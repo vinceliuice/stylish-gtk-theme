@@ -1194,8 +1194,8 @@ headerbar {
       background-color: lighten($headerbar_bg_color, 5%);
 //      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
     &:hover {
-      background-color: lighten($headerbar_bg_color, 10%);
-      color: $dark_contrast_color;
+      background-color: if($headerbar =='dark', lighten($headerbar_bg_color, 10%), lighten($headerbar_bg_color, 3%));
+      color: $headerbar_fg_color;
     }
 
     &:active, &:checked {

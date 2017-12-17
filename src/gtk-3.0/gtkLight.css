@@ -1074,8 +1074,8 @@ headerbar {
     background-color: #fbfbfb; }
     .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover,
     headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover {
-      background-color: white;
-      color: #FFFFFF; }
+      background-color: #f6f6f6;
+      color: rgba(0, 0, 0, 0.8); }
     .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:active, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
     headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active,
     headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked {

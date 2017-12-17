@@ -46,17 +46,17 @@ $disabled_tertiary_inversed_fg_color: scale-alpha($tertiary_inversed_fg_color, $
 $disabled_menu_fg_color: #868686;
 
 // Background colors
-$bg_color: if($variant =='dark', if($color == 'tang', #333333, #343943), #F5F5F5);
-$base_color: if($variant =='dark', if($color == 'tang', #404040, #40454F), #FFFFFF);
+$bg_color: if($variant =='dark', if($color == 'tang', #333333, #333333), #F5F5F5);
+$base_color: if($variant =='dark', if($color == 'tang', #404040, #404040), #FFFFFF);
 $alt_base_color: mix($base_color, $bg_color, 50%);
 
-$lighter_bg_color: if($variant =='dark', if($color == 'tang', #444444, #444851), #FAFAFA);
-$darker_bg_color: if($variant =='dark', if($color == 'tang', #303030, #31353E), #EEEEEE);
-$darker_fg_color: if($variant =='light', if($color == 'tang', #222222, #191D29), #DDDDDD);
+$lighter_bg_color: if($variant =='dark', if($color == 'tang', #444444, #444444), #FAFAFA);
+$darker_bg_color: if($variant =='dark', if($color == 'tang', #303030, #303030), #EEEEEE);
+$darker_fg_color: if($variant =='light', if($color == 'tang', #222222, #222222), #DDDDDD);
 
 // Headerbar colors
 $headerbar_tang_color: if($variant =='light', #444444, #424242);
-$headerbar_azul_color: if($variant =='light', #444851, #3F444D);
+$headerbar_azul_color: if($variant =='light', #444444, #424242);
 $headerbar_bg_color: if($headerbar =='dark', if($color =='tang', $headerbar_tang_color, $headerbar_azul_color), #EEEEEE);
 $headerbar_fg_color: if($headerbar =='dark', $dark_contrast_color, $fg_color);
 $secondary_headerbar_fg_color: if($headerbar =='dark', $secondary_inversed_fg_color, $secondary_fg_color);
@@ -69,7 +69,7 @@ $alt_primary_color: if($color == 'tang', #F57C00, $secondary_alt_primary_color);
 $secondary_accent_color: if($color == 'azul', #2E78DA, #299C2C);
 $accent_color: if($color == 'tang', #F16100, $secondary_accent_color);
 
-$menu_bg_color: if($color == 'tang', #444444, #444851);
+$menu_bg_color: if($color == 'tang', #444444, #444444);
 $tab_color: $primary_color;
 $secondary_titlebar_color: $primary_color;
 $topbar_color: $headerbar_bg_color;
