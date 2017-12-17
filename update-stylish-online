@@ -3,7 +3,7 @@ notify-send "stylish-gtk-theme" "Getting the latest version of the Stylish theme
 cd /tmp/; 
 rm -Rf /tmp/stylish-gtk-theme.zip 2>/dev/null; 
 rm -Rf /tmp/stylish-gtk-theme-master/ 2>/dev/null; 
-wget https://github.com/vinceliuice/stylish-gtk-theme/archive/master.zip -O vimix-gtk-themes.zip; 
+wget https://github.com/vinceliuice/stylish-gtk-theme/archive/master.zip -O stylish-gtk-theme-master; 
 unzip stylish-gtk-theme.zip; 
 cd stylish-gtk-theme-master; 
 ./Install; 
