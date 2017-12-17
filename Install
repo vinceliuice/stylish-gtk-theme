@@ -1,0 +1,139 @@
+#!/bin/bash
+  # Copying files
+
+ROOT_UID=0
+DEST_DIR=
+
+# Destination directory
+if [ "$UID" -eq "$ROOT_UID" ]; then
+  DEST_DIR="/usr/share/themes"
+else
+  DEST_DIR="$HOME/.themes"
+fi
+
+repodir=$(cd $(dirname $0) && pwd)
+srcdir=${repodir}/src
+
+ rm -rf $DEST_DIR/Stylish*
+
+ echo
+
+for variant in 'Dark' 'Light' ; do
+  for size in '' '-Laptop' ; do
+	for color in '' '-Tang' '-Azul' '-Jade'; do
+		echo -e "   Installing Stulish${variant}${size}${color} ..."
+
+		themedir=$DEST_DIR/Stylish${variant}${size}${color}
+		install -d ${themedir}
+
+		# Install index.theme
+		echo "[Desktop Entry]" >> ${themedir}/index.theme
+		echo "Type=X-GNOME-Metatheme" >> ${themedir}/index.theme
+		echo "Name=Stylish${variant}${size}${color}" >> ${themedir}/index.theme
+		echo "Comment=An Stylish Gtk+ theme based on Material Design" >> ${themedir}/index.theme
+		echo "Encoding=UTF-8" >> ${themedir}/index.theme
+		echo "" >> ${themedir}/index.theme
+		echo "[X-GNOME-Metatheme]" >> ${themedir}/index.theme
+		echo "GtkTheme=Stylish${variant}${size}${color}" >> ${themedir}/index.theme
+		echo "MetacityTheme=Stylish${variant}${size}${color}" >> ${themedir}/index.theme
+		echo "IconTheme=Adwaita" >> ${themedir}/index.theme
+		echo "CursorTheme=Adwaita" >> ${themedir}/index.theme
+		echo "ButtonLayout=menu:minimize,maximize,close" >> ${themedir}/index.theme
+
+		# Install GNOME Shell Theme
+		install -d ${themedir}/gnome-shell
+		cd ${srcdir}/gnome-shell
+		cp -ur \
+			extensions \
+			process-working.svg \
+			${themedir}/gnome-shell
+
+		cp -ur \
+			no-events-${variant}.svg \
+			${themedir}/gnome-shell/no-events.svg
+
+		cp -ur \
+			no-notifications-${variant}.svg \
+			${themedir}/gnome-shell/no-notifications.svg
+
+		cp -ur \
+			assets${color} \
+			${themedir}/gnome-shell/assets
+
+		cp -ur \
+			calendar-arrow-left-${variant}.svg \
+			${themedir}/gnome-shell/assets/calendar-arrow-left.svg
+
+		cp -ur \
+			calendar-arrow-right-${variant}.svg \
+			${themedir}/gnome-shell/assets/calendar-arrow-right.svg
+
+		cp -ur \
+			gnome${variant}-shell${size}${color}.css \
+			${themedir}/gnome-shell/gnome-shell.css
+
+		glib-compile-resources \
+			--sourcedir=${themedir}/gnome-shell \
+			--target=${themedir}/gnome-shell/gnome-shell-theme.gresource \
+			gnome-shell-theme.gresource.xml
+
+		# Install GTK+ 2 Theme
+		install -d ${themedir}/gtk-2.0
+		cd ${srcdir}/gtk-2.0
+
+		cp -ur \
+			Stylish${color}/assets \
+			Stylish${color}/apps.rc \
+			${themedir}/gtk-2.0
+
+		cp -ur \
+			Stylish${color}/main${variant}.rc \
+			${themedir}/gtk-2.0/main.rc
+
+		cp -ur \
+			Stylish${color}/gtk${variant}rc \
+			${themedir}/gtk-2.0/gtkrc
+
+		# Install GTK+ 3 Theme
+		install -d ${themedir}/gtk-3.0
+		cd ${srcdir}/gtk-3.0
+		cp -ur \
+			windows-assets/windows-assets \
+			${themedir}/gtk-3.0/
+		cp -ur \
+			assets${color}/assets \
+			${themedir}/gtk-3.0/
+		cp -ur \
+			scalable \
+			${themedir}/gtk-3.0/assets/
+		cp -ur \
+			gtk${variant}${size}${color}.css \
+			${themedir}/gtk-3.0/gtk.css
+		cp -ur \
+			gtk${size}${color}-dark.css \
+			${themedir}/gtk-3.0/gtk-dark.css
+
+		# Install Metacity Theme
+		install -d ${themedir}/metacity-1
+		cd ${srcdir}/metacity-1/Stylish${variant}
+		cp -ur \
+			*.svg \
+			${themedir}/metacity-1
+
+		cp -ur \
+			metacity-theme${color}-2.xml \
+			${themedir}/metacity-1/metacity-theme-2.xml
+		cp -ur \
+			metacity-theme${color}-3.xml \
+			${themedir}/metacity-1/metacity-theme-3.xml
+
+		# Install Unity Theme
+		install -d ${themedir}/unity
+		cd ${srcdir}/unity
+		cp -ur \
+			Stylish${size}/* \
+			${themedir}/unity
+	done
+  done
+done
+

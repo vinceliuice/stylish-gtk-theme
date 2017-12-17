@@ -1,0 +1,10 @@
+#!/bin/bash
+notify-send "stylish-gtk-theme" "Getting the latest version of the Stylish themes..." -i system-software-update; 
+cd /tmp/; 
+rm -Rf /tmp/stylish-gtk-theme.zip 2>/dev/null; 
+rm -Rf /tmp/stylish-gtk-theme-master/ 2>/dev/null; 
+wget https://github.com/vinceliuice/stylish-gtk-theme/archive/master.zip -O vimix-gtk-themes.zip; 
+unzip stylish-gtk-theme.zip; 
+cd stylish-gtk-theme-master; 
+./Install; 
+notify-send "All done!" "Enjoy the latest version of Stylish!" -i face-smile
