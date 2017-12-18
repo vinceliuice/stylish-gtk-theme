@@ -42,9 +42,9 @@
      inkscape:window-height="691"
      id="namedview8"
      showgrid="true"
-     inkscape:zoom="6.0251392"
-     inkscape:cx="-52.12929"
-     inkscape:cy="14.846712"
+     inkscape:zoom="12.050278"
+     inkscape:cx="11.354251"
+     inkscape:cy="3.267982"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -56,5 +56,5 @@
   <path
      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
      id="path6"
-     style="fill:#f57c00;fill-opacity:1" />
+     style="fill:#ff615a;fill-opacity:1" />
 </svg>

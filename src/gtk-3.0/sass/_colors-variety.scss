@@ -62,12 +62,12 @@ $headerbar_fg_color: if($headerbar =='dark', $dark_contrast_color, $fg_color);
 $secondary_headerbar_fg_color: if($headerbar =='dark', $secondary_inversed_fg_color, $secondary_fg_color);
 $disabled_headerbar_fg_color: if($headerbar =='dark', $disabled_secondary_inversed_fg_color, $disabled_fg_color);
 
-$secondary_primary_color: if($color == 'azul', #2196F3, #4CAF50);
-$primary_color: if($color == 'tang', #F57C00, $secondary_primary_color);
-$secondary_alt_primary_color: if($color == 'azul', #2E78DA, #299C2C);
-$alt_primary_color: if($color == 'tang', #F57C00, $secondary_alt_primary_color);
-$secondary_accent_color: if($color == 'azul', #2E78DA, #299C2C);
-$accent_color: if($color == 'tang', #F16100, $secondary_accent_color);
+$secondary_primary_color: if($color == 'azul', #2196F3, #2eb37b);
+$primary_color: if($color == 'tang', #FF6C42, $secondary_primary_color);
+$secondary_alt_primary_color: if($color == 'azul', #18B8FF, #1bc674);
+$alt_primary_color: if($color == 'tang', #ff6767, $secondary_alt_primary_color);
+$secondary_accent_color: if($color == 'azul', #18B8FF, #1bc674);
+$accent_color: if($color == 'tang', #ff6767, $secondary_accent_color);
 
 $menu_bg_color: if($color == 'tang', #444444, #444444);
 $tab_color: $primary_color;

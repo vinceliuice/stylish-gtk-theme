@@ -843,7 +843,7 @@ combobox #gtk-combobox-popup-menu {
 combobox:drop(active) {
   box-shadow: none; }
 
-#login_window #user_combobox button {
+notebook > stack:not(:only-child) button.combo, #login_window #user_combobox button {
   border-radius: 0;
   background-image: none;
   font-weight: inherit;
@@ -852,11 +852,11 @@ combobox:drop(active) {
   box-shadow: inset 0 -1px alpha(currentColor, 0.3);
   background-color: transparent;
   color: rgba(0, 0, 0, 0.8); }
-  #login_window #user_combobox button:hover {
+  notebook > stack:not(:only-child) button.combo:hover, #login_window #user_combobox button:hover {
     box-shadow: inset 0 -2px alpha(currentColor, 0.3); }
-  #login_window #user_combobox button:checked {
+  notebook > stack:not(:only-child) button.combo:checked, #login_window #user_combobox button:checked {
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #686868 100%, transparent 0%) 0 0 2/0 0 2px; }
-  #login_window #user_combobox button:disabled {
+  notebook > stack:not(:only-child) button.combo:disabled, #login_window #user_combobox button:disabled {
     color: rgba(0, 0, 0, 0.32); }
 
 /************

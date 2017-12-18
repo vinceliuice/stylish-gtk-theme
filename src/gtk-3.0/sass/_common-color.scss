@@ -1586,7 +1586,7 @@ popover.background {
   }
 
    entry { @extend %entry.flat; }
-
+   button.combo { @extend %combo_flat; }
    button:not(.suggested-action):not(.destructive-action) {
 //       @extend %button.flat;
        box-shadow: none;
@@ -1851,6 +1851,7 @@ notebook {
     revealer spinbutton:not(.vertical) { @extend %entry; }
 
     spinbutton:not(.vertical) entry { @extend %spinbutton_entry; }
+    button.combo { @extend %combo_flat; }
   }
 }
 
@@ -2225,6 +2226,22 @@ radio {
       #{$w}:selected#{$s},
       #{$w}:selected:focus#{$s} {
         color: $dark_contrast_color;
+        -gtk-icon-shadow: none;
+      }
+    }
+
+  }
+
+  @each $t in (':disabled',),
+              (':indeterminate:disabled'),
+              (':checked:disabled') {
+
+    treeview.view,
+    row,
+    row.activatable {
+      #{$w}:selected#{$t},
+      #{$w}:selected:focus#{$t} {
+        color: gtkalpha($dark_contrast_color, 0.5);
         -gtk-icon-shadow: none;
       }
     }

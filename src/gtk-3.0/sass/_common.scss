@@ -1848,6 +1848,7 @@ notebook {
     revealer spinbutton:not(.vertical) { @extend %entry; }
 
     spinbutton:not(.vertical) entry { @extend %spinbutton_entry; }
+    button.combo { @extend %combo_flat; }
   }
 }
 

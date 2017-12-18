@@ -36,17 +36,17 @@ $secondary_base_color: scale-alpha($fg_color, 0.05);
 $bg_color: scale-alpha(#000000, $middle_opacity);
 $osd_bg_color: scale-alpha(#000000, $lower_opacity);
 $overview_bg_color: scale-alpha(#FFFFFF, 0.1);
-$topbar_color: if($topbar =='dark', scale-alpha(#000, 0.6), scale-alpha(#000, 0.5));
+$topbar_color: if($topbar =='dark', scale-alpha(#000, 0.4), scale-alpha(#000, 0.3));
 $topbar_fg_color: #FFFFFF;
 $topbar_secondary_fg_color: #EFEFEF;
 $topbar_overview_color: scale-alpha(#000, 0.01);
 
-$selected_bg_color_B: if($color == 'azul', #2196F3, #4CAF50);
-$selected_bg_color: if($color =='tang', #F57C00, $selected_bg_color_B);
-$secondary_selected_bg_color_B: if($color =='azul', #03a9f4, #1eba9b);
+$selected_bg_color_B: if($color == 'azul', #2196F3, #2eb37b);
+$selected_bg_color: if($color =='tang', #FF6C42, $selected_bg_color_B);
+$secondary_selected_bg_color_B: if($color =='azul', #18B8FF, #1bc674);
 $secondary_selected_bg_color: if($color =='tang', #FF615A, $secondary_selected_bg_color_B);
-$accent_bg_color_B: if($color == 'azul', #2E78DA, #299C2C);
-$accent_bg_color: if($color =='tang', #F16100, $accent_bg_color_B);
+$accent_bg_color_B: if($color == 'azul', #18B8FF, #1bc674);
+$accent_bg_color: if($color =='tang', #FF615A, $accent_bg_color_B);
 $primary_color: $selected_bg_color;
 $primary_fg_color: #FFFFFF;
 

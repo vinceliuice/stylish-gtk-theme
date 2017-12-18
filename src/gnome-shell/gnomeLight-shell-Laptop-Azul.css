@@ -180,11 +180,11 @@ StScrollBar {
 /* Slider */
 .slider {
   height: 20px;
-  color: #2E78DA;
+  color: #18B8FF;
   -slider-height: 4px;
   -slider-background-color: rgba(0, 0, 0, 0.24);
   -slider-border-color: transparent;
-  -slider-active-background-color: #2E78DA;
+  -slider-active-background-color: #18B8FF;
   -slider-active-border-color: transparent;
   -slider-border-width: 0;
   -slider-handle-radius: 8px; }
@@ -212,9 +212,9 @@ StScrollBar {
 .check-box:focus:checked StBin {
   background-image: url("assets/checkbox.svg"); }
 .check-box:hover:checked StBin {
-  background-color: rgba(46, 120, 218, 0.15); }
+  background-color: rgba(24, 184, 255, 0.15); }
 .check-box:active:checked StBin {
-  background-color: rgba(46, 120, 218, 0.3); }
+  background-color: rgba(24, 184, 255, 0.3); }
 
 /* Switches */
 .toggle-switch {
@@ -723,8 +723,8 @@ StScrollBar {
 
 /* Tiled window previews */
 .tile-preview {
-  background-color: rgba(3, 169, 244, 0.3);
-  border: 1px solid #03a9f4; }
+  background-color: rgba(24, 184, 255, 0.3);
+  border: 1px solid #18B8FF; }
 
 .tile-preview-left.on-primary {
   border-radius: 0 0 0 0; }
@@ -737,7 +737,7 @@ StScrollBar {
 
 /* TOP BAR */
 #panel {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   font-weight: bold;
   height: 28px;
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.35); }
@@ -1871,21 +1871,21 @@ StScrollBar {
       icon-shadow: none; }
     .login-dialog .modal-dialog-button:default {
       color: #FFFFFF;
-      background-color: #2E78DA;
+      background-color: #18B8FF;
       border-color: transparent;
       box-shadow: 0 1px 1.5px rgba(0, 0, 0, 0.12), 0 1px 1px rgba(0, 0, 0, 0.24);
       text-shadow: none;
       icon-shadow: none; }
       .login-dialog .modal-dialog-button:default:hover, .login-dialog .modal-dialog-button:default:focus {
         color: #FFFFFF;
-        background-color: #2E78DA;
+        background-color: #18B8FF;
         border-color: transparent;
         box-shadow: 0 3px 3px rgba(0, 0, 0, 0.24), 0 3px 3px rgba(0, 0, 0, 0.345);
         text-shadow: none;
         icon-shadow: none; }
       .login-dialog .modal-dialog-button:default:active {
         color: #FFFFFF;
-        background-color: #6da1e5;
+        background-color: #5dcdff;
         border-color: transparent;
         box-shadow: 0 3px 3px rgba(0, 0, 0, 0.24), 0 3px 3px rgba(0, 0, 0, 0.345);
         text-shadow: none;
