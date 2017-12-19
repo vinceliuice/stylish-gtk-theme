@@ -1051,6 +1051,12 @@ headerbar {
       min-width: 32px;
       margin: 0;
       padding: 0; }
+  .default-decoration.titlebar:not(headerbar), .csd .default-decoration.titlebar:not(headerbar), .default-decoration.titlebar:backdrop:not(headerbar), .csd .default-decoration.titlebar:backdrop:not(headerbar),
+  headerbar.default-decoration, .csd
+  headerbar.default-decoration,
+  headerbar.default-decoration:backdrop, .csd
+  headerbar.default-decoration:backdrop {
+    box-shadow: none; }
   .solid-csd .titlebar:dir(rtl):not(headerbar), .solid-csd .titlebar:dir(ltr):not(headerbar), .solid-csd
   headerbar:dir(rtl), .solid-csd
   headerbar:dir(ltr) {
@@ -3819,6 +3825,25 @@ menu menuitem radio:indeterminate {
  ***********/
 window.background > box.vertical > widget > widget:selected {
   background-color: #2eb37b; }
+
+/****************
+ * Libre-Office *
+ ****************/
+window.background > grid.horizontal > grid.horizontal {
+  background-color: #444444; }
+  window.background > grid.horizontal > grid.horizontal > button.flat.small-button {
+    color: #FFFFFF; }
+    window.background > grid.horizontal > grid.horizontal > button.flat.small-button:hover, window.background > grid.horizontal > grid.horizontal > button.flat.small-button:active, window.background > grid.horizontal > grid.horizontal > button.flat.small-button:checked {
+      color: rgba(255, 255, 255, 0.75); }
+    window.background > grid.horizontal > grid.horizontal > button.flat.small-button:disabled {
+      color: rgba(255, 255, 255, 0.3); }
+
+window.background:not(.solid-csd) > notebook:not(.frame) {
+  border: 0 none transparent;
+  background-color: #FFFFFF; }
+  window.background:not(.solid-csd) > notebook:not(.frame) > stack {
+    border: none;
+    box-shadow: none; }
 
 /*********
  * Unity *
