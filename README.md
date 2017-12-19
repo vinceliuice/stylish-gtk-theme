@@ -1,12 +1,15 @@
-
-## Stylish Themes
+<img src="https://github.com/vinceliuice/stylish-gtk-theme/blob/images/logo.png" alt="Logo" align="right" /> Stylish-Gtk-Theme
+======
 
 Stylish is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
 
-
 This theme is based on Flat-Plat gtk theme of nana-4. Thanks nana-4 sincerely for his great job! 
-
 Flat-Plat gtk theme: https://github.com/nana-4/Flat-Plat
+
+## Donations
+[![paypal](https://www.paypalobjects.com/webstatic/paypalme/images/pp_logo_small.png "Donations")](https://www.paypal.me/vinceliuice) 
+
+Thanks for your donations! https://www.paypal.me/vinceliuice
 
 ## Info
 
