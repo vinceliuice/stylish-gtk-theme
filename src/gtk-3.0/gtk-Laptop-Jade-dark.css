@@ -1699,28 +1699,28 @@ switch {
     -gtk-icon-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-selectionmode-dark.png"), url("assets/checkbox-selectionmode-dark@2.png"));
     margin: 8px;
-    background-color: transparent; }
+    background: none; }
   .view.content-view.check:not(list) .view.content-view.check:hover:not(list), iconview.content-view.check:not(list) .view.content-view.check:hover:not(list), .view.content-view.check:not(list) iconview.content-view.check:hover:not(list), iconview.content-view.check:not(list) iconview.content-view.check:hover:not(list),
   .content-view .tile check:not(list) .view.content-view.check:hover:not(list),
   .content-view .tile check:not(list) iconview.content-view.check:hover:not(list) {
     -gtk-icon-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-hover-selectionmode-dark.png"), url("assets/checkbox-hover-selectionmode-dark@2.png"));
     margin: 8px;
-    background-color: transparent; }
+    background: none; }
   .view.content-view.check:not(list) .view.content-view.check:checked:not(list), iconview.content-view.check:not(list) .view.content-view.check:checked:not(list), .view.content-view.check:not(list) iconview.content-view.check:checked:not(list), iconview.content-view.check:not(list) iconview.content-view.check:checked:not(list),
   .content-view .tile check:not(list) .view.content-view.check:checked:not(list),
   .content-view .tile check:not(list) iconview.content-view.check:checked:not(list) {
     -gtk-icon-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-selectionmode-dark.png"), url("assets/checkbox-checked-selectionmode-dark@2.png"));
     margin: 8px;
-    background-color: transparent; }
+    background: none; }
   .view.content-view.check:not(list) .view.content-view.check:checked:hover:not(list), iconview.content-view.check:not(list) .view.content-view.check:checked:hover:not(list), .view.content-view.check:not(list) iconview.content-view.check:checked:hover:not(list), iconview.content-view.check:not(list) iconview.content-view.check:checked:hover:not(list),
   .content-view .tile check:not(list) .view.content-view.check:checked:hover:not(list),
   .content-view .tile check:not(list) iconview.content-view.check:checked:hover:not(list) {
     -gtk-icon-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked-hover-selectionmode-dark.png"), url("assets/checkbox-checked-hover-selectionmode-dark@2.png"));
     margin: 8px;
-    background-color: transparent; }
+    background: none; }
 
 checkbutton.text-button,
 radiobutton.text-button {
@@ -1805,6 +1805,8 @@ radio {
   border-image: -gtk-gradient(radial, center center, 0, center center, 0.001, to(#1bc674), to(transparent)) 21/21px; }
   radio {
     -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/radio-unchecked-symbolic.png"))); }
+  radio:checked {
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/radio-checked-symbolic.png"))); }
   radio:indeterminate {
     -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/radio-dash-symbolic.svg")), -gtk-recolor(url("assets/scalable/radio-dash-symbolic.png"))); }
   radio:checked {
@@ -2305,6 +2307,14 @@ check:not(:indeterminate):checked {
 
 check:not(:indeterminate):checked:active {
   animation: check_check 0.3s cubic-bezier(0.4, 0, 0.2, 1), flat_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
+
+radio:not(:indeterminate):checked {
+  border-image: none;
+  animation: check_radio 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
+
+radio:not(:indeterminate):checked:active {
+  border-image: none;
+  animation: check_radio 0.3s cubic-bezier(0.4, 0, 0.2, 1), flat_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
 
 modelbutton.flat check:indeterminate:checked, modelbutton.flat radio:indeterminate:checked,
 .menuitem.button.flat check:indeterminate:checked,
