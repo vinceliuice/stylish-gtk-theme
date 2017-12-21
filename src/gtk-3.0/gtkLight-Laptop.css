@@ -624,12 +624,7 @@ button.needs-attention > image, stacksidebar row.needs-attention > label {
 .linked:not(.vertical) > spinbutton:not(.vertical), notebook > stack:not(:only-child) revealer .linked:not(.vertical) > entry,
 notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton:not(.vertical), .linked:not(.vertical) >
 entry, .linked >
-button,
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button,
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:hover,
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active,
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:disabled,
+button, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:disabled,
 headerbar .linked:not(.vertical).path-bar > button,
 headerbar .linked:not(.vertical).path-bar > button:hover,
 headerbar .linked:not(.vertical).path-bar > button:active,
@@ -647,8 +642,7 @@ popover.background button.model, .gedit-search-slider button:dir(ltr), .gedit-se
 .linked:not(.vertical) > spinbutton:first-child:not(.vertical), notebook > stack:not(:only-child) revealer .linked:not(.vertical) > entry:first-child,
 notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) >
 entry:first-child, .linked >
-button:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo,
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:first-child,
+button:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:first-child,
 headerbar .linked:not(.vertical).path-bar > button:first-child, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, popover.background.menu button:first-child,
 popover.background button.model:first-child, .gedit-search-slider button:first-child:dir(ltr), .gedit-search-slider button:first-child:dir(rtl) {
@@ -657,8 +651,7 @@ popover.background button.model:first-child, .gedit-search-slider button:first-c
 .linked:not(.vertical) > spinbutton:last-child:not(.vertical), notebook > stack:not(:only-child) revealer .linked:not(.vertical) > entry:last-child,
 notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) >
 entry:last-child, .linked >
-button:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo,
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:last-child,
+button:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:last-child,
 headerbar .linked:not(.vertical).path-bar > button:last-child, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, popover.background.menu button:last-child,
 popover.background button.model:last-child, .gedit-search-slider button:last-child:dir(ltr), .gedit-search-slider button:last-child:dir(rtl) {
@@ -667,8 +660,7 @@ popover.background button.model:last-child, .gedit-search-slider button:last-chi
 .linked:not(.vertical) > spinbutton:only-child:not(.vertical), notebook > stack:not(:only-child) revealer .linked:not(.vertical) > entry:only-child,
 notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) >
 entry:only-child, .linked >
-button:only-child, .linked:not(.vertical) > combobox:only-child > box > button.combo,
-.titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:only-child,
+button:only-child, .linked:not(.vertical) > combobox:only-child > box > button.combo, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:only-child,
 headerbar .linked:not(.vertical).path-bar > button:only-child, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, popover.background.menu button:only-child,
 popover.background button.model:only-child, .gedit-search-slider button:only-child:dir(ltr), .gedit-search-slider button:only-child:dir(rtl) {
@@ -1064,12 +1056,19 @@ headerbar {
     margin-right: -2px;
     margin-top: -2px;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
+  .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > button, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > button:hover, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > button:active, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > button:checked, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > button:disabled,
+  headerbar .linked:not(.vertical):not(.path-bar) > button,
+  headerbar .linked:not(.vertical):not(.path-bar) > button:hover,
+  headerbar .linked:not(.vertical):not(.path-bar) > button:active,
+  headerbar .linked:not(.vertical):not(.path-bar) > button:checked,
+  headerbar .linked:not(.vertical):not(.path-bar) > button:disabled {
+    border-radius: 3px;
+    border-style: solid; }
   .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button,
   headerbar .linked:not(.vertical).path-bar > button {
     border-image: none;
     background-color: #fbfbfb; }
-    .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active,
-    .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
+    .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
     headerbar .linked:not(.vertical).path-bar > button:active,
     headerbar .linked:not(.vertical).path-bar > button:checked {
       background-color: #555555;

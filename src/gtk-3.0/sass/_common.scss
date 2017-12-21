@@ -1173,9 +1173,16 @@ headerbar {
 
   separator.titlebutton { @extend %header_separator; }
 
+  // Reset buttons
+  .linked:not(.vertical):not(.path-bar) > button {
+    &, &:hover, &:active, &:checked, &:disabled {
+      border-radius: 3px;
+      border-style: solid;
+    }
+  }
 
-  // special case for stack-switchers
-   %path-bar,
+  // special case for path-bar and stack-switchers
+
   .linked:not(.vertical).path-bar {
     > button {
       border-image: none;

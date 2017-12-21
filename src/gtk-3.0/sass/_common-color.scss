@@ -1174,8 +1174,16 @@ headerbar {
 
   separator.titlebutton { @extend %header_separator; }
 
-  // special case for stack-switchers
-   %path-bar,
+  // Reset buttons
+  .linked:not(.vertical):not(.path-bar) > button {
+    &, &:hover, &:active, &:checked, &:disabled {
+      border-radius: 3px;
+      border-style: solid;
+    }
+  }
+
+  // special case for path-bar and stack-switchers
+
   .linked:not(.vertical).path-bar {
     > button {
       border-image: none;
@@ -1197,7 +1205,7 @@ headerbar {
     > button {
       border-image: none;
       background-color: lighten($headerbar_bg_color, 5%);
-//      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
+
     &:hover {
       background-color: if($headerbar =='dark', lighten($headerbar_bg_color, 10%), lighten($headerbar_bg_color, 3%));
       color: $headerbar_fg_color;
@@ -1313,7 +1321,6 @@ headerbar {
   }
 }
 
-
 /**************
  * Tree Views *
  **************/
@@ -1426,7 +1433,6 @@ treeview.view {
 
   acceleditor > label { background-color: $primary_color; } // see tests/testaccel to test
 }
-
 
 /*********
  * Menus *
