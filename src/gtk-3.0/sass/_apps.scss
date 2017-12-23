@@ -766,6 +766,45 @@ window.background > box.vertical > scrolledwindow > widget toolbar {
 
 $firefox_border_color: scale-alpha(#000000, 0.2);
 
+%small_check,
+menu menuitem check {
+  & {
+    border-radius: 2px;
+    -gtk-outline-radius: 2px;
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.symbolic.png")));
+  }
+
+  &:checked {
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.symbolic.png")));
+  }
+
+  &:indeterminate {
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.symbolic.png")));
+  }
+}
+
+%small_radio,
+menu menuitem radio {
+  & {
+    border-image: none;
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.symbolic.png")));
+  }
+
+  &:checked {
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.symbolic.png")));
+  }
+
+  &:indeterminate {
+    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg")),
+                            -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.symbolic.png")));
+  }
+}
+
 window.background:not(.csd) {
   > widget {
     // for the bookmark toolbar's separators
@@ -832,12 +871,6 @@ window.background:not(.csd) {
     }
 
     > frame { color: $firefox_border_color; }
-
-    > checkbutton > check,
-    > radiobutton > radio {
-      margin: 0;
-      padding: 0;
-    }
   }
 
   > window.background > menu > separator { color: $borders_color; }
@@ -846,45 +879,6 @@ window.background:not(.csd) {
 }
 
 window.background > menu > menuitem > label:disabled { color: $disabled_menu_fg_color; }
-
-%small_check,
-menu menuitem check {
-  & {
-    border-radius: 2px;
-    -gtk-outline-radius: 2px;
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.symbolic.png")));
-  }
-
-  &:checked {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.symbolic.png")));
-  }
-
-  &:indeterminate {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.symbolic.png")));
-  }
-}
-
-%small_radio,
-menu menuitem radio {
-  & {
-    border-image: none;
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.symbolic.png")));
-  }
-
-  &:checked {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.symbolic.png")));
-  }
-
-  &:indeterminate {
-    -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg")),
-                            -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.symbolic.png")));
-  }
-}
 
 /***********
  * Synapse *
@@ -922,6 +916,16 @@ window.background:not(.solid-csd) {
     }
   }
 }
+
+checkbutton > check:not(:checked):not(:indeterminate) {
+    color: $secondary_fg_color;
+    &:hover { color: $fg_color; }
+  }
+
+radiobutton > radio:not(:checked):not(:indeterminate) {
+    color: $secondary_fg_color;
+    &:hover { color: $fg_color; }
+  }
 
 /*********
  * Unity *
