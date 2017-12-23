@@ -2268,36 +2268,6 @@ menu menuitem check:not(:checked), menu menuitem
 radio:not(:checked) {
   transition: none; }
 
-window.background:not(.csd) > widget > checkbutton > check,
-menu menuitem check {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > checkbutton > check:checked,
-menu menuitem check:checked {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > checkbutton > check:indeterminate,
-menu menuitem check:indeterminate {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.symbolic.png"))); }
-
-window.background:not(.csd) > widget > radiobutton > radio,
-menu menuitem radio {
-  border-image: none;
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > radiobutton > radio:checked,
-menu menuitem radio:checked {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > radiobutton > radio:indeterminate,
-menu menuitem radio:indeterminate {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.symbolic.png"))); }
-
-menu menuitem check:not(:indeterminate):checked,
-menu menuitem radio:not(:indeterminate):checked,
-menu menuitem check:indeterminate:checked,
-menu menuitem radio:indeterminate:checked {
-  animation: none;
-  border-image: none; }
-
 treeview.view check,
 treeview.view radio {
   padding: 0; }
@@ -3810,11 +3780,15 @@ checkbutton > check:not(:checked):not(:indeterminate) {
   color: rgba(255, 255, 255, 0.75); }
   checkbutton > check:not(:checked):not(:indeterminate):hover {
     color: #FFFFFF; }
+  checkbutton > check:not(:checked):not(:indeterminate):disabled {
+    color: rgba(255, 255, 255, 0.4); }
 
 radiobutton > radio:not(:checked):not(:indeterminate) {
   color: rgba(255, 255, 255, 0.75); }
   radiobutton > radio:not(:checked):not(:indeterminate):hover {
-    color: #FFFFFF; }
+    color: rgba(255, 255, 255, 0.4); }
+  radiobutton > radio:not(:checked):not(:indeterminate):disabled {
+    color: rgba(255, 255, 255, 0.4); }
 
 /*********
  * Unity *
