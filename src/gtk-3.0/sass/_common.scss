@@ -1150,7 +1150,7 @@ headerbar {
 
     button.titlebutton {
       min-height: $small_size;
-      min-width: 32px;
+      min-width: 24px;
       margin: 0;
       padding: 0;
     }
@@ -3467,8 +3467,8 @@ $darker_asset_suffix: if($headerbar=='dark', '-dark', $asset_suffix);
   button.titlebutton {
     margin: 0;
     padding: 0;
-    min-width: 32px;
-    min-height: 28px;
+    min-width: 24px;
+    min-height: $small_size;
 
     &:hover {
       @include button(flat-hover);
@@ -3481,7 +3481,7 @@ $darker_asset_suffix: if($headerbar=='dark', '-dark', $asset_suffix);
       border: none;
     }
 
-    &.close, &.maximize, &.minimize, &.restore {
+    &.close, &.maximize, &.minimize {
       color: transparent;
       background-color: transparent;
       background-position: center;
@@ -3491,11 +3491,11 @@ $darker_asset_suffix: if($headerbar=='dark', '-dark', $asset_suffix);
 
     }
     // Load png assets for each button, Fix the Chrome window restore button bug
-    @each $k in ('close', 'maximize', 'minimize', 'restore') {
+    @each $k in ('close', 'maximize', 'minimize') {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
 
-        &.#{$k}#{$l} { background-image: -gtk-scaled(url('windows-assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}.png'),
-                                                        url('windows-assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}@2.png')); }
+        &.#{$k}#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}.png'),
+                                                        url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}@2.png')); }
       }
     }
   }

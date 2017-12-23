@@ -1040,7 +1040,7 @@ headerbar {
     .default-decoration.titlebar:not(headerbar) button.titlebutton,
     headerbar.default-decoration button.titlebutton {
       min-height: 20px;
-      min-width: 32px;
+      min-width: 24px;
       margin: 0;
       padding: 0; }
   .default-decoration.titlebar:not(headerbar), .csd .default-decoration.titlebar:not(headerbar), .default-decoration.titlebar:backdrop:not(headerbar), .csd .default-decoration.titlebar:backdrop:not(headerbar),
@@ -3084,8 +3084,8 @@ headerbar button.titlebutton,
 .titlebar button.titlebutton {
   margin: 0;
   padding: 0;
-  min-width: 32px;
-  min-height: 28px; }
+  min-width: 24px;
+  min-height: 20px; }
   headerbar button.titlebutton:hover,
   .titlebar button.titlebutton:hover {
     box-shadow: none;
@@ -3105,8 +3105,7 @@ headerbar button.titlebutton,
   headerbar button.titlebutton.close,
   .titlebar button.titlebutton.close, headerbar button.titlebutton.maximize,
   .titlebar button.titlebutton.maximize, headerbar button.titlebutton.minimize,
-  .titlebar button.titlebutton.minimize, headerbar button.titlebutton.restore,
-  .titlebar button.titlebutton.restore {
+  .titlebar button.titlebutton.minimize {
     color: transparent;
     background-color: transparent;
     background-position: center;
@@ -3115,57 +3114,44 @@ headerbar button.titlebutton,
     headerbar button.titlebutton.close:backdrop,
     .titlebar button.titlebutton.close:backdrop, headerbar button.titlebutton.maximize:backdrop,
     .titlebar button.titlebutton.maximize:backdrop, headerbar button.titlebutton.minimize:backdrop,
-    .titlebar button.titlebutton.minimize:backdrop, headerbar button.titlebutton.restore:backdrop,
-    .titlebar button.titlebutton.restore:backdrop {
+    .titlebar button.titlebutton.minimize:backdrop {
       opacity: 1; }
   headerbar button.titlebutton.close,
   .titlebar button.titlebutton.close {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-close-dark.png"), url("windows-assets/titlebutton-close-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-dark.png"), url("assets/titlebutton-close-dark@2.png")); }
   headerbar button.titlebutton.close:backdrop,
   .titlebar button.titlebutton.close:backdrop {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-close-backdrop-dark.png"), url("windows-assets/titlebutton-close-backdrop-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-backdrop-dark.png"), url("assets/titlebutton-close-backdrop-dark@2.png")); }
   headerbar button.titlebutton.close:hover,
   .titlebar button.titlebutton.close:hover {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-close-hover-dark.png"), url("windows-assets/titlebutton-close-hover-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-hover-dark.png"), url("assets/titlebutton-close-hover-dark@2.png")); }
   headerbar button.titlebutton.close:active,
   .titlebar button.titlebutton.close:active {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-close-active-dark.png"), url("windows-assets/titlebutton-close-active-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-close-active-dark.png"), url("assets/titlebutton-close-active-dark@2.png")); }
   headerbar button.titlebutton.maximize,
   .titlebar button.titlebutton.maximize {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-maximize-dark.png"), url("windows-assets/titlebutton-maximize-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark.png"), url("assets/titlebutton-maximize-dark@2.png")); }
   headerbar button.titlebutton.maximize:backdrop,
   .titlebar button.titlebutton.maximize:backdrop {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-maximize-backdrop-dark.png"), url("windows-assets/titlebutton-maximize-backdrop-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark.png"), url("assets/titlebutton-maximize-backdrop-dark@2.png")); }
   headerbar button.titlebutton.maximize:hover,
   .titlebar button.titlebutton.maximize:hover {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-maximize-hover-dark.png"), url("windows-assets/titlebutton-maximize-hover-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark.png"), url("assets/titlebutton-maximize-hover-dark@2.png")); }
   headerbar button.titlebutton.maximize:active,
   .titlebar button.titlebutton.maximize:active {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-maximize-active-dark.png"), url("windows-assets/titlebutton-maximize-active-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark.png"), url("assets/titlebutton-maximize-active-dark@2.png")); }
   headerbar button.titlebutton.minimize,
   .titlebar button.titlebutton.minimize {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-minimize-dark.png"), url("windows-assets/titlebutton-minimize-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-minimize-dark.png"), url("assets/titlebutton-minimize-dark@2.png")); }
   headerbar button.titlebutton.minimize:backdrop,
   .titlebar button.titlebutton.minimize:backdrop {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-minimize-backdrop-dark.png"), url("windows-assets/titlebutton-minimize-backdrop-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-minimize-backdrop-dark.png"), url("assets/titlebutton-minimize-backdrop-dark@2.png")); }
   headerbar button.titlebutton.minimize:hover,
   .titlebar button.titlebutton.minimize:hover {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-minimize-hover-dark.png"), url("windows-assets/titlebutton-minimize-hover-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-minimize-hover-dark.png"), url("assets/titlebutton-minimize-hover-dark@2.png")); }
   headerbar button.titlebutton.minimize:active,
   .titlebar button.titlebutton.minimize:active {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-minimize-active-dark.png"), url("windows-assets/titlebutton-minimize-active-dark@2.png")); }
-  headerbar button.titlebutton.restore,
-  .titlebar button.titlebutton.restore {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-restore-dark.png"), url("windows-assets/titlebutton-restore-dark@2.png")); }
-  headerbar button.titlebutton.restore:backdrop,
-  .titlebar button.titlebutton.restore:backdrop {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-restore-backdrop-dark.png"), url("windows-assets/titlebutton-restore-backdrop-dark@2.png")); }
-  headerbar button.titlebutton.restore:hover,
-  .titlebar button.titlebutton.restore:hover {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-restore-hover-dark.png"), url("windows-assets/titlebutton-restore-hover-dark@2.png")); }
-  headerbar button.titlebutton.restore:active,
-  .titlebar button.titlebutton.restore:active {
-    background-image: -gtk-scaled(url("windows-assets/titlebutton-restore-active-dark.png"), url("windows-assets/titlebutton-restore-active-dark@2.png")); }
+    background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark.png"), url("assets/titlebutton-minimize-active-dark@2.png")); }
 
 /**********************
  * Touch Copy & Paste *

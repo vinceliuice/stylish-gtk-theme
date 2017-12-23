@@ -140,9 +140,6 @@ for variant in 'Dark' 'Light' ; do
 			thumbnail-${variant}${color}.png \
 			${themedir}/gtk-3.0/thumbnail.png
 		cp -ur \
-			windows-assets/windows-assets \
-			${themedir}/gtk-3.0/
-		cp -ur \
 			assets${color}/assets \
 			${themedir}/gtk-3.0/
 		cp -ur \
