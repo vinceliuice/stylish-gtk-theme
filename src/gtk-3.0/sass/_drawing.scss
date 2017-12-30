@@ -282,7 +282,8 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == header-normal {
     transition: $longer_transition;
     box-shadow: none;
-    background-color: transparent;
+    border: 1px solid $borders_color;
+    background-color: lighten($headerbar_bg_color, 5%);
     background-image: radial-gradient(circle farthest-corner at center,
                                       $zero_track_color 100%,
                                       transparent 0%),
@@ -302,7 +303,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
 
   @if $t == header-disabled {
     box-shadow: none;
-    background-color: transparent;
+    background-color: lighten($headerbar_bg_color, 5%);
     color: if($tc != $fg_color, gtkalpha(currentColor, $disabled_opacity), gtkalpha(currentColor, $enabled_opacity * $disabled_opacity));
   }
 

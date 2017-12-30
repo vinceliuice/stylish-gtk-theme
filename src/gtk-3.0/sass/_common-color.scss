@@ -639,6 +639,8 @@ toolbar.inline-toolbar toolbutton {
 %linked_middle {
   border-radius: 0;
   -gtk-outline-radius: $md_radius;
+  border-left-style: none;
+  border-right-style: none;
 }
 
 %linked {
@@ -647,11 +649,15 @@ toolbar.inline-toolbar toolbutton {
   &:first-child {
     border-top-left-radius: $md_radius;
     border-bottom-left-radius: $md_radius;
+    border-right-style: none;
+    border-left-style: solid;
   }
 
   &:last-child {
     border-top-right-radius: $md_radius;
     border-bottom-right-radius: $md_radius;
+    border-right-style: solid;
+    border-left-style: none;
   }
 
   &:only-child {
@@ -1055,12 +1061,13 @@ headerbar {
 
   button {
       @extend %header_button;
-      &:hover { color: $accent_color; background-color: gtkalpha($primary_color, 0.3); }
-      &:active { background-color: $primary_color; color: $dark_contrast_color; }
-      &:checked { background-color: $primary_color; color: $dark_contrast_color; }
+      &:hover { background-color: gtkalpha($headerbar_fg_color, 0.2); color: $headerbar_fg_color;}
+      &:active { background-color: $primary_color; color: $dark_contrast_color; border-color: transparent; }
+      &:checked { background-color: $primary_color; color: $dark_contrast_color; border-color: transparent; }
   }
 
   button.suggested-action, button.destructive-action {
+    border: none;
     &:disabled {
       color: gtkalpha(currentColor, $disabled_opacity);
       > label { color: inherit; }
@@ -1086,10 +1093,10 @@ headerbar {
                                     transparent 0%)
                                     0 0 0 / 0 0 0px;
       color: currentColor;
-
+      background: none;
       &:disabled {
         color: gtkalpha(currentColor, $disabled_opacity);
-
+        background: none;
         > label { color: inherit; }
       }
 
@@ -1110,10 +1117,10 @@ headerbar {
                                       transparent 0%)
                                       0 0 2 / 0 0 2px;
         color: currentColor;
-
+        background: none;
         &:disabled {
           color: gtkalpha(currentColor, $disabled_opacity);
-
+          background: none;
           > label { color: inherit; }
         }
       }
@@ -1169,13 +1176,13 @@ headerbar {
 
   separator.titlebutton { @extend %header_separator; }
 
-  // Reset buttons
-  .linked:not(.vertical):not(.path-bar) > button {
-    &, &:hover, &:active, &:checked, &:disabled {
-      border-radius: $md_radius;
-      border-style: solid;
-    }
-  }
+//  // Reset buttons
+//  .linked:not(.vertical):not(.path-bar) > button {
+//    &, &:hover, &:active, &:checked, &:disabled {
+//      border-radius: $md_radius;
+//      border-style: solid;
+//    }
+//  }
 
   // special case for path-bar and stack-switchers
 
@@ -1186,6 +1193,7 @@ headerbar {
 //      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.24);
 
     &:active, &:checked {
+      border-color: $borders_color;
       background-color: $primary_color;
       color: $dark_contrast_color;
 //      box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.18), inset 0 0 2px rgba(0, 0, 0, 0.32);
@@ -1281,8 +1289,8 @@ headerbar {
  ************/
 %pathbar_button,
 .path-bar button {
-  padding-left: ($medium_size - 24px) / 2;
-  padding-right: ($medium_size - 24px) / 2;
+  padding-left: ($medium_size - 16px) / 2;
+  padding-right: ($medium_size - 16px) / 2;
 
   label:not(:only-child) {
     &:first-child { margin-left: 4px; }
@@ -1470,7 +1478,7 @@ menu,
   }
 
   menuitem {
-    transition: $shortest_transition;
+    transition: background-color $shorter_duration $deceleration_curve;
     min-height: 20px;
     min-width: 40px;
     padding: 4px 8px;
@@ -1547,12 +1555,6 @@ menu,
 
 menuitem {
   accelerator { color: gtkalpha(currentColor, $hint_opacity); }
-
-  check,
-  radio {
-    &:dir(ltr) { margin-right: -8px; margin-left: -16px; }
-    &:dir(rtl) { margin-right: -16px; margin-left: -8px; }
-  }
 }
 
 .csd.popup { border-radius: 2px; }
@@ -1593,7 +1595,8 @@ popover.background {
    entry { @extend %entry.flat; }
    button.combo { @extend %combo_flat; }
    button:not(.suggested-action):not(.destructive-action) {
-//       @extend %button.flat;
+//       @extend %linked;
+       border: 1px solid darken($lighter_bg_color, 10%);
        box-shadow: none;
        &:hover {
            background-color: gtkalpha($primary_color, 0.8);
@@ -1618,11 +1621,9 @@ popover.background {
 
   &.menu button,
   button.model {
-//    @extend %button.flat;
-    @extend %linked;
-    margin: 0;
     min-height: 32px;
     padding: 0 6px;
+    margin-left: -1px;
     box-shadow: none;
   }
 
@@ -2133,7 +2134,7 @@ radio {
     min-height: 16px;
     min-width: 16px;
     margin: 0; // this is a workaround for a menu check/radio size allocation issue
-    padding: 0 0 0 16px;
+    padding: 0;
 
     &:dir(ltr) { margin-right: 8px; }
 

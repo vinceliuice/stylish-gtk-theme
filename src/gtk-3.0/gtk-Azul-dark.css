@@ -634,36 +634,38 @@ headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active,
 headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, popover.background.menu button,
-popover.background button.model, .gedit-search-slider button:dir(ltr), .gedit-search-slider button:dir(rtl), .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:disabled, .gedit-search-slider button:dir(ltr), .gedit-search-slider button:dir(rtl), .linked > combobox > box > button.combo:dir(ltr), .linked > combobox > box > button.combo:dir(rtl) {
   border-radius: 0;
-  -gtk-outline-radius: 3px; }
+  -gtk-outline-radius: 3px;
+  border-left-style: none;
+  border-right-style: none; }
 
 .linked:not(.vertical) > spinbutton:first-child:not(.vertical), notebook > stack:not(:only-child) revealer .linked:not(.vertical) > entry:first-child,
 notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton:first-child:not(.vertical), .linked:not(.vertical) >
 entry:first-child, .linked >
 button:first-child, combobox.linked button:nth-child(2):dir(rtl), .linked:not(.vertical) > combobox:first-child > box > button.combo, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:first-child,
 headerbar .linked:not(.vertical).path-bar > button:first-child, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, popover.background.menu button:first-child,
-popover.background button.model:first-child, .gedit-search-slider button:first-child:dir(ltr), .gedit-search-slider button:first-child:dir(rtl) {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:first-child, .gedit-search-slider button:first-child:dir(ltr), .gedit-search-slider button:first-child:dir(rtl) {
   border-top-left-radius: 3px;
-  border-bottom-left-radius: 3px; }
+  border-bottom-left-radius: 3px;
+  border-right-style: none;
+  border-left-style: solid; }
 .linked:not(.vertical) > spinbutton:last-child:not(.vertical), notebook > stack:not(:only-child) revealer .linked:not(.vertical) > entry:last-child,
 notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton:last-child:not(.vertical), .linked:not(.vertical) >
 entry:last-child, .linked >
 button:last-child, combobox.linked button:nth-child(2):dir(ltr), .linked:not(.vertical) > combobox:last-child > box > button.combo, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:last-child,
 headerbar .linked:not(.vertical).path-bar > button:last-child, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, popover.background.menu button:last-child,
-popover.background button.model:last-child, .gedit-search-slider button:last-child:dir(ltr), .gedit-search-slider button:last-child:dir(rtl) {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:last-child, .gedit-search-slider button:last-child:dir(ltr), .gedit-search-slider button:last-child:dir(rtl) {
   border-top-right-radius: 3px;
-  border-bottom-right-radius: 3px; }
+  border-bottom-right-radius: 3px;
+  border-right-style: solid;
+  border-left-style: none; }
 .linked:not(.vertical) > spinbutton:only-child:not(.vertical), notebook > stack:not(:only-child) revealer .linked:not(.vertical) > entry:only-child,
 notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton:only-child:not(.vertical), .linked:not(.vertical) >
 entry:only-child, .linked >
 button:only-child, .linked:not(.vertical) > combobox:only-child > box > button.combo, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:only-child,
 headerbar .linked:not(.vertical).path-bar > button:only-child, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child,
-headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, popover.background.menu button:only-child,
-popover.background button.model:only-child, .gedit-search-slider button:only-child:dir(ltr), .gedit-search-slider button:only-child:dir(rtl) {
+headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:only-child, .gedit-search-slider button:only-child:dir(ltr), .gedit-search-slider button:only-child:dir(rtl) {
   border-radius: 3px; }
 
 .linked.vertical > spinbutton:not(.vertical), notebook > stack:not(:only-child) revealer .linked.vertical > entry,
@@ -934,7 +936,8 @@ headerbar {
   headerbar button {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
     box-shadow: none;
-    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: #4f4f4f;
     background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0) 100%, transparent 0%), image(alpha(currentColor, 0));
     color: alpha(currentColor, 0.75); }
     .titlebar:not(headerbar) button:hover,
@@ -948,7 +951,7 @@ headerbar {
     .titlebar:not(headerbar) button:disabled,
     headerbar button:disabled {
       box-shadow: none;
-      background-color: transparent;
+      background-color: #4f4f4f;
       color: alpha(currentColor, 0.3); }
     .titlebar:not(headerbar) button:checked:disabled,
     headerbar button:checked:disabled {
@@ -956,24 +959,30 @@ headerbar {
       color: alpha(currentColor, 0.4); }
   .titlebar:not(headerbar) button:hover,
   headerbar button:hover {
-    color: #18B8FF;
-    background-color: alpha(#2196F3, 0.3); }
+    background-color: alpha(#FFFFFF, 0.2);
+    color: #FFFFFF; }
   .titlebar:not(headerbar) button:active,
   headerbar button:active {
     background-color: #2196F3;
-    color: #FFFFFF; }
+    color: #FFFFFF;
+    border-color: transparent; }
   .titlebar:not(headerbar) button:checked,
   headerbar button:checked {
     background-color: #2196F3;
-    color: #FFFFFF; }
-  .titlebar:not(headerbar) button.suggested-action:disabled, .titlebar:not(headerbar) button.destructive-action:disabled,
-  headerbar button.suggested-action:disabled,
-  headerbar button.destructive-action:disabled {
-    color: alpha(currentColor, 0.4); }
-    .titlebar:not(headerbar) button.suggested-action:disabled > label, .titlebar:not(headerbar) button.destructive-action:disabled > label,
-    headerbar button.suggested-action:disabled > label,
-    headerbar button.destructive-action:disabled > label {
-      color: inherit; }
+    color: #FFFFFF;
+    border-color: transparent; }
+  .titlebar:not(headerbar) button.suggested-action, .titlebar:not(headerbar) button.destructive-action,
+  headerbar button.suggested-action,
+  headerbar button.destructive-action {
+    border: none; }
+    .titlebar:not(headerbar) button.suggested-action:disabled, .titlebar:not(headerbar) button.destructive-action:disabled,
+    headerbar button.suggested-action:disabled,
+    headerbar button.destructive-action:disabled {
+      color: alpha(currentColor, 0.4); }
+      .titlebar:not(headerbar) button.suggested-action:disabled > label, .titlebar:not(headerbar) button.destructive-action:disabled > label,
+      headerbar button.suggested-action:disabled > label,
+      headerbar button.destructive-action:disabled > label {
+        color: inherit; }
   .selection-mode.titlebar:not(headerbar),
   headerbar.selection-mode {
     transition: background-color 0.00001s 0.3s;
@@ -987,10 +996,12 @@ headerbar {
     .selection-mode.titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action),
     headerbar.selection-mode button:not(.suggested-action):not(.destructive-action) {
       border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), currentColor 0%, transparent 0%) 0 0 0/0 0 0px;
-      color: currentColor; }
+      color: currentColor;
+      background: none; }
       .selection-mode.titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action):disabled,
       headerbar.selection-mode button:not(.suggested-action):not(.destructive-action):disabled {
-        color: alpha(currentColor, 0.4); }
+        color: alpha(currentColor, 0.4);
+        background: none; }
         .selection-mode.titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action):disabled > label,
         headerbar.selection-mode button:not(.suggested-action):not(.destructive-action):disabled > label {
           color: inherit; }
@@ -1006,10 +1017,12 @@ headerbar {
       .selection-mode.titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action):checked,
       headerbar.selection-mode button:not(.suggested-action):not(.destructive-action):checked {
         border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), currentColor 100%, transparent 0%) 0 0 2/0 0 2px;
-        color: currentColor; }
+        color: currentColor;
+        background: none; }
         .selection-mode.titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action):checked:disabled,
         headerbar.selection-mode button:not(.suggested-action):not(.destructive-action):checked:disabled {
-          color: alpha(currentColor, 0.4); }
+          color: alpha(currentColor, 0.4);
+          background: none; }
           .selection-mode.titlebar:not(headerbar) button:not(.suggested-action):not(.destructive-action):checked:disabled > label,
           headerbar.selection-mode button:not(.suggested-action):not(.destructive-action):checked:disabled > label {
             color: inherit; }
@@ -1056,14 +1069,6 @@ headerbar {
     margin-right: -2px;
     margin-top: -2px;
     box-shadow: inset 0 1px rgba(255, 255, 255, 0.1); }
-  .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > button, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > button:hover, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > button:active, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > button:checked, .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > button:disabled,
-  headerbar .linked:not(.vertical):not(.path-bar) > button,
-  headerbar .linked:not(.vertical):not(.path-bar) > button:hover,
-  headerbar .linked:not(.vertical):not(.path-bar) > button:active,
-  headerbar .linked:not(.vertical):not(.path-bar) > button:checked,
-  headerbar .linked:not(.vertical):not(.path-bar) > button:disabled {
-    border-radius: 3px;
-    border-style: solid; }
   .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button,
   headerbar .linked:not(.vertical).path-bar > button {
     border-image: none;
@@ -1071,6 +1076,7 @@ headerbar {
     .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
     headerbar .linked:not(.vertical).path-bar > button:active,
     headerbar .linked:not(.vertical).path-bar > button:checked {
+      border-color: rgba(0, 0, 0, 0.2);
       background-color: #2196F3;
       color: #FFFFFF; }
   .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button,
@@ -1129,8 +1135,8 @@ window.csd > .titlebar:not(headerbar) {
  ************/
 .caja-pathbar button,
 .path-bar button {
-  padding-left: 6px;
-  padding-right: 6px; }
+  padding-left: 10px;
+  padding-right: 10px; }
   .caja-pathbar button label:not(:only-child):first-child,
   .path-bar button label:not(:only-child):first-child {
     margin-left: 4px; }
@@ -1279,7 +1285,7 @@ menu,
   menu menuitem,
   .menu menuitem,
   .context-menu menuitem {
-    transition: all 0.1s cubic-bezier(0, 0, 0.2, 1);
+    transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1);
     min-height: 20px;
     min-width: 40px;
     padding: 4px 8px;
@@ -1357,14 +1363,6 @@ menu,
 
 menuitem accelerator {
   color: alpha(currentColor, 0.6); }
-menuitem check:dir(ltr),
-menuitem radio:dir(ltr) {
-  margin-right: -8px;
-  margin-left: -16px; }
-menuitem check:dir(rtl),
-menuitem radio:dir(rtl) {
-  margin-right: -16px;
-  margin-left: -8px; }
 
 .csd.popup {
   border-radius: 2px; }
@@ -1392,6 +1390,7 @@ popover.background {
     box-shadow: none;
     background-color: transparent; }
   popover.background button:not(.suggested-action):not(.destructive-action) {
+    border: 1px solid #2b2b2b;
     box-shadow: none; }
     popover.background button:not(.suggested-action):not(.destructive-action):hover {
       background-color: alpha(#2196F3, 0.8);
@@ -1410,9 +1409,9 @@ popover.background {
       border-color: #51adf6; }
   popover.background.menu button,
   popover.background button.model {
-    margin: 0;
     min-height: 32px;
     padding: 0 6px;
+    margin-left: -1px;
     box-shadow: none; }
   popover.background separator {
     margin: 4px 0; }
@@ -1776,7 +1775,7 @@ radio {
     min-height: 16px;
     min-width: 16px;
     margin: 0;
-    padding: 0 0 0 16px; }
+    padding: 0; }
     menu menuitem check:dir(ltr), menu menuitem
     radio:dir(ltr) {
       margin-right: 8px; }
@@ -2996,19 +2995,19 @@ decoration {
 textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, notebook > stack:not(:only-child) revealer entry selection,
 notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) selection,
 entry selection, modelbutton.flat:selected,
-.menuitem.button.flat:selected, row:selected, calendar:selected, .budgie-menu button:checked {
+.menuitem.button.flat:selected, row:selected, calendar:selected, window.background:not(.csd) > widget text:selected, .budgie-menu button:checked {
   background-color: #2196F3; }
   row:selected label, label:selected, .view:selected, iconview:selected, .view text selection, iconview text selection,
   textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, notebook > stack:not(:only-child) revealer entry selection,
   notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) selection,
   entry selection, modelbutton.flat:selected,
-  .menuitem.button.flat:selected, row:selected, calendar:selected, .budgie-menu button:checked {
+  .menuitem.button.flat:selected, row:selected, calendar:selected, window.background:not(.csd) > widget text:selected, .budgie-menu button:checked {
     color: #FFFFFF; }
     row:selected label:disabled, label:disabled:selected, .view:disabled:selected, iconview:disabled:selected, .view text selection:disabled, iconview text selection:disabled,
     textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, spinbutton:not(.vertical) selection:disabled, notebook > stack:not(:only-child) revealer entry selection:disabled,
     notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) selection:disabled,
     entry selection:disabled, modelbutton.flat:disabled:selected,
-    .menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected, .budgie-menu button:disabled:checked {
+    .menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected, window.background:not(.csd) > widget text:disabled:selected, .budgie-menu button:disabled:checked {
       color: rgba(255, 255, 255, 0.4); }
 
 .monospace {
@@ -3679,47 +3678,30 @@ window.background > box.vertical > scrolledwindow > widget toolbar {
   window.background > box.vertical > scrolledwindow > widget toolbar button {
     border-radius: 2px; }
 
-/***********
- * Firefox *
- ***********/
-window.background:not(.csd) > widget > checkbutton > check,
-menu menuitem check {
-  border-radius: 2px;
-  -gtk-outline-radius: 2px;
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > checkbutton > check:checked,
-menu menuitem check:checked {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > checkbutton > check:indeterminate,
-menu menuitem check:indeterminate {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.symbolic.png"))); }
-
-window.background:not(.csd) > widget > radiobutton > radio,
-menu menuitem radio {
-  border-image: none;
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > radiobutton > radio:checked,
-menu menuitem radio:checked {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > radiobutton > radio:indeterminate,
-menu menuitem radio:indeterminate {
-  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.symbolic.png"))); }
-
+/***************************
+ * Firefox and Thunderbird *
+ ***************************/
 window.background:not(.csd) > widget > separator {
-  color: rgba(0, 0, 0, 0.2); }
+  color: rgba(0, 0, 0, 0.1); }
 window.background:not(.csd) > widget > scrollbar {
   background-clip: border-box; }
 window.background:not(.csd) > widget > scrollbar,
 window.background:not(.csd) > widget > frame > border {
-  border-color: rgba(0, 0, 0, 0.2); }
+  border-color: rgba(0, 0, 0, 0.1); }
 window.background:not(.csd) > widget > entry,
 window.background:not(.csd) > widget > button > button {
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   box-shadow: none; }
 window.background:not(.csd) > widget > entry {
   min-height: 30px; }
   window.background:not(.csd) > widget > entry:focus {
+    border-color: #2196F3; }
+window.background:not(.csd) > widget > spinbutton:focus {
+  border-color: #2196F3; }
+window.background:not(.csd) > widget > spinbutton button {
+  border-color: rgba(0, 0, 0, 0.1); }
+  window.background:not(.csd) > widget > spinbutton button:active, window.background:not(.csd) > widget > spinbutton button:checked {
     border-color: #2196F3; }
 window.background:not(.csd) > widget > button > button {
   padding: 4px 8px;
@@ -3731,12 +3713,6 @@ window.background:not(.csd) > widget > button > button {
 window.background:not(.csd) > widget > window > menu,
 window.background:not(.csd) > widget > menu > menu {
   border: none; }
-window.background:not(.csd) > widget text:selected {
-  background-color: #2196F3; }
-  row:selected label, label:selected, window.background:not(.csd) > widget text:selected {
-    color: #FFFFFF; }
-    row:selected label:disabled, label:disabled:selected, window.background:not(.csd) > widget text:selected:disabled {
-      color: rgba(255, 255, 255, 0.4); }
 window.background:not(.csd) > widget window.background:not(.csd) > widget > menubar {
   color: rgba(255, 255, 255, 0.75); }
   window.background:not(.csd) > widget window.background:not(.csd) > widget > menubar:hover {
@@ -3744,12 +3720,49 @@ window.background:not(.csd) > widget window.background:not(.csd) > widget > menu
   window.background:not(.csd) > widget window.background:not(.csd) > widget > menubar:disabled {
     color: rgba(255, 255, 255, 0.3); }
 window.background:not(.csd) > widget window.background:not(.csd) > widget > frame {
-  color: rgba(0, 0, 0, 0.2); }
-window.background:not(.csd) > widget window.background:not(.csd) > window.background > menu > separator {
+  color: rgba(0, 0, 0, 0.1); }
+window.background:not(.csd) > widget window.background:not(.csd) > widget > checkbutton > check,
+window.background:not(.csd) > widget window.background:not(.csd) > widget > radiobutton > radio {
+  margin: 0;
+  padding: 0; }
+window.background:not(.csd) > widget window.background:not(.csd) > menu > separator {
   color: rgba(0, 0, 0, 0.2); }
 
 window.background > menu > menuitem > label:disabled {
   color: #868686; }
+
+window.background > menu > separator {
+  color: rgba(0, 0, 0, 0.2); }
+
+window.background:not(.csd) > widget > checkbutton > check,
+menu menuitem check {
+  min-height: 16px;
+  min-width: 16px;
+  border-radius: 2px;
+  padding-left: 4px;
+  -gtk-outline-radius: 2px;
+  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.symbolic.png"))); }
+window.background:not(.csd) > widget > checkbutton > check:checked,
+menu menuitem check:checked {
+  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.symbolic.png"))); }
+window.background:not(.csd) > widget > checkbutton > check:indeterminate,
+menu menuitem check:indeterminate {
+  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.symbolic.png"))); }
+
+window.background:not(.csd) > widget > radiobutton > radio,
+menu menuitem radio {
+  min-height: 16px;
+  min-width: 16px;
+  padding-left: 4px;
+  -gtk-icon-shadow: none;
+  border-image: none;
+  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.symbolic.png"))); }
+window.background:not(.csd) > widget > radiobutton > radio:checked,
+menu menuitem radio:checked {
+  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.symbolic.png"))); }
+window.background:not(.csd) > widget > radiobutton > radio:indeterminate,
+menu menuitem radio:indeterminate {
+  -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.symbolic.png"))); }
 
 /***********
  * Synapse *
