@@ -122,19 +122,20 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
 
   @if $t == normal {
     transition: $longer_transition, $shadow_transition;
+    border: 1px solid $borders_color;
+    border-radius: $md_radius;
     border-image: none;
-    box-shadow: $z-depth-1;
+    box-shadow: none;
     background-color: if($fc != $primary_color, $fc, $base_color);
     color: if($fc != $primary_color, $inversed_fg_color, $fg_color);
   }
 
   @if $t == focus {
+    border-color: $primary_color;
     border-image: none;
-    box-shadow: $z-depth-2;
   }
 
   @if $t == disabled {
-    box-shadow: $z-depth-1;
     background-color: $alt_base_color;
     color: $disabled_fg_color;
   }
@@ -181,7 +182,8 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
 
   @if $t == normal {
     transition: $longer_transition, $shadow_transition;
-    box-shadow: $z-depth-1;
+    border: 1px solid $borders_color;
+    box-shadow: none;
     background-color: $c;
     background-image: radial-gradient(circle farthest-corner at center,
                                       $zero_track_color 100%,
@@ -191,7 +193,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == hover {
-    box-shadow: $z-depth-2;
+    background-color: rgba(black, 0.05);
     background-image: radial-gradient(circle farthest-corner at center,
                                       $zero_track_color 100%,
                                       transparent 0%),
@@ -202,7 +204,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == active {
     transition: $longer_transition, $shadow_transition, background-image 0;
     animation: ripple_effect $longer_duration $deceleration_curve forwards;
-    box-shadow: $z-depth-2;
+    border-color: darken($borders_color, 5%);
     color: $fg_color;
   }
 

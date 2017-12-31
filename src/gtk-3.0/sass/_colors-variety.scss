@@ -43,14 +43,13 @@ $disabled_tertiary_fg_color: scale-alpha($tertiary_fg_color, $disabled_opacity);
 $disabled_inversed_fg_color: scale-alpha($inversed_fg_color, $disabled_opacity);
 $disabled_secondary_inversed_fg_color: scale-alpha($secondary_inversed_fg_color, $disabled_opacity);
 $disabled_tertiary_inversed_fg_color: scale-alpha($tertiary_inversed_fg_color, $disabled_opacity);
-$disabled_menu_fg_color: if($headerbar =='light' and $variant =='light', rgba(#000, 0.5), rgba(#fff, 0.5));
 
 // Background colors
 $bg_color: if($variant =='dark', if($color == 'tang', #333333, #333333), #F5F5F5);
 $base_color: if($variant =='dark', if($color == 'tang', #404040, #404040), #FFFFFF);
 $alt_base_color: mix($base_color, $bg_color, 50%);
 
-$lighter_bg_color: if($variant =='dark', if($color == 'tang', #444444, #444444), #FAFAFA);
+$lighter_bg_color: if($variant =='dark', if($color == 'tang', #444444, #444444), #ffffff);
 $darker_bg_color: if($variant =='dark', if($color == 'tang', #303030, #303030), #EEEEEE);
 $darker_fg_color: if($variant =='light', if($color == 'tang', #222222, #222222), #DDDDDD);
 
@@ -68,6 +67,10 @@ $secondary_alt_primary_color: if($color == 'azul', #18B8FF, #1bc674);
 $alt_primary_color: if($color == 'tang', #ff6767, $secondary_alt_primary_color);
 $secondary_accent_color: if($color == 'azul', #18B8FF, #1bc674);
 $accent_color: if($color == 'tang', #ff6767, $secondary_accent_color);
+
+$menu_bg_color: if($headerbar =='light' and $variant =='light', #FFFFFF, $headerbar_bg_color);
+$menu_fg_color: $headerbar_fg_color;
+$disabled_menu_fg_color: if($headerbar =='light' and $variant =='light', rgba(#000, 0.5), rgba(#fff, 0.5));
 
 $tab_color: $primary_color;
 $secondary_titlebar_color: $primary_color;

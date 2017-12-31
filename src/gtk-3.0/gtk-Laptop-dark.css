@@ -180,19 +180,20 @@ entry {
   padding: 0 8px;
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
   border-image: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: none;
   background-color: #404040;
   color: #FFFFFF; }
   spinbutton:focus:not(.vertical), notebook > stack:not(:only-child) revealer entry:focus,
   notebook > stack:not(:only-child) revealer spinbutton:focus:not(.vertical),
   entry:focus {
-    border-image: none;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
+    border-color: #787878;
+    border-image: none; }
   spinbutton:disabled:not(.vertical), notebook > stack:not(:only-child) revealer entry:disabled,
   notebook > stack:not(:only-child) revealer spinbutton:disabled:not(.vertical),
   entry:disabled {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     background-color: #3a3a3a;
     color: rgba(255, 255, 255, 0.4); }
   spinbutton.flat:not(.vertical), popover.background entry, notebook > stack:not(:only-child) entry,
@@ -268,17 +269,18 @@ entry {
   notebook > stack:not(:only-child) revealer spinbutton.error:not(.vertical),
   entry.error {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
     border-image: none;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: none;
     background-color: #DD2C00;
     color: #FFFFFF; }
     spinbutton.error:focus:not(.vertical), notebook > stack:not(:only-child) revealer entry.error:focus,
     entry.error:focus {
-      border-image: none;
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
+      border-color: #787878;
+      border-image: none; }
     spinbutton.error:disabled:not(.vertical), notebook > stack:not(:only-child) revealer entry.error:disabled,
     entry.error:disabled {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       background-color: #3a3a3a;
       color: rgba(255, 255, 255, 0.4); }
     spinbutton.error.flat:not(.vertical), popover.background entry.error, notebook > stack:not(:only-child) entry.error,
@@ -304,17 +306,18 @@ entry {
   notebook > stack:not(:only-child) revealer spinbutton.warning:not(.vertical),
   entry.warning {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
     border-image: none;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: none;
     background-color: #FF6D00;
     color: #FFFFFF; }
     spinbutton.warning:focus:not(.vertical), notebook > stack:not(:only-child) revealer entry.warning:focus,
     entry.warning:focus {
-      border-image: none;
-      box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
+      border-color: #787878;
+      border-image: none; }
     spinbutton.warning:disabled:not(.vertical), notebook > stack:not(:only-child) revealer entry.warning:disabled,
     entry.warning:disabled {
-      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
       background-color: #3a3a3a;
       color: rgba(255, 255, 255, 0.4); }
     spinbutton.warning.flat:not(.vertical), popover.background entry.warning, notebook > stack:not(:only-child) entry.warning,
@@ -377,18 +380,19 @@ button {
   border-radius: 3px;
   font-weight: 500;
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: none;
   background-color: #444444;
   background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0) 100%, transparent 0%), image(alpha(currentColor, 0));
   color: rgba(255, 255, 255, 0.75); }
   button:hover {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+    background-color: rgba(0, 0, 0, 0.05);
     background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0) 100%, transparent 0%), image(alpha(currentColor, 0));
     color: #FFFFFF; }
   button:active {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0;
     animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+    border-color: rgba(0, 0, 0, 0.2);
     color: #FFFFFF; }
   button:disabled {
     box-shadow: none;
@@ -501,7 +505,7 @@ button.suggested-action {
   color: #FFFFFF;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   button.suggested-action:hover {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+    background-color: rgba(0, 0, 0, 0.05);
     background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0) 100%, transparent 0%), image(alpha(currentColor, 0));
     color: #FFFFFF;
     background-color: #5cb860;
@@ -539,7 +543,7 @@ button.destructive-action {
   color: #FFFFFF;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   button.destructive-action:hover {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+    background-color: rgba(0, 0, 0, 0.05);
     background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0) 100%, transparent 0%), image(alpha(currentColor, 0));
     color: #FFFFFF;
     background-color: #ff6c6c;
@@ -1647,8 +1651,10 @@ switch {
       color: rgba(255, 255, 255, 0.4); }
   switch slider {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
     border-image: none;
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    box-shadow: none;
     background-color: #404040;
     color: #FFFFFF;
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1), margin 0;
@@ -1658,15 +1664,14 @@ switch {
     border-radius: 100px;
     -gtk-outline-radius: 100px; }
   switch:hover slider {
-    border-image: none;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
+    border-color: #787878;
+    border-image: none; }
   switch:checked slider {
     animation: needs_attention 0.3s cubic-bezier(0, 0, 0.2, 1);
     margin: -4px -4px -4px 0;
     background-color: #FAFAFA;
     color: #FFFFFF; }
   switch:disabled slider {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     background-color: #3a3a3a;
     color: rgba(255, 255, 255, 0.4); }
   switch:checked:disabled slider {
@@ -2385,12 +2390,13 @@ levelbar trough {
   padding: 2px;
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
   border-image: none;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  box-shadow: none;
   background-color: #404040;
   color: #FFFFFF; }
   levelbar trough:disabled {
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     background-color: #3a3a3a;
     color: rgba(255, 255, 255, 0.4); }
 levelbar.horizontal.discrete block {

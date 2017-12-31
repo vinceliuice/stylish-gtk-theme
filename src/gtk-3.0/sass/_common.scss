@@ -1468,7 +1468,7 @@ menu,
   margin: 4px;
   padding: 2px 0px;
   box-shadow: none;
-  background-color: $headerbar_bg_color;
+  background-color: $menu_bg_color;
   border: none;
 
   .csd & {
@@ -1483,7 +1483,7 @@ menu,
     padding: 4px 8px;
     font: initial;
     text-shadow: none;
-    color: $headerbar_fg_color;
+    color: $menu_fg_color;
 
     &:hover {
       transition: none;

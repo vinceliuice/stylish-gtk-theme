@@ -265,11 +265,11 @@ entry {
     &.flat {
       border-radius: 0;
 
-      @include entry(flat-normal);
+      @include entry(normal);
 
-      &:focus { @include entry(flat-focus); }
+      &:focus { @include entry(focus); }
 
-      &:disabled { @include entry(flat-disabled); }
+      &:disabled { @include entry(disabled); }
     }
 
     image { // icons inside the entry
@@ -309,11 +309,11 @@ entry {
         &:disabled { @include entry(disabled, $e_color); }
 
         &.flat {
-          @include entry(flat-normal, $e_color);
+          @include entry(normal, $e_color);
 
-          &:focus { @include entry(flat-focus, $e_color); }
+          &:focus { @include entry(focus, $e_color); }
 
-          &:disabled { @include entry(flat-disabled, $e_color); }
+          &:disabled { @include entry(disabled, $e_color); }
         }
       }
     }
@@ -465,20 +465,20 @@ button {
 
     .linked.vertical > & { @extend %linked_vertical; }
 
-    .linked > &.flat,
-    .linked.vertical > &.flat {
-      border-radius: $md_radius;
-
-      &.image-button {
-        border-radius: $md_radius;
-        -gtk-outline-radius: $md_radius;
-      }
-
-      &.text-button.image-button {
-        border-radius: $md_radius;
-        -gtk-outline-radius: $md_radius;
-      }
-    }
+//    .linked > &.flat,
+//    .linked.vertical > &.flat {
+//      border-radius: $md_radius;
+//
+//      &.image-button {
+//        border-radius: $md_radius;
+//        -gtk-outline-radius: $md_radius;
+//      }
+//
+//      &.text-button.image-button {
+//        border-radius: $md_radius;
+//        -gtk-outline-radius: $md_radius;
+//      }
+//    }
 
     &:drop(active) {
       // box-shadow: inset 0 0 0 2px $accent_color;
@@ -509,7 +509,7 @@ button {
     &.#{$b_type} {
       background-color: $b_color;
       color: $inversed_fg_color;
-      box-shadow: $z-depth-1;
+      box-shadow: none;
 //       @include button(normal, $b_color, $inversed_fg_color);
 
        &:hover { @include button(hover, $b_color, $inversed_fg_color);
@@ -627,13 +627,14 @@ button {
 
 // More inline toolbar buttons
 toolbar.inline-toolbar toolbutton {
-  // > button.flat { @extend %linked_middle; }
+   border: 1px solid $borders_color;
+   > button.flat { @extend %linked_middle; }
 
-  // &:first-child > button.flat { @extend %linked:first-child; }
+   &:first-child > button.flat { @extend %linked:first-child; }
 
-  // &:last-child > button.flat { @extend %linked:last-child; }
+   &:last-child > button.flat { @extend %linked:last-child; }
 
-  // &:only-child > button.flat { @extend %linked:only-child; }
+   &:only-child > button.flat { @extend %linked:only-child; }
 }
 
 %linked_middle {
@@ -662,12 +663,15 @@ toolbar.inline-toolbar toolbutton {
 
   &:only-child {
     border-radius: $md_radius;
+    border-style: solid;
   }
 }
 
 %linked_vertical_middle {
   border-radius: 0;
-  -gtk-outline-radius: $md_radius
+  -gtk-outline-radius: $md_radius;
+  border-bottom-style: none;
+  border-top-style: none;
 }
 
 %linked_vertical{
@@ -676,15 +680,20 @@ toolbar.inline-toolbar toolbutton {
   &:first-child {
     border-top-left-radius: $md_radius;
     border-top-right-radius: $md_radius;
+    border-bottom-style: none;
+    border-top-style: solid;
   }
 
   &:last-child {
     border-bottom-left-radius: $md_radius;
     border-bottom-right-radius: $md_radius;
+    border-bottom-style: solid;
+    border-top-style: none;
   }
 
   &:only-child {
     border-radius: $md_radius;
+    border-style: solid;
   }
 }
 
@@ -774,6 +783,7 @@ spinbutton {
       min-width: $large_size - 8px * 2;
       // reset all the other props since the spinbutton node is styled here
       margin: 0;
+      border-style: none;
       border-image: none;
       border-radius: 0;
       box-shadow: none;
@@ -837,6 +847,7 @@ spinbutton {
       min-height: $medium_size;
       min-width: $large_size;
       padding: 0;
+      border-radius: 0;
     }
 
     button {
@@ -846,9 +857,9 @@ spinbutton {
 
       @extend %simple_flat_button;
 
-      &.up { border-radius: 2px 2px 0 0; }
+      &.up { border-radius: 2px 2px 0 0; border-bottom-style: none; }
 
-      &.down { border-radius: 0 0 2px 2px; }
+      &.down { border-radius: 0 0 2px 2px; border-top-style: none; }
     }
   }
 
@@ -934,16 +945,11 @@ combobox {
   background-image: none;
   font-weight: inherit;
 
-  @include entry(flat-normal);
+  @include entry(normal);
 
-  &:hover { box-shadow: inset 0 -2px $track_color; }
+  &:hover { @include button(hover); }
 
-  &:checked {
-    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
-                                  $primary_color 100%,
-                                  transparent 0%)
-                                  0 0 2 / 0 0 2px;
-  }
+  &:checked { @include button(active); }
 
   &:disabled { color: $disabled_fg_color; }
 }
@@ -957,7 +963,7 @@ toolbar {
   padding: $container_padding / 2;
   background-color: $bg_color;
 
-  button { @extend %button_basic.flat; }
+  button { @extend %button_basic.flat; border-color: transparent; }
 
   // on OSD
   .osd & { background-color: transparent; }
@@ -1003,7 +1009,7 @@ toolbar {
 .inline-toolbar {
   padding: $container_padding;
   border-style: solid;
-  border-width: 0 1px 1px;
+  border-width: 1px;
   border-color: $borders_color;
   background-color: $alt_base_color;
 }
@@ -1469,7 +1475,7 @@ menu,
   margin: 4px;
   padding: 2px 0px;
   box-shadow: none;
-  background-color: $headerbar_bg_color;
+  background-color: $menu_bg_color;
   border: none;
 
   .csd & {
@@ -1484,7 +1490,7 @@ menu,
     padding: 4px 8px;
     font: initial;
     text-shadow: none;
-    color: $headerbar_fg_color;
+    color: $menu_fg_color;
 
     &:hover {
       transition: none;
@@ -1521,17 +1527,17 @@ menu,
     min-width: 16px;
     padding: 4px;
     border-radius: 0;
-    background-color: $headerbar_bg_color;
+    background-color: $menu_bg_color;
     color: $secondary_headerbar_fg_color;
 
     &.top {
-      margin-top: -4px;
+      margin-top: -6px;
       border-bottom: 1px solid $borders_color;
       -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
     }
 
     &.bottom {
-      margin-bottom: -4px;
+      margin-bottom: -6px;
       border-top: 1px solid $borders_color;
       -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
     }
@@ -1582,7 +1588,6 @@ popover.background {
   > .view,
   > toolbar {
     border-style: none;
-    box-shadow: none;
     background-color: transparent;
   }
 
@@ -1592,47 +1597,20 @@ popover.background {
     &.osd { @extend %osd; }
   }
 
-   entry { @extend %entry.flat; }
-   button.combo { @extend %combo_flat; }
-   button:not(.suggested-action):not(.destructive-action) {
-//       @extend %linked;
-       border: 1px solid darken($lighter_bg_color, 10%);
-       box-shadow: none;
-       &:hover {
-           background-color: gtkalpha($primary_color, 0.8);
-           color: $inversed_fg_color;
-           border-color: gtkalpha($primary_color, 0.8);
-       }
-       &:checked {
-           background-color: $primary_color;
-           color: $inversed_fg_color;
-           border-color: $primary_color;
-       }
-       &:disabled {
-           background-color: $lighter_bg_color;
-           color: $disabled_fg_color;
-       }
-       &:checked:disabled {
-           background-color: lighten($primary_color, 10%);
-           color: $inversed_fg_color;
-           border-color: lighten($primary_color, 10%);
-       }
-    }
-
-  &.menu button,
-  button.model {
-    min-height: 32px;
-    padding: 0 6px;
-    margin-left: -1px;
-    box-shadow: none;
-  }
-
   separator { margin: 4px 0; }
 
   list separator { margin: 0; }
 }
 
-
+//touch selection handlebars for the Popover.osd above
+cursor-handle {
+  background-color: transparent;
+  background-image: none;
+  box-shadow: none;
+  border-style: none;
+  &.top { -gtk-icon-source: -gtk-icontheme('selection-start-symbolic'); }
+  &.bottom { -gtk-icon-source: -gtk-icontheme('selection-end-symbolic'); }
+}
 
 /*************
  * Notebooks *
