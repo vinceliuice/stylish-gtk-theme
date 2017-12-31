@@ -1301,7 +1301,7 @@ menu,
     menu menuitem:disabled,
     .menu menuitem:disabled,
     .context-menu menuitem:disabled {
-      color: #868686; }
+      color: rgba(255, 255, 255, 0.5); }
     menu menuitem arrow,
     .menu menuitem arrow,
     .context-menu menuitem arrow {
@@ -3697,12 +3697,6 @@ window.background:not(.csd) > widget > entry {
   min-height: 30px; }
   window.background:not(.csd) > widget > entry:focus {
     border-color: #FF6C42; }
-window.background:not(.csd) > widget > spinbutton:focus {
-  border-color: #FF6C42; }
-window.background:not(.csd) > widget > spinbutton button {
-  border-color: rgba(0, 0, 0, 0.1); }
-  window.background:not(.csd) > widget > spinbutton button:active, window.background:not(.csd) > widget > spinbutton button:checked {
-    border-color: #FF6C42; }
 window.background:not(.csd) > widget > button > button {
   padding: 4px 8px;
   background-size: auto; }
@@ -3729,7 +3723,7 @@ window.background:not(.csd) > widget window.background:not(.csd) > menu > separa
   color: rgba(0, 0, 0, 0.1); }
 
 window.background > menu > menuitem > label:disabled {
-  color: #868686; }
+  color: rgba(255, 255, 255, 0.5); }
 
 window.background > menu > separator {
   color: rgba(0, 0, 0, 0.1); }
