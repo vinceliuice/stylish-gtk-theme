@@ -1304,7 +1304,7 @@ headerbar {
   headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked {
     background-color: #2196F3;
     color: #FFFFFF;
-    border-color: #2196F3; }
+    border-color: rgba(0, 0, 0, 0.15); }
 
 .titlebar:not(headerbar) separator.titlebutton,
 headerbar separator.titlebutton {

@@ -1243,7 +1243,11 @@ headerbar {
       }
 
       &:active,
-      &:checked { background-color: $primary_color; color: $dark_contrast_color; border-color: $primary_color; }
+      &:checked {
+          background-color: $primary_color;
+          color: $dark_contrast_color;
+          border-color: if($variant == 'light' and $headerbar =='light', $primary_color, $borders_color);
+        }
 
       &, &:hover, &:active, &:checked, &:disabled { @extend %linked; }
 
