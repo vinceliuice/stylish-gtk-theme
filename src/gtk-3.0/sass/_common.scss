@@ -969,6 +969,7 @@ combobox {
   // the combo is a composite widget so the way we do button linking doesn't
   // work, special case needed. See
   // https://bugzilla.gnome.org/show_bug.cgi?id=733979
+  border-style: solid;
   &:dir(ltr),
   &:dir(rtl) { @extend %linked_middle; } // specificity bump
 }
@@ -977,12 +978,12 @@ combobox {
 .linked:not(.vertical) > combobox:last-child > box > button.combo { @extend %linked:last-child; }
 .linked:not(.vertical) > combobox:only-child > box > button.combo { @extend %linked:only-child; }
 
-.linked.vertical > combobox > box > button.combo { @extend %linked_vertical_middle; }
+.linked.vertical > combobox > box > button.combo { border-style: solid; @extend %linked_vertical_middle; }
 .linked.vertical > combobox:first-child > box > button.combo { @extend %linked_vertical:first-child; }
 .linked.vertical > combobox:last-child > box > button.combo { @extend %linked_vertical:last-child; }
 .linked.vertical > combobox:only-child > box > button.combo { @extend %linked_vertical:only-child; }
 
-.linked > button { border: 1px solid $borders_color; }
+.linked > button { border-style: solid; }
 
 %combo_flat {
   border-radius: 0;

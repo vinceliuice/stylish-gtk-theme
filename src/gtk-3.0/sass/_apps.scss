@@ -288,6 +288,136 @@ frame.gedit-map-frame > border {
   border: 1px solid $borders_color;
 }
 
+//
+//  * Gnome-Logs *
+//
+
+// titles inside the button!?
+headerbar > button.flat.popup.title-menu-button.toggle {
+  border-radius: $md_radius;
+  -gtk-outline-radius: $md_radius;
+
+  > grid {
+    .title {
+      margin: rem(-2.7px) 0;
+      padding: rem(1.3px) rem(13.3px) 0;
+      font-size: 90%;
+    }
+    .subtitle {
+      margin: rem(-2.7px) 0;
+      padding: 0 rem(13.3px) rem(1.3px);
+      font-size: 80%;
+    }
+  }
+}
+
+window.background > box.vertical box.horizontal {
+  list.categories { // side-pane
+    background-color: $bg_color;
+    border: none;
+    color: $fg_color;
+
+    row.activatable.category { // use side-bar styling
+      // paddings in row were hard-coded with crazy large values...
+      // padding: rem(2.7px) rem(8px) rem(4px);
+      color: $fg_color;
+      background-color: transparent;
+      font-weight: 500;
+      &:hover {
+          color: $fg_color;
+          background-color: rgba($fg_color, 0.08);
+        }
+
+      &:selected {
+        color: $dark_contrast_color;
+        background-color: $primary_color;
+
+        label { color: $dark_contrast_color; }
+      }
+
+      > label {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+  }
+
+  > box.vertical > scrolledwindow > viewport.frame > list { // right-pane
+    > separator {
+      background-color: $borders_color; // hide single-line separators
+
+      &.compressed-rows-group-separator { // use opaque colour
+        background-color: $borders_color;
+        background-image : image($borders_color);
+      }
+    }
+
+    // > 3.25.90
+    row.event.activatable {
+      color: $fg_color;
+      transition-duration: 0.1s;
+      &:hover,
+      &:active { color: $fg_color; }
+
+      label.compressed-entries-label { // hard-coded background-color?
+        background-image: image($suggested_color);
+        color: $dark_contrast_color;
+        font-weight: 700;
+      }
+
+      &.compressed-row {
+        background-image: image(darken($bg_color, 3%));
+        color: darken($fg_color, 20%);
+        transition-property: opacity, // exclude background-color
+                             border-image,
+                             background-image,
+                             box-shadow;
+        &:hover {
+          background-image: image(mix($fg_color, $bg_color, 5%));
+          color: $fg_color;
+        }
+        &:active {
+          &, &:focus {
+            background-image: image(mix($fg_color,
+                                        $bg_color, 10%));
+            color: $fg_color;
+            animation: none;
+          }
+        }
+
+        &.popover-activated-row {
+          background-image: image($primary_color);
+          color: $dark_contrast_color;
+        }
+
+        &-header {
+          background-image: image($base_color); // stop highlighting
+          background-color: $base_color; // stop highlighting
+          color: $primary_color;
+          &:hover {
+            background-image: image(mix($primary_color,
+                                        $base_color, 5%));
+          }
+          &:active {
+            &, &:focus {
+              background-image: image(mix($primary_color,
+                                          $base_color, 10%));
+              color: $primary_color;
+              animation: none;
+            }
+          }
+
+          label.compressed-entries-label {
+            background-image: image($primary_color);
+            color: $dark_contrast_color;
+            transition-duration: 0s;
+          }
+        }
+      }
+    }
+  }
+}
+
 
 /***********
  * Builder *
