@@ -45,30 +45,41 @@ $disabled_secondary_inversed_fg_color: scale-alpha($secondary_inversed_fg_color,
 $disabled_tertiary_inversed_fg_color: scale-alpha($tertiary_inversed_fg_color, $disabled_opacity);
 
 // Background colors
-$bg_color: if($variant == 'light', #F5F5F5, #333333);
-$base_color: if($variant == 'light', #FFFFFF, #404040);
+$bg_color: if($variant =='dark', #333333, #F5F5F5);
+$base_color: if($variant =='dark', #404040, #FFFFFF);
 $alt_base_color: mix($base_color, $bg_color, 50%);
-$lighter_bg_color: if($variant =='light', #FAFAFA, #444444);
-$darker_bg_color: if($variant =='light', #EEEEEE, #303030);
-$darker_fg_color: if($variant =='light', #202020, #DDDDDD);
-$progress_color: if($variant =='light', #444444, #EEEEEE);
-$tab_color: if($variant =='light', #505050, #FFFFFF);
-$secondary_titlebar_color: #333333;
+
+$lighter_bg_color: if($variant =='dark', #444444, #ffffff);
+$darker_bg_color: if($variant =='dark', #303030, #EEEEEE);
+$darker_fg_color: if($variant =='light', #222222, #DDDDDD);
 
 // Headerbar colors
-$headerbar_bg_color: if($headerbar =='dark', #444444, #EEEEEE);
+
+$headerbar_bg_color: #444444;
+
+@if $variant =='light' and $headerbar =='dark' { $headerbar_bg_color: #444444; }
+@if $variant =='light' and $headerbar =='light' { $headerbar_bg_color: #EEEEEE; }
+@if $variant =='dark' { $headerbar_bg_color: #424242; }
+
 $headerbar_fg_color: if($headerbar =='dark', $dark_contrast_color, $fg_color);
 $secondary_headerbar_fg_color: if($headerbar =='dark', $secondary_inversed_fg_color, $secondary_fg_color);
 $disabled_headerbar_fg_color: if($headerbar =='dark', $disabled_secondary_inversed_fg_color, $disabled_fg_color);
 
-$primary_color: if($headerbar =='dark', #787878, #686868);
-$alt_primary_color: if($headerbar =='dark', #666666, #464646);
-$accent_color: if($variant =='light', #666666, #FAFAFA);
+$primary_color: #787878;
+$alt_primary_color: #666666;
+$accent_color: if($variant =='light', #666666, #fafafa);
 
-$menu_bg_color: if($headerbar =='light' and $variant =='light', #FFFFFF, $headerbar_bg_color);
-$menu_fg_color: $headerbar_fg_color;
-$disabled_menu_fg_color: if($headerbar =='light' and $variant =='light', rgba(#000, 0.5), rgba(#fff, 0.5));
+@if $color =='tang' { $primary_color: #FF6C42; $alt_primary_color: #ff6767; $accent_color: #ff6767; }
+@if $color =='azul' { $primary_color: #2196F3; $alt_primary_color: #18B8FF; $accent_color: #18B8FF; }
+@if $color =='jade' { $primary_color: #2eb37b; $alt_primary_color: #1bc674; $accent_color: #1bc674; }
+@if $color =='white' { $primary_color: #686868; $alt_primary_color: #666666; $accent_color: if($variant =='light', #666666, #fafafa); }
 
+$menu_bg_color: $base_color;
+$menu_fg_color: $fg_color;
+$disabled_menu_fg_color: if($variant =='light', rgba(#000, 0.5), rgba(#fff, 0.5));
+
+$tab_color: $primary_color;
+$secondary_titlebar_color: $primary_color;
 $topbar_color: $headerbar_bg_color;
 $topbar_fg_color: $headerbar_fg_color;
 
@@ -77,13 +88,16 @@ $track_color: gtkalpha(currentColor, $lower_opacity);
 $semi_track_color: gtkalpha(currentColor, $lower_opacity / 2);
 $zero_track_color: gtkalpha(currentColor, 0);
 $row_track_color: gtkalpha(currentColor, 0.05);
+
 $borders_color: if($variant == 'light', scale-alpha(#000000, 0.15), scale-alpha(#000000, 0.2));
-$highlight_color: if($variant == 'light', scale-alpha(#FFFFFF, 0.4), scale-alpha(#FFFFFF, 0.1));
+$header_borders_color: $borders_color;
+
+$highlight_color: if($variant == 'light', scale-alpha(#FFFFFF, 0.4), scale-alpha(#FFFFFF, 0.3));
 $secondary_highlight_color: scale-alpha(#FFFFFF, 0.1);
 
 $placeholder_text_color: mix($fg_color, $base_color, percentage($hint_opacity));
 
-$link_color: if($variant =='light', $primary_color, #FAFAFA);
+$link_color: $primary_color;
 $link_visited_color: #E040FB;
 
 $warning_color: #FF6D00;

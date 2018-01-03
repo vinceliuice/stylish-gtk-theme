@@ -193,7 +193,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == hover {
-    background-color: rgba(black, 0.05);
+    background-color: if($variant == 'light', rgba(black, 0.05), rgba(white, 0.16));
     background-image: radial-gradient(circle farthest-corner at center,
                                       $zero_track_color 100%,
                                       transparent 0%),
@@ -217,11 +217,13 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == checked {
     background-color: $primary_color;
     color: $inversed_fg_color;
+    border-color: $primary_color;
   }
 
   @if $t == checked-disabled {
     background-color: $track_color;
     color: scale-alpha($primary_color, $disabled_opacity);
+    border-color: scale-alpha($primary_color, $disabled_opacity);
   }
 
   @if $t == flat-normal {
@@ -260,11 +262,13 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == flat-checked {
     background-color: $track_color;
     color: currentColor;
+    border-color: $borders_color;
   }
 
   @if $t == flat-checked-disabled {
     background-color: $track_color;
     color: gtkalpha(currentColor, $disabled_opacity);
+    border-color: gtkalpha($borders_color, $disabled_opacity);
   }
 }
 
@@ -284,7 +288,6 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == header-normal {
     transition: $longer_transition;
     box-shadow: none;
-    border: 1px solid $borders_color;
     background-color: lighten($headerbar_bg_color, 5%);
     background-image: radial-gradient(circle farthest-corner at center,
                                       $zero_track_color 100%,
@@ -294,6 +297,10 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == header-hover {
+    background-image: radial-gradient(circle farthest-corner at center,
+                                      $zero_track_color 100%,
+                                      transparent 0%),
+                      image($zero_track_color);
     box-shadow: none;
   }
 
