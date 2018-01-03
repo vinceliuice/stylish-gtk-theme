@@ -204,8 +204,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == active {
     transition: $longer_transition, $shadow_transition, background-image 0;
     animation: ripple_effect $longer_duration $deceleration_curve forwards;
-    border-color: darken($borders_color, 5%);
-    color: $fg_color;
+
   }
 
   @if $t == disabled {
@@ -322,6 +321,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == header-checked {
     background-color: $primary_color;
     color: $inversed_fg_color;
+    border-color: $primary_color;
   }
 
   @if $t == header-checked-disabled {

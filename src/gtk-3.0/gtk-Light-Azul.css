@@ -424,9 +424,7 @@ button {
   .path-bar button:active,
   button:active {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0;
-    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
-    border-color: rgba(0, 0, 0, 0.15);
-    color: rgba(0, 0, 0, 0.8); }
+    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
   :not(headerbar) .caja-pathbar button:disabled, .caja-pathbar :not(headerbar) button:disabled, :not(headerbar)
   .path-bar button:disabled,
   button:disabled {
@@ -998,12 +996,6 @@ combobox #gtk-combobox-popup-menu {
 combobox:drop(active) {
   box-shadow: none; }
 
-.linked > combobox > box > button.combo {
-  border: 1px solid rgba(0, 0, 0, 0.15); }
-
-.linked.vertical > combobox > box > button.combo {
-  border: 1px solid rgba(0, 0, 0, 0.15); }
-
 .linked > button {
   border: 1px solid rgba(0, 0, 0, 0.15); }
 
@@ -1024,9 +1016,7 @@ notebook > stack:not(:only-child) button.combo, #login_window #user_combobox but
     color: rgba(0, 0, 0, 0.8); }
   notebook > stack:not(:only-child) button.combo:checked, #login_window #user_combobox button:checked {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1), background-image 0;
-    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
-    border-color: rgba(0, 0, 0, 0.15);
-    color: rgba(0, 0, 0, 0.8); }
+    animation: ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards; }
   notebook > stack:not(:only-child) button.combo:disabled, #login_window #user_combobox button:disabled {
     color: rgba(0, 0, 0, 0.32); }
 
@@ -1150,7 +1140,8 @@ headerbar {
     headerbar .linked:not(.vertical).path-bar > button:checked,
     headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked {
       background-color: #2196F3;
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      border-color: #2196F3; }
     .titlebar:not(headerbar) button:checked:disabled,
     headerbar button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked:disabled,
     .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:disabled,
@@ -1297,25 +1288,16 @@ headerbar {
   headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:hover {
     background-color: rgba(0, 0, 0, 0.05);
     color: rgba(0, 0, 0, 0.8); }
-  .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active,
+  .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
   .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:active,
-  headerbar .linked:not(.vertical).path-bar > button:active,
-  headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active {
-    background-color: #2196F3;
-    color: #FFFFFF;
-    border-color: rgba(0, 0, 0, 0.15); }
-  .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
   .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked,
+  headerbar .linked:not(.vertical).path-bar > button:active,
   headerbar .linked:not(.vertical).path-bar > button:checked,
+  headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:active,
   headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked {
     background-color: #2196F3;
     color: #FFFFFF;
-    border-color: rgba(0, 0, 0, 0.15); }
-  .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:backdrop,
-  .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop,
-  headerbar .linked:not(.vertical).path-bar > button:backdrop,
-  headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:backdrop {
-    opacity: 0.85; }
+    border-color: #2196F3; }
 
 .titlebar:not(headerbar) separator.titlebutton,
 headerbar separator.titlebutton {

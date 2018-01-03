@@ -969,7 +969,6 @@ combobox {
   // the combo is a composite widget so the way we do button linking doesn't
   // work, special case needed. See
   // https://bugzilla.gnome.org/show_bug.cgi?id=733979
-  border: 1px solid $borders_color;
   &:dir(ltr),
   &:dir(rtl) { @extend %linked_middle; } // specificity bump
 }
@@ -978,7 +977,7 @@ combobox {
 .linked:not(.vertical) > combobox:last-child > box > button.combo { @extend %linked:last-child; }
 .linked:not(.vertical) > combobox:only-child > box > button.combo { @extend %linked:only-child; }
 
-.linked.vertical > combobox > box > button.combo { border: 1px solid $borders_color; @extend %linked_vertical_middle; }
+.linked.vertical > combobox > box > button.combo { @extend %linked_vertical_middle; }
 .linked.vertical > combobox:first-child > box > button.combo { @extend %linked_vertical:first-child; }
 .linked.vertical > combobox:last-child > box > button.combo { @extend %linked_vertical:last-child; }
 .linked.vertical > combobox:only-child > box > button.combo { @extend %linked_vertical:only-child; }
@@ -1236,13 +1235,15 @@ headerbar {
 
     > button {
       @extend %header_button;
+
       &:hover { 
          background-color: if($variant == 'light' and $headerbar =='light', rgba(black, 0.05), rgba(white, 0.16));
          color: $headerbar_fg_color;
       }
-      &:active { background-color: $primary_color; color: $dark_contrast_color; border-color: $borders_color; }
-      &:checked { background-color: $primary_color; color: $dark_contrast_color; border-color: $borders_color; }
-      &:backdrop { opacity: 0.85; }
+
+      &:active,
+      &:checked { background-color: $primary_color; color: $dark_contrast_color; border-color: $primary_color; }
+
       &, &:hover, &:active, &:checked, &:disabled { @extend %linked; }
 
   }
