@@ -204,7 +204,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == active {
     transition: $longer_transition, $shadow_transition, background-image 0;
     animation: ripple_effect $longer_duration $deceleration_curve forwards;
-
+//    border-color: $borders_color;
   }
 
   @if $t == disabled {
@@ -216,7 +216,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == checked {
     background-color: $primary_color;
     color: $inversed_fg_color;
-    border-color: $primary_color;
+//    border-color: $primary_color;
   }
 
   @if $t == checked-disabled {
@@ -262,7 +262,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == flat-checked {
     background-color: $track_color;
     color: currentColor;
-//    border-color: $borders_color;
+    border-color: transparent;
   }
 
   @if $t == flat-checked-disabled {
@@ -327,6 +327,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == header-checked-disabled {
     background-color: $track_color;
     color: gtkalpha(currentColor, $disabled_opacity);
+    border-color: $borders_color;
   }
 }
 

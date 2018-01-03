@@ -435,8 +435,7 @@ button {
   .path-bar button:checked,
   button:checked {
     background-color: #2196F3;
-    color: #FFFFFF;
-    border-color: #2196F3; }
+    color: #FFFFFF; }
   :not(headerbar) .caja-pathbar button:checked:disabled, .caja-pathbar :not(headerbar) button:checked:disabled, :not(headerbar)
   .path-bar button:checked:disabled,
   button:checked:disabled {
@@ -483,7 +482,8 @@ button {
   .path-bar button.flat:checked,
   button.flat:checked {
     background-color: alpha(currentColor, 0.3);
-    color: currentColor; }
+    color: currentColor;
+    border-color: transparent; }
   layouttabbar button:checked:disabled, .mate-panel-menu-bar #PanelApplet button:checked:disabled:not(.flat), .budgie-panel #tasklist-button:checked:disabled, .raven stackswitcher.linked > button:checked:disabled, toolbar button:checked:disabled, actionbar > revealer > box button:checked:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:checked:disabled, :not(headerbar) .caja-pathbar button.flat:checked:disabled, .caja-pathbar :not(headerbar) button.flat:checked:disabled, :not(headerbar)
   .path-bar button.flat:checked:disabled,
   button.flat:checked:disabled {
@@ -1148,7 +1148,8 @@ headerbar {
     headerbar .linked:not(.vertical).path-bar > button:checked:disabled,
     headerbar .linked:not(.vertical):not(.path-bar).stack-switcher > button:checked:disabled {
       background-color: alpha(currentColor, 0.3);
-      color: alpha(currentColor, 0.4); }
+      color: alpha(currentColor, 0.4);
+      border-color: rgba(0, 0, 0, 0.15); }
   .titlebar:not(headerbar) button:hover,
   headerbar button:hover {
     background-color: rgba(0, 0, 0, 0.05);
