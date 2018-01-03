@@ -235,6 +235,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
                                       transparent 0%),
                       image($zero_track_color);
     color: gtkalpha(currentColor, $enabled_opacity);
+    border-color: transparent;
   }
 
   @if $t == flat-hover {
@@ -262,13 +263,13 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == flat-checked {
     background-color: $track_color;
     color: currentColor;
-    border-color: $borders_color;
+//    border-color: $borders_color;
   }
 
   @if $t == flat-checked-disabled {
     background-color: $track_color;
     color: gtkalpha(currentColor, $disabled_opacity);
-    border-color: gtkalpha($borders_color, $disabled_opacity);
+//    border-color: gtkalpha($borders_color, $disabled_opacity);
   }
 }
 
@@ -294,6 +295,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
                                       transparent 0%),
                       image($zero_track_color);
     color: gtkalpha(currentColor, $enabled_opacity);
+    border-color: $borders_color;
   }
 
   @if $t == header-hover {
@@ -308,6 +310,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
     transition: $longer_transition, background-image 0;
     animation: flat_ripple_effect $longer_duration $deceleration_curve forwards;
     box-shadow: none;
+    color: $inversed_fg_color;
   }
 
   @if $t == header-disabled {
@@ -317,6 +320,8 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == header-checked {
+    background-color: $primary_color;
+    color: $inversed_fg_color;
   }
 
   @if $t == header-checked-disabled {
