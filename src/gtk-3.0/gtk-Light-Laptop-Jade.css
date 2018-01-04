@@ -997,13 +997,13 @@ combobox:drop(active) {
   box-shadow: none; }
 
 .linked > combobox > box > button.combo {
-  border-style: solid; }
+  border: 1px solid rgba(0, 0, 0, 0.15); }
 
 .linked.vertical > combobox > box > button.combo {
-  border-style: solid; }
+  border: 1px solid rgba(0, 0, 0, 0.15); }
 
 .linked > button {
-  border-style: solid; }
+  border: 1px solid rgba(0, 0, 0, 0.15); }
 
 notebook > stack:not(:only-child) button.combo, #login_window #user_combobox button {
   border-radius: 0;
