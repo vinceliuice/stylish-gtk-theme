@@ -216,7 +216,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == checked {
     background-color: $primary_color;
     color: $inversed_fg_color;
-//    border-color: $primary_color;
+    border-color: $primary_color;
   }
 
   @if $t == checked-disabled {
@@ -251,6 +251,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
     animation: flat_ripple_effect $longer_duration $deceleration_curve forwards;
     box-shadow: none;
     color: currentColor;
+    background-color: gtkalpha(black, 0.1);
   }
 
   @if $t == flat-disabled {
@@ -260,9 +261,9 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == flat-checked {
-    background-color: $track_color;
+    background-color: gtkalpha(black, 0.15);
     color: currentColor;
-    border-color: transparent;
+//    border-color: transparent;
   }
 
   @if $t == flat-checked-disabled {

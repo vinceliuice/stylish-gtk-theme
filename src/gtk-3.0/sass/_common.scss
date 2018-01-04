@@ -555,22 +555,11 @@ button {
       box-shadow: none;
       border-color: $b_color;
 
-       &:hover { opacity: 0.75;
-//           background-color: lighten($b_color, 5%);
-           color: $inversed_fg_color;
-//           border-color: lighten($b_color, 5%);
-        }
+      &:hover { opacity: 0.75; color: $inversed_fg_color; }
 
-       &:disabled {
-         color: gtkalpha(inversed_fg_color, $disabled_opacity);
-         border-color: $borders_color;
-         > label { color: inherit; }
-        }
+      &:disabled { opacity: 0.35; > label { color: inherit; } }
 
-      &:checked { opacity: 0.65;
-//          background-color: mix($inversed_fg_color, $b_color, percentage($lower_opacity)); 
-//          border-color: mix($inversed_fg_color, $b_color, percentage($lower_opacity));
-        }
+      &:checked { opacity: 0.65; }
 
       &.flat {
         background-color: transparent;
@@ -1232,7 +1221,7 @@ headerbar {
 
   // special case for path-bar and stack-switchers
   .linked:not(.vertical).path-bar,
-  .linked:not(.vertical):not(.path-bar).stack-switcher {
+  .linked:not(.vertical).stack-switcher {
 
     > button {
       @extend %header_button;
@@ -1253,6 +1242,15 @@ headerbar {
 
   }
  }  
+
+  .linked:not(.vertical) {
+      > button {
+      &:active,
+      &:checked { border-color: if($variant == 'light' and $headerbar =='light', $primary_color, $borders_color); }
+      &:only-child:active,
+      &:only-child:checked { border-color: $primary_color; }
+  }
+ }
 }
 
 %header_separator {
