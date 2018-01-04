@@ -86,7 +86,6 @@
   }
 }
 
-
 @mixin entry($t, $fc: $primary_color) {
 //
 // entry
@@ -96,14 +95,14 @@
 //
 
   @if $t == normal {
-    background-color: if($fc == $primary_color, rgba($base_color, 0.01), rgba($bg_color, 0.01));
-    border-color: transparent;
-    box-shadow: inset 0 -1px if($fc == $primary_color, $track_color, $fc);
+    background-color: darken($base_color, 2%);
+    border-radius: 3px;
+    border: 1px solid $border_color;
+    box-shadow: none;
   }
 
   @if $t == focus {
-    border-color: transparent;
-    box-shadow: inset 0 -2px $fc;
+    border-color: $primary_color;
   }
 
   @if $t == hover {
@@ -111,11 +110,41 @@
 
   @if $t == insensitive {
     color: $disabled_fg_color;
-    border-color: transparent;
-    box-shadow: inset 0 -1px if($fc == $primary_color, $divider_color, $fc);
+    box-shadow: none;
   }
 }
 
+@mixin search_entry($t, $fc: $primary_color) {
+//
+// search_entry
+//
+// $t: search_entry type
+// $fc: focus color
+//
+
+  @if $t == normal {
+    background-color: rgba(white, 0.12);
+    border-radius: 3px;
+    border-color: transparent;
+    box-shadow: 0 1px 2px rgba(black, 0.35);
+  }
+
+  @if $t == focus {
+    border-color: transparent;
+    background-color: rgba(white, 0.18);
+    box-shadow: 2px 3px 5px rgba(black, 0.55);
+  }
+
+  @if $t == hover {
+    background-color: rgba(white, 0.2);
+    box-shadow: 1px 2px 3px rgba(black, 0.35);
+  }
+
+  @if $t == insensitive {
+    color: $disabled_fg_color;
+    box-shadow: none;
+  }
+}
 
 @mixin button($t, $c: $base_color, $tc: $fg_color) {
 //

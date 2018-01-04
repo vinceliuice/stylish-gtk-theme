@@ -972,7 +972,11 @@ combobox {
 .linked.vertical > combobox:last-child > box > button.combo { @extend %linked_vertical:last-child; }
 .linked.vertical > combobox:only-child > box > button.combo { @extend %linked_vertical:only-child; }
 
-.linked > button { border: 1px solid $borders_color; }
+.linked > button {
+    border: 1px solid $borders_color;
+    &:active,
+    &:checked { border-color: if($variant == 'light', $primary_color, $borders_color); }
+}
 
 %combo_flat {
   border-radius: 0;
@@ -1103,8 +1107,12 @@ headerbar {
          background-color: if($variant == 'light' and $headerbar =='light', rgba(black, 0.05), rgba(white, 0.16));
          color: $headerbar_fg_color;
       }
-      &:active { background-color: $primary_color; color: $dark_contrast_color; border-color: $primary_color; }
-      &:checked { background-color: $primary_color; color: $dark_contrast_color; border-color: $primary_color; }
+      &:active,
+      &:checked { 
+          background-color: $primary_color;
+          color: $dark_contrast_color;
+          border-color: if($variant == 'light' and $headerbar =='light', $primary_color, $borders_color);
+      }
       &:backdrop { opacity: 0.85; }
   }
 
@@ -1202,7 +1210,7 @@ headerbar {
     .fullscreen & { box-shadow: none; }
 
     button.titlebutton {
-      min-height: $small_size;
+      min-height: 24px;
       min-width: 24px;
       margin: 0;
       padding: 0;
@@ -1316,8 +1324,8 @@ headerbar {
  ************/
 %pathbar_button,
 .path-bar button {
-  padding-left: ($medium_size - 24px) / 2;
-  padding-right: ($medium_size - 24px) / 2;
+  padding-left: ($medium_size - 28px) / 2;
+  padding-right: ($medium_size - 28px) / 2;
 
   label:not(:only-child) {
     &:first-child { margin-left: 4px; }
@@ -1339,6 +1347,7 @@ headerbar {
   &:active, &:checked {
       background-color: $primary_color;
       color: $dark_contrast_color;
+      border-color: if($variant == 'light', $primary_color, $borders_color);
      }
 
   &:disabled { background-color: $base_color; }
@@ -3433,28 +3442,20 @@ $darker_asset_suffix: if($headerbar=='dark', '-dark', $asset_suffix);
 %titlebuttons {
 
   button.titlebutton {
-    margin: 0;
-    padding: 0;
-    min-width: 24px;
-    min-height: $small_size;
 
-    &:hover {
-      @include button(flat-hover);
-    }
-    &:active, &:checked {
-      @include button(flat-active);
-      transition: none;
+    &.close, &.maximize, &.minimize {
+      margin: 0;
+      padding: 0;
+      min-width: 24px;
+//      transition: none;
       animation: none;
       box-shadow: none;
       border: none;
-    }
-
-    &.close, &.maximize, &.minimize {
       color: transparent;
       background-color: transparent;
       background-position: center;
       background-repeat: no-repeat;
-      border-width: 0;
+
       &:backdrop { opacity: 1; }
 
     }

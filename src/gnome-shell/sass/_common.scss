@@ -1411,15 +1411,15 @@ StScrollBar {
   .search-entry {
     width: 320px - 8px * 2;
     padding: 0 8px;
-    border-radius: 0;
+    border: none;
     color: $inverse_hint_fg_color;
     selection-background-color: $inverse_track_color;
     selected-color: $inverse_fg_color;
-    @include entry(normal,$fc:$inverse_track_color);
+    @include search_entry(normal, $fc:$inverse_track_color);
     &:focus {
-      @include entry(focus,$fc:$inverse_fg_color);
+      @include search_entry(focus, $fc:$inverse_fg_color);
       padding: 0 8px;
-      border-width: 0;
+      border: none;
       color: $inverse_fg_color;
     }
 

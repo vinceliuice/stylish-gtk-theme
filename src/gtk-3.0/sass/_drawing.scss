@@ -322,7 +322,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == header-checked {
     background-color: $primary_color;
     color: $inversed_fg_color;
-    border-color: $primary_color;
+//    border-color: $primary_color;
   }
 
   @if $t == header-checked-disabled {
