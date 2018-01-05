@@ -557,21 +557,19 @@ button {
 
       &:hover { opacity: 0.75; color: $inversed_fg_color; }
 
+      &:active, &:checked { opacity: 0.65; }
+
       &:disabled { opacity: 0.35; > label { color: inherit; } }
 
-      &:checked { opacity: 0.65; }
-
       &.flat {
-        background-color: transparent;
-        color: $b_color;
-
-         @include button(flat-normal, $b_color, $inversed_fg_color);
+         background-color: transparent;
+         color: $b_color;
 
          &:hover { @include button(flat-hover, $b_color, $inversed_fg_color); }
 
          &:active, &:checked { @include button(flat-active, $b_color, $inversed_fg_color); }
 
-        &:disabled { @include button(flat-disabled, $b_color, $inversed_fg_color); }
+         &:disabled { @include button(flat-disabled, $b_color, $inversed_fg_color); }
       }
 
       .osd & {
@@ -974,8 +972,9 @@ combobox {
 
 .linked > button {
     border: 1px solid $borders_color;
-    &:active,
+    &:active { border-color: $borders_color; }
     &:checked { border-color: if($variant == 'light', $primary_color, $borders_color); }
+    &:checked:disabled { border-color: scale-alpha($primary_color, $disabled_opacity); }
 }
 
 %combo_flat {
@@ -1074,9 +1073,9 @@ headerbar {
   background-color: $headerbar_bg_color;
   color: $headerbar_fg_color;
 
-  &:backdrop {
-    color: $secondary_headerbar_fg_color;
-  }
+//  &:backdrop {
+//    color: $secondary_headerbar_fg_color;
+//  }
 
   .title {
     transition: $longer_transition;
@@ -1103,10 +1102,7 @@ headerbar {
 
   button {
       @extend %header_button;
-      &:hover { 
-         background-color: if($variant == 'light' and $headerbar =='light', rgba(black, 0.05), rgba(white, 0.16));
-         color: $headerbar_fg_color;
-      }
+      &:hover { }
       &:active,
       &:checked { 
           background-color: $primary_color;
@@ -1125,23 +1121,11 @@ headerbar {
       box-shadow: none;
       border-color: $b_color;
 
-       &:hover { opacity: 0.75;
-//           background-color: lighten($b_color, 5%);
-           color: $inversed_fg_color;
-//           border-color: lighten($b_color, 5%);
-        }
+      &:hover { opacity: 0.75; color: $inversed_fg_color; }
 
-       &:disabled {
-         color: gtkalpha(inversed_fg_color, $disabled_opacity);
-         background-color: gtkalpha($b_color, $disabled_opacity);
-         border-color: gtkalpha($b_color, $disabled_opacity);
-         > label { color: inherit; }
-        }
+      &:disabled { opacity: 0.35; > label { color: inherit; } }
 
-      &:checked { opacity: 0.65;
-//          background-color: mix($inversed_fg_color, $b_color, percentage($lower_opacity));
-//          border-color: mix($inversed_fg_color, $b_color, percentage($lower_opacity));
-        }
+      &:checked { opacity: 0.65; }
       }
     }
 
@@ -1210,7 +1194,7 @@ headerbar {
     .fullscreen & { box-shadow: none; }
 
     button.titlebutton {
-      min-height: 24px;
+      min-height: $small_size;
       min-width: 24px;
       margin: 0;
       padding: 0;
@@ -1233,12 +1217,7 @@ headerbar {
 
     > button {
       @extend %header_button;
-
-      &:hover { 
-         background-color: if($variant == 'light' and $headerbar =='light', rgba(black, 0.05), rgba(white, 0.16));
-         color: $headerbar_fg_color;
-      }
-
+      &:hover { }
       &:active,
       &:checked {
           background-color: $primary_color;
@@ -1500,7 +1479,7 @@ menu,
 .menu,
 .context-menu {
   margin: 4px;
-  padding: 2px 0px;
+  padding: 2px 0;
   box-shadow: none;
   border-radius: 0;
   background-color: $menu_bg_color;
@@ -1583,8 +1562,22 @@ menu,
     }
   }
 
-  separator { margin: 3px 0; 
-      border: none; }
+  separator {
+    border: none;
+    background: none;
+    &:dir(ltr) { margin: 3px 10px 3px 10px; }
+    &:dir(rtl) { margin: 3px 10px 3px 10px; }
+  }
+
+  box.horizontal separator { // special case for nm-applet
+    min-height: 0;
+    border: none;
+    background: none;
+
+    &:dir(ltr),
+    &:dir(rtl)  { margin: 3px 10px 3px 10px; }
+  }
+
 }
 
 menuitem {
@@ -1631,10 +1624,9 @@ popover.background {
     
   &.menu button,
   button.model {
-//    @extend %button.flat;
     margin: 0;
-    min-height: 32px;
-    min-width: 38px;
+    min-height: 28px;
+    min-width: 32px;
     padding: 0;
   }
 
@@ -2157,9 +2149,10 @@ radio {
   }
 
   popover & {
-    &, &:hover, &:disabled {
+    &, &:hover, &:indeterminate, &:checked, &:disabled {
       box-shadow: none;
       background-image: none;
+      background-color: transparent;
     }
 
     &:not(:checked):not(:indeterminate):not(:disabled) { color: $secondary_fg_color; }
@@ -2900,16 +2893,34 @@ messagedialog { // Message Dialog styling
     }
 
     .dialog-action-area button {
-      @extend %simple_flat_button;
+//      @extend %simple_flat_button;
       padding: 8px 16px;
-      border-color: $borders_color;
-      border-top-width: 1px;
+      border-style: none;
+      border-top: 1px solid $borders_color;
       border-radius: 0;
         
-      &:first-child { border-color: $borders_color; border-radius: 0; border-bottom-left-radius: 2px; }
+      &:first-child { border-left-style: none; border-radius: 0; border-bottom-left-radius: 2px; }
 
-      &:last-child { border-color: $borders_color; border-radius: 0; border-bottom-right-radius: 2px; }
+      &:last-child { border-right-style: none; border-radius: 0; border-bottom-right-radius: 2px; }
     }
+
+  @each $b_type, $b_color in (suggested-action, $suggested_color),
+                             (destructive-action, $destructive_color) {
+    .dialog-action-area button.#{$b_type} {
+      color: $b_color;
+      background-color: transparent;
+      box-shadow: none;
+//      border-color: $borders_color;
+      &:hover,
+      &:checked {
+          background-color: $b_color;
+          color: $inversed_fg_color;
+//          border-color: $b_color;
+        }
+      &:disabled { opacity: 0.65; }
+      }
+    }
+
   }
 }
 
@@ -2949,30 +2960,31 @@ filechooserbutton:drop(active) {
     border-right-style: none;
   }
 
+  // remove background from child-elements
+  .frame,
   list { background-color: transparent; }
 
   row {
-    padding: 0 2px;
+    padding: 8px 2px;
     transition: none;
     
-    &:hover { color: $primary_color;
-              background-color: transparent; 
-              box-shadow: inset 3px 0 $primary_color; }
-
-    &:active { box-shadow: inset 3px 0 $primary_color; }
-
-    &:backdrop:hover { background-color: transparent; }
+    &:hover { background-color: if($variant == 'light', rgba(black, 0.05), rgba(white, 0.16)); }
+    &:active { color: $dark_contrast_color; background-color: $primary_color; }
+    &:backdrop { opacity: 0.85; }
 
     &:selected {
       &:active { box-shadow: none; }
-
-      &:hover { color: #fff;
-                background-color: scale-alpha($primary_color, 0.8);
-                box-shadow: none; }
-
-      &:backdrop { background-color: scale-alpha($primary_color, 0.8); }
-              }
+      &:hover { background-color: scale-alpha($primary_color, 0.8); }
+      }
+    separator { background-color: transparent; }
     }
+
+  separator,
+  .separator {
+    min-height: 0;
+    border-color: transparent;
+    background-color: transparent;
+  }
 
   paned & { &.left, &.right, &.left:dir(rtl), &:dir(rtl), &:dir(ltr), & { border-style: none; }}
 }
@@ -2988,7 +3000,6 @@ stacksidebar {
   }
 
   row {
-    padding: 10px 4px;
 
     > label {
       padding-left: 6px;
@@ -3272,6 +3283,7 @@ colorswatch {
 
   &:drop(active) {
     box-shadow: none;
+    background-color: $lighter_bg_color;
 
     &.light overlay {
       box-shadow: 0 0 0 2px $accent_color;
@@ -3286,8 +3298,7 @@ colorswatch {
     transition: $shadow_transition;
     border: 1px solid $borders_color;
     box-shadow: none;
-
-    &:hover { box-shadow: none; background-color: scale-alpha(#FFFFFF, 0.2); }
+    &:hover { box-shadow: none; border: 1px solid darken($borders_color, 15%); background-color: rgba(white, 0.2); }
   }
 
   &#add-color-button {
@@ -3442,12 +3453,12 @@ $darker_asset_suffix: if($headerbar=='dark', '-dark', $asset_suffix);
 %titlebuttons {
 
   button.titlebutton {
-
-    &.close, &.maximize, &.minimize {
       margin: 0;
       padding: 0;
       min-width: 24px;
-//      transition: none;
+      min-height: $small_size;
+
+    &.close, &.maximize, &.minimize {
       animation: none;
       box-shadow: none;
       border: none;
@@ -3456,7 +3467,7 @@ $darker_asset_suffix: if($headerbar=='dark', '-dark', $asset_suffix);
       background-position: center;
       background-repeat: no-repeat;
 
-      &:backdrop { opacity: 1; }
+//      &:backdrop { opacity: 1; }
 
     }
     // Load png assets for each button, Fix the Chrome window restore button bug

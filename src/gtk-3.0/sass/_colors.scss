@@ -84,8 +84,8 @@ $topbar_color: $headerbar_bg_color;
 $topbar_fg_color: $headerbar_fg_color;
 
 // Misc colors
-$track_color: gtkalpha(currentColor, $lower_opacity);
-$semi_track_color: gtkalpha(currentColor, $lower_opacity / 2);
+$track_color: gtkalpha(currentColor, 0.12);
+$semi_track_color: gtkalpha(currentColor, 0.1);
 $zero_track_color: gtkalpha(currentColor, 0);
 $row_track_color: gtkalpha(currentColor, 0.05);
 

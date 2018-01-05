@@ -193,7 +193,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == hover {
-    background-color: if($variant == 'light', rgba(black, 0.05), rgba(white, 0.16));
+    background-color: if($variant == 'light', darken($c, 5%), lighten($c, 5%));
     background-image: radial-gradient(circle farthest-corner at center,
                                       $zero_track_color 100%,
                                       transparent 0%),
@@ -202,9 +202,10 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == active {
+//    background-color: if($variant == 'light', darken($c, 8%), lighten($c, 8%));
     transition: $longer_transition, $shadow_transition, background-image 0;
     animation: ripple_effect $longer_duration $deceleration_curve forwards;
-//    border-color: $borders_color;
+    border-color: $borders_color;
   }
 
   @if $t == disabled {
@@ -244,6 +245,8 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
                                       transparent 0%),
                       image($semi_track_color);
     color: currentColor;
+    border-color: transparent;
+    background-color: gtkalpha(black, 0.08);
   }
 
   @if $t == flat-active {
@@ -251,7 +254,8 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
     animation: flat_ripple_effect $longer_duration $deceleration_curve forwards;
     box-shadow: none;
     color: currentColor;
-    background-color: gtkalpha(black, 0.1);
+    background-color: gtkalpha(black, 0.12);
+    border-color: transparent;
   }
 
   @if $t == flat-disabled {
@@ -261,15 +265,16 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == flat-checked {
-    background-color: gtkalpha(black, 0.15);
+//    background-color: gtkalpha(black, 0.15);
     color: currentColor;
-//    border-color: transparent;
+    background-color: $track_color;
+    border-color: transparent;
   }
 
   @if $t == flat-checked-disabled {
     background-color: $track_color;
     color: gtkalpha(currentColor, $disabled_opacity);
-//    border-color: gtkalpha($borders_color, $disabled_opacity);
+    border-color: gtkalpha($borders_color, $disabled_opacity);
   }
 }
 
@@ -299,6 +304,8 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == header-hover {
+    background-color: if($variant == 'light' and $headerbar =='light', rgba(black, 0.05), rgba(white, 0.16));
+    color: $headerbar_fg_color;
     background-image: radial-gradient(circle farthest-corner at center,
                                       $zero_track_color 100%,
                                       transparent 0%),
