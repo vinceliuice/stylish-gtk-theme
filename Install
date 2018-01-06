@@ -118,27 +118,32 @@ for variant in '' '-Dark' '-Light' ; do
 
 		# Install GTK+ 2 Theme
 		install -d ${themedir}/gtk-2.0
-		cd ${srcdir}/gtk-2.0/Stylish${color}
+		cd ${srcdir}/gtk-2.0/
 
 		cp -ur \
-			gtkrc${variant} \
+			gtkrc${variant}${color} \
 			${themedir}/gtk-2.0/gtkrc
 
 		cp -ur \
-			assets${variant} \
-			${themedir}/gtk-2.0/assets
-
-		cp -ur \
-			apps.rc \
-			main.rc \
-			panel.rc \
-			xfce-notify.rc \
-			menubar-toolbar \
+			common/apps.rc \
+			common/main.rc \
+			common/panel.rc \
+			common/xfce-notify.rc \
 			${themedir}/gtk-2.0
 
 		cp -ur \
-			menubar-toolbar${variant}.rc \
+			assets/Stylish${color}/menubar-toolbar \
+			${themedir}/gtk-2.0
+
+		cp -ur \
+			common/menubar-toolbar${variant}.rc \
 			${themedir}/gtk-2.0/menubar-toolbar/menubar-toolbar.rc 
+
+		install -d ${themedir}/gtk-2.0/assets
+		cd ${srcdir}/gtk-2.0/assets/Stylish${color}
+		cp -ur \
+			assets${variant}/*.png \
+			${themedir}/gtk-2.0/assets/
 
 		# Install GTK+ 3 Theme
 		install -d ${themedir}/gtk-3.0

@@ -45,12 +45,12 @@ $disabled_secondary_inversed_fg_color: scale-alpha($secondary_inversed_fg_color,
 $disabled_tertiary_inversed_fg_color: scale-alpha($tertiary_inversed_fg_color, $disabled_opacity);
 
 // Background colors
-$bg_color: if($variant =='dark', #333333, #F5F5F5);
-$base_color: if($variant =='dark', #404040, #FFFFFF);
+$bg_color: if($variant =='dark', #303030, #F5F5F5);
+$base_color: if($variant =='dark', #353535, #FFFFFF);
 $alt_base_color: mix($base_color, $bg_color, 50%);
 
-$lighter_bg_color: if($variant =='dark', #444444, #ffffff);
-$darker_bg_color: if($variant =='dark', #303030, #EEEEEE);
+$lighter_bg_color: if($variant =='dark', #3e3e3e, #ffffff);
+$darker_bg_color: if($variant =='dark', #282828, #EEEEEE);
 $darker_fg_color: if($variant =='light', #222222, #DDDDDD);
 
 // Headerbar colors
@@ -85,11 +85,11 @@ $topbar_fg_color: $headerbar_fg_color;
 
 // Misc colors
 $track_color: gtkalpha(currentColor, 0.12);
-$semi_track_color: gtkalpha(currentColor, 0.1);
+$semi_track_color: gtkalpha(currentColor, 0.12);
 $zero_track_color: gtkalpha(currentColor, 0);
 $row_track_color: gtkalpha(currentColor, 0.05);
 
-$borders_color: if($variant == 'light', scale-alpha(#000000, 0.15), scale-alpha(#000000, 0.2));
+$borders_color: if($variant == 'light', scale-alpha(#000000, 0.15), scale-alpha(#ffffff, 0.15));
 $header_borders_color: $borders_color;
 
 $highlight_color: if($variant == 'light', scale-alpha(#FFFFFF, 0.4), scale-alpha(#FFFFFF, 0.3));
@@ -100,7 +100,7 @@ $placeholder_text_color: mix($fg_color, $base_color, percentage($hint_opacity));
 $link_color: $primary_color;
 $link_visited_color: #E040FB;
 
-$warning_color: #FF6D00;
+$warning_color: #ff4e00;
 $error_color: #DD2C00;
 $success_color: #00C853;
 

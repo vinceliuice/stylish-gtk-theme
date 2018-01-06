@@ -644,6 +644,14 @@ button {
   .primary-toolbar & { -gtk-icon-shadow: none; } // tango icons don't need shadows
 }
 
+// Set button borders for all linked buttons
+.linked > button {
+    border: 1px solid $borders_color;
+    &:active { border-color: $borders_color; }
+    &:checked { border-color: $primary_color; }
+    &:checked:disabled { border-color: scale-alpha($primary_color, $disabled_opacity); }
+}
+
 %needs_attention {
   animation: needs_attention $longer_duration $deceleration_curve forwards;
   background-repeat: no-repeat;
@@ -910,7 +918,6 @@ spinbutton {
   }
 }
 
-
 /**************
  * ComboBoxes *
  **************/
@@ -970,13 +977,6 @@ combobox {
 .linked.vertical > combobox:last-child > box > button.combo { @extend %linked_vertical:last-child; }
 .linked.vertical > combobox:only-child > box > button.combo { @extend %linked_vertical:only-child; }
 
-.linked > button {
-    border: 1px solid $borders_color;
-    &:active { border-color: $borders_color; }
-    &:checked { border-color: if($variant == 'light', $primary_color, $borders_color); }
-    &:checked:disabled { border-color: scale-alpha($primary_color, $disabled_opacity); }
-}
-
 %combo_flat {
   border-radius: 0;
   background-image: none;
@@ -1010,10 +1010,10 @@ toolbar {
     transition: $shadow_transition;
     padding: $container_padding;
     border-radius: 2px;
-    box-shadow: $z-depth-2, inset 0 1px $secondary_highlight_color;
+    box-shadow: $z-depth-2;
     background-color: $base_color;
 
-    &:backdrop { box-shadow: $z-depth-1, inset 0 1px $secondary_highlight_color; }
+    &:backdrop { box-shadow: $z-depth-1; }
 
     &.left,
     &.right,
@@ -1068,8 +1068,7 @@ headerbar {
   transition: background-color $shorter_duration $deceleration_curve;
   min-height: $large_size;
   padding: 0 $container_padding;
-  box-shadow: inset 0 1px $secondary_highlight_color,
-              inset 0 -1px $borders_color;
+  box-shadow: inset 0 -1px $borders_color;
   background-color: $headerbar_bg_color;
   color: $headerbar_fg_color;
 
@@ -1107,7 +1106,7 @@ headerbar {
       &:checked { 
           background-color: $primary_color;
           color: $dark_contrast_color;
-          border-color: if($variant == 'light' and $headerbar =='light', $primary_color, $borders_color);
+          border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $primary_color);
       }
       &:backdrop { opacity: 0.85; }
   }
@@ -1132,7 +1131,7 @@ headerbar {
   &.selection-mode {
     transition: background-color 0.00001s $longer_duration;
     animation: header_ripple_effect $longer_duration $deceleration_curve;
-    box-shadow: $z-depth-1, inset 0 1px $secondary_highlight_color;
+    box-shadow: $z-depth-1;
     background-color: $primary_color;
     color: $inversed_fg_color;
 
@@ -1222,7 +1221,7 @@ headerbar {
       &:checked {
           background-color: $primary_color;
           color: $dark_contrast_color;
-          border-color: if($variant == 'light' and $headerbar =='light', $primary_color, $borders_color);
+          border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $primary_color);
         }
 
       &, &:hover, &:active, &:checked, &:disabled { @extend %linked; }
@@ -1233,7 +1232,7 @@ headerbar {
   .linked:not(.vertical) {
       > button {
       &:active,
-      &:checked { border-color: if($variant == 'light' and $headerbar =='light', $primary_color, $borders_color); }
+      &:checked { border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $primary_color); }
       &:only-child:active,
       &:only-child:checked { border-color: $primary_color; }
   }
@@ -1326,7 +1325,7 @@ headerbar {
   &:active, &:checked {
       background-color: $primary_color;
       color: $dark_contrast_color;
-      border-color: if($variant == 'light', $primary_color, $borders_color);
+      border-color: $primary_color;
      }
 
   &:disabled { background-color: $base_color; }
@@ -1483,10 +1482,10 @@ menu,
   box-shadow: none;
   border-radius: 0;
   background-color: $menu_bg_color;
-  border: none;
+  border: 1px solid if($variant == 'light', $borders_color, $borders_color);
 
   .csd & {
-    border: none; // axes borders in a composited env
+    border: 1px solid if($variant == 'light', $borders_color, $borders_color); // axes borders in a composited env
     border-radius: 0;
   }
 
@@ -1563,19 +1562,20 @@ menu,
   }
 
   separator {
+    min-height: 1px;
     border: none;
-    background: none;
-    &:dir(ltr) { margin: 3px 10px 3px 10px; }
-    &:dir(rtl) { margin: 3px 10px 3px 10px; }
+    background-color: $borders_color;
+    &:dir(ltr) { margin: 3px 0; }
+    &:dir(rtl) { margin: 3px 0; }
   }
 
   box.horizontal separator { // special case for nm-applet
-    min-height: 0;
+    min-height: 1px;
     border: none;
-    background: none;
+    background-color: $borders_color;
 
     &:dir(ltr),
-    &:dir(rtl)  { margin: 3px 10px 3px 10px; }
+    &:dir(rtl)  { margin: 3px 0; }
   }
 
 }
@@ -1599,9 +1599,7 @@ popover.background {
   &:backdrop { box-shadow: $z-depth-1; }
 
   &, .csd & {
-    border-style: solid;
-    border-width: 1px;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.3);
+    border: 1px solid $borders_color;
     border-radius: 2px + 1px;
   }
 
@@ -1620,7 +1618,7 @@ popover.background {
 
 //   entry { @extend %entry.flat; }
 //   button.combo { @extend %combo_flat; }
-//   button:not(.suggested-action):not(.destructive-action) {  @extend %button_basic; }
+   button:not(.suggested-action):not(.destructive-action) {  @extend %button_basic; }
     
   &.menu button,
   button.model {
@@ -2761,7 +2759,7 @@ $row_transition: $longer_transition, background-color 0, color 0;
 row {
   &.activatable {
     transition: $row_transition;
-    box-shadow: inset 0 0 0 9999px $zero_track_color;
+//    box-shadow: inset 0 0 0 9999px $zero_track_color;
     background-image: radial-gradient(circle farthest-corner at center,
                                       $zero_track_color 100%,
                                       transparent 0%),
@@ -2769,24 +2767,25 @@ row {
 
     &:hover {
       transition: $row_transition, box-shadow 0;
-      box-shadow: inset 0 0 0 9999px $row_track_color;
+//      box-shadow: inset 0 0 0 9999px $row_track_color;
       background-image: radial-gradient(circle farthest-corner at center,
                                         $zero_track_color 100%,
                                         transparent 0%),
                         image($zero_track_color);
+      background-color: $row_track_color;
     }
 
     &.has-open-popup, // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
     &:active {
       transition: $row_transition, background-image 0;
       animation: row_ripple_effect $longer_duration $deceleration_curve forwards;
-      box-shadow: inset 0 0 0 9999px $semi_track_color;
+//      box-shadow: inset 0 0 0 9999px $semi_track_color;
+      background-color: $semi_track_color;
     }
   }
 
-  &:selected { @extend %selected_items; }
+  &:selected { @extend %selected_items; &:hover { background-color: lighten($primary_color, 5%); } }
 }
-
 
 /*********************
  * App Notifications *
@@ -2878,9 +2877,9 @@ messagedialog { // Message Dialog styling
   .titlebar {
     min-height: $small_size;
     border-style: none;
-    box-shadow: inset 0 1px $secondary_highlight_color;
     background-color: $lighter_bg_color;
     color: $fg_color;
+    box-shadow: none;
 
     &:backdrop { color: $secondary_fg_color; }
   }
@@ -2910,7 +2909,7 @@ messagedialog { // Message Dialog styling
       color: $b_color;
       background-color: transparent;
       box-shadow: none;
-//      border-color: $borders_color;
+      border-color: $borders_color;
       &:hover,
       &:checked {
           background-color: $b_color;
@@ -3167,7 +3166,7 @@ infobar {
   &.error {
     > label, & { color: $inversed_fg_color; }
 
-    button { @extend %button_selected; }
+    button { @extend %selected_button; }
 
     selection {}
 
@@ -3176,6 +3175,49 @@ infobar {
 }
 
 
+//
+// Buttons on selected backgrounds
+//
+%selected_button {
+
+  @at-root %normal_selected_button, & {
+    color: $dark_contrast_color;
+    background-color: transparentize($dark_contrast_color, 1);
+    border-color: transparentize($dark_contrast_color, 0.5);
+  }
+
+  &.flat {
+    @include button(undecorated);
+    color: $dark_contrast_color;
+    background-color: transparentize($dark_contrast_color, 1);
+
+    &:disabled {
+      &, label { color: transparentize($dark_contrast_color, 0.6); }
+    }
+  }
+  &:hover {
+    color: $dark_contrast_color;
+    background-color: transparentize($dark_contrast_color, 0.8);
+    border-color: transparentize($dark_contrast_color, 0.2);
+  }
+  &:active, &:active:hover, &:checked {
+    color: $dark_contrast_color;
+    background-color: transparentize($dark_contrast_color, 0.9);
+    border-color: transparentize($dark_contrast_color, 0.2);
+  }
+  &:disabled {
+    &, label { color: transparentize($dark_contrast_color, 0.5); }
+    background-color: transparentize($dark_contrast_color, 1);
+    border-color: transparentize($dark_contrast_color, 0.6);
+
+    &:active, &:checked {
+      color: $dark_contrast_color;
+      background-color: transparentize($dark_contrast_color, 0.5);
+      border-color: transparentize($dark_contrast_color, 0.6);
+    }
+  }
+}
+
 /************
  * Tooltips *
  ************/
@@ -3183,7 +3225,6 @@ tooltip {
   &.background {
     // background-color needs to be set this way otherwise it gets drawn twice
     // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
-    box-shadow: inset 0 1px $secondary_highlight_color;
     background-color: scale-alpha($base_color, $higher_opacity);
   }
 
@@ -3339,10 +3380,10 @@ colorswatch {
 colorchooser .popover.osd {
   transition: $shadow_transition;
   border-radius: 2px;
-  box-shadow:  $z-depth-2, inset 0 1px $highlight_color;
+  box-shadow:  $z-depth-2;
   background-color: $base_color;
 
-  &:backdrop { box-shadow: $z-depth-1, inset 0 1px $highlight_color; }
+  &:backdrop { box-shadow: $z-depth-1; }
 
   spinbutton:not(.vertical) { @extend %entry.flat; }
 }
@@ -3423,8 +3464,7 @@ decoration {
     margin: 0;
     padding: 0;
     border-radius: 0;
-    box-shadow: inset 0 1px $secondary_highlight_color;
-    border: 1px solid $headerbar_bg_color;
+    border: 1px solid $borders_color;
     background-color: $headerbar_bg_color;
   }
 }
