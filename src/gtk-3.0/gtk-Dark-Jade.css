@@ -1759,7 +1759,8 @@ notebook > header {
       margin-right: 0; }
     notebook > header.top tabs tab.reorderable-page, notebook > header.bottom tabs tab.reorderable-page {
       margin: 0 -1px;
-      border-style: none; }
+      border-left-style: solid;
+      border-right-style: solid; }
   notebook > header.left tabs, notebook > header.right tabs {
     padding-top: 8px;
     padding-bottom: 8px; }
@@ -1769,7 +1770,8 @@ notebook > header {
       margin-bottom: 0; }
     notebook > header.left tabs tab.reorderable-page, notebook > header.right tabs tab.reorderable-page {
       margin: -1px 0;
-      border-style: none; }
+      border-top-style: solid;
+      border-bottom-style: solid; }
 notebook > stack:not(:only-child) {
   background-color: #353535; }
 

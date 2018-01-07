@@ -1846,7 +1846,8 @@ notebook {
         tab {
           &.reorderable-page {
             margin: 0 -1px;
-            border-style: none;
+            border-left-style: solid;
+            border-right-style: solid;
           }
         }
       }
@@ -1866,7 +1867,8 @@ notebook {
         tab {
           &.reorderable-page {
             margin: -1px 0;
-            border-style: none;
+            border-top-style: solid;
+            border-bottom-style: solid;
           }
         }
       }
