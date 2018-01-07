@@ -202,7 +202,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == active {
-    background-color: if($variant == 'light', darken($c, 10%), lighten($c, 10%));
+//    background-color: if($variant == 'light', darken($c, 10%), lighten($c, 10%));
     transition: $longer_transition, $shadow_transition, background-image 0;
     animation: ripple_effect $longer_duration $deceleration_curve forwards;
     border-color: $track_color;
@@ -246,7 +246,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
                       image($semi_track_color);
     color: currentColor;
     border-color: transparent;
-    background-color: gtkalpha(black, 0.08);
+//    background-color: gtkalpha(black, 0.08);
   }
 
   @if $t == flat-active {
@@ -254,7 +254,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
     animation: flat_ripple_effect $longer_duration $deceleration_curve forwards;
     box-shadow: none;
     color: currentColor;
-    background-color: gtkalpha(black, 0.12);
+//    background-color: gtkalpha(black, 0.12);
     border-color: transparent;
   }
 
@@ -267,7 +267,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == flat-checked {
 //    background-color: gtkalpha(black, 0.15);
     color: currentColor;
-    background-color: $track_color;
+//    background-color: $track_color;
     border-color: transparent;
   }
 

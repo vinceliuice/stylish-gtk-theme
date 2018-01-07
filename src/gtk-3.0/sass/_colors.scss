@@ -47,7 +47,7 @@ $disabled_tertiary_inversed_fg_color: scale-alpha($tertiary_inversed_fg_color, $
 // Background colors
 $bg_color: if($variant =='dark', #303030, #F5F5F5);
 $base_color: if($variant =='dark', #353535, #FFFFFF);
-$alt_base_color: mix($base_color, $bg_color, 50%);
+$alt_base_color: if($variant =='dark', #323232, #F2F2F2);
 
 $lighter_bg_color: if($variant =='dark', #3e3e3e, #ffffff);
 $darker_bg_color: if($variant =='dark', #282828, #EEEEEE);

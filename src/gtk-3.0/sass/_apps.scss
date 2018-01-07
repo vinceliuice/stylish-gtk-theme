@@ -52,12 +52,13 @@ filechooser,
      separator,
      .separator {
        min-height: 1px;
-       border-color: $borders_color;
+       border: none;
        background-color: $borders_color;
      }
 
     row.sidebar-row {
       padding: 0;
+      border-color: transparent;
       &:hover { color: $primary_color;
               background-color: transparent;
               box-shadow: inset 3px 0 $primary_color; }
