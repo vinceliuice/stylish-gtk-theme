@@ -2961,7 +2961,9 @@ messagedialog.csd .dialog-action-area button {
   padding: 8px 16px;
   border-style: none;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 0; }
+  border-bottom: none;
+  border-radius: 0;
+  box-shadow: none; }
   messagedialog.csd .dialog-action-area button:first-child {
     border-left-style: none;
     border-radius: 0;

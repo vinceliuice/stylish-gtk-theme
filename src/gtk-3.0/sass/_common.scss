@@ -2905,7 +2905,9 @@ messagedialog { // Message Dialog styling
       padding: 8px 16px;
       border-style: none;
       border-top: 1px solid $borders_color;
+      border-bottom: none;
       border-radius: 0;
+      box-shadow: none;
         
       &:first-child { border-left-style: none; border-radius: 0; border-bottom-left-radius: 2px; }
 
