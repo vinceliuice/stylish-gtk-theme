@@ -3662,18 +3662,6 @@ frame.gedit-map-frame > border:dir(rtl) {
   background-image: image(#FFFFFF);
   border: 1px solid rgba(0, 0, 0, 0.15); }
 
-headerbar > button.flat.popup.title-menu-button.toggle {
-  border-radius: 3px;
-  -gtk-outline-radius: 3px; }
-  headerbar > button.flat.popup.title-menu-button.toggle > grid .title {
-    margin: rem(-2.7px) 0;
-    padding: rem(1.3px) rem(13.3px) 0;
-    font-size: 90%; }
-  headerbar > button.flat.popup.title-menu-button.toggle > grid .subtitle {
-    margin: rem(-2.7px) 0;
-    padding: 0 rem(13.3px) rem(1.3px);
-    font-size: 80%; }
-
 window.background > box.vertical box.horizontal list.categories {
   background-color: #F5F5F5;
   border: none;
