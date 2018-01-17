@@ -127,7 +127,7 @@ headerbar .subtitle, .budgie-notification .notification-body {
 assistant .sidebar {
   padding: 4px 0; }
 assistant .sidebar label {
-  min-height: 36px;
+  min-height: 34px;
   padding: 0 12px;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 500; }
@@ -176,7 +176,7 @@ spinner {
 spinbutton:not(.vertical), notebook > stack:not(:only-child) revealer entry,
 notebook > stack:not(:only-child) revealer spinbutton:not(.vertical),
 entry {
-  min-height: 36px;
+  min-height: 34px;
   padding: 0 8px;
   border-radius: 2px;
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
@@ -369,7 +369,7 @@ treeview entry.flat, treeview entry {
     box-shadow: none; }
 
 .entry-tag, .documents-entry-tag, .photos-entry-tag {
-  margin: 6px;
+  margin: 5px;
   border-radius: 100px;
   box-shadow: none;
   background-color: #787878;
@@ -378,11 +378,11 @@ treeview entry.flat, treeview entry {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24); }
   :dir(ltr) .entry-tag, :dir(ltr) .documents-entry-tag, :dir(ltr) .photos-entry-tag {
     margin-left: 8px;
-    margin-right: -2px;
+    margin-right: -3px;
     padding-left: 8px;
     padding-right: 4px; }
   :dir(rtl) .entry-tag, :dir(rtl) .documents-entry-tag, :dir(rtl) .photos-entry-tag {
-    margin-left: -2px;
+    margin-left: -3px;
     margin-right: 8px;
     padding-left: 4px;
     padding-right: 8px; }
@@ -405,7 +405,7 @@ popover.background button:not(.suggested-action):not(.destructive-action), :not(
 button {
   min-height: 24px;
   min-width: 16px;
-  padding: 6px 10px;
+  padding: 5px 9px;
   border-radius: 3px;
   font-weight: 500;
   transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
@@ -502,7 +502,7 @@ button {
   .path-bar button.image-button,
   button.image-button {
     min-width: 24px;
-    padding: 6px;
+    padding: 5px;
     border-radius: 3px;
     -gtk-outline-radius: 3px; }
   popover.background button.text-button.image-button:not(.suggested-action):not(.destructive-action), :not(headerbar) .caja-pathbar button.text-button.image-button, .caja-pathbar :not(headerbar) button.text-button.image-button, :not(headerbar)
@@ -513,18 +513,18 @@ button {
     popover.background button.text-button.image-button:not(.suggested-action):not(.destructive-action) label:first-child, :not(headerbar) .caja-pathbar button.text-button.image-button label:first-child, .caja-pathbar :not(headerbar) button.text-button.image-button label:first-child, :not(headerbar)
     .path-bar button.text-button.image-button label:first-child,
     button.text-button.image-button label:first-child {
-      margin-left: 10px;
+      margin-left: 11px;
       margin-right: 2px; }
     popover.background button.text-button.image-button:not(.suggested-action):not(.destructive-action) label:last-child, :not(headerbar) .caja-pathbar button.text-button.image-button label:last-child, .caja-pathbar :not(headerbar) button.text-button.image-button label:last-child, :not(headerbar)
     .path-bar button.text-button.image-button label:last-child,
     button.text-button.image-button label:last-child {
       margin-left: 2px;
-      margin-right: 10px; }
+      margin-right: 11px; }
     popover.background button.text-button.image-button:not(.suggested-action):not(.destructive-action) label:only-child, :not(headerbar) .caja-pathbar button.text-button.image-button label:only-child, .caja-pathbar :not(headerbar) button.text-button.image-button label:only-child, :not(headerbar)
     .path-bar button.text-button.image-button label:only-child,
     button.text-button.image-button label:only-child {
-      margin-left: 10px;
-      margin-right: 10px; }
+      margin-left: 11px;
+      margin-right: 11px; }
     popover.background button.text-button.image-button:not(.suggested-action):not(.destructive-action) image:not(:only-child):first-child, :not(headerbar) .caja-pathbar button.text-button.image-button image:not(:only-child):first-child, .caja-pathbar :not(headerbar) button.text-button.image-button image:not(:only-child):first-child, :not(headerbar)
     .path-bar button.text-button.image-button image:not(:only-child):first-child,
     button.text-button.image-button image:not(:only-child):first-child {
@@ -541,11 +541,11 @@ button:disabled {
 :not(headerbar) .caja-pathbar button.osd, .caja-pathbar :not(headerbar) button.osd, :not(headerbar)
 .path-bar button.osd,
 button.osd {
-  padding: 11px 15px; }
+  padding: 9px 13px; }
   :not(headerbar) .caja-pathbar button.osd.image-button, .caja-pathbar :not(headerbar) button.osd.image-button, :not(headerbar)
   .path-bar button.osd.image-button,
   button.osd.image-button {
-    padding: 11px; }
+    padding: 9px; }
   :not(headerbar) .caja-pathbar button.osd:disabled, .caja-pathbar :not(headerbar) button.osd:disabled, :not(headerbar)
   .path-bar button.osd:disabled,
   button.osd:disabled {
@@ -682,8 +682,8 @@ button {
   :not(headerbar) .caja-pathbar .stack-switcher > button.image-button, .caja-pathbar :not(headerbar) .stack-switcher > button.image-button, :not(headerbar)
   .path-bar .stack-switcher > button.image-button, .stack-switcher >
   button.image-button {
-    padding-left: 4px;
-    padding-right: 4px; }
+    padding-left: 3px;
+    padding-right: 3px; }
   :not(headerbar) .caja-pathbar .stack-switcher > button.needs-attention:checked > label, .caja-pathbar :not(headerbar) .stack-switcher > button.needs-attention:checked > label, :not(headerbar)
   .path-bar .stack-switcher > button.needs-attention:checked > label,
   :not(headerbar) .caja-pathbar .stack-switcher > button.needs-attention:checked > image,
@@ -941,7 +941,7 @@ spinbutton:not(.vertical) {
   padding: 0; }
   notebook > stack:not(:only-child) spinbutton:not(.vertical) entry,
   spinbutton:not(.vertical) entry {
-    min-width: 30px;
+    min-width: 26px;
     margin: 0;
     border-style: none;
     border-image: none;
@@ -959,13 +959,13 @@ spinbutton.vertical:disabled {
 spinbutton.vertical:drop(active) {
   box-shadow: none; }
 spinbutton.vertical entry {
-  min-height: 36px;
-  min-width: 46px;
+  min-height: 34px;
+  min-width: 42px;
   padding: 0;
   border-radius: 0; }
 spinbutton.vertical button {
-  min-height: 36px;
-  min-width: 46px;
+  min-height: 34px;
+  min-width: 42px;
   padding: 0;
   border-color: rgba(255, 255, 255, 0.15); }
   spinbutton.vertical button.up {
@@ -993,13 +993,13 @@ combobox decoration,
 combobox button.combo:checked {
   transition: none; }
 combobox button.combo cellview:dir(ltr) {
-  margin-left: -2px; }
+  margin-left: -1px; }
 combobox button.combo cellview:dir(rtl) {
-  margin-right: -2px; }
+  margin-right: -1px; }
 combobox #gtk-combobox-popup-menu {
   padding: 2px 0; }
   combobox #gtk-combobox-popup-menu menuitem {
-    min-height: 32px;
+    min-height: 30px;
     padding: 0 8px; }
 combobox entry:focus + button {
   border-color: #787878; }
@@ -1104,7 +1104,7 @@ searchbar,
 .titlebar:not(headerbar),
 headerbar {
   transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1);
-  min-height: 46px;
+  min-height: 42px;
   padding: 0 6px;
   box-shadow: inset 0 -1px rgba(255, 255, 255, 0.15);
   background-color: #424242;
@@ -1359,8 +1359,8 @@ window.csd > .titlebar:not(headerbar) {
  ************/
 .caja-pathbar button,
 .path-bar button {
-  padding-left: 4px;
-  padding-right: 4px; }
+  padding-left: 3px;
+  padding-right: 3px; }
   .caja-pathbar button label:not(:only-child):first-child,
   .path-bar button label:not(:only-child):first-child {
     margin-left: 4px; }
@@ -2010,8 +2010,8 @@ check,
 radio {
   min-height: 24px;
   min-width: 24px;
-  margin: -11px;
-  padding: 11px; }
+  margin: -9px;
+  padding: 9px; }
   check:checked, check:indeterminate,
   radio:checked,
   radio:indeterminate {
@@ -2579,8 +2579,8 @@ treeview.view radio:checked {
  * GtkScale *
  ************/
 scale {
-  min-height: 12px;
-  min-width: 12px;
+  min-height: 10px;
+  min-width: 10px;
   padding: 12px; }
   scale * {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1); }
@@ -2738,11 +2738,11 @@ progressbar {
  * Level Bar *
  *************/
 levelbar block {
-  min-width: 36px;
+  min-width: 34px;
   min-height: 4px; }
 levelbar.vertical block {
   min-width: 4px;
-  min-height: 36px; }
+  min-height: 34px; }
 levelbar trough {
   padding: 2px;
   border-radius: 2px;
@@ -3450,8 +3450,8 @@ stackswitcher button.text-button {
 
 stackswitcher button.circular,
 stackswitcher button.text-button.circular {
-  min-width: 36px;
-  min-height: 36px;
+  min-width: 34px;
+  min-height: 34px;
   padding: 0; }
 
 /*********
@@ -3464,7 +3464,7 @@ button.emoji-section {
   margin-top: 4px;
   padding: 0 8px;
   min-width: 24px;
-  min-height: 36px;
+  min-height: 34px;
   outline-offset: -4px;
   box-shadow: none; }
 
@@ -3764,7 +3764,7 @@ layouttabbar {
   background-color: #303030; }
 
 layouttabbar > box > button {
-  margin: 2px 0; }
+  margin: 3px 0; }
 
 layouttab {
   margin: 0 8px;
@@ -3959,7 +3959,7 @@ task-row {
     margin: 0 4px; }
 
 task-list-view > box > revealer > box > button {
-  min-height: 36px;
+  min-height: 34px;
   margin: -4px;
   padding: 0 12px; }
   task-list-view > box > revealer > box > button label {
@@ -4003,7 +4003,7 @@ list.categories {
  * Calculator *
  **************/
 button.title label {
-  min-height: 36px; }
+  min-height: 34px; }
 
 /************
  * Terminix *
@@ -4019,7 +4019,7 @@ button.title label {
   border-style: none; }
 
 button.image-button.session-new-button {
-  min-width: 32px; }
+  min-width: 30px; }
 
 overlay > revealer.left > scrolledwindow.frame,
 overlay > revealer.right > scrolledwindow.frame {
@@ -4517,7 +4517,7 @@ frame.raven-frame > border {
       border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #FFA726 100%, transparent 0%) 0 0 2/0 0 2px;
       background-color: transparent; }
   .raven .raven-header {
-    min-height: 36px;
+    min-height: 34px;
     padding: 3px;
     border-style: none none solid;
     border-width: 1px;
@@ -4534,7 +4534,7 @@ frame.raven-frame > border {
       color: #FFFFFF; }
       .raven .raven-header.top stackswitcher button {
         margin: -6px 0;
-        min-height: 36px; }
+        min-height: 34px; }
       .raven .raven-header.top button.image-button:dir(ltr) {
         margin-right: 2px; }
       .raven .raven-header.top button.image-button:dir(rtl) {
@@ -4565,7 +4565,7 @@ frame.raven-frame > border {
       margin: -4px 0; }
   .raven .powerstrip button {
     margin: 2px 0 1px;
-    padding: 11px; }
+    padding: 9px; }
   .raven .option-subtitle {
     font-size: smaller; }
 
@@ -4582,7 +4582,7 @@ calendar.raven-calendar {
   .raven-mpris label {
     min-height: 24px; }
   .raven-mpris button.image-button {
-    padding: 11px; }
+    padding: 9px; }
 
 .budgie-notification-window, .budgie-osd-window {
   background-color: transparent; }
