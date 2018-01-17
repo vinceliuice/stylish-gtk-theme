@@ -816,7 +816,6 @@ spinbutton {
     // behaves as the entry, so we extend the entry styling
     // and nuke the style on the internal entry
     @extend %entry;
-
     padding: 0;
 
     %spinbutton_entry,
@@ -866,8 +865,7 @@ spinbutton {
 
   // OSD horizontal
   .osd &:not(.vertical) {
-    button {
-    }
+    button { }
   }
 
   // Vertical
@@ -905,8 +903,7 @@ spinbutton {
   }
 
   // OSD vertical
-  .osd &.vertical button:first-child {
-  }
+  .osd &.vertical { button:first-child { } }
 
   // Misc
   treeview &:not(.vertical) {
@@ -955,6 +952,9 @@ combobox {
     }
   }
 
+  entry:focus + button { border-color: $primary_color; }
+  entry:drop(active) + button { border-color: $warning_bg_color; }
+
   &:drop(active) { // FIXME: untested
     box-shadow: none;
 
@@ -993,7 +993,6 @@ combobox {
 
   &:disabled { color: $disabled_fg_color; }
 }
-
 
 /************
  * Toolbars *
@@ -1061,8 +1060,11 @@ searchbar,
   border-color: $borders_color;
   background-color: $bg_color;
   background-clip: border-box;
-}
 
+  entry:focus + button { border-color: $primary_color; }
+  entry:drop(active) + button { border-color: $warning_bg_color; }
+
+}
 
 /***************
  * Header bars *
@@ -1213,6 +1215,12 @@ headerbar {
     }
 
   separator.titlebutton { @extend %header_separator; }
+
+  // special case for headerbar linked entrys
+  .linked:not(.vertical):not(.path-bar) > entry {
+    border: 1px solid $borders_color;
+    &:focus { border: 1px solid $primary_color; }
+  }
 
   // special case for path-bar and stack-switchers
   .linked:not(.vertical).path-bar,

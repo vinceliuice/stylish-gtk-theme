@@ -252,7 +252,6 @@ filechooser,
   }
 
   entry {
-
     &.error ~ button {
       color: gtkalpha($secondary_fg_color, $hint_opacity);
 
@@ -261,9 +260,12 @@ filechooser,
   }
 
   button {
-    @extend %simple_flat_button;
+//    @extend %simple_flat_button;
     padding: 0 8px;
   }
+
+  entry:focus + button { border-left: 1px solid $primary_color; }
+  entry:drop(active) + button { border-left: 1px solid $warning_bg_color; }
 
 }
 

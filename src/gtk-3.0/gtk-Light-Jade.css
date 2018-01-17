@@ -446,7 +446,7 @@ button {
     border-color: rgba(46, 179, 123, 0.4); }
   modelbutton.flat,
   .menuitem.button.flat, spinbutton:not(.vertical) button, spinbutton.vertical button, notebook > header > tabs > arrow, scrollbar button, check,
-  radio, calendar.button, button.sidebar-button, .gedit-search-slider button, PanelToplevel > widget > button, .raven .raven-header:not(.top) button, .drop-shadow button, .budgie-session-dialog .linked.horizontal > button, .lightdm-gtk-greeter button, layouttabbar button, .mate-panel-menu-bar #PanelApplet button:not(.flat), .budgie-panel #tasklist-button, .raven stackswitcher.linked > button, toolbar button, popover.background button.flat:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button, :not(headerbar) .caja-pathbar button.flat, .caja-pathbar :not(headerbar) button.flat, :not(headerbar)
+  radio, calendar.button, button.sidebar-button, PanelToplevel > widget > button, .raven .raven-header:not(.top) button, .drop-shadow button, .budgie-session-dialog .linked.horizontal > button, .lightdm-gtk-greeter button, layouttabbar button, .mate-panel-menu-bar #PanelApplet button:not(.flat), .budgie-panel #tasklist-button, .raven stackswitcher.linked > button, toolbar button, popover.background button.flat:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button, :not(headerbar) .caja-pathbar button.flat, .caja-pathbar :not(headerbar) button.flat, :not(headerbar)
   .path-bar button.flat,
   button.flat {
     transition: all 0.3s cubic-bezier(0, 0, 0.2, 1);
@@ -457,7 +457,7 @@ button {
     border-color: transparent; }
     modelbutton.flat:hover,
     .menuitem.button.flat:hover, spinbutton:not(.vertical) button:hover, spinbutton.vertical button:hover, notebook > header > tabs > arrow:hover, scrollbar button:hover, check:hover,
-    radio:hover, calendar.button:hover, button.sidebar-button:hover, .gedit-search-slider button:hover, PanelToplevel > widget > button:hover, .raven .raven-header:not(.top) button:hover, .drop-shadow button:hover, .budgie-session-dialog .linked.horizontal > button:hover, .lightdm-gtk-greeter button:hover, layouttabbar button:hover, .mate-panel-menu-bar #PanelApplet button:hover:not(.flat), .budgie-panel #tasklist-button:hover, .raven stackswitcher.linked > button:hover, toolbar button:hover, popover.background button.flat:hover:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:hover:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:hover, :not(headerbar) .caja-pathbar button.flat:hover, .caja-pathbar :not(headerbar) button.flat:hover, :not(headerbar)
+    radio:hover, calendar.button:hover, button.sidebar-button:hover, PanelToplevel > widget > button:hover, .raven .raven-header:not(.top) button:hover, .drop-shadow button:hover, .budgie-session-dialog .linked.horizontal > button:hover, .lightdm-gtk-greeter button:hover, layouttabbar button:hover, .mate-panel-menu-bar #PanelApplet button:hover:not(.flat), .budgie-panel #tasklist-button:hover, .raven stackswitcher.linked > button:hover, toolbar button:hover, popover.background button.flat:hover:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:hover:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:hover, :not(headerbar) .caja-pathbar button.flat:hover, .caja-pathbar :not(headerbar) button.flat:hover, :not(headerbar)
     .path-bar button.flat:hover,
     button.flat:hover {
       box-shadow: none;
@@ -466,7 +466,7 @@ button {
       border-color: transparent; }
     modelbutton.flat:active,
     .menuitem.button.flat:active, spinbutton:not(.vertical) button:active, spinbutton.vertical button:active, notebook > header > tabs > arrow:active, scrollbar button:active, check:active,
-    radio:active, calendar.button:active, button.sidebar-button:active, .gedit-search-slider button:active, PanelToplevel > widget > button:active, .raven .raven-header:not(.top) button:active, .drop-shadow button:active, .budgie-session-dialog .linked.horizontal > button:active, .lightdm-gtk-greeter button:active, layouttabbar button:active, .mate-panel-menu-bar #PanelApplet button:active:not(.flat), .budgie-panel #tasklist-button:active, .raven stackswitcher.linked > button:active, toolbar button:active, popover.background button.flat:active:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:active, :not(headerbar) .caja-pathbar button.flat:active, .caja-pathbar :not(headerbar) button.flat:active, :not(headerbar)
+    radio:active, calendar.button:active, button.sidebar-button:active, PanelToplevel > widget > button:active, .raven .raven-header:not(.top) button:active, .drop-shadow button:active, .budgie-session-dialog .linked.horizontal > button:active, .lightdm-gtk-greeter button:active, layouttabbar button:active, .mate-panel-menu-bar #PanelApplet button:active:not(.flat), .budgie-panel #tasklist-button:active, .raven stackswitcher.linked > button:active, toolbar button:active, popover.background button.flat:active:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:active, :not(headerbar) .caja-pathbar button.flat:active, .caja-pathbar :not(headerbar) button.flat:active, :not(headerbar)
     .path-bar button.flat:active,
     button.flat:active {
       transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), background-image 0;
@@ -476,7 +476,7 @@ button {
       border-color: transparent; }
     modelbutton.flat:disabled,
     .menuitem.button.flat:disabled, spinbutton:not(.vertical) button:disabled, spinbutton.vertical button:disabled, notebook > header > tabs > arrow:disabled, scrollbar button:disabled, check:disabled,
-    radio:disabled, calendar.button:disabled, button.sidebar-button:disabled, .gedit-search-slider button:disabled, PanelToplevel > widget > button:disabled, .raven .raven-header:not(.top) button:disabled, .drop-shadow button:disabled, .budgie-session-dialog .linked.horizontal > button:disabled, .lightdm-gtk-greeter button:disabled, layouttabbar button:disabled, .mate-panel-menu-bar #PanelApplet button:disabled:not(.flat), .budgie-panel #tasklist-button:disabled, .raven stackswitcher.linked > button:disabled, toolbar button:disabled, popover.background button.flat:disabled:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:disabled, :not(headerbar) .caja-pathbar button.flat:disabled, .caja-pathbar :not(headerbar) button.flat:disabled, :not(headerbar)
+    radio:disabled, calendar.button:disabled, button.sidebar-button:disabled, PanelToplevel > widget > button:disabled, .raven .raven-header:not(.top) button:disabled, .drop-shadow button:disabled, .budgie-session-dialog .linked.horizontal > button:disabled, .lightdm-gtk-greeter button:disabled, layouttabbar button:disabled, .mate-panel-menu-bar #PanelApplet button:disabled:not(.flat), .budgie-panel #tasklist-button:disabled, .raven stackswitcher.linked > button:disabled, toolbar button:disabled, popover.background button.flat:disabled:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:disabled, :not(headerbar) .caja-pathbar button.flat:disabled, .caja-pathbar :not(headerbar) button.flat:disabled, :not(headerbar)
     .path-bar button.flat:disabled,
     button.flat:disabled {
       box-shadow: none;
@@ -1001,6 +1001,10 @@ combobox #gtk-combobox-popup-menu {
   combobox #gtk-combobox-popup-menu menuitem {
     min-height: 32px;
     padding: 0 8px; }
+combobox entry:focus + button {
+  border-color: #2eb37b; }
+combobox entry:drop(active) + button {
+  border-color: #FFA726; }
 combobox:drop(active) {
   box-shadow: none; }
 
@@ -1087,6 +1091,12 @@ searchbar,
   border-color: rgba(0, 0, 0, 0.15);
   background-color: #F5F5F5;
   background-clip: border-box; }
+  searchbar entry:focus + button,
+  .location-bar entry:focus + button {
+    border-color: #2eb37b; }
+  searchbar entry:drop(active) + button,
+  .location-bar entry:drop(active) + button {
+    border-color: #FFA726; }
 
 /***************
  * Header bars *
@@ -1282,6 +1292,12 @@ headerbar {
   headerbar.default-decoration:backdrop {
     box-shadow: none;
     border: none; }
+  .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > entry,
+  headerbar .linked:not(.vertical):not(.path-bar) > entry {
+    border: 1px solid rgba(0, 0, 0, 0.15); }
+    .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > entry:focus,
+    headerbar .linked:not(.vertical):not(.path-bar) > entry:focus {
+      border: 1px solid #2eb37b; }
   .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
   .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:active,
   .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:checked,
@@ -3628,6 +3644,10 @@ filechooser placessidebar.sidebar row.sidebar-row,
       color: rgba(0, 0, 0, 0.32); }
   .gedit-search-slider button {
     padding: 0 8px; }
+  .gedit-search-slider entry:focus + button {
+    border-left: 1px solid #2eb37b; }
+  .gedit-search-slider entry:drop(active) + button {
+    border-left: 1px solid #FFA726; }
 
 frame.gedit-map-frame > border:dir(ltr) {
   border-style: none none none solid; }
