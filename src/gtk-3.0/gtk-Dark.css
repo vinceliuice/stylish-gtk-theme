@@ -462,8 +462,7 @@ button {
     button.flat:hover {
       box-shadow: none;
       background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0) 100%, transparent 0%), image(alpha(currentColor, 0.12));
-      color: currentColor;
-      border-color: transparent; }
+      color: currentColor; }
     modelbutton.flat:active,
     .menuitem.button.flat:active, spinbutton:not(.vertical) button:active, spinbutton.vertical button:active, notebook > header > tabs > arrow:active, scrollbar button:active, check:active,
     radio:active, calendar.button:active, button.sidebar-button:active, PanelToplevel > widget > button:active, .raven .raven-header:not(.top) button:active, .drop-shadow button:active, .budgie-session-dialog .linked.horizontal > button:active, .lightdm-gtk-greeter button:active, layouttabbar button:active, .mate-panel-menu-bar #PanelApplet button:active:not(.flat), .budgie-panel #tasklist-button:active, .raven stackswitcher.linked > button:active, toolbar button:active, popover.background button.flat:active:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:active, :not(headerbar) .caja-pathbar button.flat:active, .caja-pathbar :not(headerbar) button.flat:active, :not(headerbar)
@@ -472,8 +471,7 @@ button {
       transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), background-image 0;
       animation: flat_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
       box-shadow: none;
-      color: currentColor;
-      border-color: transparent; }
+      color: currentColor; }
     modelbutton.flat:disabled,
     .menuitem.button.flat:disabled, spinbutton:not(.vertical) button:disabled, spinbutton.vertical button:disabled, notebook > header > tabs > arrow:disabled, scrollbar button:disabled, check:disabled,
     radio:disabled, calendar.button:disabled, button.sidebar-button:disabled, PanelToplevel > widget > button:disabled, .raven .raven-header:not(.top) button:disabled, .drop-shadow button:disabled, .budgie-session-dialog .linked.horizontal > button:disabled, .lightdm-gtk-greeter button:disabled, layouttabbar button:disabled, .mate-panel-menu-bar #PanelApplet button:disabled:not(.flat), .budgie-panel #tasklist-button:disabled, .raven stackswitcher.linked > button:disabled, toolbar button:disabled, popover.background button.flat:disabled:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:disabled, :not(headerbar) .caja-pathbar button.flat:disabled, .caja-pathbar :not(headerbar) button.flat:disabled, :not(headerbar)
@@ -486,6 +484,7 @@ button {
   .path-bar button.flat:checked,
   button.flat:checked {
     color: currentColor;
+    background-color: alpha(currentColor, 0.12);
     border-color: transparent; }
   layouttabbar button:checked:disabled, .mate-panel-menu-bar #PanelApplet button:checked:disabled:not(.flat), .budgie-panel #tasklist-button:checked:disabled, .raven stackswitcher.linked > button:checked:disabled, toolbar button:checked:disabled, popover.background button.flat:checked:disabled:not(.suggested-action):not(.destructive-action), actionbar > revealer > box button:checked:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:checked:disabled, :not(headerbar) .caja-pathbar button.flat:checked:disabled, .caja-pathbar :not(headerbar) button.flat:checked:disabled, :not(headerbar)
   .path-bar button.flat:checked:disabled,
@@ -586,8 +585,7 @@ button.suggested-action {
     button.suggested-action.flat:hover {
       box-shadow: none;
       background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0) 100%, transparent 0%), image(alpha(currentColor, 0.12));
-      color: currentColor;
-      border-color: transparent; }
+      color: currentColor; }
     :not(headerbar) .caja-pathbar button.suggested-action.flat:active, .caja-pathbar :not(headerbar) button.suggested-action.flat:active, :not(headerbar)
     .path-bar button.suggested-action.flat:active, :not(headerbar) .caja-pathbar button.suggested-action.flat:checked, .caja-pathbar :not(headerbar) button.suggested-action.flat:checked, :not(headerbar)
     .path-bar button.suggested-action.flat:checked,
@@ -596,8 +594,7 @@ button.suggested-action {
       transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), background-image 0;
       animation: flat_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
       box-shadow: none;
-      color: currentColor;
-      border-color: transparent; }
+      color: currentColor; }
     :not(headerbar) .caja-pathbar button.suggested-action.flat:disabled, .caja-pathbar :not(headerbar) button.suggested-action.flat:disabled, :not(headerbar)
     .path-bar button.suggested-action.flat:disabled,
     button.suggested-action.flat:disabled {
@@ -640,8 +637,7 @@ button.destructive-action {
     button.destructive-action.flat:hover {
       box-shadow: none;
       background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0) 100%, transparent 0%), image(alpha(currentColor, 0.12));
-      color: currentColor;
-      border-color: transparent; }
+      color: currentColor; }
     :not(headerbar) .caja-pathbar button.destructive-action.flat:active, .caja-pathbar :not(headerbar) button.destructive-action.flat:active, :not(headerbar)
     .path-bar button.destructive-action.flat:active, :not(headerbar) .caja-pathbar button.destructive-action.flat:checked, .caja-pathbar :not(headerbar) button.destructive-action.flat:checked, :not(headerbar)
     .path-bar button.destructive-action.flat:checked,
@@ -650,8 +646,7 @@ button.destructive-action {
       transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), background-image 0;
       animation: flat_ripple_effect 0.3s cubic-bezier(0, 0, 0.2, 1) forwards;
       box-shadow: none;
-      color: currentColor;
-      border-color: transparent; }
+      color: currentColor; }
     :not(headerbar) .caja-pathbar button.destructive-action.flat:disabled, .caja-pathbar :not(headerbar) button.destructive-action.flat:disabled, :not(headerbar)
     .path-bar button.destructive-action.flat:disabled,
     button.destructive-action.flat:disabled {

@@ -245,7 +245,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
                                       transparent 0%),
                       image($semi_track_color);
     color: currentColor;
-    border-color: transparent;
+//    border-color: transparent;
 //    background-color: gtkalpha(black, 0.08);
   }
 
@@ -255,7 +255,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
     box-shadow: none;
     color: currentColor;
 //    background-color: gtkalpha(black, 0.12);
-    border-color: transparent;
+//    border-color: transparent;
   }
 
   @if $t == flat-disabled {
@@ -267,7 +267,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == flat-checked {
 //    background-color: gtkalpha(black, 0.15);
     color: currentColor;
-//    background-color: $track_color;
+    background-color: $track_color;
     border-color: transparent;
   }
 
