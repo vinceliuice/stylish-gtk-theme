@@ -2067,9 +2067,9 @@ switch {
     color: $inversed_fg_color;
   }
 
-  &:disabled slider { @include entry(disabled); }
+  &:disabled slider { background-color: if($variant == 'light', darken($bg_color, 10%), lighten($bg_color, 10%)); }
 
-  &:checked:disabled slider { animation: none; }
+  &:checked:disabled slider { animation: none; background-color: lighten($accent_color, 10%); }
 
   row:selected & {
       background-color: gtkalpha($light_contrast_color, 0.2);

@@ -1914,10 +1914,10 @@ switch {
     background-color: #1bc674;
     color: #FFFFFF; }
   switch:disabled slider {
-    background-color: alpha(currentColor, 0.12);
-    color: rgba(255, 255, 255, 0.4); }
+    background-color: #4a4a4a; }
   switch:checked:disabled slider {
-    animation: none; }
+    animation: none;
+    background-color: #31e38e; }
   row:selected switch {
     background-color: alpha(rgba(0, 0, 0, 0.8), 0.2); }
     row:selected switch:checked {
