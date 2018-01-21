@@ -3625,8 +3625,9 @@ filechooser placessidebar.sidebar row.sidebar-row,
 
 .gedit-search-slider {
   padding: 6px;
-  border-radius: 0 0 2px 2px;
-  border: 0 1px 1px 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 3px 3px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-top: none;
   background-color: #fafafa; }
   .gedit-search-slider .gedit-search-entry-occurrences-tag {
     margin: 2px;
@@ -4130,13 +4131,13 @@ window.background > box.vertical > widget > widget:selected {
 /****************
  * Libre-Office *
  ****************/
-window.background > grid.horizontal > grid.horizontal {
+window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal {
   background-color: #EEEEEE; }
-  window.background > grid.horizontal > grid.horizontal > button.flat.small-button {
+  window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button {
     color: rgba(0, 0, 0, 0.8); }
-    window.background > grid.horizontal > grid.horizontal > button.flat.small-button:hover, window.background > grid.horizontal > grid.horizontal > button.flat.small-button:active, window.background > grid.horizontal > grid.horizontal > button.flat.small-button:checked {
+    window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:hover, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:active, window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:checked {
       color: rgba(0, 0, 0, 0.6); }
-    window.background > grid.horizontal > grid.horizontal > button.flat.small-button:disabled {
+    window.background:not(.csd):not(.solid-csd) > grid.horizontal > grid.horizontal > button.flat.small-button:disabled {
       color: rgba(0, 0, 0, 0.32); }
 
 window.background:not(.solid-csd) > notebook:not(.frame) {

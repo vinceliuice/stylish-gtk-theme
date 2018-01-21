@@ -240,8 +240,9 @@ filechooser,
 
 .gedit-search-slider {
   padding: 6px;
-  border-radius: 0 0 2px 2px;
-  border: 0 1px 1px 1px solid $borders_color;
+  border-radius: 0 0 3px 3px;
+  border: 1px solid $borders_color;
+  border-top: none;
   background-color: lighten($bg_color, 2%);
 
   .gedit-search-entry-occurrences-tag {
@@ -1017,7 +1018,7 @@ window.background > box.vertical > widget > widget:selected { background-color: 
  * Libre-Office *
  ****************/
 
-window.background {
+window.background:not(.csd):not(.solid-csd) {
 // reserved area at the most-right side of GtkMenuBar
   > grid.horizontal > grid.horizontal {
     background-color: $headerbar_bg_color;
