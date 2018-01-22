@@ -65,28 +65,28 @@
     <linearGradient
        id="linearGradient5046">
       <stop
-         style="stop-color:#18B8FF;stop-opacity:1;"
+         style="stop-color:#2196F3;stop-opacity:1;"
          offset="0"
          id="stop5048" />
     </linearGradient>
     <linearGradient
        id="linearGradient5035">
       <stop
-         style="stop-color:#18B8FF;stop-opacity:1;"
+         style="stop-color:#2196F3;stop-opacity:1;"
          offset="0"
          id="stop5037" />
     </linearGradient>
     <linearGradient
        id="linearGradient5019">
       <stop
-         style="stop-color:#18B8FF;stop-opacity:1;"
+         style="stop-color:#2196F3;stop-opacity:1;"
          offset="0"
          id="stop5021" />
     </linearGradient>
     <linearGradient
        id="linearGradient5013">
       <stop
-         style="stop-color:#18B8FF;stop-opacity:1;"
+         style="stop-color:#2196F3;stop-opacity:1;"
          offset="0"
          id="stop5015" />
     </linearGradient>
@@ -94,7 +94,7 @@
        id="selected_bg_color"
        osb:paint="solid">
       <stop
-         style="stop-color:#18B8FF;stop-opacity:1;"
+         style="stop-color:#2196F3;stop-opacity:1;"
          offset="0"
          id="stop5012" />
     </linearGradient>
@@ -1373,7 +1373,7 @@
                      height="26.85346"
                      width="27.286064"
                      id="rect5147-9-1-7-2-8"
-                     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#18B8FF;stroke-width:2.08222359;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#2196F3;stroke-width:2.08222359;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                      ry="13.42673" />
                 </g>
               </g>
@@ -1388,7 +1388,7 @@
          height="6.9997721"
          width="6.9997721"
          id="use15101-5-7-8"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#18B8FF;fill-opacity:1;stroke:none;stroke-width:2.9236505;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#2196F3;fill-opacity:1;stroke:none;stroke-width:2.9236505;marker:none;enable-background:accumulate"
          ry="3.499886" />
     </g>
     <g
@@ -1504,7 +1504,7 @@
                      height="28.919104"
                      width="29.384996"
                      id="rect5147-9-1-7-2-0-6"
-                     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#18B8FF;stroke-width:2.24276541;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#2196F3;stroke-width:2.24276541;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                      ry="14.459552" />
                 </g>
               </g>
@@ -1519,7 +1519,7 @@
          height="7.5382156"
          width="7.5407095"
          id="use15101-5-7-2-3"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#18B8FF;fill-opacity:1;stroke:none;stroke-width:2.9236505;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#2196F3;fill-opacity:1;stroke:none;stroke-width:2.9236505;marker:none;enable-background:accumulate"
          ry="3.7691078" />
     </g>
     <g
@@ -1800,7 +1800,7 @@
                      height="28.919107"
                      width="29.384991"
                      id="rect5147-9-1-7-2-3-9"
-                     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#18B8FF;stroke-width:2.08222359;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#2196F3;stroke-width:2.08222359;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                      ry="14.459554" />
                 </g>
               </g>
@@ -1815,7 +1815,7 @@
          height="7.9997454"
          width="7.9997454"
          id="use15101-5-7-0-1"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#18B8FF;fill-opacity:1;stroke:none;stroke-width:4.17664671;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#2196F3;fill-opacity:1;stroke:none;stroke-width:4.17664671;marker:none;enable-background:accumulate"
          ry="3.9998727" />
     </g>
     <g
@@ -2044,7 +2044,7 @@
                      height="28.919104"
                      width="29.384996"
                      id="rect5147-9-1-7-2-0-3-1"
-                     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#18B8FF;stroke-width:2.08222359;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#2196F3;stroke-width:2.08222359;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                      ry="14.459552" />
                 </g>
               </g>
@@ -2059,7 +2059,7 @@
          height="7.9997454"
          width="7.9997454"
          id="use15101-5-7-2-2-1"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#18B8FF;fill-opacity:1;stroke:none;stroke-width:4.17664671;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#2196F3;fill-opacity:1;stroke:none;stroke-width:4.17664671;marker:none;enable-background:accumulate"
          ry="3.9998727" />
     </g>
     <g
@@ -3685,51 +3685,51 @@
     <g
        id="arrow-left-prelight"
        transform="matrix(0,0.74646448,-0.80750136,0,28.210562,49.8995)"
-       style="display:inline;fill:#18B8FF;fill-opacity:1"
+       style="display:inline;fill:#2196F3;fill-opacity:1"
        inkscape:label="#g4159-9-2-8">
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="status"
          id="layer9-0-5-2" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="devices"
          id="layer10-55-1-8"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="apps"
          id="layer11-0-7-5"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="places"
          id="layer13-80-7-5"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="mimetypes"
          id="layer14-8-4-6"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="emblems"
          id="layer15-2-5-5" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="emotes"
          id="g71291-0-8-3" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="categories"
          id="g4953-14-7-9" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="actions"
          id="layer12-2-6-7">
         <path
@@ -3743,51 +3743,51 @@
     <g
        id="arrow-right-prelight"
        transform="matrix(0,0.74646448,0.80750136,0,15.789437,60.8995)"
-       style="display:inline;fill:#18B8FF;fill-opacity:1"
+       style="display:inline;fill:#2196F3;fill-opacity:1"
        inkscape:label="#g4159-9-7">
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="status"
          id="layer9-0-1" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="devices"
          id="layer10-55-5"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="apps"
          id="layer11-0-0"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="places"
          id="layer13-80-76"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="mimetypes"
          id="layer14-8-1"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="emblems"
          id="layer15-2-4" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="emotes"
          id="g71291-0-9" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="categories"
          id="g4953-14-3" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="actions"
          id="layer12-2-1">
         <path
@@ -4071,51 +4071,51 @@
     <g
        id="arrow-up-prelight"
        transform="matrix(0.7464645,0,0,-0.80750136,16.537321,82.572742)"
-       style="display:inline;fill:#18B8FF;fill-opacity:1"
+       style="display:inline;fill:#2196F3;fill-opacity:1"
        inkscape:label="#g4159-7-3">
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="status"
          id="layer9-6-7" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="devices"
          id="layer10-1-6"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="apps"
          id="layer11-5-7"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="places"
          id="layer13-1-0"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
          inkscape:label="mimetypes"
          id="layer14-3-1"
-         style="fill:#18B8FF;fill-opacity:1" />
+         style="fill:#2196F3;fill-opacity:1" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="emblems"
          id="layer15-6-0" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="emotes"
          id="g71291-9-2" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="categories"
          id="g4953-1-9" />
       <g
          transform="translate(-181.0002,-747)"
-         style="display:inline;fill:#18B8FF;fill-opacity:1"
+         style="display:inline;fill:#2196F3;fill-opacity:1"
          inkscape:label="actions"
          id="layer12-8-4">
         <path
@@ -5967,7 +5967,7 @@
          ry="5.499896" />
       <rect
          ry="2.499896"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#18B8FF;fill-opacity:1;stroke:none;stroke-width:2.08830285;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#2196F3;fill-opacity:1;stroke:none;stroke-width:2.08830285;marker:none;enable-background:accumulate"
          id="rect947"
          width="4.9997921"
          height="4.9997921"

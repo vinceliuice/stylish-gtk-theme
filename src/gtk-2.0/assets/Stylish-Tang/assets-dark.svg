@@ -65,28 +65,28 @@
     <linearGradient
        id="linearGradient5046">
       <stop
-         style="stop-color:#ff6767;stop-opacity:1;"
+         style="stop-color:#FF6C42;stop-opacity:1;"
          offset="0"
          id="stop5048" />
     </linearGradient>
     <linearGradient
        id="linearGradient5035">
       <stop
-         style="stop-color:#ff6767;stop-opacity:1;"
+         style="stop-color:#FF6C42;stop-opacity:1;"
          offset="0"
          id="stop5037" />
     </linearGradient>
     <linearGradient
        id="linearGradient5019">
       <stop
-         style="stop-color:#ff6767;stop-opacity:1;"
+         style="stop-color:#FF6C42;stop-opacity:1;"
          offset="0"
          id="stop5021" />
     </linearGradient>
     <linearGradient
        id="linearGradient5013">
       <stop
-         style="stop-color:#ff6767;stop-opacity:1;"
+         style="stop-color:#FF6C42;stop-opacity:1;"
          offset="0"
          id="stop5015" />
     </linearGradient>
@@ -94,7 +94,7 @@
        id="selected_bg_color"
        osb:paint="solid">
       <stop
-         style="stop-color:#ff6767;stop-opacity:1;"
+         style="stop-color:#FF6C42;stop-opacity:1;"
          offset="0"
          id="stop5012" />
     </linearGradient>
@@ -5944,7 +5944,7 @@
                      height="26.85346"
                      width="27.286064"
                      id="rect5147-9-1-7-2-8"
-                     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff6767;stroke-width:2.08222365;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#FF6C42;stroke-width:2.08222365;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                      ry="13.42673" />
                 </g>
               </g>
@@ -5959,7 +5959,7 @@
          height="6.9997721"
          width="6.9997721"
          id="use15101-5-7-8"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff6767;fill-opacity:1;stroke:none;stroke-width:2.9236505;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#FF6C42;fill-opacity:1;stroke:none;stroke-width:2.9236505;marker:none;enable-background:accumulate"
          ry="3.499886" />
     </g>
     <g
@@ -5994,7 +5994,7 @@
                      height="28.919104"
                      width="29.384996"
                      id="rect5147-9-1-7-2-0-6"
-                     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff6767;stroke-width:2.24276543;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#FF6C42;stroke-width:2.24276543;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                      ry="14.459552" />
                 </g>
               </g>
@@ -6009,7 +6009,7 @@
          height="7.5382156"
          width="7.5407095"
          id="use15101-5-7-2-3"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#ff6767;fill-opacity:1;stroke:none;stroke-width:2.9236505;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#FF6C42;fill-opacity:1;stroke:none;stroke-width:2.9236505;marker:none;enable-background:accumulate"
          ry="3.7691078" />
     </g>
     <g
@@ -6051,7 +6051,7 @@
                      height="28.919107"
                      width="29.384991"
                      id="rect5147-9-1-7-2-3-9"
-                     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff6767;stroke-width:2.08222365;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                     style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#FF6C42;stroke-width:2.08222365;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                      ry="14.459554" />
                 </g>
               </g>
@@ -6066,7 +6066,7 @@
          height="7.9997454"
          width="7.9997454"
          id="use15101-5-7-0-1"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff6767;fill-opacity:1;stroke:none;stroke-width:4.17664671;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#FF6C42;fill-opacity:1;stroke:none;stroke-width:4.17664671;marker:none;enable-background:accumulate"
          ry="3.9998727" />
     </g>
     <g
@@ -6108,7 +6108,7 @@
                      height="28.919104"
                      width="29.384996"
                      id="rect5147-9-1-7-2-0-3-1"
-                     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#ff6767;stroke-width:2.08222365;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+                     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:none;fill-opacity:1;fill-rule:nonzero;stroke:#FF6C42;stroke-width:2.08222365;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
                      ry="14.459552" />
                 </g>
               </g>
@@ -6123,7 +6123,7 @@
          height="7.9997454"
          width="7.9997454"
          id="use15101-5-7-2-2-1"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#ff6767;fill-opacity:1;stroke:none;stroke-width:4.17664671;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:#FF6C42;fill-opacity:1;stroke:none;stroke-width:4.17664671;marker:none;enable-background:accumulate"
          ry="3.9998727" />
     </g>
     <g
@@ -6177,7 +6177,7 @@
          ry="5.499896" />
       <rect
          ry="2.499896"
-         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#ff6767;fill-opacity:1;stroke:none;stroke-width:2.08830285;marker:none;enable-background:accumulate"
+         style="color:#000000;display:inline;overflow:visible;visibility:visible;fill:#FF6C42;fill-opacity:1;stroke:none;stroke-width:2.08830285;marker:none;enable-background:accumulate"
          id="rect947"
          width="4.9997921"
          height="4.9997921"

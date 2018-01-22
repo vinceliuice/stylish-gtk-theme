@@ -3,8 +3,8 @@
 
 Stylish is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
 
-This theme is based on Flat-Plat gtk theme of nana-4. Thanks nana-4 sincerely for his great job! 
-Flat-Plat gtk theme: https://github.com/nana-4/Flat-Plat
+This theme is based on materia-theme of nana-4. Thanks nana-4 sincerely for his great job! 
+materia-theme: https://github.com/nana-4/materia-theme
 
 ## Info
 
@@ -36,7 +36,7 @@ Open the terminal at current directory.
 Run
 
 
-    ./stylish-installer
+    ./Install
 
 
 Or double-click to open that script files and select "run at the terminal" at nautilus.
