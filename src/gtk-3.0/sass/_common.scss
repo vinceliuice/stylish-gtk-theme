@@ -208,7 +208,7 @@ assistant {
   // &.csd .sidebar { border-top-style: none; }
 
   .sidebar label {
-    min-height: $medium_size;
+    min-height: $small_size;
     padding: 0 12px;
     color: $tertiary_fg_color;
     font-weight: 500;
@@ -459,8 +459,8 @@ button {
     }
 
     &.text-button {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: 8px;
+      padding-right: 8px;
     }
 
     &.image-button {
@@ -1314,8 +1314,8 @@ headerbar {
  ************/
 %pathbar_button,
 .path-bar button {
-  padding-left: ($medium_size - 28px) / 2;
-  padding-right: ($medium_size - 28px) / 2;
+  padding-left: ($medium_size - 24px) / 2;
+  padding-right: ($medium_size - 24px) / 2;
 
   label:not(:only-child) {
     &:first-child { margin-left: 4px; }
@@ -1631,14 +1631,15 @@ popover.background {
 
 //   entry { @extend %entry.flat; }
 //   button.combo { @extend %combo_flat; }
-   button:not(.suggested-action):not(.destructive-action) {  @extend %button_basic; }
+   button:not(.suggested-action):not(.destructive-action) {
+    min-height: 24px;
+    min-width: 28px;
+  }
     
   &.menu button,
   button.model {
-    margin: 0;
-    min-height: 28px;
-    min-width: 32px;
-    padding: 0;
+    min-height: 24px;
+    min-width: 28px;
   }
 
   separator { margin: 4px 0; }
