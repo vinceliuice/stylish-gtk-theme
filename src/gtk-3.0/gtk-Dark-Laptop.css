@@ -1475,6 +1475,7 @@ menubar,
 .menubar {
   -GtkWidget-window-dragging: true;
   padding: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   background-color: #424242; }
   menubar > menuitem,
   .menubar > menuitem {
@@ -1807,9 +1808,9 @@ scrollbar {
     border-left: 1px solid rgba(255, 255, 255, 0.15); }
   scrollbar slider {
     transition: all 0.2s cubic-bezier(0, 0, 0.2, 1), margin 0, border-width 0;
-    min-width: 8px;
+    min-width: 6px;
     min-height: 8px;
-    border: 4px solid transparent;
+    border: 3px solid transparent;
     border-radius: 100px;
     background-clip: padding-box;
     background-color: rgba(255, 255, 255, 0.6); }
@@ -1849,11 +1850,11 @@ scrollbar {
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal slider {
       min-width: 24px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).horizontal button {
-      min-width: 8px; }
+      min-width: 6px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical slider {
       min-height: 24px; }
     scrollbar.overlay-indicator:not(.dragging):not(.hovering).vertical button {
-      min-height: 8px; }
+      min-height: 6px; }
   scrollbar.overlay-indicator.dragging, scrollbar.overlay-indicator.hovering {
     background-color: rgba(53, 53, 53, 0.9); }
   scrollbar.horizontal slider {
