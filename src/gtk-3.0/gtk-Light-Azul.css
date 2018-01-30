@@ -3286,7 +3286,8 @@ decoration {
   .popup decoration {
     box-shadow: none; }
   .ssd decoration {
-    border-radius: 2px; }
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px alpha(rgba(0, 0, 0, 0.15), 0.5), 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
   .csd.popup decoration {
     border-radius: 2px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
