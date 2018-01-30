@@ -508,23 +508,6 @@ button {
   .linked.vertical > &:active,
   .linked.vertical > &:checked { @extend %linked_vertical; }
 
-//    .linked > &.flat,
-//    .linked.vertical > &.flat {
-//      border-radius: $md_radius;
-//
-//      &.image-button {
-//          @extend %linked;
-//        border-radius: $md_radius;
-//        -gtk-outline-radius: $md_radius;
-//      }
-//
-//      &.text-button.image-button {
-//          @extend %linked;
-//        border-radius: $md_radius;
-//        -gtk-outline-radius: $md_radius;
-//      }
-//    }
-
     &:drop(active) {
       // box-shadow: inset 0 0 0 2px $accent_color;
     }
@@ -1040,7 +1023,7 @@ toolbar {
       &:not(:last-child) { margin-right: 0; }
     }
 
-    switch { margin: ($container_padding / 2 + $container_padding) ($container_padding / 2); }
+//    switch { margin: ($container_padding / 2 + $container_padding) ($container_padding / 2); }
   }
 }
 
@@ -1063,6 +1046,7 @@ searchbar,
   background-clip: border-box;
 
   entry:focus + button { border-color: $primary_color; }
+  entry:focus + button + button { border-color: $primary_color; }
   entry:drop(active) + button { border-color: $warning_bg_color; }
 
 }
@@ -1108,7 +1092,6 @@ headerbar {
 
   button {
       @extend %header_button;
-      &:hover { }
       &:active,
       &:checked { 
           background-color: $primary_color;
@@ -1276,10 +1259,10 @@ headerbar {
     margin-bottom: $container_padding;
   }
 
-  switch {
-    margin-top: $container_padding * 2;
-    margin-bottom: $container_padding * 2;
-  }
+//  switch {
+//    margin-top: $container_padding * 2;
+//    margin-bottom: $container_padding * 2;
+//  }
 }
 
 .background:not(.tiled):not(.maximized):not(.fullscreen) .titlebar {
@@ -1632,16 +1615,6 @@ popover.background {
 
 //   entry { @extend %entry.flat; }
 //   button.combo { @extend %combo_flat; }
-   button:not(.suggested-action):not(.destructive-action) {
-    min-height: 24px;
-    min-width: 28px;
-  }
-    
-  &.menu button,
-  button.model {
-    min-height: 24px;
-    min-width: 28px;
-  }
 
   separator { margin: 4px 0; }
 
@@ -3425,19 +3398,19 @@ colorchooser .popover.osd {
 decoration {
   transition: $shadow_transition;
   border-radius: 2px 2px 0 0;
-  box-shadow: 0 0 0 1px $borders_color, $z-depth-4, 0 16px 16px transparent;
+  box-shadow: 0 0 0 1px $borders_color, $z-depth-4, 0 8px 10px transparent;
 
   // FIXME rationalize shadows
 
   // this is used for the resize cursor area
-  margin: 8px;
+  margin: 4px;
 
   &:backdrop {
     // the transparent shadow here is to enforce that the shadow extents don't
     // change when we go to backdrop, to prevent jumping windows.
     // The biggest shadow should be in the same order then in the active state
     // or the jumping will happen during the transition.
-    box-shadow: 0 0 0 1px gtkalpha($borders_color, 0.5), $z-depth-2, 0 16px 16px transparent;
+    box-shadow: 0 0 0 1px gtkalpha($borders_color, 0.5), $z-depth-2, 0 8px 10px transparent;
   }
 
   .maximized &,
@@ -3447,7 +3420,7 @@ decoration {
   .popup & { box-shadow: none; }
 
   // server-side decorations as used by mutter
-  .ssd & { box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16); } //just doing borders, wm draws actual shadows
+  .ssd & { border-radius: 2px; } //just doing borders, wm draws actual shadows
 
   .csd.popup & {
     border-radius: 2px;

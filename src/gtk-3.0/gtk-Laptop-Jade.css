@@ -1069,8 +1069,6 @@ toolbar {
   toolbar:not(.inline-toolbar):not(.osd) .linked spinbutton:not(:last-child),
   toolbar:not(.inline-toolbar):not(.osd) .linked button:not(:last-child) {
     margin-right: 0; }
-  toolbar:not(.inline-toolbar):not(.osd) switch {
-    margin: 9px 3px; }
 
 .inline-toolbar {
   padding: 6px;
@@ -1089,6 +1087,9 @@ searchbar,
   background-clip: border-box; }
   searchbar entry:focus + button,
   .location-bar entry:focus + button {
+    border-color: #2eb37b; }
+  searchbar entry:focus + button + button,
+  .location-bar entry:focus + button + button {
     border-color: #2eb37b; }
   searchbar entry:drop(active) + button,
   .location-bar entry:drop(active) + button {
@@ -1329,9 +1330,6 @@ headerbar spinbutton,
 headerbar button {
   margin-top: 6px;
   margin-bottom: 6px; }
-headerbar switch {
-  margin-top: 12px;
-  margin-bottom: 12px; }
 
 .background:not(.tiled):not(.maximized):not(.fullscreen) .titlebar {
   border-top-left-radius: 2px;
@@ -1631,13 +1629,6 @@ popover.background {
   popover.background > toolbar {
     border-style: none;
     background-color: transparent; }
-  popover.background button:not(.suggested-action):not(.destructive-action) {
-    min-height: 24px;
-    min-width: 28px; }
-  popover.background.menu button,
-  popover.background button.model {
-    min-height: 24px;
-    min-width: 28px; }
   popover.background separator {
     margin: 4px 0; }
   popover.background list separator {
@@ -3286,16 +3277,16 @@ colorchooser .popover.osd {
 decoration {
   transition: box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
   border-radius: 2px 2px 0 0;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22), 0 16px 16px transparent;
-  margin: 8px; }
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22), 0 8px 10px transparent;
+  margin: 4px; }
   decoration:backdrop {
-    box-shadow: 0 0 0 1px alpha(rgba(0, 0, 0, 0.15), 0.5), 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), 0 16px 16px transparent; }
+    box-shadow: 0 0 0 1px alpha(rgba(0, 0, 0, 0.15), 0.5), 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), 0 8px 10px transparent; }
   .maximized decoration, .fullscreen decoration, .tiled decoration {
     border-radius: 0; }
   .popup decoration {
     box-shadow: none; }
   .ssd decoration {
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16); }
+    border-radius: 2px; }
   .csd.popup decoration {
     border-radius: 2px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
@@ -3679,6 +3670,11 @@ frame.gedit-map-frame > border:dir(rtl) {
   background-image: image(#FFFFFF);
   border: 1px solid rgba(0, 0, 0, 0.15); }
 
+.tweak-titlebar-right > switch:not(:indeterminate),
+dialog.csd > headerbar.titlebar > switch:not(:indeterminate) {
+  margin-top: 12px;
+  margin-bottom: 12px; }
+
 window.background > box.vertical box.horizontal list.categories {
   background-color: #F5F5F5;
   border: none;
@@ -4021,7 +4017,7 @@ button.image-button.session-new-button {
 overlay > revealer.left > scrolledwindow.frame,
 overlay > revealer.right > scrolledwindow.frame {
   border-style: none;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22); }
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22); }
 
 overlay > revealer.left > scrolledwindow.frame {
   margin-right: 32px; }
@@ -4402,7 +4398,7 @@ na-tray-applet {
 /* mate-screensaver lock dialog */
 .lock-dialog {
   border-radius: 3px;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.4); }
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22), inset 0 1px rgba(255, 255, 255, 0.4); }
   .lock-dialog frame > border {
     border-style: none; }
 
@@ -4491,7 +4487,7 @@ button.raven-trigger {
 
 frame.raven-frame > border {
   border-style: none;
-  box-shadow: 0 14px 14px rgba(0, 0, 0, 0.25), 0 10px 5px rgba(0, 0, 0, 0.22); }
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22); }
 
 .top frame.raven-frame > border {
   margin-bottom: 32px; }
