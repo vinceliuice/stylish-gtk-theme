@@ -12,7 +12,7 @@
    viewBox="0 0 36 36"
    version="1.1"
    id="svg8"
-   sodipodi:docname="window-close-active.svg"
+   sodipodi:docname="window-hover.svg"
    inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
   <metadata
      id="metadata14">
@@ -39,25 +39,31 @@
      inkscape:window-width="640"
      inkscape:window-height="480"
      id="namedview10"
-     showgrid="false"
-     inkscape:zoom="8.7222222"
-     inkscape:cx="-16.675897"
-     inkscape:cy="12.75036"
-     inkscape:current-layer="svg8" />
+     showgrid="true"
+     inkscape:zoom="6.1675425"
+     inkscape:cx="14.674081"
+     inkscape:cy="8.2202124"
+     inkscape:current-layer="svg8"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid821" />
+  </sodipodi:namedview>
   <circle
      cx="18"
      cy="18"
      r="18"
-     fill="#FF5252"
-     id="circle2" />
+     id="circle2"
+     style="stroke:none;stroke-opacity:0.24598931;paint-order:stroke markers fill;stroke-linecap:butt;stroke-linejoin:round;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;fill:#ff8181;fill-opacity:1"
+     fill="#FF5252" />
   <circle
      cx="18"
      cy="18"
      r="18"
-     id="circle4"
      fill="#FFFFFF"
-     opacity="0.3"
-     style="fill:#000000;opacity:0.05" />
+     opacity="0"
+     id="circle4" />
   <path
      d="M 23,14.41 21.59,13 18,16.59 14.41,13 13,14.41 16.59,18 13,21.59 14.41,23 18,19.41 21.59,23 23,21.59 19.41,18 Z"
      fill="#FFFFFF"

@@ -372,6 +372,7 @@ treeview entry {
   box-shadow: none;
   background-color: $primary_color;
   color: $inversed_fg_color;
+  border: none;
 
   &:hover { box-shadow: $z-depth-1; }
 
@@ -394,6 +395,7 @@ treeview entry {
   // seems any sizing doesn't work
   &.button {
     box-shadow: none;
+    border: none;
     background-color: transparent;
 
     &:not(:hover):not(:active) { color: $secondary_inversed_fg_color; }

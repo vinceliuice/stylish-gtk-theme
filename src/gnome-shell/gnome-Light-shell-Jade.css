@@ -1185,18 +1185,12 @@ StScrollBar {
   height: 36px;
   width: 36px;
   -shell-close-overlap: 18px;
-  -st-background-image-shadow: 0 0 transparent;
   background-image: url("assets/window-close.svg");
   background-size: 36px; }
   .window-close:hover {
-    -st-background-image-shadow: 0 0 0 6px rgba(0, 0, 0, 0.15);
-    background-image: url("assets/window-close.svg"); }
+    background-image: url("assets/window-close-hover.svg"); }
   .window-close:active {
     background-image: url("assets/window-close-active.svg"); }
-  .window-close:rtl {
-    -st-background-image-shadow: 0 0 transparent; }
-  .window-close:rtl:hover {
-    -st-background-image-shadow: 0 0 0 6px rgba(0, 0, 0, 0.15); }
 
 /* NETWORK DIALOGS */
 .nm-dialog {

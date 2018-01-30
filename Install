@@ -62,6 +62,7 @@ for variant in '' '-Dark' '-Light' ; do
 			noise-texture.svg \
 			process-working.svg \
 			window-close.svg \
+			window-close-hover.svg \
 			window-close-active.svg \
 			${themedir}/gnome-shell/assets
 
