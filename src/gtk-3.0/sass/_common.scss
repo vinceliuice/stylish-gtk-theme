@@ -368,13 +368,13 @@ treeview entry {
   $tag_margin: ($medium_size - $tag_height) / 2;
 
   margin: $tag_margin; // instead of min-height: $tag_height;
-  border-radius: $circular_radius;
+  border-radius: 3px;
   box-shadow: none;
   background-color: $primary_color;
   color: $inversed_fg_color;
   border: none;
 
-  &:hover { box-shadow: $z-depth-1; }
+  &:hover { background-color: lighten($primary_color, 5%); }
 
   // side margins: compensate the entry padding with a negative margin
   // then the negative margin itself
