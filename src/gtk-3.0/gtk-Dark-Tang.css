@@ -3333,7 +3333,8 @@ entry selection, modelbutton.flat:selected,
 headerbar button.titlebutton.close,
 .titlebar button.titlebutton.close, headerbar button.titlebutton.maximize,
 .titlebar button.titlebutton.maximize, headerbar button.titlebutton.minimize,
-.titlebar button.titlebutton.minimize {
+.titlebar button.titlebutton.minimize, headerbar button.titlebutton.restore,
+.titlebar button.titlebutton.restore {
   margin: 0;
   padding: 0;
   min-width: 24px;
@@ -3381,6 +3382,18 @@ headerbar button.titlebutton.minimize:hover,
 headerbar button.titlebutton.minimize:active,
 .titlebar button.titlebutton.minimize:active {
   background-image: -gtk-scaled(url("assets/titlebutton-minimize-active-dark.png"), url("assets/titlebutton-minimize-active-dark@2.png")); }
+headerbar button.titlebutton.restore,
+.titlebar button.titlebutton.restore {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-dark.png"), url("assets/titlebutton-maximize-dark@2.png")); }
+headerbar button.titlebutton.restore:backdrop,
+.titlebar button.titlebutton.restore:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop-dark.png"), url("assets/titlebutton-maximize-backdrop-dark@2.png")); }
+headerbar button.titlebutton.restore:hover,
+.titlebar button.titlebutton.restore:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover-dark.png"), url("assets/titlebutton-maximize-hover-dark@2.png")); }
+headerbar button.titlebutton.restore:active,
+.titlebar button.titlebutton.restore:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active-dark.png"), url("assets/titlebutton-maximize-active-dark@2.png")); }
 
 /**********************
  * Touch Copy & Paste *

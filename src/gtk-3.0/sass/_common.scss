@@ -3473,7 +3473,7 @@ $darker_asset_suffix: if($headerbar=='dark', '-dark', $asset_suffix);
 
 %title_buttons {
   button.titlebutton {
-    &.close, &.maximize, &.minimize {
+    &.close, &.maximize, &.minimize, &.restore {
       margin: 0;
       padding: 0;
       min-width: 24px;
@@ -3487,9 +3487,9 @@ $darker_asset_suffix: if($headerbar=='dark', '-dark', $asset_suffix);
       background-repeat: no-repeat;
 
 //      &:backdrop { opacity: 1; }
-
     }
-    // Load png assets for each button, Fix the Chrome window restore button bug
+
+    // Load png assets for each button
     @each $k in ('close', 'maximize', 'minimize') {
       @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
 
@@ -3497,6 +3497,13 @@ $darker_asset_suffix: if($headerbar=='dark', '-dark', $asset_suffix);
                                                         url('assets/titlebutton-#{$k}#{$m}#{$darker_asset_suffix}@2.png')); }
       }
     }
+
+    // Load png assets for Chrome window restore button
+      @each $l, $m in ('',''), (':backdrop','-backdrop'), (':hover','-hover'), (':active','-active') {
+
+        &.restore#{$l} { background-image: -gtk-scaled(url('assets/titlebutton-maximize#{$m}#{$darker_asset_suffix}.png'),
+                                                     url('assets/titlebutton-maximize#{$m}#{$darker_asset_suffix}@2.png')); }
+      }
   }
 }
 
