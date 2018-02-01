@@ -3309,19 +3309,22 @@ decoration {
 textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, notebook > stack:not(:only-child) revealer entry selection,
 notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) selection,
 entry selection, modelbutton.flat:selected,
-.menuitem.button.flat:selected, row:selected, calendar:selected, window.background:not(.csd) > widget text:selected, .budgie-menu button:checked {
+.menuitem.button.flat:selected, row:selected, calendar:selected, window.background:not(.csd) > widget text:selected, #MozillaGtkWidget.background > widget > scrolledwindow > textview text:selected, #MozillaGtkWidget.background > widget > scrolledwindow > textview text:selected:focus,
+#MozillaGtkWidget.background > widget > scrolledwindow > textview text selection, .budgie-menu button:checked {
   background-color: #FF6C42; }
   row:selected label, label:selected, .view:selected, iconview:selected, .view text selection, iconview text selection,
   textview text selection, flowbox flowboxchild:selected, spinbutton:not(.vertical) selection, notebook > stack:not(:only-child) revealer entry selection,
   notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) selection,
   entry selection, modelbutton.flat:selected,
-  .menuitem.button.flat:selected, row:selected, calendar:selected, window.background:not(.csd) > widget text:selected, .budgie-menu button:checked {
+  .menuitem.button.flat:selected, row:selected, calendar:selected, window.background:not(.csd) > widget text:selected, #MozillaGtkWidget.background > widget > scrolledwindow > textview text:selected, #MozillaGtkWidget.background > widget > scrolledwindow > textview text:selected:focus,
+  #MozillaGtkWidget.background > widget > scrolledwindow > textview text selection, .budgie-menu button:checked {
     color: #FFFFFF; }
     row:selected label:disabled, label:disabled:selected, .view:disabled:selected, iconview:disabled:selected, .view text selection:disabled, iconview text selection:disabled,
     textview text selection:disabled, flowbox flowboxchild:disabled:selected, label:disabled selection, spinbutton:not(.vertical) selection:disabled, notebook > stack:not(:only-child) revealer entry selection:disabled,
     notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) selection:disabled,
     entry selection:disabled, modelbutton.flat:disabled:selected,
-    .menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected, window.background:not(.csd) > widget text:disabled:selected, .budgie-menu button:disabled:checked {
+    .menuitem.button.flat:disabled:selected, row:disabled:selected, calendar:disabled:selected, window.background:not(.csd) > widget text:disabled:selected, #MozillaGtkWidget.background > widget > scrolledwindow > textview text:disabled:selected,
+    #MozillaGtkWidget.background > widget > scrolledwindow > textview text selection:disabled, .budgie-menu button:disabled:checked {
       color: rgba(255, 255, 255, 0.4); }
 
 .monospace {
@@ -3384,16 +3387,32 @@ headerbar button.titlebutton.minimize:active,
   background-image: -gtk-scaled(url("assets/titlebutton-minimize-active.png"), url("assets/titlebutton-minimize-active@2.png")); }
 headerbar button.titlebutton.restore,
 .titlebar button.titlebutton.restore {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize.png"), url("assets/titlebutton-maximize@2.png")); }
+  background-image: -gtk-scaled(url("assets/titlebutton-restore.png"), url("assets/titlebutton-restore@2.png")); }
 headerbar button.titlebutton.restore:backdrop,
 .titlebar button.titlebutton.restore:backdrop {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-backdrop.png"), url("assets/titlebutton-maximize-backdrop@2.png")); }
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop.png"), url("assets/titlebutton-restore-backdrop@2.png")); }
 headerbar button.titlebutton.restore:hover,
 .titlebar button.titlebutton.restore:hover {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-hover.png"), url("assets/titlebutton-maximize-hover@2.png")); }
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover.png"), url("assets/titlebutton-restore-hover@2.png")); }
 headerbar button.titlebutton.restore:active,
 .titlebar button.titlebutton.restore:active {
-  background-image: -gtk-scaled(url("assets/titlebutton-maximize-active.png"), url("assets/titlebutton-maximize-active@2.png")); }
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active.png"), url("assets/titlebutton-restore-active@2.png")); }
+.fullscreen headerbar button.titlebutton.maximize,
+.fullscreen .titlebar button.titlebutton.maximize, .maximized headerbar button.titlebutton.maximize,
+.maximized .titlebar button.titlebutton.maximize {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore.png"), url("assets/titlebutton-restore@2.png")); }
+.fullscreen headerbar button.titlebutton.maximize:backdrop,
+.fullscreen .titlebar button.titlebutton.maximize:backdrop, .maximized headerbar button.titlebutton.maximize:backdrop,
+.maximized .titlebar button.titlebutton.maximize:backdrop {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-backdrop.png"), url("assets/titlebutton-restore-backdrop@2.png")); }
+.fullscreen headerbar button.titlebutton.maximize:hover,
+.fullscreen .titlebar button.titlebutton.maximize:hover, .maximized headerbar button.titlebutton.maximize:hover,
+.maximized .titlebar button.titlebutton.maximize:hover {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-hover.png"), url("assets/titlebutton-restore-hover@2.png")); }
+.fullscreen headerbar button.titlebutton.maximize:active,
+.fullscreen .titlebar button.titlebutton.maximize:active, .maximized headerbar button.titlebutton.maximize:active,
+.maximized .titlebar button.titlebutton.maximize:active {
+  background-image: -gtk-scaled(url("assets/titlebutton-restore-active.png"), url("assets/titlebutton-restore-active@2.png")); }
 
 /**********************
  * Touch Copy & Paste *
@@ -4059,19 +4078,19 @@ window.background > box.vertical > scrolledwindow > widget toolbar {
  * Firefox and Thunderbird *
  ***************************/
 window.background:not(.csd) > widget > separator {
-  color: rgba(0, 0, 0, 0.1); }
+  color: rgba(0, 0, 0, 0.15); }
 window.background:not(.csd) > widget > scrollbar {
   background-clip: border-box; }
 window.background:not(.csd) > widget > scrollbar,
 window.background:not(.csd) > widget > frame > border {
-  border-color: rgba(0, 0, 0, 0.1); }
+  border-color: rgba(0, 0, 0, 0.15); }
 window.background:not(.csd) > widget > entry,
 window.background:not(.csd) > widget > button > button {
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 3px;
   box-shadow: none; }
 window.background:not(.csd) > widget > entry {
-  min-height: 30px; }
+  min-height: 32px; }
   window.background:not(.csd) > widget > entry:focus {
     border-color: #FF6C42; }
 window.background:not(.csd) > widget > button > button {
@@ -4084,56 +4103,263 @@ window.background:not(.csd) > widget > button > button {
 window.background:not(.csd) > widget > window > menu,
 window.background:not(.csd) > widget > menu > menu {
   border: none; }
-window.background:not(.csd) > widget window.background:not(.csd) > widget > menubar {
+
+window.background:not(.csd) > widget > menubar {
   color: rgba(0, 0, 0, 0.6); }
-  window.background:not(.csd) > widget window.background:not(.csd) > widget > menubar:hover {
+  window.background:not(.csd) > widget > menubar:hover {
     color: rgba(0, 0, 0, 0.8); }
-  window.background:not(.csd) > widget window.background:not(.csd) > widget > menubar:disabled {
+  window.background:not(.csd) > widget > menubar:disabled {
     color: rgba(0, 0, 0, 0.32); }
-window.background:not(.csd) > widget window.background:not(.csd) > widget > frame {
-  color: rgba(0, 0, 0, 0.1); }
-window.background:not(.csd) > widget window.background:not(.csd) > widget > checkbutton > check,
-window.background:not(.csd) > widget window.background:not(.csd) > widget > radiobutton > radio {
+window.background:not(.csd) > widget > frame {
+  color: rgba(0, 0, 0, 0.15); }
+window.background:not(.csd) > widget > checkbutton > check,
+window.background:not(.csd) > widget > radiobutton > radio {
+  min-height: 16px;
+  min-width: 16px;
   margin: 0;
   padding: 0; }
-window.background:not(.csd) > widget window.background:not(.csd) > menu > separator {
+window.background:not(.csd) > menu > separator {
   color: rgba(0, 0, 0, 0.15); }
-
-window.background > menu > menuitem > label:disabled {
+window.background:not(.csd) > menu > menuitem > label:disabled {
   color: rgba(0, 0, 0, 0.5); }
 
-window.background > menu > separator {
-  color: rgba(0, 0, 0, 0.15); }
-
-window.background:not(.csd) > widget > checkbutton > check,
+window.background:not(.csd) > widget > checkbutton > check, #MozillaGtkWidget.background > window.background > menu > menuitem > check, #MozillaGtkWidget.background > widget > checkbutton > check,
 menu menuitem check {
   min-height: 16px;
   min-width: 16px;
+  padding: 0;
+  margin: 0;
   border-radius: 2px;
-  padding-left: 4px;
   -gtk-outline-radius: 2px;
+  -gtk-icon-shadow: none;
+  border-image: none;
+  background-image: none;
   -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-unchecked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > checkbutton > check:checked,
+window.background:not(.csd) > widget > checkbutton > check:checked, #MozillaGtkWidget.background > window.background > menu > menuitem > check:checked, #MozillaGtkWidget.background > widget > checkbutton > check:checked,
 menu menuitem check:checked {
+  color: #ff6767;
   -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-checked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > checkbutton > check:indeterminate,
+window.background:not(.csd) > widget > checkbutton > check:indeterminate, #MozillaGtkWidget.background > window.background > menu > menuitem > check:indeterminate, #MozillaGtkWidget.background > widget > checkbutton > check:indeterminate,
 menu menuitem check:indeterminate {
   -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-checkbox-mixed-symbolic.symbolic.png"))); }
 
-window.background:not(.csd) > widget > radiobutton > radio,
+window.background:not(.csd) > widget > radiobutton > radio, #MozillaGtkWidget.background > window.background > menu > menuitem > radio, #MozillaGtkWidget.background > widget > radiobutton > radio,
 menu menuitem radio {
   min-height: 16px;
   min-width: 16px;
-  padding-left: 4px;
+  padding: 0;
+  margin: 0;
   -gtk-icon-shadow: none;
   border-image: none;
+  background-image: none;
   -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-unchecked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > radiobutton > radio:checked,
+window.background:not(.csd) > widget > radiobutton > radio:checked, #MozillaGtkWidget.background > window.background > menu > menuitem > radio:checked, #MozillaGtkWidget.background > widget > radiobutton > radio:checked,
 menu menuitem radio:checked {
+  color: #ff6767;
   -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-checked-symbolic.symbolic.png"))); }
-window.background:not(.csd) > widget > radiobutton > radio:indeterminate,
+window.background:not(.csd) > widget > radiobutton > radio:indeterminate, #MozillaGtkWidget.background > window.background > menu > menuitem > radio:indeterminate, #MozillaGtkWidget.background > widget > radiobutton > radio:indeterminate,
 menu menuitem radio:indeterminate {
   -gtk-icon-source: image(-gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.svg")), -gtk-recolor(url("assets/scalable/small-radio-mixed-symbolic.symbolic.png"))); }
+
+#MozillaGtkWidget.background > widget > button > button, #MozillaGtkWidget.background > widget > button.combo > button {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: none; }
+
+#MozillaGtkWidget.background > widget > button > button:hover, #MozillaGtkWidget.background > widget > button.combo > button:hover {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgba(248, 248, 248, 0.992);
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: none; }
+
+#MozillaGtkWidget.background > widget > button > button:active, #MozillaGtkWidget.background > widget > button > button:checked, #MozillaGtkWidget.background > widget > button.combo > button:active, #MozillaGtkWidget.background > widget > button.combo > button:checked {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgba(241, 241, 241, 0.984);
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: none;
+  animation: none; }
+
+#MozillaGtkWidget.background > widget > button > button:disabled, #MozillaGtkWidget.background > widget > button.combo > button:disabled {
+  border: none;
+  background-color: rgba(238, 238, 238, 0.992);
+  color: rgba(0, 0, 0, 0.32);
+  box-shadow: none; }
+
+#MozillaGtkWidget.background > widget > button > button:checked:disabled, #MozillaGtkWidget.background > widget > button.combo > button:checked:disabled {
+  border: none;
+  background-color: #ffe2d9;
+  color: #ffc4b3;
+  box-shadow: none; }
+
+#MozillaGtkWidget.background > widget > entry {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-image: none;
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.6);
+  box-shadow: none; }
+
+#MozillaGtkWidget.background > widget > entry:focus {
+  border: 1px solid #FF6C42;
+  border-image: none;
+  background-color: #ffffff;
+  color: rgba(0, 0, 0, 0.8);
+  box-shadow: none; }
+
+#MozillaGtkWidget.background > widget > entry:disabled {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-image: none;
+  background-color: rgba(238, 238, 238, 0.992);
+  color: rgba(0, 0, 0, 0.32);
+  box-shadow: none; }
+
+#MozillaGtkWidget.background > widget > button.combo, #MozillaGtkWidget.background > widget > button, #MozillaGtkWidget.background > widget > button:not(.combo) > button {
+  min-width: unset;
+  min-height: unset;
+  padding: 4px 8px 5px; }
+
+#MozillaGtkWidget.background > widget > entry {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0 4px; }
+
+#MozillaGtkWidget.background {
+  background-color: #F2F2F2; }
+  #MozillaGtkWidget.background,
+  #MozillaGtkWidget.background decoration {
+    border-radius: 2px 2px 0 0; }
+  #MozillaGtkWidget.background headerbar.titlebar {
+    border-radius: 2px 2px 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15); }
+    #MozillaGtkWidget.background headerbar.titlebar.default-decoration button.titlebutton {
+      min-width: 16px;
+      min-height: 16px;
+      margin: 6px 2px;
+      padding: 0; }
+  #MozillaGtkWidget.background .background,
+  #MozillaGtkWidget.background frame,
+  #MozillaGtkWidget.background separator,
+  #MozillaGtkWidget.background scrolledwindow {
+    background-color: #F5F5F5; }
+  #MozillaGtkWidget.background scrollbar {
+    background-color: #FFFFFF; }
+  #MozillaGtkWidget.background *:not(menuitem):hover, #MozillaGtkWidget.background *:not(menuitem):hover button,
+  #MozillaGtkWidget.background *:focus,
+  #MozillaGtkWidget.background *:focus button,
+  #MozillaGtkWidget.background *:active,
+  #MozillaGtkWidget.background *:active button,
+  #MozillaGtkWidget.background *:checked,
+  #MozillaGtkWidget.background *:checked button {
+    color: rgba(0, 0, 0, 0.8); }
+  #MozillaGtkWidget.background > window.background > menu {
+    background-color: #FFFFFF; }
+    #MozillaGtkWidget.background > window.background > menu > separator {
+      padding: 0;
+      border: none;
+      background-color: rgba(0, 0, 0, 0.15); }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > check {
+      color: alpha(currentColor, 0.6);
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > check:indeterminate {
+      color: #ff6767;
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > check:checked {
+      color: #ff6767;
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > check:hover {
+      color: #FFFFFF;
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > check:indeterminate:hover {
+      color: #FFFFFF;
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > check:checked:hover {
+      color: #FFFFFF;
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > check:disabled {
+      color: alpha(#FFFFFF, 0.5);
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > check:indeterminate:disabled {
+      color: alpha(#FFFFFF, 0.5);
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > check:checked:disabled {
+      color: alpha(#FFFFFF, 0.5);
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > radio {
+      color: alpha(currentColor, 0.6);
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > radio:indeterminate {
+      color: #ff6767;
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > radio:checked {
+      color: #ff6767;
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > radio:hover {
+      color: #FFFFFF;
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > radio:indeterminate:hover {
+      color: #FFFFFF;
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > radio:checked:hover {
+      color: #FFFFFF;
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > radio:disabled {
+      color: alpha(#FFFFFF, 0.5);
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > radio:indeterminate:disabled {
+      color: alpha(#FFFFFF, 0.5);
+      -gtk-icon-shadow: none;
+      border-image: none; }
+    #MozillaGtkWidget.background > window.background > menu > menuitem > radio:checked:disabled {
+      color: alpha(#FFFFFF, 0.5);
+      -gtk-icon-shadow: none;
+      border-image: none; }
+  #MozillaGtkWidget.background > widget border {
+    border-color: rgba(0, 0, 0, 0.15); }
+  #MozillaGtkWidget.background > widget separator {
+    background-color: rgba(0, 0, 0, 0.15); }
+  #MozillaGtkWidget.background > widget > scrolledwindow > textview {
+    background-color: #FFFFFF; }
+    #MozillaGtkWidget.background > widget > scrolledwindow > textview text {
+      background-color: transparent;
+      color: rgba(0, 0, 0, 0.6); }
+  #MozillaGtkWidget.background > widget > entry {
+    border-radius: 2px; }
+  #MozillaGtkWidget.background > widget > checkbutton > check, #MozillaGtkWidget.background > widget > radiobutton > radio {
+    color: #888888; }
+    #MozillaGtkWidget.background > widget > checkbutton > check:hover, #MozillaGtkWidget.background > widget > radiobutton > radio:hover {
+      color: alpha(#888888, 0.75); }
+    #MozillaGtkWidget.background > widget > checkbutton > check:checked, #MozillaGtkWidget.background > widget > radiobutton > radio:checked, #MozillaGtkWidget.background > widget > checkbutton > check:indeterminate, #MozillaGtkWidget.background > widget > radiobutton > radio:indeterminate {
+      color: #ff6767; }
+    #MozillaGtkWidget.background > widget > checkbutton > check:checked:hover, #MozillaGtkWidget.background > widget > radiobutton > radio:checked:hover, #MozillaGtkWidget.background > widget > checkbutton > check:indeterminate:hover, #MozillaGtkWidget.background > widget > radiobutton > radio:indeterminate:hover {
+      color: alpha(#ff6767, 0.8); }
+    #MozillaGtkWidget.background > widget > checkbutton > check:disabled, #MozillaGtkWidget.background > widget > radiobutton > radio:disabled {
+      color: alpha(#888888, 0.5); }
+    #MozillaGtkWidget.background > widget > checkbutton > check:checked:disabled, #MozillaGtkWidget.background > widget > radiobutton > radio:checked:disabled, #MozillaGtkWidget.background > widget > checkbutton > check:indeterminate:disabled, #MozillaGtkWidget.background > widget > radiobutton > radio:indeterminate:disabled {
+      color: alpha(#ff6767, 0.5); }
+  #MozillaGtkWidget.background > widget > check,
+  #MozillaGtkWidget.background > widget > radio {
+    min-width: 16px;
+    min-height: 16px;
+    margin: 0;
+    padding: 0;
+    background-image: none;
+    transition: none; }
 
 /***********
  * Synapse *
