@@ -892,9 +892,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.9999998"
-     inkscape:cx="294.20498"
-     inkscape:cy="355.57531"
+     inkscape:zoom="63.999997"
+     inkscape:cx="442.37823"
+     inkscape:cy="162.40109"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -6195,5 +6195,9 @@
          x="437"
          y="142" />
     </g>
+    <path
+       style="opacity:1;fill:#d7d7d7;fill-opacity:1;stroke:none;stroke-width:1.00199997;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 436,-31.637819 h 1 v 1 h -1 z"
+       id="border" />
   </g>
 </svg>

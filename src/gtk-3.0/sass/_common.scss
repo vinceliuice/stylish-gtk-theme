@@ -3422,7 +3422,7 @@ decoration {
   .popup & { box-shadow: none; }
 
   // server-side decorations as used by mutter
-  .ssd & { border-radius: 2px; box-shadow: 0 0 0 1px gtkalpha($borders_color, 0.5), $z-depth-2; } //just doing borders, wm draws actual shadows
+  .ssd & { border-radius: 0; box-shadow: 0 0 0 1px gtkalpha($borders_color, 0.5), $z-depth-2; } //just doing borders, wm draws actual shadows
 
   .csd.popup & {
     border-radius: 2px;

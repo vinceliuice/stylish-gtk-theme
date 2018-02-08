@@ -892,12 +892,12 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="22.627416"
-     inkscape:cx="406.81872"
-     inkscape:cy="398.00429"
+     inkscape:zoom="5.656854"
+     inkscape:cx="473.98661"
+     inkscape:cy="167.14882"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
-     showgrid="false"
+     showgrid="true"
      showborder="false"
      inkscape:window-width="1366"
      inkscape:window-height="688"
@@ -6185,5 +6185,10 @@
          y="6.3622899"
          rx="2.499896" />
     </g>
+    <path
+       style="display:inline;opacity:1;fill:#515151;fill-opacity:1;stroke:none;stroke-width:1.00199997;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 440,-31.637819 h 1 v 1 h -1 z"
+       id="border"
+       inkscape:connector-curvature="0" />
   </g>
 </svg>

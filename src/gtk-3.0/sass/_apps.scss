@@ -898,6 +898,8 @@ window.background > box.vertical > scrolledwindow > widget toolbar {
 
 $firefox_border_color: $borders_color;
 $firefox_entry_bg: if($variant =='light', $dark_contrast_color, gtkalpha($dark_contrast_color, 0.1));
+$firefox_fg_color: if($variant =='light', $secondary_fg_color, #aaaaaa);
+$firefox_bg_color: if($variant =='light', $lighter_bg_color, #666666);
 
 window.background:not(.csd) {
   > widget {
@@ -1136,7 +1138,7 @@ menu menuitem radio {
   separator,
   scrolledwindow { background-color: $bg_color; }
 
-  scrollbar { background-color: $base_color; }
+  scrollbar { background-color: transparent; }
 
   *:not(menuitem):hover, // exclude menuitem node
   *:focus,
@@ -1191,11 +1193,11 @@ menu menuitem radio {
     // FIXME: this affected to popover widget as well,
     // so we can not set $lighter_bg_color to search-bar...
     > scrolledwindow > textview {
-      background-color: if($variant == 'light', $base_color, lighten($base_color, 13%));
+      background-color: if($variant == 'light', $base_color, lighten($base_color, 3%));
 
       text {
         background-color: transparent;
-        color: $secondary_fg_color;
+        color: $firefox_fg_color;
         &:selected,
         &:selected:focus,
         selection { @extend %selected_items; }
@@ -1304,6 +1306,16 @@ radiobutton > radio:not(:checked):not(:indeterminate) {
     &:hover { color: $fg_color; }
     &:disabled { color: $disabled_fg_color; }
   }
+
+//
+//  * Geary *
+//
+
+.geary-titlebar-left,
+.geary-titlebar-right {
+  // remove unexpected "hardcoded" vertical separator
+  separator { opacity: 0; }
+}
 
 /*********
  * Unity *

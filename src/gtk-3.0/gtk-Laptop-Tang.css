@@ -4242,7 +4242,7 @@ menu menuitem radio:indeterminate {
   #MozillaGtkWidget.background scrolledwindow {
     background-color: #F5F5F5; }
   #MozillaGtkWidget.background scrollbar {
-    background-color: #FFFFFF; }
+    background-color: transparent; }
   #MozillaGtkWidget.background *:not(menuitem):hover, #MozillaGtkWidget.background *:not(menuitem):hover button,
   #MozillaGtkWidget.background *:focus,
   #MozillaGtkWidget.background *:focus button,
@@ -4399,6 +4399,10 @@ radiobutton > radio:not(:checked):not(:indeterminate) {
     color: rgba(0, 0, 0, 0.8); }
   radiobutton > radio:not(:checked):not(:indeterminate):disabled {
     color: rgba(0, 0, 0, 0.32); }
+
+.geary-titlebar-left separator,
+.geary-titlebar-right separator {
+  opacity: 0; }
 
 /*********
  * Unity *

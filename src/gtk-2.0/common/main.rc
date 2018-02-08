@@ -924,6 +924,38 @@ style "menu_item"
       overlay_stretch = FALSE
       arrow_direction = RIGHT
     }
+
+    #########
+    # Menus #
+    #########
+
+    image {
+      function = BOX
+      state    = PRELIGHT
+      detail   = "menu_scroll_arrow_up"
+      file     = "assets/border.png"
+    }
+
+    image {
+      function = BOX
+      detail   = "menu_scroll_arrow_up"
+      file     = "assets/border.png"
+      border   = {0, 0, 0, 1}
+    }
+
+    image {
+      function = BOX
+      state    = PRELIGHT
+      detail   = "menu_scroll_arrow_down"
+      file     = "assets/border.png"
+    }
+
+    image {
+      function = BOX
+      detail   = "menu_scroll_arrow_down"
+      file     = "assets/border.png"
+      border   = {0, 0, 1, 0}
+    }
   }
 }
 
@@ -1949,14 +1981,14 @@ style "progressbar" {
 }
 
 style "separator_menu_item" {
+  xthickness = 0
+  ythickness = 0
 
   engine "pixmap" {
-
     image {
       function = BOX
-      file = "assets/null.png"
-      border = { 0, 0, 1, 0 }
-      stretch = TRUE
+      file     = "assets/border.png"
+      border   = {0, 0, 0, 1}
     }
   }
 }
@@ -2128,16 +2160,33 @@ style "toolbar" {
       orientation = VERTICAL
     }
 
+    #########
+    # Lines #
+    #########
+
     image {
       function = VLINE
-      recolorable = TRUE
-      file = "assets/null.png"
+      file     = "assets/border.png"
+      border   = {1, 0, 0, 0}
     }
 
     image {
       function = HLINE
-      recolorable = TRUE
-      file = "assets/null.png"
+      file     = "assets/border.png"
+      border   = {0, 0, 1, 0}
+    }
+  }
+}
+
+style "toolbar_separator" {
+  GtkWidget::wide-separators  = 1
+  GtkWidget::separator-width  = 1
+  GtkWidget::separator-height = 1
+
+  engine "pixmap" {
+    image {
+      function = BOX
+      file     = "assets/border.png"
     }
   }
 }

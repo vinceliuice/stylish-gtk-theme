@@ -4242,7 +4242,7 @@ menu menuitem radio:indeterminate {
   #MozillaGtkWidget.background scrolledwindow {
     background-color: #303030; }
   #MozillaGtkWidget.background scrollbar {
-    background-color: #353535; }
+    background-color: transparent; }
   #MozillaGtkWidget.background *:not(menuitem):hover, #MozillaGtkWidget.background *:not(menuitem):hover button,
   #MozillaGtkWidget.background *:focus,
   #MozillaGtkWidget.background *:focus button,
@@ -4334,10 +4334,10 @@ menu menuitem radio:indeterminate {
   #MozillaGtkWidget.background > widget separator {
     background-color: rgba(255, 255, 255, 0.15); }
   #MozillaGtkWidget.background > widget > scrolledwindow > textview {
-    background-color: #565656; }
+    background-color: #3d3d3d; }
     #MozillaGtkWidget.background > widget > scrolledwindow > textview text {
       background-color: transparent;
-      color: rgba(255, 255, 255, 0.75); }
+      color: #aaaaaa; }
   #MozillaGtkWidget.background > widget > entry {
     border-radius: 2px; }
   #MozillaGtkWidget.background > widget > checkbutton > check, #MozillaGtkWidget.background > widget > radiobutton > radio {
@@ -4399,6 +4399,10 @@ radiobutton > radio:not(:checked):not(:indeterminate) {
     color: #FFFFFF; }
   radiobutton > radio:not(:checked):not(:indeterminate):disabled {
     color: rgba(255, 255, 255, 0.4); }
+
+.geary-titlebar-left separator,
+.geary-titlebar-right separator {
+  opacity: 0; }
 
 /*********
  * Unity *

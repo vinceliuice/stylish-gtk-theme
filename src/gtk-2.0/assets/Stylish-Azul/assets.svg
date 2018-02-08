@@ -6195,5 +6195,10 @@
          x="437"
          y="142" />
     </g>
+    <path
+       inkscape:connector-curvature="0"
+       style="display:inline;opacity:1;fill:#d7d7d7;fill-opacity:1;stroke:none;stroke-width:1.00199997;stroke-linecap:round;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:stroke fill markers"
+       d="m 436,-31.63782 h 1 v 1 h -1 z"
+       id="border" />
   </g>
 </svg>
