@@ -277,19 +277,25 @@ entry {
     image { // icons inside the entry
       // @extend %simple_flat_button;
 
-      min-height: $small_size;
-      min-width: $small_size;
-      border-radius: $md_radius;
-      -gtk-outline-radius: $md_radius;
+//      min-height: $small_size;
+//      min-width: $small_size;
+//      border-radius: $md_radius;
+//      -gtk-outline-radius: $md_radius;
       color: gtkalpha(currentColor, $enabled_opacity);
 
       &:hover, &:active { color: currentColor; }
 
       &:disabled { color: gtkalpha(currentColor, $hint_opacity); }
 
-      &.left { margin-left: -2px; margin-right: 2px; }
+       &.left {
+        margin-left: ($medium_size - 16px) / 2 - 8px;
+        margin-right: 6px;
+      }
 
-      &.right { margin-left: 2px; margin-right: -2px; }
+      &.right {
+        margin-left: 6px;
+        margin-right: ($medium_size - 16px) / 2 - 8px;
+      }
     }
 
     undershoot {
@@ -988,6 +994,7 @@ toolbar {
   background-color: $bg_color;
 
   button { @extend %button_basic.flat; border-color: transparent; }
+  entry { @extend %entry.flat; }
 
   // on OSD
   .osd & { background-color: transparent; }
@@ -1204,8 +1211,10 @@ headerbar {
 
   // special case for headerbar linked entrys
   .linked:not(.vertical):not(.path-bar) > entry {
-    border: 1px solid $borders_color;
-    &:focus { border: 1px solid $primary_color; }
+    &:first-child:focus { box-shadow: inset -1px 0 $primary_color; }
+    &:last-child:focus { box-shadow: inset 1px 0 $primary_color; }
+    &:not(:first-child):not(:last-child):focus { box-shadow: inset 1px 0 $primary_color, inset -1px 0 $primary_color; }
+    &:disabled { background-color: darken($lighter_bg_color, 3%); }
   }
 
   // special case for path-bar and stack-switchers

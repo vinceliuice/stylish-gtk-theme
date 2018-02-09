@@ -196,7 +196,7 @@ entry {
   entry:disabled {
     background-color: alpha(currentColor, 0.12);
     color: rgba(0, 0, 0, 0.32); }
-  spinbutton.flat:not(.vertical), notebook > stack:not(:only-child) entry,
+  spinbutton.flat:not(.vertical), toolbar entry, notebook > stack:not(:only-child) entry,
   notebook > stack:not(:only-child) spinbutton:not(.vertical), notebook > stack:not(:only-child) revealer entry.flat,
   notebook > stack:not(:only-child) revealer spinbutton.flat:not(.vertical), colorchooser .popover.osd spinbutton:not(.vertical), layoutpane entry.search, editortweak entry.search, #login_window entry,
   entry.flat {
@@ -208,12 +208,12 @@ entry {
     box-shadow: none;
     background-color: #ffffff;
     color: rgba(0, 0, 0, 0.8); }
-    spinbutton.flat:focus:not(.vertical), notebook > stack:not(:only-child) entry:focus,
+    spinbutton.flat:focus:not(.vertical), toolbar entry:focus, notebook > stack:not(:only-child) entry:focus,
     notebook > stack:not(:only-child) spinbutton:focus:not(.vertical), colorchooser .popover.osd spinbutton:focus:not(.vertical), layoutpane entry.search:focus, editortweak entry.search:focus, #login_window entry:focus,
     entry.flat:focus {
       border-color: #2eb37b;
       border-image: none; }
-    spinbutton.flat:disabled:not(.vertical), notebook > stack:not(:only-child) entry:disabled,
+    spinbutton.flat:disabled:not(.vertical), toolbar entry:disabled, notebook > stack:not(:only-child) entry:disabled,
     notebook > stack:not(:only-child) spinbutton:disabled:not(.vertical), colorchooser .popover.osd spinbutton:disabled:not(.vertical), layoutpane entry.search:disabled, editortweak entry.search:disabled, #login_window entry:disabled,
     entry.flat:disabled {
       background-color: alpha(currentColor, 0.12);
@@ -221,10 +221,6 @@ entry {
   spinbutton:not(.vertical) image, notebook > stack:not(:only-child) revealer entry image,
   notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) image,
   entry image {
-    min-height: 22px;
-    min-width: 22px;
-    border-radius: 3px;
-    -gtk-outline-radius: 3px;
     color: alpha(currentColor, 0.75); }
     spinbutton:not(.vertical) image:hover, notebook > stack:not(:only-child) revealer entry image:hover,
     notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) image:hover, spinbutton:not(.vertical) image:active, notebook > stack:not(:only-child) revealer entry image:active,
@@ -239,13 +235,13 @@ entry {
     spinbutton:not(.vertical) image.left, notebook > stack:not(:only-child) revealer entry image.left,
     notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) image.left,
     entry image.left {
-      margin-left: -2px;
-      margin-right: 2px; }
+      margin-left: 1px;
+      margin-right: 6px; }
     spinbutton:not(.vertical) image.right, notebook > stack:not(:only-child) revealer entry image.right,
     notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) image.right,
     entry image.right {
-      margin-left: 2px;
-      margin-right: -2px; }
+      margin-left: 6px;
+      margin-right: 1px; }
   spinbutton:not(.vertical) undershoot.left, notebook > stack:not(:only-child) revealer entry undershoot.left,
   notebook > stack:not(:only-child) revealer spinbutton:not(.vertical) undershoot.left,
   entry undershoot.left {
@@ -284,7 +280,7 @@ entry {
     entry.error:disabled {
       background-color: alpha(currentColor, 0.12);
       color: rgba(0, 0, 0, 0.32); }
-    spinbutton.error.flat:not(.vertical), notebook > stack:not(:only-child) entry.error,
+    spinbutton.error.flat:not(.vertical), toolbar entry.error, notebook > stack:not(:only-child) entry.error,
     notebook > stack:not(:only-child) spinbutton.error:not(.vertical), colorchooser .popover.osd spinbutton.error:not(.vertical), layoutpane entry.error.search, editortweak entry.error.search, #login_window entry.error,
     entry.error.flat {
       transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
@@ -294,12 +290,12 @@ entry {
       box-shadow: none;
       background-color: #DD2C00;
       color: #FFFFFF; }
-      spinbutton.error.flat:focus:not(.vertical), notebook > stack:not(:only-child) entry.error:focus,
+      spinbutton.error.flat:focus:not(.vertical), toolbar entry.error:focus, notebook > stack:not(:only-child) entry.error:focus,
       notebook > stack:not(:only-child) spinbutton.error:focus:not(.vertical), colorchooser .popover.osd spinbutton.error:focus:not(.vertical), layoutpane entry.error.search:focus, editortweak entry.error.search:focus, #login_window entry.error:focus,
       entry.error.flat:focus {
         border-color: #2eb37b;
         border-image: none; }
-      spinbutton.error.flat:disabled:not(.vertical), notebook > stack:not(:only-child) entry.error:disabled,
+      spinbutton.error.flat:disabled:not(.vertical), toolbar entry.error:disabled, notebook > stack:not(:only-child) entry.error:disabled,
       notebook > stack:not(:only-child) spinbutton.error:disabled:not(.vertical), colorchooser .popover.osd spinbutton.error:disabled:not(.vertical), layoutpane entry.error.search:disabled, editortweak entry.error.search:disabled, #login_window entry.error:disabled,
       entry.error.flat:disabled {
         background-color: alpha(currentColor, 0.12);
@@ -322,7 +318,7 @@ entry {
     entry.warning:disabled {
       background-color: alpha(currentColor, 0.12);
       color: rgba(0, 0, 0, 0.32); }
-    spinbutton.warning.flat:not(.vertical), notebook > stack:not(:only-child) entry.warning,
+    spinbutton.warning.flat:not(.vertical), toolbar entry.warning, notebook > stack:not(:only-child) entry.warning,
     notebook > stack:not(:only-child) spinbutton.warning:not(.vertical), colorchooser .popover.osd spinbutton.warning:not(.vertical), layoutpane entry.warning.search, editortweak entry.warning.search, #login_window entry.warning,
     entry.warning.flat {
       transition: all 0.3s cubic-bezier(0, 0, 0.2, 1), box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
@@ -332,12 +328,12 @@ entry {
       box-shadow: none;
       background-color: #ff4e00;
       color: #FFFFFF; }
-      spinbutton.warning.flat:focus:not(.vertical), notebook > stack:not(:only-child) entry.warning:focus,
+      spinbutton.warning.flat:focus:not(.vertical), toolbar entry.warning:focus, notebook > stack:not(:only-child) entry.warning:focus,
       notebook > stack:not(:only-child) spinbutton.warning:focus:not(.vertical), colorchooser .popover.osd spinbutton.warning:focus:not(.vertical), layoutpane entry.warning.search:focus, editortweak entry.warning.search:focus, #login_window entry.warning:focus,
       entry.warning.flat:focus {
         border-color: #2eb37b;
         border-image: none; }
-      spinbutton.warning.flat:disabled:not(.vertical), notebook > stack:not(:only-child) entry.warning:disabled,
+      spinbutton.warning.flat:disabled:not(.vertical), toolbar entry.warning:disabled, notebook > stack:not(:only-child) entry.warning:disabled,
       notebook > stack:not(:only-child) spinbutton.warning:disabled:not(.vertical), colorchooser .popover.osd spinbutton.warning:disabled:not(.vertical), layoutpane entry.warning.search:disabled, editortweak entry.warning.search:disabled, #login_window entry.warning:disabled,
       entry.warning.flat:disabled {
         background-color: alpha(currentColor, 0.12);
@@ -350,9 +346,9 @@ entry progress {
   border-width: 2px;
   border-color: #2eb37b;
   background-color: transparent; }
-.linked:not(.vertical) > spinbutton.flat:not(.vertical), notebook > stack:not(:only-child) .linked:not(.vertical) > entry,
+.linked:not(.vertical) > spinbutton.flat:not(.vertical), toolbar .linked:not(.vertical) > entry, notebook > stack:not(:only-child) .linked:not(.vertical) > entry,
 notebook > stack:not(:only-child) .linked:not(.vertical) > spinbutton:not(.vertical), notebook > stack:not(:only-child) revealer .linked:not(.vertical) > entry.flat,
-notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton.flat:not(.vertical), colorchooser .popover.osd .linked:not(.vertical) > spinbutton:not(.vertical), layoutpane .linked:not(.vertical) > entry.search, editortweak .linked:not(.vertical) > entry.search, #login_window .linked:not(.vertical) > entry, .linked.vertical > spinbutton.flat:not(.vertical), notebook > stack:not(:only-child) .linked.vertical > entry,
+notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton.flat:not(.vertical), colorchooser .popover.osd .linked:not(.vertical) > spinbutton:not(.vertical), layoutpane .linked:not(.vertical) > entry.search, editortweak .linked:not(.vertical) > entry.search, #login_window .linked:not(.vertical) > entry, .linked.vertical > spinbutton.flat:not(.vertical), toolbar .linked.vertical > entry, notebook > stack:not(:only-child) .linked.vertical > entry,
 notebook > stack:not(:only-child) .linked.vertical > spinbutton:not(.vertical), notebook > stack:not(:only-child) revealer .linked.vertical > entry.flat,
 notebook > stack:not(:only-child) revealer .linked.vertical > spinbutton.flat:not(.vertical), colorchooser .popover.osd .linked.vertical > spinbutton:not(.vertical), layoutpane .linked.vertical > entry.search, editortweak .linked.vertical > entry.search, #login_window .linked.vertical > entry, .linked:not(.vertical) >
 entry.flat, .linked.vertical >
@@ -1291,12 +1287,18 @@ headerbar {
   headerbar.default-decoration:backdrop {
     box-shadow: none;
     border: none; }
-  .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > entry,
-  headerbar .linked:not(.vertical):not(.path-bar) > entry {
-    border: 1px solid rgba(0, 0, 0, 0.15); }
-    .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > entry:focus,
-    headerbar .linked:not(.vertical):not(.path-bar) > entry:focus {
-      border: 1px solid #2eb37b; }
+  .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > entry:first-child:focus,
+  headerbar .linked:not(.vertical):not(.path-bar) > entry:first-child:focus {
+    box-shadow: inset -1px 0 #2eb37b; }
+  .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > entry:last-child:focus,
+  headerbar .linked:not(.vertical):not(.path-bar) > entry:last-child:focus {
+    box-shadow: inset 1px 0 #2eb37b; }
+  .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > entry:not(:first-child):not(:last-child):focus,
+  headerbar .linked:not(.vertical):not(.path-bar) > entry:not(:first-child):not(:last-child):focus {
+    box-shadow: inset 1px 0 #2eb37b, inset -1px 0 #2eb37b; }
+  .titlebar:not(headerbar) .linked:not(.vertical):not(.path-bar) > entry:disabled,
+  headerbar .linked:not(.vertical):not(.path-bar) > entry:disabled {
+    background-color: #f7f7f7; }
   .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
   .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:active,
   .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:checked,
@@ -3288,7 +3290,7 @@ decoration {
   .popup decoration {
     box-shadow: none; }
   .ssd decoration {
-    border-radius: 2px;
+    border-radius: 0;
     box-shadow: 0 0 0 1px alpha(rgba(0, 0, 0, 0.15), 0.5), 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
   .csd.popup decoration {
     border-radius: 2px;
