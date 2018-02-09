@@ -1258,6 +1258,57 @@ menu menuitem radio {
   }
 }
 
+ /***************
+  * Chrome(ium) *
+  ***************/
+
+window.background.chromium {
+  // checked-tab & toolbar & button widgets
+//  background-color: $bg_color;
+//  color: $text_color;
+
+  headerbar.titlebar {
+    button.toggle { // account-button (> 64.0.3282?)
+      min-height: 22px;
+      margin: 6px 0;
+      padding: 0 6px;
+      &:checked, &:active { border-color: $primary_color; }
+    }
+
+    // from nav_button_provider_gtk3.cc (> 62.0.3202?)
+    button.titlebutton { // title-buttons
+      // define global titlebutton class sizing
+      min-width: 24px; // > 16px causes image blurring
+      min-height: 24px;
+      margin: 0; // unset margins
+      padding: 0;
+      color: transparent; // hide stock icons
+    }
+  }
+
+  // FIXME: not for actual button widgets but for toolbar's separators
+  // crazy: src/+/master/chrome/browser/ui/libgtkui/gtk_ui.cc#891
+  button { // for active-tab borders
+    border-width: 1px;
+    border-style: solid;
+    border-color: $borders_color;
+  }
+
+  entry.chromium {
+    & { // overrides standard borders
+      border-image: none;
+      border: 1px solid $borders_color;
+    }
+    &:focus { // overrides standard borders
+      border-image: none;
+      border: 1px solid $primary_color;
+    }
+  }
+
+  // internal region of toolbar's entry widget
+  > textview.view { background-color: $bg_color; }
+}
+
 /***********
  * Synapse *
  ***********/
