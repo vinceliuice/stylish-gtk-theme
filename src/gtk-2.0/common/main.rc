@@ -448,14 +448,14 @@ style "default" {
     image {
       function = VLINE
       file = "assets/line-v.png"
-      border = { 0, 0, 0, 0 }
+      border = { 1, 0, 0, 0 }
       stretch = TRUE
     }
 
     image {
       function = HLINE
       file = "assets/line-h.png"
-      border = { 0, 0, 0, 0 }
+      border = { 0, 0, 1, 0 }
       stretch = TRUE
     }
 
@@ -691,10 +691,15 @@ style "menu" {
   engine "pixmap" { # For menus that use horizontal lines rather than gtkseparator
 
     image {
+      function = VLINE
+      file     = "assets/border.png"
+      border   = {1, 0, 0, 0}
+    }
+
+    image {
       function = HLINE
-      file = "assets/null.png"
-      border = { 0, 0, 0, 0 }
-      stretch = TRUE
+      file     = "assets/border.png"
+      border   = {0, 0, 1, 0}
     }
   }
 }

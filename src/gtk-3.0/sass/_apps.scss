@@ -258,16 +258,15 @@ filechooser,
 
       &:disabled { color: $disabled_fg_color; }
     }
+
+    &:focus { box-shadow: inset -1px 0 $primary_color; }
+    &:drop(active) { box-shadow: inset -1px 0 $warning_bg_color; }
   }
 
   button {
 //    @extend %simple_flat_button;
     padding: 0 8px;
   }
-
-  entry:focus + button { border-left: 1px solid $primary_color; }
-  entry:drop(active) + button { border-left: 1px solid $warning_bg_color; }
-
 }
 
 frame.gedit-map-frame > border {

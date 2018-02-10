@@ -3667,12 +3667,12 @@ filechooser placessidebar.sidebar row.sidebar-row,
     color: alpha(rgba(0, 0, 0, 0.6), 0.6); }
     .gedit-search-slider entry.error ~ button:disabled {
       color: rgba(0, 0, 0, 0.32); }
+  .gedit-search-slider entry:focus {
+    box-shadow: inset -1px 0 #2196F3; }
+  .gedit-search-slider entry:drop(active) {
+    box-shadow: inset -1px 0 #FFA726; }
   .gedit-search-slider button {
     padding: 0 8px; }
-  .gedit-search-slider entry:focus + button {
-    border-left: 1px solid #2196F3; }
-  .gedit-search-slider entry:drop(active) + button {
-    border-left: 1px solid #FFA726; }
 
 frame.gedit-map-frame > border:dir(ltr) {
   border-style: none none none solid; }
