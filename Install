@@ -185,6 +185,18 @@ for variant in '' '-Dark' '-Light' ; do
 		cp -ur \
 			Stylish${size}/* \
 			${themedir}/unity
+
+		# Install xfwm4 Theme
+		install -d ${themedir}/xfwm4
+		cd ${srcdir}/xfwm4
+
+		cp -ur \
+			assets${variant}${color}/*.png \
+			${themedir}/xfwm4
+
+		cp -ur \
+			themerc${variant} \
+			${themedir}/xfwm4/themerc
 	done
   done
 done

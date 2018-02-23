@@ -533,8 +533,7 @@ style "default" {
 
 style "toplevel_hack" {
 
-  engine "adwaita" {
-  }
+  # engine "adwaita" { }
 }
 
 style "ooo_stepper_hack" {
@@ -706,8 +705,7 @@ style "menu" {
 
 style "menu_framed_box" {
 
-  engine "adwaita" {
-  }
+  # engine "adwaita" { }
 }
 
 style "menu_item"

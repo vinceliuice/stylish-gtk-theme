@@ -943,11 +943,7 @@ button:visited, *:link:visited:hover,
 button:visited:hover, *:link:visited:active,
 button:visited:active {
   color: #E040FB; }
-infobar.info *:link, infobar.info button:link,
-infobar.info button:visited, infobar.question *:link, infobar.question button:link,
-infobar.question button:visited, infobar.warning *:link, infobar.warning button:link,
-infobar.warning button:visited, infobar.error *:link, infobar.error button:link,
-infobar.error button:visited, *:link:selected, button:selected:link,
+infobar.info :link, infobar.question :link, infobar.warning :link, infobar.error :link, *:link:selected, button:selected:link,
 button:selected:visited, .selection-mode.titlebar:not(headerbar) .subtitle:link,
 headerbar.selection-mode .subtitle:link, *:selected *:link, *:selected button:link,
 *:selected button:visited {
@@ -3324,7 +3320,7 @@ decoration {
     box-shadow: none; }
   .ssd decoration {
     border-radius: 0;
-    box-shadow: 0 0 0 1px alpha(rgba(255, 255, 255, 0.15), 0.5), 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.15), 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
   .csd.popup decoration {
     border-radius: 2px;
     box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23); }
