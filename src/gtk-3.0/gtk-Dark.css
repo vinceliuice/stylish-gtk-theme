@@ -5949,9 +5949,9 @@ window.background.chromium headerbar.titlebar button.toggle:checked, window.back
 }
 
 window.background.chromium headerbar.titlebar button.titlebutton {
-  min-width: 24px;
-  min-height: 24px;
-  margin: 0;
+  min-width: 20px;
+  min-height: 20px;
+  margin: 0 2px;
   padding: 0;
   color: transparent;
 }
@@ -5973,7 +5973,7 @@ window.background.chromium entry.chromium:focus {
 }
 
 window.background.chromium > textview.view {
-  background-color: #303030;
+  background-color: #353535;
 }
 
 /***********
