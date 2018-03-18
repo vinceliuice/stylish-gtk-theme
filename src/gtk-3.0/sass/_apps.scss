@@ -1321,6 +1321,7 @@ window.background:not(.csd):not(.solid-csd) {
 // reserved area at the most-right side of GtkMenuBar
   > grid.horizontal > grid.horizontal {
     background-color: $headerbar_bg_color;
+    box-shadow: inset 0 -1px $header_borders_color;
 
     > button.flat.small-button { // 'close' button
       color: $headerbar_fg_color;

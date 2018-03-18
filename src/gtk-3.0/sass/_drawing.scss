@@ -234,7 +234,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
                                       $zero_track_color 100%,
                                       transparent 0%),
                       image($zero_track_color);
-    color: gtkalpha(currentColor, $enabled_opacity);
+    color: rgba($fg_color, $enabled_opacity);
     border-color: transparent;
   }
 
@@ -244,37 +244,36 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
                                       $zero_track_color 100%,
                                       transparent 0%),
                       image($semi_track_color);
-    color: currentColor;
+    color: $fg_color;
 //    border-color: transparent;
-//    background-color: gtkalpha(black, 0.08);
+    background-color: rgba($fg_color, 0.10);
   }
 
   @if $t == flat-active {
     transition: $longer_transition, background-image 0;
     animation: flat_ripple_effect $longer_duration $deceleration_curve forwards;
     box-shadow: none;
-    color: currentColor;
-//    background-color: gtkalpha(black, 0.12);
+    color: $fg_color;
+    background-color: rgba($fg_color, 0.15);
 //    border-color: transparent;
   }
 
   @if $t == flat-disabled {
     box-shadow: none;
     background-color: transparent;
-    color: if($tc != $fg_color, gtkalpha(currentColor, $disabled_opacity), gtkalpha(currentColor, $enabled_opacity * $disabled_opacity));
+    color: if($tc != $fg_color, rgba($fg_color, $disabled_opacity), rgba($fg_color, $enabled_opacity * $disabled_opacity));
   }
 
   @if $t == flat-checked {
-//    background-color: gtkalpha(black, 0.15);
-    color: currentColor;
-    background-color: $track_color;
+    color: $fg_color;
+    background-color: rgba($fg_color, 0.20);
     border-color: transparent;
   }
 
   @if $t == flat-checked-disabled {
-    background-color: $track_color;
-    color: gtkalpha(currentColor, $disabled_opacity);
-    border-color: gtkalpha($borders_color, $disabled_opacity);
+    background-color: rgba($fg_color, 0.15);
+    color: rgba($fg_color, $disabled_opacity);
+    border-color: rgba($borders_color, $disabled_opacity);
   }
 }
 
