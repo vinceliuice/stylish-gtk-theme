@@ -1,4 +1,4 @@
-<img src="https://github.com/vinceliuice/stylish-gtk-theme/blob/images/logo.png" alt="Logo" align="right" /> Stylish-Gtk-Theme
+<img src="https://github.com/vinceliuice/stylish-gtk-theme/blob/master/logo.png" alt="Logo" align="right" /> Stylish-Gtk-Theme
 ======
 
 Stylish is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
@@ -66,8 +66,8 @@ When running the installer script in Fedora 24 or later, you need to install 'gl
 ## Screenshots
 
 ### GNOME Shell
-![01](https://github.com/vinceliuice/stylish-gtk-theme/blob/images/screenshot1.jpeg?raw=true) 
-![02](https://github.com/vinceliuice/stylish-gtk-theme/blob/images/screenshot2.jpeg?raw=true) 
-![03](https://github.com/vinceliuice/stylish-gtk-theme/blob/images/screenshot3.jpeg?raw=true) 
-![04](https://github.com/vinceliuice/stylish-gtk-theme/blob/images/screenshot4.jpeg?raw=true) 
-![05](https://github.com/vinceliuice/stylish-gtk-theme/blob/images/screenshot5.jpeg?raw=true)
+![01](https://github.com/vinceliuice/stylish-gtk-theme/blob/master/screenshots/screenshot1.jpe?raw=true) 
+![02](https://github.com/vinceliuice/stylish-gtk-theme/blob/master/screenshots/screenshot2.jpg?raw=true) 
+![03](https://github.com/vinceliuice/stylish-gtk-theme/blob/master/screenshots/screenshot3.jpg?raw=true) 
+![04](https://github.com/vinceliuice/stylish-gtk-theme/blob/master/screenshots/screenshot4.jpg?raw=true) 
+![05](https://github.com/vinceliuice/stylish-gtk-theme/blob/master/screenshots/screenshot5.jpg?raw=true)
