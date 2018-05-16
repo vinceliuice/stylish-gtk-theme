@@ -1763,8 +1763,8 @@ headerbar button {
 }
 
 .background:not(.tiled):not(.maximized):not(.fullscreen) .titlebar {
-  border-top-left-radius: 2px;
-  border-top-right-radius: 2px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }
 
 window:not(.tiled):not(.maximized):not(.fullscreen) separator:first-child + headerbar,
@@ -4219,8 +4219,7 @@ paned > separator {
   min-height: 1px;
   -gtk-icon-source: none;
   border-style: none;
-  background-color: transparent;
-  background-image: image(rgba(0, 0, 0, 0.15));
+  background-color: rgba(0, 0, 0, 0.08);
   background-size: 1px 1px;
 }
 
@@ -4502,7 +4501,7 @@ colorchooser .popover.osd:backdrop {
  *********************/
 decoration {
   transition: box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
-  border-radius: 2px 2px 0 0;
+  border-radius: 0 0 0 0;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22), 0 8px 10px transparent;
   margin: 4px;
 }
