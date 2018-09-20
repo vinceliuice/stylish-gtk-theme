@@ -16,7 +16,7 @@ style "default" {
   GtkWidget::new-tooltip-style = 1 #for compatibility
 
   GtkSeparatorMenuItem::horizontal-padding = 0
-  GtkSeparatorMenuItem::wide-separators = 1
+  GtkSeparatorMenuItem::wide-separators = 0
   GtkSeparatorMenuItem::separator-height = 2
 
   GtkButton::child-displacement-y = 0
@@ -706,6 +706,15 @@ style "menu" {
 style "menu_framed_box" {
 
   # engine "adwaita" { }
+
+  engine "pixmap" {
+    image {
+      function = BOX
+      file     = "assets/frame.png"
+      border   = { 1, 1, 2, 1 }
+      stretch  = TRUE
+    }
+  }
 }
 
 style "menu_item"
