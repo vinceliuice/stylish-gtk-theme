@@ -1294,9 +1294,10 @@ headerbar {
 //  }
 }
 
-.background:not(.tiled):not(.maximized):not(.fullscreen) .titlebar {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.titlebar:not(.tiled):not(.maximized):not(.fullscreen),
+.background:not(.tiled):not(.maximized):not(.fullscreen).titlebar {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }
 
 headerbar {
@@ -1507,10 +1508,10 @@ menu,
   box-shadow: none;
   border-radius: 0;
   background-color: $menu_bg_color;
-  border: 1px solid if($variant == 'light', $borders_color, $borders_color);
+  border: 1px solid $borders_color;
 
   .csd & {
-    border: 1px solid if($variant == 'light', $borders_color, $borders_color); // axes borders in a composited env
+    border: none; // axes borders in a composited env
     border-radius: 0;
   }
 
@@ -1558,19 +1559,18 @@ menu,
     min-width: 16px;
     padding: 4px;
     border-radius: 0;
-    border: 1px solid $borders_color;
     background-color: $menu_bg_color;
     color: $menu_fg_color;
 
     &.top {
       margin-top: -6px;
-//      border-bottom: 1px solid $borders_color;
+      border-bottom: 1px solid $borders_color;
       -gtk-icon-source: -gtk-icontheme('pan-up-symbolic');
     }
 
     &.bottom {
       margin-bottom: -6px;
-//      border-top: 1px solid $borders_color;
+      border-top: 1px solid $borders_color;
       -gtk-icon-source: -gtk-icontheme('pan-down-symbolic');
     }
 
@@ -3417,13 +3417,15 @@ colorchooser .popover.osd {
 
 decoration {
   transition: $shadow_transition;
-  border-radius: 0 0 0 0;
+  border-radius: 2px 2px 0 0;
   box-shadow: 0 0 0 1px $borders_color, $z-depth-4, 0 8px 10px transparent;
 
   // FIXME rationalize shadows
 
   // this is used for the resize cursor area
   margin: 4px;
+
+  &.background.ssd { border-radius: 2px 2px 0 0; }
 
   &:backdrop {
     // the transparent shadow here is to enforce that the shadow extents don't
@@ -3441,13 +3443,13 @@ decoration {
 
   // server-side decorations as used by mutter
   .ssd & {
-    border-radius: 0;
+    border-radius: 2px 2px 0 0;
     box-shadow: 0 0 0 1px $borders_color, $z-depth-2;
   } //just doing borders, wm draws actual shadows
 
   .csd.popup & {
-    border-radius: 2px;
-    box-shadow: $z-depth-2;
+    border-radius: 0;
+    box-shadow: 0 0 0 1px $borders_color, $z-depth-2;
   }
 
   tooltip.csd & {

@@ -94,7 +94,7 @@
 // FIXME: workspace has unnecessary/unknown margin
 .workspace-switcher {
   .workspace-layout {
-    border: 0 solid rgba(white, 0.12);
+    border: 0 solid $borders_color;
 
     .top &,
     .bottom & {
@@ -109,7 +109,7 @@
 
   .workspace-item,
   .workspace-add-button {
-    border: 0 solid rgba(white, 0.12);
+    border: 0 solid $borders_color;
 
     .top &,
     .bottom & {
@@ -290,6 +290,7 @@ popover.background.places-menu {
     border-radius: 0;
     color: $topbar_fg_color;
 
+    &:hover, &:checked, &:active { color: $topbar_fg_color; }
     &:checked { background-color: rgba($topbar_fg_color, 0.12); }
   }
 
@@ -363,14 +364,14 @@ popover.background.places-menu {
     .#{$pos} & {
       & {
         border-image: radial-gradient(circle closest-corner at #{$b_pos},
-                                      currentColor 0%,
+                                      $primary_color 0%,
                                       transparent 0%)
                                       0 0 0 0 / 0 0 0 0;
       }
 
       &:checked {
         border-image: radial-gradient(circle closest-corner at #{$b_pos},
-                                      currentColor 100%,
+                                      $primary_color 100%,
                                       transparent 0%)
                                       #{$b_wid};
       }
@@ -541,6 +542,7 @@ calendar.raven-calendar {
 
   button.image-button {
     padding: ($large_size - 24px) / 2;
+    border-radius: 100px;
 
     @extend %button_selected.flat;
   }
