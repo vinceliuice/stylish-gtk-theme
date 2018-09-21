@@ -20,11 +20,9 @@
 }
 
 .budgie-popover {
-  border-style: solid;
-  border-width: 1px;
   border-color: $borders_color;
   border-radius: $md_radius + 1px;
-  box-shadow: $z-depth-2;
+  box-shadow: $z-depth-2, 0 0 0 1px $borders_color;
   background-color: $lighter_bg_color;
 
   .container { padding: 2px; }
@@ -88,6 +86,21 @@
     separator { margin: 4px 0; }
 
     flowboxchild { padding: 0; }
+  }
+}
+
+// budgie specific popover widgets
+window.budgie-popover:not(.csd) {
+
+  > frame.container {
+    margin: 0 -1px -1px; // remove gap
+
+    .bottom & { padding: 2px 0 2px; } // revive bottom padding
+
+    &,
+    > border {
+      border-style: none; // hide container borders
+    }
   }
 }
 
