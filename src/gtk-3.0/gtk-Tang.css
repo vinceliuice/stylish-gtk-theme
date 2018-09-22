@@ -1762,9 +1762,10 @@ headerbar button {
   margin-bottom: 6px;
 }
 
-.background:not(.tiled):not(.maximized):not(.fullscreen) .titlebar {
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
+.titlebar:not(.tiled):not(.maximized):not(.fullscreen),
+.background:not(.tiled):not(.maximized):not(.fullscreen).titlebar {
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
 }
 
 window:not(.tiled):not(.maximized):not(.fullscreen) separator:first-child + headerbar,
@@ -2013,7 +2014,7 @@ menu,
 .csd menu, .csd
 .menu, .csd
 .context-menu {
-  border: 1px solid rgba(0, 0, 0, 0.15);
+  border: none;
   border-radius: 0;
 }
 
@@ -2079,7 +2080,6 @@ menu > arrow,
   min-width: 16px;
   padding: 4px;
   border-radius: 0;
-  border: 1px solid rgba(0, 0, 0, 0.15);
   background-color: #FFFFFF;
   color: rgba(0, 0, 0, 0.8);
 }
@@ -2088,6 +2088,7 @@ menu > arrow.top,
 .menu > arrow.top,
 .context-menu > arrow.top {
   margin-top: -6px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   -gtk-icon-source: -gtk-icontheme("pan-up-symbolic");
 }
 
@@ -2095,6 +2096,7 @@ menu > arrow.bottom,
 .menu > arrow.bottom,
 .context-menu > arrow.bottom {
   margin-bottom: -6px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
 }
 
@@ -4501,9 +4503,13 @@ colorchooser .popover.osd:backdrop {
  *********************/
 decoration {
   transition: box-shadow 0.2s cubic-bezier(0, 0, 0.2, 1);
-  border-radius: 0 0 0 0;
+  border-radius: 2px 2px 0 0;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22), 0 8px 10px transparent;
   margin: 4px;
+}
+
+decoration.background.ssd {
+  border-radius: 2px 2px 0 0;
 }
 
 decoration:backdrop {
@@ -4521,13 +4527,13 @@ decoration:backdrop {
 }
 
 .ssd decoration {
-  border-radius: 0;
+  border-radius: 2px 2px 0 0;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
 }
 
 .csd.popup decoration {
-  border-radius: 2px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  border-radius: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
 }
 
 tooltip.csd decoration {
@@ -6517,11 +6523,9 @@ na-tray-applet {
 }
 
 .budgie-popover {
-  border-style: solid;
-  border-width: 1px;
   border-color: rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), 0 0 0 1px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
 }
 
@@ -6603,8 +6607,21 @@ na-tray-applet {
   padding: 0;
 }
 
+window.budgie-popover:not(.csd) > frame.container {
+  margin: 0 -1px -1px;
+}
+
+.bottom window.budgie-popover:not(.csd) > frame.container {
+  padding: 2px 0 2px;
+}
+
+window.budgie-popover:not(.csd) > frame.container,
+window.budgie-popover:not(.csd) > frame.container > border {
+  border-style: none;
+}
+
 .workspace-switcher .workspace-layout {
-  border: 0 solid rgba(255, 255, 255, 0.12);
+  border: 0 solid rgba(0, 0, 0, 0.15);
 }
 
 .top .workspace-switcher .workspace-layout:dir(ltr),
@@ -6624,7 +6641,7 @@ na-tray-applet {
 
 .workspace-switcher .workspace-item,
 .workspace-switcher .workspace-add-button {
-  border: 0 solid rgba(255, 255, 255, 0.12);
+  border: 0 solid rgba(0, 0, 0, 0.15);
 }
 
 .top .workspace-switcher .workspace-item:dir(ltr),
@@ -6807,6 +6824,10 @@ popover.background.places-menu row {
   color: #FFFFFF;
 }
 
+.budgie-panel button:hover, .budgie-panel button:checked, .budgie-panel button:active {
+  color: #FFFFFF;
+}
+
 .budgie-panel button:checked {
   background-color: rgba(255, 255, 255, 0.12);
 }
@@ -6874,39 +6895,39 @@ popover.background.places-menu row {
 }
 
 .top .budgie-panel #tasklist-button, .budgie-panel .top #tasklist-button, .top .budgie-panel button.flat.launcher, .budgie-panel .top button.flat.launcher {
-  border-image: radial-gradient(circle closest-corner at center calc(1px), currentColor 0%, transparent 0%) 0 0 0 0/0 0 0 0;
+  border-image: radial-gradient(circle closest-corner at center calc(1px), #FF6C42 0%, transparent 0%) 0 0 0 0/0 0 0 0;
 }
 
 .top .budgie-panel #tasklist-button:checked, .budgie-panel .top #tasklist-button:checked, .top .budgie-panel button.flat.launcher:checked, .budgie-panel .top button.flat.launcher:checked, .top .budgie-panel .unpinned button.flat.launcher, .budgie-panel .unpinned .top button.flat.launcher,
 .top .budgie-panel .pinned button.flat.launcher.running, .budgie-panel .pinned .top button.flat.launcher.running {
-  border-image: radial-gradient(circle closest-corner at center calc(1px), currentColor 100%, transparent 0%) 2 0 0 0/2px 0 0 0;
+  border-image: radial-gradient(circle closest-corner at center calc(1px), #FF6C42 100%, transparent 0%) 2 0 0 0/2px 0 0 0;
 }
 
 .bottom .budgie-panel #tasklist-button, .budgie-panel .bottom #tasklist-button, .bottom .budgie-panel button.flat.launcher, .budgie-panel .bottom button.flat.launcher {
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), currentColor 0%, transparent 0%) 0 0 0 0/0 0 0 0;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #FF6C42 0%, transparent 0%) 0 0 0 0/0 0 0 0;
 }
 
 .bottom .budgie-panel #tasklist-button:checked, .budgie-panel .bottom #tasklist-button:checked, .bottom .budgie-panel button.flat.launcher:checked, .budgie-panel .bottom button.flat.launcher:checked, .bottom .budgie-panel .unpinned button.flat.launcher, .budgie-panel .unpinned .bottom button.flat.launcher,
 .bottom .budgie-panel .pinned button.flat.launcher.running, .budgie-panel .pinned .bottom button.flat.launcher.running {
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), currentColor 100%, transparent 0%) 0 0 2 0/0 0 2px 0;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #FF6C42 100%, transparent 0%) 0 0 2 0/0 0 2px 0;
 }
 
 .left .budgie-panel #tasklist-button, .budgie-panel .left #tasklist-button, .left .budgie-panel button.flat.launcher, .budgie-panel .left button.flat.launcher {
-  border-image: radial-gradient(circle closest-corner at calc(1px) center, currentColor 0%, transparent 0%) 0 0 0 0/0 0 0 0;
+  border-image: radial-gradient(circle closest-corner at calc(1px) center, #FF6C42 0%, transparent 0%) 0 0 0 0/0 0 0 0;
 }
 
 .left .budgie-panel #tasklist-button:checked, .budgie-panel .left #tasklist-button:checked, .left .budgie-panel button.flat.launcher:checked, .budgie-panel .left button.flat.launcher:checked, .left .budgie-panel .unpinned button.flat.launcher, .budgie-panel .unpinned .left button.flat.launcher,
 .left .budgie-panel .pinned button.flat.launcher.running, .budgie-panel .pinned .left button.flat.launcher.running {
-  border-image: radial-gradient(circle closest-corner at calc(1px) center, currentColor 100%, transparent 0%) 0 0 0 2/0 0 0 2px;
+  border-image: radial-gradient(circle closest-corner at calc(1px) center, #FF6C42 100%, transparent 0%) 0 0 0 2/0 0 0 2px;
 }
 
 .right .budgie-panel #tasklist-button, .budgie-panel .right #tasklist-button, .right .budgie-panel button.flat.launcher, .budgie-panel .right button.flat.launcher {
-  border-image: radial-gradient(circle closest-corner at calc(100% - 1px) center, currentColor 0%, transparent 0%) 0 0 0 0/0 0 0 0;
+  border-image: radial-gradient(circle closest-corner at calc(100% - 1px) center, #FF6C42 0%, transparent 0%) 0 0 0 0/0 0 0 0;
 }
 
 .right .budgie-panel #tasklist-button:checked, .budgie-panel .right #tasklist-button:checked, .right .budgie-panel button.flat.launcher:checked, .budgie-panel .right button.flat.launcher:checked, .right .budgie-panel .unpinned button.flat.launcher, .budgie-panel .unpinned .right button.flat.launcher,
 .right .budgie-panel .pinned button.flat.launcher.running, .budgie-panel .pinned .right button.flat.launcher.running {
-  border-image: radial-gradient(circle closest-corner at calc(100% - 1px) center, currentColor 100%, transparent 0%) 0 2 0 0/0 2px 0 0;
+  border-image: radial-gradient(circle closest-corner at calc(100% - 1px) center, #FF6C42 100%, transparent 0%) 0 2 0 0/0 2px 0 0;
 }
 
 frame.raven-frame > border {
@@ -7062,6 +7083,7 @@ calendar.raven-calendar:selected {
 
 .raven-mpris button.image-button {
   padding: 9px;
+  border-radius: 100px;
 }
 
 .budgie-notification-window, .budgie-osd-window, .budgie-switcher-window {
