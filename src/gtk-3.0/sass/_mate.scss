@@ -5,6 +5,87 @@
  * Mate-Panel *
  **************/
 
+%panelbutton {
+  color: $topbar_fg_color;
+  border-radius: 0;
+  border: none;
+  background-color: transparentize($topbar_bg_color, 1);
+
+  &:hover {
+    border: none;
+    background-color: lighten($topbar_bg_color, 10%);
+  }
+  &:active, &:checked {
+    color: white;
+    border: none;
+    background-color: $primary_color;
+
+    label, image { color: inherit; }
+  }
+}
+
+//
+// Mate OSD Window
+//
+MsdOsdWindow.background.osd {
+  border-radius: 2px;
+  border: 1px solid $borders_color;
+
+  .progressbar {
+    background-color: $primary_color;
+    border: none;
+    border-color: red;
+    border-radius: 5px;
+  }
+  .trough {
+    background-color: darken($topbar_bg_color, 5%);
+    border: none;
+    border-radius: 5px;
+  }
+}
+
+//
+// Mate/Gnome Flashback Panel
+//
+.mate-panel-menu-bar,
+panel-toplevel.background {
+
+  &, menubar { background-color: transparent; }
+
+  menubar,
+  #PanelApplet label,
+  #PanelApplet image { color: $topbar_fg_color; }
+
+  // Panel buttons
+  button:not(#tasklist-button) {
+    @extend %panelbutton;
+  }
+
+  button,
+  #tasklist-button {
+    label, image { color: inherit; }
+  }
+
+  .wnck-pager {
+    color: mix($topbar_fg_color, black, 50%);
+    background-color: darken($topbar_bg_color, 10%);
+
+    &:hover {
+      background-color: lighten($topbar_bg_color, 5%);
+    }
+
+    &:selected {
+      color: lighten($primary_color, 20%);
+      background-color: $primary_color;
+    }
+  }
+
+  na-tray-applet {
+    -NaTrayApplet-icon-padding: 0;
+    -NaTrayApplet-icon-size: 16px;
+  }
+}
+
 // first make all transparent
 .mate-panel-menu-bar menubar,
 #PanelApplet-window-menu-applet-button {

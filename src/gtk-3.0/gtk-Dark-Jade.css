@@ -6193,6 +6193,98 @@ menuitem calendar iconview {
 /**************
  * Mate-Panel *
  **************/
+.mate-panel-menu-bar button:not(#tasklist-button),
+panel-toplevel.background button:not(#tasklist-button) {
+  color: #FFFFFF;
+  border-radius: 0;
+  border: none;
+  background-color: rgba(66, 66, 66, 0);
+}
+
+.mate-panel-menu-bar button:hover:not(#tasklist-button),
+panel-toplevel.background button:hover:not(#tasklist-button) {
+  border: none;
+  background-color: #5c5c5c;
+}
+
+.mate-panel-menu-bar button:active:not(#tasklist-button),
+panel-toplevel.background button:active:not(#tasklist-button), .mate-panel-menu-bar button:checked:not(#tasklist-button),
+panel-toplevel.background button:checked:not(#tasklist-button) {
+  color: white;
+  border: none;
+  background-color: #2eb37b;
+}
+
+.mate-panel-menu-bar button:active:not(#tasklist-button) label, panel-toplevel.background button:active:not(#tasklist-button) label, .mate-panel-menu-bar button:active:not(#tasklist-button) image, panel-toplevel.background button:active:not(#tasklist-button) image, .mate-panel-menu-bar button:checked:not(#tasklist-button) label, panel-toplevel.background button:checked:not(#tasklist-button) label, .mate-panel-menu-bar button:checked:not(#tasklist-button) image, panel-toplevel.background button:checked:not(#tasklist-button) image {
+  color: inherit;
+}
+
+MsdOsdWindow.background.osd {
+  border-radius: 2px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+MsdOsdWindow.background.osd .progressbar {
+  background-color: #2eb37b;
+  border: none;
+  border-color: red;
+  border-radius: 5px;
+}
+
+MsdOsdWindow.background.osd .trough {
+  background-color: #353535;
+  border: none;
+  border-radius: 5px;
+}
+
+.mate-panel-menu-bar, .mate-panel-menu-bar menubar,
+panel-toplevel.background,
+panel-toplevel.background menubar {
+  background-color: transparent;
+}
+
+.mate-panel-menu-bar menubar,
+.mate-panel-menu-bar #PanelApplet label,
+.mate-panel-menu-bar #PanelApplet image,
+panel-toplevel.background menubar,
+panel-toplevel.background #PanelApplet label,
+panel-toplevel.background #PanelApplet image {
+  color: #FFFFFF;
+}
+
+.mate-panel-menu-bar button label, .mate-panel-menu-bar button image,
+.mate-panel-menu-bar #tasklist-button label,
+.mate-panel-menu-bar #tasklist-button image,
+panel-toplevel.background button label,
+panel-toplevel.background button image,
+panel-toplevel.background #tasklist-button label,
+panel-toplevel.background #tasklist-button image {
+  color: inherit;
+}
+
+.mate-panel-menu-bar .wnck-pager,
+panel-toplevel.background .wnck-pager {
+  color: gray;
+  background-color: #292929;
+}
+
+.mate-panel-menu-bar .wnck-pager:hover,
+panel-toplevel.background .wnck-pager:hover {
+  background-color: #4f4f4f;
+}
+
+.mate-panel-menu-bar .wnck-pager:selected,
+panel-toplevel.background .wnck-pager:selected {
+  color: #6ddaac;
+  background-color: #2eb37b;
+}
+
+.mate-panel-menu-bar na-tray-applet,
+panel-toplevel.background na-tray-applet {
+  -NaTrayApplet-icon-padding: 0;
+  -NaTrayApplet-icon-size: 16px;
+}
+
 .mate-panel-menu-bar menubar,
 #PanelApplet-window-menu-applet-button {
   background-color: transparent;
