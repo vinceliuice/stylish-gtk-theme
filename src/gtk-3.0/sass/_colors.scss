@@ -80,8 +80,8 @@ $disabled_menu_fg_color: if($variant =='light', rgba(#000, 0.5), rgba(#fff, 0.5)
 
 $tab_color: $primary_color;
 $secondary_titlebar_color: $primary_color;
-$topbar_bg_color: $headerbar_bg_color;
-$topbar_fg_color: $headerbar_fg_color;
+$topbar_bg_color: #262626;
+$topbar_fg_color: $secondary_inversed_fg_color;
 
 // Misc colors
 $track_color: gtkalpha(currentColor, 0.15);

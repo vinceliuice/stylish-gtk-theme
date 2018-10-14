@@ -6,6 +6,66 @@
 // hard-coded css:
 // https://git.gnome.org/browse/nautilus/tree/src/resources/css/nautilus.css
 
+%pathbar_box_button {
+  margin: 0;
+  @extend %flat_button;
+  color: $secondary_headerbar_fg_color;
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                $primary_color 0%,
+                                transparent 0%)
+                                0 0 0 / 0 0 0;
+  &:hover {
+    color: $headerbar_fg_color;
+    background-color: rgba($headerbar_fg_color, 0.12);
+  }
+  &:checked, &:active {
+    color: $headerbar_fg_color;
+    background-color: transparent;
+    border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
+                                  $primary_color 100%,
+                                  transparent 0%)
+                                  0 0 2 / 0 0 2px;
+  }
+}
+
+.nautilus-window headerbar {
+  .path-bar-box {
+    margin: 0 $container_padding;
+    padding: 0 6px;
+    min-height: 16px;
+    border-radius: 3px;
+    button {
+      &, &.text-button,
+      &.image-button,
+      &.text-button.image-button {
+        @extend %pathbar_box_button;
+        &, &:hover, &:active, &:checked, &:disabled { border-radius: 3px; }
+      }
+    }
+
+    &.width-maximized {
+      color: $secondary_headerbar_fg_color;
+      background-color: lighten($headerbar_bg_color, 5%);
+      border: 1px solid $borders_color;
+
+//      button {
+//        &, &.text-button,
+//        &.image-button,
+//        &.text-button.image-button {
+//          @extend %pathbar_widthbox_button;
+//          &, &:hover, &:active, &:checked, &:disabled { border-radius: 0; }
+//        }
+//      }
+    }
+
+    // workaround for 3.30.1
+    &.background.frame {
+      border: none;
+      background-color: transparent;
+    }
+  }
+}
+
 .nautilus-window,
 .nautilus-window notebook,
 .nautilus-window notebook > stack {
@@ -1358,14 +1418,240 @@ radiobutton > radio:not(:checked):not(:indeterminate) {
     &:disabled { color: $disabled_fg_color; }
   }
 
-//
-//  * Geary *
-//
+/*************
+  * rhythmbox *
+  *************/
 
-.geary-titlebar-left,
-.geary-titlebar-right {
+// add top-border to inline-toolbar
+.sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar {
+  box-shadow: inset 0 1px $borders_color;
+  padding: 4px;
+  background-color: darken($bg_color, 1%);
+
+  button.image-button {
+    @extend %flat_button;
+  }
+}
+
+// tweak sidebar styling
+.sidebar-paned {
+  scrolledwindow { border: none; }
+}
+
+// tweak border and frame in alt-toolbar
+window.csd > box.vertical > box.vertical,
+window.solid-csd > box.vertical > box.vertical {
+  > toolbar.horizontal {
+    margin: -1px 0;
+    border-top: 1px solid $borders_color;
+    box-shadow: none;
+  }
+
+  > frame {
+    margin: -1px 0;
+    padding: 0;
+
+    > border { border: none; }
+  }
+}
+
+
+ /*********
+  * Geary *
+  *********/
+
+// Geary is the most ugly app for theming.
+.geary-titlebar-right,
+.geary-titlebar-left {
   // remove unexpected "hardcoded" vertical separator
   separator { opacity: 0; }
+}
+
+%folder_frame_border { border-width: 0 0 1px; }
+
+%folder_frame {
+  &:dir(ltr),
+  &.left,
+  &.left:dir(rtl) { @extend %sidebar_left; }
+
+  &:dir(rtl),
+  &.right { @extend %sidebar_right; }
+}
+
+// left-pane styling
+.sidebar.vertical > paned.geary-sidebar-pane-separator {
+  .geary-folder-frame {
+    > border { @extend  %folder_frame_border; }
+    > scrolledwindow { @extend %folder_frame; }
+  }
+}
+
+
+//
+// Xfce4
+//
+
+$text_shadow: 0 0 1px rgba(0, 0, 0, 0.26),
+              0 1px 2px rgba(0, 0, 0, 0.32),
+              0 2px 3px rgba(0, 0, 0, 0.12);
+
+%panelbutton {
+  color: $topbar_fg_color;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+
+  &:hover:not(:active):not(:checked) {
+    color: $topbar_fg_color;
+    box-shadow: inset 0 -2px rgba($primary_color, 0.5);
+    background-color: transparent;
+  }
+  &:checked, &:active {
+    color: $topbar_fg_color;
+    box-shadow: inset 0 -2px $primary_color;
+    background: transparent;
+    label, image { color: inherit; }
+  }
+  &:disabled {
+    color: rgba($topbar_fg_color, 0.5);
+    box-shadow: none;
+    background-color: transparent;
+  }
+  &:checked:disabled {
+    color: rgba($topbar_fg_color, 0.5);
+    box-shadow: inset 0 -2px rgba($primary_color, 0.5);
+    background-color: transparent;
+  }
+}
+
+.XfceHeading {
+  border: 0 none transparent;
+  background-color: $bg_color;
+  color: $fg_color;
+}
+
+.xfce4-panel {
+  background-color: $topbar_bg_color;
+  color: $topbar_fg_color;
+  font-weight: 700;
+  text-shadow: none;
+  -gtk-icon-shadow: none;
+
+  &, // unset borders
+  frame > border { border: none; }
+
+  &#XfcePanelWindow { // main panel container >= 4.13.3?
+    // FIXME: unneeded 1px borders are reserved by its code itself
+    border: 1px solid $topbar_bg_color;
+
+    &, &.marching-ants { transition: none; } // unset transitions
+  }
+
+//  button.flat { @extend %panelbutton; }
+
+  button {
+    font-weight: 700;
+    @extend %panelbutton;
+
+    &#launcher-arrow { // launcher applet
+      // FIXME: quite weird pseudo-classe transitions, especially :hover
+      // state can't be cleared properly ( -> an upstream issue)
+      &, + button.toggle {
+        &:hover { box-shadow: none; } // hide indicators
+      }
+
+      + button.toggle:checked { // 'arrow' toggle button
+        color: $primary_color;
+        box-shadow: none;
+      }
+    }
+
+    &#xfce4-notification-plugin {
+      padding: 0 1px; // for 4.12.2
+    }
+  }
+
+  menu {
+    font-weight: 400; // for enforcing regular weight
+    text-shadow: none;
+    -gtk-icon-effect: none;
+  }
+
+  widget.tasklist > button.toggle { font-weight: 400; }
+}
+
+XfdesktopIconView.view {
+  border-radius: 2px;
+  background: transparent;
+  color: $inversed_fg_color;
+  text-shadow: $text_shadow;
+
+  &:active, &:checked {
+    background-color: $primary_color;
+    text-shadow: none;
+  }
+
+  .rubberband { @extend rubberband; }
+}
+
+window#whiskermenu-window {
+  background-color: $base_color;
+
+  // no CSD class even if the sw compositor was enabled.
+  > frame > border {
+    border-radius: 0;
+  }
+
+//  entry { @extend %entry.flat; }
+
+  scrolledwindow {
+    > viewport button.radio {
+      &:hover { background-color: $semi_track_color; }
+      &:checked {
+        background-color: $primary_color;
+        color: $inversed_fg_color;
+      }
+    }
+
+    treeview.view {
+      &:selected:hover {
+        background-color: $semi_track_color;
+        color: $fg_color;
+      }
+    }
+  }
+}
+
+#xfce4-weather-plugin *,
+#xfce4-power-manager-plugin *,
+#xfce4-clipman-plugin * {
+  -gtk-icon-transform: scale(.8);
+}
+
+//
+//  * Thunar *
+//
+
+window.thunar {
+  toolbar#location-toolbar {
+    border-bottom: 1px solid $borders_color;
+
+    // FIXME: need to unset for weird allocation height
+    entry { min-height: 0; }
+  }
+
+  notebook {
+    // hide unneeded border
+    stack > scrolledwindow.frame.standard-view {
+      border-top-width: 0;
+      border-right-width: 0;
+    }
+
+    // an allocation height of label node affects to close button's
+    // image height (it's quite weird).
+    header.top tab.reorderable-page > box > label { min-height: 0; }
+  }
 }
 
 /*********

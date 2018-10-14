@@ -5,28 +5,10 @@
  * Mate-Panel *
  **************/
 
-%panelbutton {
-  color: $topbar_fg_color;
-  border-radius: 0;
-  border: none;
-  background-color: transparentize($topbar_bg_color, 1);
-
-  &:hover {
-    border: none;
-    background-color: lighten($topbar_bg_color, 10%);
-  }
-  &:active, &:checked {
-    color: white;
-    border: none;
-    background-color: $primary_color;
-
-    label, image { color: inherit; }
-  }
-}
-
 //
 // Mate OSD Window
 //
+
 MsdOsdWindow.background.osd {
   border-radius: 2px;
   border: 1px solid $borders_color;

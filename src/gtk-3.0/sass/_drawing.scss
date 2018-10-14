@@ -27,71 +27,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
 // ripple effect animations
 
 @keyframes ripple_effect {
-  from {
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      $semi_track_color 0%,
-                                      transparent 0%),
-                      image($zero_track_color);
-  }
-
-  to {
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      $semi_track_color 100%,
-                                      transparent 0%),
-                      image($semi_track_color);
-  }
-}
-
-@keyframes flat_ripple_effect {
-  from {
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      $semi_track_color 0%,
-                                      transparent 0%),
-                      image($semi_track_color);
-  }
-
-  to {
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      $semi_track_color 100%,
-                                      transparent 0%),
-                      image($semi_track_color);
-  }
-}
-
-@keyframes row_ripple_effect {
-  from {
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      $semi_track_color 0%,
-                                      transparent 0%),
-                      image($zero_track_color);
-  }
-
-  to {
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      $semi_track_color 100%,
-                                      transparent 0%),
-                      image($zero_track_color);
-  }
-}
-
-@keyframes tab_ripple_effect {
-  from {
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      scale-alpha($primary_color, $middle_opacity) 0%,
-                                      transparent 0%);
-  }
-
-  50% {
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      scale-alpha($primary_color, $middle_opacity) 100%,
-                                      transparent 0%);
-  }
-
-  to {
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      transparent 100%,
-                                      transparent 0%);
-  }
+  to { background-size: 1000% 1000%; }
 }
 
 @keyframes header_ripple_effect {
@@ -107,7 +43,6 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
                                       transparent 0%);
   }
 }
-
 
 @mixin entry($t, $fc:$primary_color) {
 //
@@ -127,12 +62,13 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
     border-image: none;
     box-shadow: none;
     background-color: if($fc != $primary_color, $fc, $lighter_bg_color);
-    color: if($fc != $primary_color, $inversed_fg_color, $fg_color);
+    color: if($fc != $primary_color, $secondary_inversed_fg_color, $secondary_fg_color);
   }
 
   @if $t == focus {
     border-color: $primary_color;
     border-image: none;
+     color: if($fc != $primary_color, $inversed_fg_color, $fg_color);
   }
 
   @if $t == disabled {
@@ -181,30 +117,34 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
 //
 
   @if $t == normal {
-    transition: $longer_transition, $shadow_transition;
+    transition: $longer_transition,
+                $shadow_transition,
+                background-size $ripple_duration $deceleration_curve,
+                background-image $ripple_opacity_duration $deceleration_curve;
     border: 1px solid $borders_color;
     box-shadow: none;
     background-color: $c;
     background-image: radial-gradient(circle farthest-corner at center,
-                                      $zero_track_color 100%,
-                                      transparent 0%),
-                      image($zero_track_color);
+                                      transparent 100%,
+                                      transparent 0%);
     color: $secondary_fg_color;
   }
 
   @if $t == hover {
     background-color: if($variant == 'light', darken($c, 6%), lighten($c, 6%));
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      $zero_track_color 100%,
-                                      transparent 0%),
-                      image($zero_track_color);
     color: $fg_color;
   }
 
   @if $t == active {
 //    background-color: if($variant == 'light', darken($c, 10%), lighten($c, 10%));
-    transition: $longer_transition, $shadow_transition, background-image 0;
+    transition: $longer_transition,
+                background-size 0,
+                background-image 0;
     animation: ripple_effect $longer_duration $deceleration_curve forwards;
+    background-image: radial-gradient(circle farthest-corner at center,
+                                      $semi_track_color 10%,
+                                      transparent 0%);
+    background-size: 0% 0%;
     border-color: $track_color;
   }
 
@@ -221,41 +161,43 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == checked-disabled {
-    background-color: scale-alpha($primary_color, $lower_opacity);
+    background-color: $track_color;
     color: scale-alpha($primary_color, $disabled_opacity);
     border-color: scale-alpha($primary_color, $disabled_opacity);
   }
 
   @if $t == flat-normal {
-    transition: $longer_transition;
-    box-shadow: none;
+    transition: $longer_transition,
+                background-size $ripple_duration $deceleration_curve,
+                background-image $ripple_opacity_duration $deceleration_curve;
+    box-shadow: inset 0 0 0 9999px transparent;
     background-color: transparent;
     background-image: radial-gradient(circle farthest-corner at center,
-                                      $zero_track_color 100%,
-                                      transparent 0%),
-                      image($zero_track_color);
-    color: rgba($fg_color, $enabled_opacity);
-    border-color: transparent;
+                                      transparent 100%,
+                                      transparent 0%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1000% 1000%;
+    color: $secondary_fg_color;
+    border: none;
   }
 
   @if $t == flat-hover {
-    box-shadow: none;
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      $zero_track_color 100%,
-                                      transparent 0%),
-                      image($semi_track_color);
+    box-shadow: inset 0 0 0 9999px $semi_track_color;
     color: $fg_color;
-//    border-color: transparent;
-    background-color: rgba($fg_color, 0.10);
   }
 
   @if $t == flat-active {
-    transition: $longer_transition, background-image 0;
-    animation: flat_ripple_effect $longer_duration $deceleration_curve forwards;
-    box-shadow: none;
+    transition: $longer_transition,
+                background-size 0,
+                background-image 0;
+    animation: ripple_effect $longer_duration $deceleration_curve forwards;
+    box-shadow: inset 0 0 0 9999px $semi_track_color;
+    background-image: radial-gradient(circle farthest-corner at center,
+                                      $semi_track_color 10%,
+                                      transparent 0%);
+    background-size: 0% 0%;
     color: $fg_color;
-    background-color: rgba($fg_color, 0.15);
-//    border-color: transparent;
   }
 
   @if $t == flat-disabled {
@@ -267,13 +209,11 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == flat-checked {
     color: $fg_color;
     background-color: rgba($fg_color, 0.20);
-    border-color: transparent;
   }
 
   @if $t == flat-checked-disabled {
     background-color: rgba($fg_color, 0.15);
-    color: rgba($fg_color, $disabled_opacity);
-    border-color: rgba($borders_color, $disabled_opacity);
+    color: $disabled_fg_color;
   }
 }
 
@@ -295,26 +235,23 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
     box-shadow: none;
     background-color: lighten($headerbar_bg_color, 5%);
     background-image: radial-gradient(circle farthest-corner at center,
-                                      $zero_track_color 100%,
-                                      transparent 0%),
-                      image($zero_track_color);
-    color: gtkalpha(currentColor, $enabled_opacity);
+                                      transparent 100%,
+                                      transparent 0%);
+    color: $secondary_headerbar_fg_color;
     border-color: $borders_color;
   }
 
   @if $t == header-hover {
     background-color: if($variant == 'light' and $headerbar =='light', rgba(black, 0.05), rgba(white, 0.16));
     color: $headerbar_fg_color;
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      $zero_track_color 100%,
-                                      transparent 0%),
-                      image($zero_track_color);
     box-shadow: none;
   }
 
   @if $t == header-active {
-    transition: $longer_transition, background-image 0;
-    animation: flat_ripple_effect $longer_duration $deceleration_curve forwards;
+    transition: $longer_transition,
+                background-size 0,
+                background-image 0;
+    animation: ripple_effect $longer_duration $deceleration_curve forwards;
     box-shadow: none;
     color: $inversed_fg_color;
   }
@@ -328,7 +265,6 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == header-checked {
     background-color: $primary_color;
     color: $inversed_fg_color;
-//    border-color: $primary_color;
   }
 
   @if $t == header-checked-disabled {

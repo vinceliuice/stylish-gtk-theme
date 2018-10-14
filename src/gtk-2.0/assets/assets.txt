@@ -132,3 +132,5 @@ toolbar
 menubar
 menubar-light
 focus-line
+pathbar_button_prelight
+pathbar_button_active

@@ -14,7 +14,7 @@
    version="1.1"
    id="svg4"
    sodipodi:docname="check-unchecked-symbolic.svg"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
   <metadata
      id="metadata10">
     <rdf:RDF>
@@ -37,13 +37,13 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="640"
-     inkscape:window-height="480"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
      id="namedview6"
      showgrid="true"
-     inkscape:zoom="15.379572"
-     inkscape:cx="19.422317"
-     inkscape:cy="17.794468"
+     inkscape:zoom="30.759144"
+     inkscape:cx="9.9942952"
+     inkscape:cy="13.093846"
      inkscape:current-layer="svg4"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
@@ -52,13 +52,16 @@
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-midpoints="true"
      inkscape:object-paths="true"
-     inkscape:snap-intersection-paths="true">
+     inkscape:snap-intersection-paths="true"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
        id="grid12" />
   </sodipodi:namedview>
   <path
-     style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;paint-order:markers fill stroke"
-     d="M 5 3 C 3.892 3 3 3.892 3 5 L 3 19 C 3 20.108 3.892 21 5 21 L 19 21 C 20.108 21 21 20.108 21 19 L 21 5 C 21 3.892 20.108 3 19 3 L 5 3 z M 5.7773438 4 L 18.222656 4 C 19.207545 4 20 4.7924549 20 5.7773438 L 20 18.222656 C 20 19.207545 19.207545 20 18.222656 20 L 5.7773438 20 C 4.7924549 20 4 19.207545 4 18.222656 L 4 5.7773438 C 4 4.7924549 4.7924549 4 5.7773438 4 z "
-     id="rect822" />
+     style="opacity:1;fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-opacity:1"
+     d="M 5 3 C 3.892 3 3 3.892 3 5 L 3 19 C 3 20.108 3.892 21 5 21 L 19 21 C 20.108 21 21 20.108 21 19 L 21 5 C 21 3.892 20.108 3 19 3 L 5 3 z M 4.9980469 4 L 19.001953 4 C 19.55458 4 20 4.4454198 20 4.9980469 L 20 19.001953 C 20 19.55458 19.55458 20 19.001953 20 L 4.9980469 20 C 4.4454198 20 4 19.55458 4 19.001953 L 4 4.9980469 C 4 4.4454198 4.4454198 4 4.9980469 4 z "
+     id="rect816" />
 </svg>

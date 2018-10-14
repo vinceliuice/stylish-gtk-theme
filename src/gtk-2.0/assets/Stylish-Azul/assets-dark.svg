@@ -15,7 +15,7 @@
    height="416"
    id="svg9892"
    version="1.1"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
    sodipodi:docname="assets-dark.svg">
   <defs
      id="defs9894">
@@ -893,16 +893,16 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="3.9999998"
-     inkscape:cx="488.60586"
-     inkscape:cy="285.44381"
+     inkscape:cx="322.90246"
+     inkscape:cy="287.08822"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      showborder="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="709"
+     inkscape:window-width="1920"
+     inkscape:window-height="1019"
      inkscape:window-x="0"
-     inkscape:window-y="31"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:snap-nodes="true"
      inkscape:snap-bbox="true"
@@ -6190,5 +6190,25 @@
        d="m 440,-31.63782 h 1 v 1 h -1 z"
        id="border"
        inkscape:connector-curvature="0" />
+    <rect
+       style="display:inline;opacity:0.5;fill:#2196f3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.81649661;stroke-opacity:1"
+       id="pathbar_button_prelight"
+       width="12"
+       height="2"
+       x="304"
+       y="-145.63782"
+       rx="0"
+       ry="0"
+       inkscape:label="#rect5312" />
+    <rect
+       ry="0"
+       rx="0"
+       y="-139.63782"
+       x="304"
+       height="2"
+       width="12"
+       id="pathbar_button_active"
+       style="display:inline;opacity:1;fill:#2196f3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.81649661;stroke-opacity:1"
+       inkscape:label="#rect5320" />
   </g>
 </svg>
