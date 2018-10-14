@@ -127,6 +127,9 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
     background-image: radial-gradient(circle farthest-corner at center,
                                       transparent 100%,
                                       transparent 0%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 1000% 1000%;
     color: $secondary_fg_color;
   }
 
@@ -215,28 +218,10 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
     background-color: rgba($fg_color, 0.15);
     color: $disabled_fg_color;
   }
-}
-
-@mixin header_button($t, $c:$lighter_bg_color, $tc:$fg_color) {
-//
-// Button drawing function
-//
-// $t:    button type,
-// $c:    base button color for colored* types
-// $tc:   optional text color for colored* types
-//
-// possible $t values:
-// normal, hover, active, disabled, checked, checked-disabled,
-// flat-normal, flat-hover, flat-active, flat-disabled, flat-checked, flat-checked-disabled;
-//
 
   @if $t == header-normal {
     transition: $longer_transition;
-    box-shadow: none;
     background-color: lighten($headerbar_bg_color, 5%);
-    background-image: radial-gradient(circle farthest-corner at center,
-                                      transparent 100%,
-                                      transparent 0%);
     color: $secondary_headerbar_fg_color;
     border-color: $borders_color;
   }
@@ -244,20 +229,14 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == header-hover {
     background-color: if($variant == 'light' and $headerbar =='light', rgba(black, 0.05), rgba(white, 0.16));
     color: $headerbar_fg_color;
-    box-shadow: none;
   }
 
   @if $t == header-active {
-    transition: $longer_transition,
-                background-size 0,
-                background-image 0;
-    animation: ripple_effect $longer_duration $deceleration_curve forwards;
-    box-shadow: none;
+    background-color: $primary_color;
     color: $inversed_fg_color;
   }
 
   @if $t == header-disabled {
-    box-shadow: none;
     background-color: lighten($headerbar_bg_color, 5%);
     color: if($tc != $fg_color, gtkalpha(currentColor, $disabled_opacity), gtkalpha(currentColor, $enabled_opacity * $disabled_opacity));
   }
@@ -273,7 +252,6 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
     border-color: $borders_color;
   }
 }
-
 
 @mixin overshoot($p, $t:normal, $c:$alt_primary_color) {
 //

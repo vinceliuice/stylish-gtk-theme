@@ -253,7 +253,7 @@ entry:disabled {
 
 spinbutton.flat:not(.vertical), toolbar entry, notebook > stack:not(:only-child) entry,
 notebook > stack:not(:only-child) spinbutton:not(.vertical), notebook > stack:not(:only-child) revealer entry.flat,
-notebook > stack:not(:only-child) revealer spinbutton.flat:not(.vertical), colorchooser .popover.osd spinbutton:not(.vertical), layoutpane entry.search, editortweak entry.search, .raven .raven-background spinbutton:not(.vertical), #login_window entry,
+notebook > stack:not(:only-child) revealer spinbutton.flat:not(.vertical), colorchooser .popover.osd spinbutton:not(.vertical), layoutpane entry.search, editortweak entry.search, #login_window entry,
 entry.flat {
   border-radius: 0;
   transition: all 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
@@ -266,7 +266,7 @@ entry.flat {
 }
 
 spinbutton.flat:focus:not(.vertical), toolbar entry:focus, notebook > stack:not(:only-child) entry:focus,
-notebook > stack:not(:only-child) spinbutton:focus:not(.vertical), colorchooser .popover.osd spinbutton:focus:not(.vertical), layoutpane entry.search:focus, editortweak entry.search:focus, .raven .raven-background spinbutton:focus:not(.vertical), #login_window entry:focus,
+notebook > stack:not(:only-child) spinbutton:focus:not(.vertical), colorchooser .popover.osd spinbutton:focus:not(.vertical), layoutpane entry.search:focus, editortweak entry.search:focus, #login_window entry:focus,
 entry.flat:focus {
   border-color: #787878;
   border-image: none;
@@ -274,7 +274,7 @@ entry.flat:focus {
 }
 
 spinbutton.flat:disabled:not(.vertical), toolbar entry:disabled, notebook > stack:not(:only-child) entry:disabled,
-notebook > stack:not(:only-child) spinbutton:disabled:not(.vertical), colorchooser .popover.osd spinbutton:disabled:not(.vertical), layoutpane entry.search:disabled, editortweak entry.search:disabled, .raven .raven-background spinbutton:disabled:not(.vertical), #login_window entry:disabled,
+notebook > stack:not(:only-child) spinbutton:disabled:not(.vertical), colorchooser .popover.osd spinbutton:disabled:not(.vertical), layoutpane entry.search:disabled, editortweak entry.search:disabled, #login_window entry:disabled,
 entry.flat:disabled {
   background-color: alpha(currentColor, 0.15);
   color: rgba(0, 0, 0, 0.32);
@@ -356,7 +356,7 @@ entry.error:disabled {
 }
 
 spinbutton.error.flat:not(.vertical), toolbar entry.error, notebook > stack:not(:only-child) entry.error,
-notebook > stack:not(:only-child) spinbutton.error:not(.vertical), colorchooser .popover.osd spinbutton.error:not(.vertical), layoutpane entry.error.search, editortweak entry.error.search, .raven .raven-background spinbutton.error:not(.vertical), #login_window entry.error,
+notebook > stack:not(:only-child) spinbutton.error:not(.vertical), colorchooser .popover.osd spinbutton.error:not(.vertical), layoutpane entry.error.search, editortweak entry.error.search, #login_window entry.error,
 entry.error.flat {
   transition: all 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -368,7 +368,7 @@ entry.error.flat {
 }
 
 spinbutton.error.flat:focus:not(.vertical), toolbar entry.error:focus, notebook > stack:not(:only-child) entry.error:focus,
-notebook > stack:not(:only-child) spinbutton.error:focus:not(.vertical), colorchooser .popover.osd spinbutton.error:focus:not(.vertical), layoutpane entry.error.search:focus, editortweak entry.error.search:focus, .raven .raven-background spinbutton.error:focus:not(.vertical), #login_window entry.error:focus,
+notebook > stack:not(:only-child) spinbutton.error:focus:not(.vertical), colorchooser .popover.osd spinbutton.error:focus:not(.vertical), layoutpane entry.error.search:focus, editortweak entry.error.search:focus, #login_window entry.error:focus,
 entry.error.flat:focus {
   border-color: #787878;
   border-image: none;
@@ -376,7 +376,7 @@ entry.error.flat:focus {
 }
 
 spinbutton.error.flat:disabled:not(.vertical), toolbar entry.error:disabled, notebook > stack:not(:only-child) entry.error:disabled,
-notebook > stack:not(:only-child) spinbutton.error:disabled:not(.vertical), colorchooser .popover.osd spinbutton.error:disabled:not(.vertical), layoutpane entry.error.search:disabled, editortweak entry.error.search:disabled, .raven .raven-background spinbutton.error:disabled:not(.vertical), #login_window entry.error:disabled,
+notebook > stack:not(:only-child) spinbutton.error:disabled:not(.vertical), colorchooser .popover.osd spinbutton.error:disabled:not(.vertical), layoutpane entry.error.search:disabled, editortweak entry.error.search:disabled, #login_window entry.error:disabled,
 entry.error.flat:disabled {
   background-color: alpha(currentColor, 0.15);
   color: rgba(0, 0, 0, 0.32);
@@ -408,7 +408,7 @@ entry.warning:disabled {
 }
 
 spinbutton.warning.flat:not(.vertical), toolbar entry.warning, notebook > stack:not(:only-child) entry.warning,
-notebook > stack:not(:only-child) spinbutton.warning:not(.vertical), colorchooser .popover.osd spinbutton.warning:not(.vertical), layoutpane entry.warning.search, editortweak entry.warning.search, .raven .raven-background spinbutton.warning:not(.vertical), #login_window entry.warning,
+notebook > stack:not(:only-child) spinbutton.warning:not(.vertical), colorchooser .popover.osd spinbutton.warning:not(.vertical), layoutpane entry.warning.search, editortweak entry.warning.search, #login_window entry.warning,
 entry.warning.flat {
   transition: all 300ms cubic-bezier(0, 0, 0.2, 1), box-shadow 200ms cubic-bezier(0, 0, 0.2, 1);
   border: 1px solid rgba(0, 0, 0, 0.15);
@@ -420,7 +420,7 @@ entry.warning.flat {
 }
 
 spinbutton.warning.flat:focus:not(.vertical), toolbar entry.warning:focus, notebook > stack:not(:only-child) entry.warning:focus,
-notebook > stack:not(:only-child) spinbutton.warning:focus:not(.vertical), colorchooser .popover.osd spinbutton.warning:focus:not(.vertical), layoutpane entry.warning.search:focus, editortweak entry.warning.search:focus, .raven .raven-background spinbutton.warning:focus:not(.vertical), #login_window entry.warning:focus,
+notebook > stack:not(:only-child) spinbutton.warning:focus:not(.vertical), colorchooser .popover.osd spinbutton.warning:focus:not(.vertical), layoutpane entry.warning.search:focus, editortweak entry.warning.search:focus, #login_window entry.warning:focus,
 entry.warning.flat:focus {
   border-color: #787878;
   border-image: none;
@@ -428,7 +428,7 @@ entry.warning.flat:focus {
 }
 
 spinbutton.warning.flat:disabled:not(.vertical), toolbar entry.warning:disabled, notebook > stack:not(:only-child) entry.warning:disabled,
-notebook > stack:not(:only-child) spinbutton.warning:disabled:not(.vertical), colorchooser .popover.osd spinbutton.warning:disabled:not(.vertical), layoutpane entry.warning.search:disabled, editortweak entry.warning.search:disabled, .raven .raven-background spinbutton.warning:disabled:not(.vertical), #login_window entry.warning:disabled,
+notebook > stack:not(:only-child) spinbutton.warning:disabled:not(.vertical), colorchooser .popover.osd spinbutton.warning:disabled:not(.vertical), layoutpane entry.warning.search:disabled, editortweak entry.warning.search:disabled, #login_window entry.warning:disabled,
 entry.warning.flat:disabled {
   background-color: alpha(currentColor, 0.15);
   color: rgba(0, 0, 0, 0.32);
@@ -445,7 +445,7 @@ entry progress {
 
 .linked:not(.vertical) > spinbutton.flat:not(.vertical), toolbar .linked:not(.vertical) > entry, notebook > stack:not(:only-child) .linked:not(.vertical) > entry,
 notebook > stack:not(:only-child) .linked:not(.vertical) > spinbutton:not(.vertical), notebook > stack:not(:only-child) revealer .linked:not(.vertical) > entry.flat,
-notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton.flat:not(.vertical), colorchooser .popover.osd .linked:not(.vertical) > spinbutton:not(.vertical), layoutpane .linked:not(.vertical) > entry.search, editortweak .linked:not(.vertical) > entry.search, .raven .raven-background .linked:not(.vertical) > spinbutton:not(.vertical), #login_window .linked:not(.vertical) > entry,
+notebook > stack:not(:only-child) revealer .linked:not(.vertical) > spinbutton.flat:not(.vertical), colorchooser .popover.osd .linked:not(.vertical) > spinbutton:not(.vertical), layoutpane .linked:not(.vertical) > entry.search, editortweak .linked:not(.vertical) > entry.search, #login_window .linked:not(.vertical) > entry,
 .linked.vertical > spinbutton.flat:not(.vertical),
 toolbar .linked.vertical > entry,
 notebook > stack:not(:only-child) .linked.vertical > entry,
@@ -455,7 +455,6 @@ notebook > stack:not(:only-child) revealer .linked.vertical > spinbutton.flat:no
 colorchooser .popover.osd .linked.vertical > spinbutton:not(.vertical),
 layoutpane .linked.vertical > entry.search,
 editortweak .linked.vertical > entry.search,
-.raven .raven-background .linked.vertical > spinbutton:not(.vertical),
 #login_window .linked.vertical > entry, .linked:not(.vertical) >
 entry.flat,
 .linked.vertical >
@@ -537,6 +536,9 @@ button {
   box-shadow: none;
   background-color: #ffffff;
   background-image: radial-gradient(circle farthest-corner at center, transparent 100%, transparent 0%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1000% 1000%;
   color: rgba(0, 0, 0, 0.6);
 }
 
@@ -700,13 +702,13 @@ button:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.raven stackswitcher.linked > button, .raven-mpris button.image-button, row:selected .caja-pathbar button.flat, .caja-pathbar row:selected button.flat,
+.raven .raven-header.top stackswitcher button, row:selected .caja-pathbar button.flat, .caja-pathbar row:selected button.flat,
 row:selected .path-bar button.flat, .path-bar row:selected button.flat, row:selected
 button.flat {
   color: rgba(255, 255, 255, 0.75);
 }
 
-.raven stackswitcher.linked > button:hover, .raven-mpris button.image-button:hover, .raven stackswitcher.linked > button:active, .raven-mpris button.image-button:active, row:selected .caja-pathbar button.flat:hover, .caja-pathbar row:selected button.flat:hover,
+.raven .raven-header.top stackswitcher button:hover, .raven .raven-header.top stackswitcher button:active, row:selected .caja-pathbar button.flat:hover, .caja-pathbar row:selected button.flat:hover,
 row:selected .path-bar button.flat:hover, .path-bar row:selected button.flat:hover, row:selected .caja-pathbar button.flat:active, .caja-pathbar row:selected button.flat:active,
 row:selected .path-bar button.flat:active, .path-bar row:selected button.flat:active, row:selected
 button.flat:hover, row:selected
@@ -714,20 +716,20 @@ button.flat:active {
   color: #FFFFFF;
 }
 
-.raven stackswitcher.linked > button:disabled, .raven-mpris button.image-button:disabled, row:selected .caja-pathbar button.flat:disabled, .caja-pathbar row:selected button.flat:disabled,
+.raven .raven-header.top stackswitcher button:disabled, row:selected .caja-pathbar button.flat:disabled, .caja-pathbar row:selected button.flat:disabled,
 row:selected .path-bar button.flat:disabled, .path-bar row:selected button.flat:disabled, row:selected
 button.flat:disabled {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.raven stackswitcher.linked > button:checked, .raven-mpris button.image-button:checked, row:selected .caja-pathbar button.flat:checked, .caja-pathbar row:selected button.flat:checked,
+.raven .raven-header.top stackswitcher button:checked, row:selected .caja-pathbar button.flat:checked, .caja-pathbar row:selected button.flat:checked,
 row:selected .path-bar button.flat:checked, .path-bar row:selected button.flat:checked, row:selected
 button.flat:checked {
   background-color: alpha(currentColor, 0.15);
   color: #FFFFFF;
 }
 
-.raven stackswitcher.linked > button:checked:disabled, .raven-mpris button.image-button:checked:disabled, row:selected .caja-pathbar button.flat:checked:disabled, .caja-pathbar row:selected button.flat:checked:disabled,
+.raven .raven-header.top stackswitcher button:checked:disabled, row:selected .caja-pathbar button.flat:checked:disabled, .caja-pathbar row:selected button.flat:checked:disabled,
 row:selected .path-bar button.flat:checked:disabled, .path-bar row:selected button.flat:checked:disabled, row:selected
 button.flat:checked:disabled {
   background-color: rgba(255, 255, 255, 0.12);
@@ -1455,7 +1457,7 @@ combobox:drop(active) {
   border: 1px solid rgba(0, 0, 0, 0.15);
 }
 
-notebook > stack:not(:only-child) button.combo, .raven .raven-background button.combo, #login_window #user_combobox button {
+notebook > stack:not(:only-child) button.combo, #login_window #user_combobox button {
   border-radius: 0;
   background-image: none;
   font-weight: inherit;
@@ -1468,12 +1470,12 @@ notebook > stack:not(:only-child) button.combo, .raven .raven-background button.
   color: rgba(0, 0, 0, 0.6);
 }
 
-notebook > stack:not(:only-child) button.combo:hover, .raven .raven-background button.combo:hover, #login_window #user_combobox button:hover {
+notebook > stack:not(:only-child) button.combo:hover, #login_window #user_combobox button:hover {
   background-color: #f0f0f0;
   color: rgba(0, 0, 0, 0.8);
 }
 
-notebook > stack:not(:only-child) button.combo:checked, .raven .raven-background button.combo:checked, #login_window #user_combobox button:checked {
+notebook > stack:not(:only-child) button.combo:checked, #login_window #user_combobox button:checked {
   transition: all 300ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
   animation: ripple_effect 300ms cubic-bezier(0, 0, 0.2, 1) forwards;
   background-image: radial-gradient(circle farthest-corner at center, alpha(currentColor, 0.12) 10%, transparent 0%);
@@ -1481,7 +1483,7 @@ notebook > stack:not(:only-child) button.combo:checked, .raven .raven-background
   border-color: alpha(currentColor, 0.15);
 }
 
-notebook > stack:not(:only-child) button.combo:disabled, .raven .raven-background button.combo:disabled, #login_window #user_combobox button:disabled {
+notebook > stack:not(:only-child) button.combo:disabled, #login_window #user_combobox button:disabled {
   color: rgba(0, 0, 0, 0.32);
 }
 
@@ -1631,9 +1633,7 @@ headerbar button, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > but
 headerbar .linked:not(.vertical).path-bar > button,
 headerbar .linked:not(.vertical).stack-switcher > button {
   transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
-  box-shadow: none;
   background-color: #515151;
-  background-image: radial-gradient(circle farthest-corner at center, transparent 100%, transparent 0%);
   color: rgba(255, 255, 255, 0.75);
   border-color: rgba(0, 0, 0, 0.15);
 }
@@ -1647,7 +1647,6 @@ headerbar .linked:not(.vertical).path-bar > button:hover,
 headerbar .linked:not(.vertical).stack-switcher > button:hover {
   background-color: rgba(255, 255, 255, 0.16);
   color: #FFFFFF;
-  box-shadow: none;
 }
 
 .titlebar:not(headerbar) button.flat.toggle.popup:active,
@@ -1657,9 +1656,7 @@ headerbar button:active, .titlebar:not(headerbar) .linked:not(.vertical).path-ba
 .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:active,
 headerbar .linked:not(.vertical).path-bar > button:active,
 headerbar .linked:not(.vertical).stack-switcher > button:active {
-  transition: all 300ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
-  animation: ripple_effect 300ms cubic-bezier(0, 0, 0.2, 1) forwards;
-  box-shadow: none;
+  background-color: #787878;
   color: #FFFFFF;
 }
 
@@ -1670,7 +1667,6 @@ headerbar button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-
 .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:disabled,
 headerbar .linked:not(.vertical).path-bar > button:disabled,
 headerbar .linked:not(.vertical).stack-switcher > button:disabled {
-  box-shadow: none;
   background-color: #515151;
   color: alpha(currentColor, 0.3);
 }
@@ -4219,7 +4215,7 @@ expander arrow:selected:disabled {
  * Calendar *
  ***********/
 calendar {
-  padding: 1px;
+  padding: 2px 6px;
   border: 1px solid rgba(0, 0, 0, 0.15);
   color: rgba(0, 0, 0, 0.8);
 }
@@ -4272,6 +4268,7 @@ messagedialog .dialog-action-area {
 messagedialog .dialog-action-area button {
   padding: 4px 2px;
   border: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: none;
 }
 
 messagedialog.csd.background {
@@ -4479,7 +4476,8 @@ paned > separator {
   min-height: 1px;
   -gtk-icon-source: none;
   border-style: none;
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: transparent;
+  background-image: image(gainsboro);
   background-size: 1px 1px;
 }
 
@@ -4963,7 +4961,7 @@ cursor-handle.insertion-cursor:dir(ltr), cursor-handle.insertion-cursor:dir(rtl)
 .caja-pathbar button.circular,
 .path-bar button.circular,
 button.circular, check,
-radio, .nautilus-window headerbar > revealer > button, .raven .raven-header:not(.top) button.image-button, .raven .expander-button,
+radio, .nautilus-window headerbar > revealer > button, .raven button.image-button, .raven .raven-header:not(.top) button.image-button, .raven .expander-button, .budgie-notification-window button.image-button, .budgie-osd-window button.image-button, .budgie-switcher-window button.image-button,
 button.circular {
   border-radius: 100px;
   -gtk-outline-radius: 100px;
@@ -6424,7 +6422,7 @@ window.solid-csd > box.vertical > box.vertical > frame > border {
 
 .xfce4-panel button, .mate-panel-menu-bar button:not(#tasklist-button),
 panel-toplevel.background button:not(#tasklist-button) {
-  color: rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
   border-radius: 0;
   border: none;
   box-shadow: none;
@@ -6433,7 +6431,7 @@ panel-toplevel.background button:not(#tasklist-button) {
 
 .xfce4-panel button:hover:not(:active):not(:checked), .mate-panel-menu-bar button:hover:not(:active):not(:checked):not(#tasklist-button),
 panel-toplevel.background button:hover:not(:active):not(:checked):not(#tasklist-button) {
-  color: rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
   box-shadow: inset 0 -2px rgba(120, 120, 120, 0.5);
   background-color: transparent;
 }
@@ -6441,7 +6439,7 @@ panel-toplevel.background button:hover:not(:active):not(:checked):not(#tasklist-
 .xfce4-panel button:checked, .mate-panel-menu-bar button:checked:not(#tasklist-button),
 panel-toplevel.background button:checked:not(#tasklist-button), .xfce4-panel button:active, .mate-panel-menu-bar button:active:not(#tasklist-button),
 panel-toplevel.background button:active:not(#tasklist-button) {
-  color: rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
   box-shadow: inset 0 -2px #787878;
   background: transparent;
 }
@@ -6472,7 +6470,7 @@ panel-toplevel.background button:checked:disabled:not(#tasklist-button) {
 
 .xfce4-panel {
   background-color: #262626;
-  color: rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
   font-weight: 700;
   text-shadow: none;
   -gtk-icon-shadow: none;
@@ -6630,7 +6628,7 @@ UnityPanelWidget,
 .unity-panel {
   background-color: #262626;
   background-image: image(#262626);
-  color: rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
 }
 
 UnityPanelWidget:backdrop,
@@ -6645,7 +6643,7 @@ UnityPanelWidget:backdrop,
 
 .unity-panel.menubar.menuitem:hover,
 .unity-panel.menubar .menuitem *:hover {
-  box-shadow: inset 0 -2px rgba(255, 255, 255, 0.75);
+  box-shadow: inset 0 -2px #FFFFFF;
   background-color: transparent;
   color: currentColor;
 }
@@ -6705,7 +6703,7 @@ panel-toplevel.background menubar {
 panel-toplevel.background menubar,
 panel-toplevel.background #PanelApplet label,
 panel-toplevel.background #PanelApplet image {
-  color: rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
 }
 
 .mate-panel-menu-bar button label, .mate-panel-menu-bar button image,
@@ -6720,7 +6718,7 @@ panel-toplevel.background #tasklist-button image {
 
 .mate-panel-menu-bar .wnck-pager,
 panel-toplevel.background .wnck-pager {
-  color: rgba(96, 96, 96, 0.875);
+  color: gray;
   background-color: #0d0d0d;
 }
 
@@ -6749,7 +6747,7 @@ panel-toplevel.background na-tray-applet {
 #PanelPlug,
 PanelToplevel.background {
   background-color: #262626;
-  color: rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
   font-weight: 500;
 }
 
@@ -6959,6 +6957,69 @@ na-tray-applet {
 /******************
  * Budgie Desktop *
  ******************/
+.budgie-panel button, .budgie-panel #tasklist-button, .budgie-panel button.flat.launcher {
+  color: #E0E0E0;
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.budgie-panel button:hover, .budgie-panel #tasklist-button:hover, .budgie-panel button.flat.launcher:hover {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.budgie-panel button:disabled, .budgie-panel #tasklist-button:disabled, .budgie-panel button.flat.launcher:disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.budgie-panel button:checked, .budgie-panel #tasklist-button:checked, .budgie-panel button.flat.launcher:checked {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+}
+
+.budgie-panel button:active, .budgie-panel #tasklist-button:active, .budgie-panel button.flat.launcher:active {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #FFFFFF;
+}
+
+.budgie-panel button:checked:disabled, .budgie-panel #tasklist-button:checked:disabled {
+  background-color: rgba(255, 255, 255, 0.03);
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.raven-mpris button.image-button {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.raven-mpris button.image-button:hover {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.raven-mpris button.image-button:checked {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.raven-mpris button.image-button:active {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.raven-mpris button.image-button:disabled {
+  background-color: transparent;
+}
+
+.raven-mpris button.image-button:disabled label, .raven-mpris button.image-button:disabled {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.raven-mpris button.image-button:checked:disabled {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.65);
+}
+
 .budgie-container {
   background-color: transparent;
 }
@@ -6968,12 +7029,15 @@ na-tray-applet {
 }
 
 .budgie-settings-window buttonbox.inline-toolbar button {
+  min-height: 16px;
   border-radius: 2px;
   -gtk-outline-radius: 2px;
+  padding: 0;
+  margin: 0;
 }
 
 .budgie-popover {
-  border-color: rgba(0, 0, 0, 0.15);
+  border-color: #ffffff;
   border-radius: 4px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), 0 0 0 1px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
@@ -6997,6 +7061,11 @@ na-tray-applet {
 
 .budgie-popover row:hover {
   box-shadow: none;
+}
+
+.budgie-popover switch {
+  margin-left: 56px;
+  margin-right: 6px;
 }
 
 .budgie-popover:not(.budgie-menu) button.flat:not(.image-button) {
@@ -7123,7 +7192,7 @@ window.budgie-popover:not(.csd) > frame.container > border {
 }
 
 .workspace-switcher .workspace-item.current-workspace {
-  background-color: rgba(255, 255, 255, 0.12);
+  background-color: alpha(currentColor, 0.12);
 }
 
 .workspace-switcher .workspace-add-button {
@@ -7256,14 +7325,14 @@ popover.background.places-menu row {
 }
 
 .budgie-panel {
-  transition: background-color 300ms cubic-bezier(0, 0, 0.2, 1);
+  transition: background-color 200ms cubic-bezier(0, 0, 0.2, 1);
   background-color: #262626;
-  color: rgba(255, 255, 255, 0.75);
+  color: #E0E0E0;
   font-weight: 500;
 }
 
 .budgie-panel.transparent {
-  background-color: rgba(38, 38, 38, 0.65);
+  background-color: rgba(38, 38, 38, 0.85);
 }
 
 .budgie-panel button {
@@ -7271,15 +7340,6 @@ popover.background.places-menu row {
   min-width: 16px;
   padding: 0;
   border-radius: 0;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.budgie-panel button:hover, .budgie-panel button:checked, .budgie-panel button:active {
-  color: rgba(255, 255, 255, 0.75);
-}
-
-.budgie-panel button:checked {
-  background-color: rgba(255, 255, 255, 0.12);
 }
 
 .budgie-panel.horizontal button {
@@ -7294,26 +7354,21 @@ popover.background.places-menu row {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-.budgie-panel menubar,
-.budgie-panel .menubar {
-  border: none;
-  color: rgba(255, 255, 255, 0.75);
-}
-
 .budgie-panel menubar > menuitem,
 .budgie-panel .menubar > menuitem {
   border-radius: 0;
+  color: #E0E0E0;
 }
 
 .budgie-panel menubar > menuitem:hover,
 .budgie-panel .menubar > menuitem:hover {
-  color: rgba(255, 255, 255, 0.75);
+  color: #FFFFFF;
   background-color: rgba(255, 255, 255, 0.12);
 }
 
 .budgie-panel menubar > menuitem:disabled,
 .budgie-panel .menubar > menuitem:disabled {
-  color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .budgie-panel .alert {
@@ -7348,57 +7403,192 @@ popover.background.places-menu row {
   border-image: radial-gradient(circle closest-corner at center calc(1px), #787878 0%, transparent 0%) 0 0 0 0/0 0 0 0;
 }
 
-.top .budgie-panel #tasklist-button:checked, .budgie-panel .top #tasklist-button:checked, .top .budgie-panel button.flat.launcher:checked, .budgie-panel .top button.flat.launcher:checked, .top .budgie-panel .unpinned button.flat.launcher, .budgie-panel .unpinned .top button.flat.launcher,
-.top .budgie-panel .pinned button.flat.launcher.running, .budgie-panel .pinned .top button.flat.launcher.running {
-  border-image: radial-gradient(circle closest-corner at center calc(1px), #787878 100%, transparent 0%) 2 0 0 0/2px 0 0 0;
+.top .budgie-panel #tasklist-button:checked, .budgie-panel .top #tasklist-button:checked, .top .budgie-panel button.flat.launcher:checked, .budgie-panel .top button.flat.launcher:checked {
+  border-image: radial-gradient(circle closest-corner at center calc(1px), #787878 100%, transparent 0%) 3 0 0 0/3px 0 0 0;
 }
 
 .bottom .budgie-panel #tasklist-button, .budgie-panel .bottom #tasklist-button, .bottom .budgie-panel button.flat.launcher, .budgie-panel .bottom button.flat.launcher {
   border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #787878 0%, transparent 0%) 0 0 0 0/0 0 0 0;
 }
 
-.bottom .budgie-panel #tasklist-button:checked, .budgie-panel .bottom #tasklist-button:checked, .bottom .budgie-panel button.flat.launcher:checked, .budgie-panel .bottom button.flat.launcher:checked, .bottom .budgie-panel .unpinned button.flat.launcher, .budgie-panel .unpinned .bottom button.flat.launcher,
-.bottom .budgie-panel .pinned button.flat.launcher.running, .budgie-panel .pinned .bottom button.flat.launcher.running {
-  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #787878 100%, transparent 0%) 0 0 2 0/0 0 2px 0;
+.bottom .budgie-panel #tasklist-button:checked, .budgie-panel .bottom #tasklist-button:checked, .bottom .budgie-panel button.flat.launcher:checked, .budgie-panel .bottom button.flat.launcher:checked {
+  border-image: radial-gradient(circle closest-corner at center calc(100% - 1px), #787878 100%, transparent 0%) 0 0 3 0/0 0 3px 0;
 }
 
 .left .budgie-panel #tasklist-button, .budgie-panel .left #tasklist-button, .left .budgie-panel button.flat.launcher, .budgie-panel .left button.flat.launcher {
   border-image: radial-gradient(circle closest-corner at calc(1px) center, #787878 0%, transparent 0%) 0 0 0 0/0 0 0 0;
 }
 
-.left .budgie-panel #tasklist-button:checked, .budgie-panel .left #tasklist-button:checked, .left .budgie-panel button.flat.launcher:checked, .budgie-panel .left button.flat.launcher:checked, .left .budgie-panel .unpinned button.flat.launcher, .budgie-panel .unpinned .left button.flat.launcher,
-.left .budgie-panel .pinned button.flat.launcher.running, .budgie-panel .pinned .left button.flat.launcher.running {
-  border-image: radial-gradient(circle closest-corner at calc(1px) center, #787878 100%, transparent 0%) 0 0 0 2/0 0 0 2px;
+.left .budgie-panel #tasklist-button:checked, .budgie-panel .left #tasklist-button:checked, .left .budgie-panel button.flat.launcher:checked, .budgie-panel .left button.flat.launcher:checked {
+  border-image: radial-gradient(circle closest-corner at calc(1px) center, #787878 100%, transparent 0%) 0 0 0 3/0 0 0 3px;
 }
 
 .right .budgie-panel #tasklist-button, .budgie-panel .right #tasklist-button, .right .budgie-panel button.flat.launcher, .budgie-panel .right button.flat.launcher {
   border-image: radial-gradient(circle closest-corner at calc(100% - 1px) center, #787878 0%, transparent 0%) 0 0 0 0/0 0 0 0;
 }
 
-.right .budgie-panel #tasklist-button:checked, .budgie-panel .right #tasklist-button:checked, .right .budgie-panel button.flat.launcher:checked, .budgie-panel .right button.flat.launcher:checked, .right .budgie-panel .unpinned button.flat.launcher, .budgie-panel .unpinned .right button.flat.launcher,
-.right .budgie-panel .pinned button.flat.launcher.running, .budgie-panel .pinned .right button.flat.launcher.running {
-  border-image: radial-gradient(circle closest-corner at calc(100% - 1px) center, #787878 100%, transparent 0%) 0 2 0 0/0 2px 0 0;
+.right .budgie-panel #tasklist-button:checked, .budgie-panel .right #tasklist-button:checked, .right .budgie-panel button.flat.launcher:checked, .budgie-panel .right button.flat.launcher:checked {
+  border-image: radial-gradient(circle closest-corner at calc(100% - 1px) center, #787878 100%, transparent 0%) 0 3 0 0/0 3px 0 0;
+}
+
+
+button.flat.launcher {
+  min-width: 16px;
+  min-height: 16px;
+  padding: 0;
+  border-radius: 0;
+  background-position: center center;
+}
+
+
+button.flat.launcher > image {
+  opacity: 0.87;
+}
+
+
+button.flat.launcher:hover {
+  -gtk-icon-effect: highlight;
+}
+
+
+button.flat.launcher:hover > image {
+  opacity: 1.0;
+}
+
+
+button.flat.launcher:active > image {
+  opacity: 1.0;
+}
+
+
+button.flat.launcher:checked {
+  background-color: transparent;
+}
+
+
+button.flat.launcher:checked:hover {
+  -gtk-icon-effect: highlight;
+}
+
+
+button.flat.launcher:checked > image {
+  opacity: 1.0;
+}
+
+
+.unpinned button.flat.launcher:hover,
+.pinned button.flat.launcher.running:hover,
+.pinned button.launcher.running.sidebar-button:hover {
+  -gtk-icon-effect: highlight;
+}
+
+
+.unpinned button.flat.launcher > image,
+.pinned button.flat.launcher.running > image,
+.pinned button.launcher.running.sidebar-button > image {
+  background-repeat: no-repeat;
+  opacity: 1.0;
+}
+
+
+.unpinned button.flat.launcher:checked > image,
+.pinned button.flat.launcher.running:checked > image,
+.pinned button.launcher.running.sidebar-button:checked > image {
+  background-image: none;
+}
+
+.top .budgie-panel .unpinned button.flat.launcher > image,
+.top .budgie-panel .pinned button.flat.launcher.running > image,
+.top .budgie-panel .pinned button.launcher.running.sidebar-button > image {
+  background-image: image(#787878);
+  background-size: 6px 3px;
+  background-position: top center;
+}
+
+.top .budgie-panel .unpinned button.flat.launcher:checked > image,
+.top .budgie-panel .pinned button.flat.launcher.running:checked > image,
+.top .budgie-panel .pinned button.launcher.running.sidebar-button:checked > image {
+  background-image: none;
+}
+
+.bottom .budgie-panel .unpinned button.flat.launcher > image,
+.bottom .budgie-panel .pinned button.flat.launcher.running > image,
+.bottom .budgie-panel .pinned button.launcher.running.sidebar-button > image {
+  background-image: image(#787878);
+  background-size: 6px 3px;
+  background-position: bottom center;
+}
+
+.bottom .budgie-panel .unpinned button.flat.launcher:checked > image,
+.bottom .budgie-panel .pinned button.flat.launcher.running:checked > image,
+.bottom .budgie-panel .pinned button.launcher.running.sidebar-button:checked > image {
+  background-image: none;
+}
+
+.left .budgie-panel .unpinned button.flat.launcher > image,
+.left .budgie-panel .pinned button.flat.launcher.running > image,
+.left .budgie-panel .pinned button.launcher.running.sidebar-button > image {
+  background-image: image(#787878);
+  background-size: 3px 6px;
+  background-position: left center;
+}
+
+.left .budgie-panel .unpinned button.flat.launcher:checked > image,
+.left .budgie-panel .pinned button.flat.launcher.running:checked > image,
+.left .budgie-panel .pinned button.launcher.running.sidebar-button:checked > image {
+  background-image: none;
+}
+
+.right .budgie-panel .unpinned button.flat.launcher > image,
+.right .budgie-panel .pinned button.flat.launcher.running > image,
+.right .budgie-panel .pinned button.launcher.running.sidebar-button > image {
+  background-image: image(#787878);
+  background-size: 3px 6px;
+  background-position: right center;
+}
+
+.right .budgie-panel .unpinned button.flat.launcher:checked > image,
+.right .budgie-panel .pinned button.flat.launcher.running:checked > image,
+.right .budgie-panel .pinned button.launcher.running.sidebar-button:checked > image {
+  background-image: none;
+}
+
+box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher, box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher:checked {
+  border-image: none;
+}
+
+widget.icon-tasklist > box:drop(active),
+box.pinned:drop(active) {
+  border: none;
+  border-radius: 0;
+  background-color: rgba(255, 167, 38, 0.2);
+  box-shadow: inset 0 0 0 1px #FFA726;
+}
+
+*:drop(active):focus,
+*:drop(active) {
+  box-shadow: inset 0 0 0 1px #FFA726;
 }
 
 frame.raven-frame > border {
   border-style: none;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25), 0 5px 5px rgba(0, 0, 0, 0.22);
+  box-shadow: none;
 }
 
-.top frame.raven-frame > border {
-  margin-bottom: 32px;
+.top .shadow-block {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.08), transparent);
 }
 
-.bottom frame.raven-frame > border {
-  margin-top: 32px;
+.bottom .shadow-block {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.08), transparent);
 }
 
-.left frame.raven-frame > border {
-  margin-right: 32px;
+.left .shadow-block {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.08), transparent);
 }
 
-.right frame.raven-frame > border {
-  margin-left: 32px;
+.right .shadow-block {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.08), transparent);
 }
 
 .raven {
@@ -7533,7 +7723,115 @@ calendar.raven-calendar:selected {
 
 .raven-mpris button.image-button {
   padding: 7px;
-  border-radius: 100px;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame {
+  padding: 0;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame list {
+  background-color: transparent;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button {
+  margin-left: -8px;
+  margin-right: -2px;
+  background-color: transparent;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable > grid > *, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view > grid > *, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview > grid > *, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button > grid > *, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button > grid > *,
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable > box.vertical *,
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view > box.vertical *,
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview > box.vertical *,
+treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button > box.vertical *,
+.budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button > box.vertical * {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview image, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button image, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button image {
+  padding-left: 8px;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview button.image-button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button button.image-button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button button.image-button {
+  min-height: 32px;
+  min-width: 32px;
+  margin: 8px;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview button.image-button image, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button button.image-button image, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button button.image-button image {
+  padding: 0;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list {
+  border-radius: 2px;
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > row.activatable, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > row.activatable, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > row.activatable, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > .view, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > .view, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > .view, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > iconview, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > iconview, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > iconview, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable treeview.view header list > button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view treeview.view header list > button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview treeview.view header list > button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button treeview.view header list > button, treeview.view header .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable .budgie-menu list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view .budgie-menu list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview .budgie-menu list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button .budgie-menu list > button, .budgie-menu treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > row.activatable:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > row.activatable:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > row.activatable:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > .view:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > .view:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > .view:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > iconview:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > iconview:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > iconview:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable treeview.view header list > button:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view treeview.view header list > button:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview treeview.view header list > button:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button treeview.view header list > button:last-child, treeview.view header .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable .budgie-menu list > button:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view .budgie-menu list > button:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview .budgie-menu list > button:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button .budgie-menu list > button:last-child, .budgie-menu treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button:last-child {
+  border-bottom: none;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > row.activatable:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > row.activatable:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > row.activatable:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > .view:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > .view:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > .view:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > iconview:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > iconview:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > iconview:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable treeview.view header list > button:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view treeview.view header list > button:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview treeview.view header list > button:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button treeview.view header list > button:selected, treeview.view header .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable .budgie-menu list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view .budgie-menu list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview .budgie-menu list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button .budgie-menu list > button:selected, .budgie-menu treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button:selected {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > row.activatable label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > row.activatable label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > row.activatable label, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable label, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > .view label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > .view label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > .view label, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view label, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > iconview label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > iconview label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > iconview label, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview label, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable treeview.view header list > button label, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view treeview.view header list > button label, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview treeview.view header list > button label, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button label, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button label, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button treeview.view header list > button label, treeview.view header .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable .budgie-menu list > button label, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view .budgie-menu list > button label, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button label, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview .budgie-menu list > button label, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button label, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button .budgie-menu list > button label, .budgie-menu treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button label, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button label {
+  padding: 0 16px;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > row.activatable button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > row.activatable button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > row.activatable button.image-button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable button.image-button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > .view button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > .view button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > .view button.image-button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view button.image-button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > iconview button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > iconview button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > iconview button.image-button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview button.image-button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable treeview.view header list > button button.image-button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view treeview.view header list > button button.image-button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview treeview.view header list > button button.image-button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button button.image-button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button button.image-button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button treeview.view header list > button button.image-button, treeview.view header .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable .budgie-menu list > button button.image-button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view .budgie-menu list > button button.image-button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview .budgie-menu list > button button.image-button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button button.image-button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button .budgie-menu list > button button.image-button, .budgie-menu treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button button.image-button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button button.image-button {
+  min-height: 24px;
+  min-width: 24px;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > row.activatable button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > row.activatable button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > row.activatable button.image-button image, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable button.image-button image, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > row.activatable button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > .view button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > .view button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > .view button.image-button image, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view button.image-button image, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > .view button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > iconview button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > iconview button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > iconview button.image-button image, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview button.image-button image, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > iconview button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable treeview.view header list > button button.image-button image, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view treeview.view header list > button button.image-button image, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview treeview.view header list > button button.image-button image, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button button.image-button image, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button button.image-button image, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button treeview.view header list > button button.image-button image, treeview.view header .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable .budgie-menu list > button button.image-button image, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable list > button button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view .budgie-menu list > button button.image-button image, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view list > button button.image-button image, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview .budgie-menu list > button button.image-button image, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview list > button button.image-button image, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button .budgie-menu list > button button.image-button image, .budgie-menu treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button button.image-button image, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button list > button button.image-button image {
+  padding: 0;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected {
+  background-color: rgba(120, 120, 120, 0.75);
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected > grid > *, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected > grid > *, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected > grid > *, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected > grid > *, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected > grid > *,
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected > box.vertical *,
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected > box.vertical *,
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected > box.vertical *,
+treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected > box.vertical *,
+.budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected > box.vertical * {
+  color: white;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected button.image-button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected button.image-button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected button.image-button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected button.image-button {
+  border: none;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected button.image-button:hover, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected button.image-button:hover, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected button.image-button:hover, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected button.image-button:hover, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected button.image-button:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected button.image-button:active, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected button.image-button:active, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected button.image-button:active, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected button.image-button:active, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected button.image-button:active, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected button.image-button:checked, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected button.image-button:checked, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected button.image-button:checked, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected button.image-button:checked, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected button.image-button:checked {
+  background-color: rgba(255, 255, 255, 0.35);
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > row.activatable, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > row.activatable, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > row.activatable, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > row.activatable, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > row.activatable, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > .view, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > .view, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > .view, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > .view, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > .view, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > iconview, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > iconview, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > iconview, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > iconview, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > iconview, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected treeview.view header list > button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected treeview.view header list > button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected treeview.view header list > button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected treeview.view header list > button, treeview.view header .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected .budgie-menu list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected .budgie-menu list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > button, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected .budgie-menu list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > button, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected .budgie-menu list > button, .budgie-menu treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > row.activatable:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > row.activatable:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > row.activatable:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > row.activatable:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > row.activatable:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > .view:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > .view:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > .view:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > .view:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > .view:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > iconview:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > iconview:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > iconview:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > iconview:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > iconview:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected treeview.view header list > button:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > button:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected treeview.view header list > button:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > button:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected treeview.view header list > button:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > button:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected treeview.view header list > button:last-child, treeview.view header .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected .budgie-menu list > button:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > button:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected .budgie-menu list > button:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > button:last-child, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected .budgie-menu list > button:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > button:last-child, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected .budgie-menu list > button:last-child, .budgie-menu treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button:last-child, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button:last-child {
+  border-bottom: none;
+}
+
+box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > row.activatable:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > row.activatable:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > row.activatable:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > row.activatable:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > row.activatable:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > .view:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > .view:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > .view:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > .view:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > .view:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > iconview:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > iconview:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > iconview:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > iconview:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > iconview:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected treeview.view header list > button:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > button:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected treeview.view header list > button:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > button:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected treeview.view header list > button:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > button:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected treeview.view header list > button:selected, treeview.view header .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected .budgie-menu list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > row.activatable:selected list > button:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected .budgie-menu list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > .view:selected list > button:selected, box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected .budgie-menu list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > iconview:selected list > button:selected, treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected .budgie-menu list > button:selected, .budgie-menu treeview.view header box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button:selected, .budgie-menu box.vertical > stack > box.vertical > .raven-background > viewport.frame > list > button:selected list > button:selected {
+  background-color: rgba(120, 120, 120, 0.65);
 }
 
 .budgie-notification-window, .budgie-osd-window, .budgie-switcher-window {
@@ -7552,7 +7850,7 @@ calendar.raven-calendar:selected {
   margin: 5px 9px;
   padding: 3px;
   border-radius: 2px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), inset 0 1px rgba(255, 255, 255, 0.4);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), inset 0 1px rgba(255, 255, 255, 0.4), 0 0 0 1px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
 }
 
@@ -7719,3 +8017,7 @@ these are pretty self explicative */
 @define-color success_color #00C853;
 @define-color content_view_bg #FFFFFF;
 @define-color placeholder_text_color rgba(128, 128, 128, 0.88);
+@define-color budgie_tasklist_indicator_color #787878;
+@define-color budgie_tasklist_indicator_color_active #787878;
+@define-color budgie_tasklist_indicator_color_active_window #525252;
+@define-color budgie_tasklist_indicator_color_attention #ff4e00;

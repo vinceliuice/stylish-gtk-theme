@@ -1106,12 +1106,12 @@ headerbar {
   }
 
    @at-root %header_button {
-      @include header_button(header-normal);
-      &:hover { @include header_button(header-hover); }
-      &:active { @include header_button(header-active); }
-      &:disabled { @include header_button(header-disabled); }
-      &:checked { @include header_button(header-checked); }
-      &:checked:disabled { @include header_button(header-checked-disabled); }
+      @include button(header-normal);
+      &:hover { @include button(header-hover); }
+      &:active { @include button(header-active); }
+      &:disabled { @include button(header-disabled); }
+      &:checked { @include button(header-checked); }
+      &:checked:disabled { @include button(header-checked-disabled); }
     }
 
   button.flat.toggle.popup,
@@ -2896,7 +2896,7 @@ expander {
  * Calendar *
  ***********/
 calendar {
-  padding: 1px;
+  padding: 2px 6px;
   border: 1px solid $borders_color;
   color: $fg_color;
 
@@ -2946,6 +2946,7 @@ messagedialog { // Message Dialog styling
       @extend %simple_flat_button;
       padding: 4px 2px;
       border: 1px solid $borders_color;
+      border-bottom: none;
     }
   }
 
@@ -3160,9 +3161,9 @@ paned {
     min-height: 1px;
     -gtk-icon-source: none; // defeats the ugly default handle decoration
     border-style: none; // just to be sure
-    background-color: rgba($borders_color, 0.08);
+    background-color: transparent;
     // workaround, using background istead of a border since the border will get rendered twice (?)
-    // background-image: image($borders_color);
+    background-image: image($solid_borders_color);
     background-size: 1px 1px;
 
     &.wide {
@@ -3525,10 +3526,9 @@ decoration {
   messagedialog.csd & {
     border-radius: 2px;
     // box-shadow: $z-depth-4, 0 16px 16px transparent;
-
     // &:backdrop { box-shadow: $z-depth-2, 0 16px 16px transparent; }
   }
-    
+
   .solid-csd & {
     margin: 0;
     padding: 0;

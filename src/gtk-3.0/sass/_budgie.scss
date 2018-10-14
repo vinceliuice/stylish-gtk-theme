@@ -6,21 +6,73 @@
  ******************/
 // Container for both the "panel" area and the shadow. Wise to keep
 // this transparent..
+
+ %budgie_button {
+  color: $alt_topbar_fg_color;
+  background-color: transparent;
+  box-shadow: none;
+  &:hover {
+    color: $topbar_fg_color;
+    background-color: rgba($topbar_fg_color, 0.1);
+  }
+  &:disabled { color: rgba($topbar_fg_color, 0.5); }
+  &:checked {
+    background-color: rgba($topbar_fg_color, 0.12);
+    color: $topbar_fg_color;
+  }
+  &:active {
+    background-color: rgba($topbar_fg_color, 0.15);
+    color: $topbar_fg_color;
+  }
+  &:checked:disabled {
+    background-color: rgba($topbar_fg_color, 0.03);
+    color: rgba($topbar_fg_color, 0.65);
+  }
+}
+
+%budgie_button_flat {
+  color: rgba(white, 0.85);
+  &:hover {
+    color: white;
+    background-color: rgba(white, 0.15);
+    border-color: rgba(white, 0.15);
+  }
+  &:checked {
+    color: white;
+    background-color: rgba(white, 0.25);
+  }
+  &:active {
+    color: white;
+    background-color: rgba(white, 0.20);
+  }
+  &:disabled {
+    label, & { color: rgba(white, 0.5); }
+    background-color: transparent;
+  }
+  &:checked:disabled {
+    background-color: rgba(white, 0.1);
+    color: rgba(white, 0.65);
+  }
+}
+
 .budgie-container { background-color: transparent; }
 
 .budgie-settings-window buttonbox.inline-toolbar {
   border-style: none none solid;
 
   button {
+    min-height: 16px;
     border-radius: 2px;
     -gtk-outline-radius: 2px;
+    padding: 0;
+    margin: 0;
 
     @extend %simple_flat_button;
   }
 }
 
 .budgie-popover {
-  border-color: $borders_color;
+  border-color: $lighter_bg_color;
   border-radius: $md_radius + 1px;
   box-shadow: $z-depth-2, 0 0 0 1px $borders_color;
   background-color: $lighter_bg_color;
@@ -36,6 +88,8 @@
 
     &:hover { box-shadow: none; }
   }
+
+  switch { margin-left: 56px; margin-right: 6px; }
 
   &:not(.budgie-menu) button.flat:not(.image-button) {
     min-height: $menuitem_size;
@@ -138,7 +192,7 @@ window.budgie-popover:not(.csd) {
   .workspace-item {
     transition: $shorter_transition;
 
-    &.current-workspace { background-color: rgba(white, 0.12); }
+    &.current-workspace { background-color: gtkalpha(currentColor, 0.12); }
   }
 
   .workspace-add-button {
@@ -288,23 +342,19 @@ popover.background.places-menu {
 
 // Panel
 .budgie-panel {
-  transition: background-color $longer_duration $deceleration_curve;
+  transition: background-color $shorter_duration $deceleration_curve;
   background-color: $topbar_bg_color;
-  color: $topbar_fg_color;
+  color: $alt_topbar_fg_color;
   font-weight: 500;
 
-  &.transparent { background-color: rgba($topbar_bg_color, 0.65); }
+  &.transparent { background-color: rgba($topbar_bg_color, 0.85); }
 
   button {
-
+    @extend %budgie_button;
     min-height: 16px;
     min-width: 16px;
     padding: 0;
     border-radius: 0;
-    color: $topbar_fg_color;
-
-    &:hover, &:checked, &:active { color: $topbar_fg_color; }
-    &:checked { background-color: rgba($topbar_fg_color, 0.12); }
   }
 
   &.horizontal button { padding: 0 4px; }
@@ -316,18 +366,17 @@ popover.background.places-menu {
   // Budgie styled Gtk Menus
   menubar,
   .menubar {
-    border: none;
-    color: $topbar_fg_color;
 
     > menuitem {
       border-radius: 0;
+      color: $alt_topbar_fg_color;
 
       &:hover {
         color: $topbar_fg_color;
         background-color: rgba($topbar_fg_color, 0.12);
       }
       &:disabled {
-        color: transparentize($topbar_fg_color, 0.6);
+        color: transparentize($topbar_fg_color, 0.5);
       }
     }
   }
@@ -343,8 +392,8 @@ popover.background.places-menu {
   // Tasklist
   #tasklist-button {
     padding: 0 4px;
-
     @extend %underscores;
+    @extend %budgie_button;
   }
 
   &.vertical #tasklist-button { min-height: 32px; }
@@ -352,28 +401,25 @@ popover.background.places-menu {
   // Icon Tasklist
   button.flat.launcher {
     padding: 0;
-
     @extend %underscores;
+    @extend %budgie_button;
 
     // for indicator colors
     &:not(:checked) {
-      color: rgba(white, 0.5);
+      color: rgba($topbar_fg_color, 0.5);
 
-      &:hover, &:active { color: rgba(white, 0.7); }
+      &:hover, &:active { color: rgba($topbar_fg_color, 0.7); }
 
-      &:disabled { color: rgba(white, 0.3); }
+      &:disabled { color: rgba($topbar_fg_color, 0.3); }
     }
   }
-
-  .unpinned button.flat.launcher,
-  .pinned button.flat.launcher.running { @extend %underscores:checked; }
 }
 
 %underscores {
-  @each $pos, $b_pos, $b_wid in (top,    center calc(1px),        2 0 0 0 / 2px 0 0 0),
-                                (bottom, center calc(100% - 1px), 0 0 2 0 / 0 0 2px 0),
-                                (left,   calc(1px) center,        0 0 0 2 / 0 0 0 2px),
-                                (right,  calc(100% - 1px) center, 0 2 0 0 / 0 2px 0 0) {
+  @each $pos, $b_pos, $b_wid in (top,    center calc(1px),        3 0 0 0 / 3px 0 0 0),
+                                (bottom, center calc(100% - 1px), 0 0 3 0 / 0 0 3px 0),
+                                (left,   calc(1px) center,        0 0 0 3 / 0 0 0 3px),
+                                (right,  calc(100% - 1px) center, 0 3 0 0 / 0 3px 0 0) {
     .#{$pos} & {
       & {
         border-image: radial-gradient(circle closest-corner at #{$b_pos},
@@ -392,9 +438,100 @@ popover.background.places-menu {
   }
 }
 
+.budgie-panel {
+  @at-root %budgie_icon_tasklist_button,
+  button.flat.launcher {
+    min-width: 16px;
+    min-height: 16px;
+    padding: 0;
+    border-radius: 0;
+    background-position: center center;
+
+    > image { opacity: 0.87; }
+
+    &:hover {
+      -gtk-icon-effect: highlight;
+      > image { opacity: 1.0; }
+    }
+    &:active {
+      > image { opacity: 1.0; }
+    }
+    &:checked {
+      background-color: transparent;
+      &:hover { -gtk-icon-effect: highlight; }
+      > image { opacity: 1.0; }
+    }
+  }
+
+  @at-root %running_budgie_icon_tasklist_button,
+  .unpinned button.flat.launcher,
+  .pinned button.flat.launcher.running,
+  .pinned button.launcher.running.sidebar-button {
+    &:hover { -gtk-icon-effect: highlight; }
+
+    > image {
+      background-repeat: no-repeat;
+      opacity: 1.0;
+    }
+
+    &:checked {
+      > image { background-image: none; }
+    }
+  }
+}
+
+// draw dots
+@each $position, $_dot in (top, 6px 3px),
+                          (bottom, 6px 3px),
+                          (left, 3px 6px),
+                          (right, 3px 6px) {
+  .#{$position} .budgie-panel {
+
+    .unpinned button.flat.launcher,
+    .pinned button.flat.launcher.running,
+    .pinned button.launcher.running.sidebar-button {
+      > image {
+        background-image: image($primary_color);
+        background-size: #{$_dot};
+        background-position: #{$position} center;
+      }
+
+      &:checked {
+//        &:hover { transition: none; }
+        > image { background-image: none; }
+      }
+    }
+  }
+}
+
+box:not(.unpinned):not(.pinned) > revealer > button.flat.launcher { &, &:checked { border-image: none; } } // unset before drawing indicators
+
+// icon tasklist styling
+%icon_tasklist_droptarget,
+box.pinned { // drop-target
+  &:drop(active) {
+    border: none;
+    border-radius: 0;
+    background-color: rgba($warning_bg_color, 0.2);
+    box-shadow: inset 0 0 0 1px $warning_bg_color;
+  }
+}
+
+// upcoming icon tasklist
+widget.icon-tasklist {
+  > box:drop(active) { // drop-target
+    @extend %icon_tasklist_droptarget;
+  }
+}
+
+*:drop(active):focus,
+*:drop(active) {
+    box-shadow: inset 0 0 0 1px $warning_bg_color;
+}
+
 frame.raven-frame > border {
   border-style: none;
-  box-shadow: $z-depth-4;
+  box-shadow: none;
 }
 
 $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
@@ -405,12 +542,11 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
 
   // Raven borders
   .#{$pos} frame.raven-frame > border {
-    margin-#{$b_pos}: 32px;
     // border-#{$b_pos}: 1px solid $borders_color;
   }
 
   // Shadows
-  // .#{$pos} .shadow-block { background-image: linear-gradient(to $b_pos, $borders_color, transparent); }
+   .#{$pos} .shadow-block { background-image: linear-gradient(to $b_pos, rgba(black, 0.25), rgba(black, 0.08), transparent); }
 }
 
 // Raven
@@ -425,9 +561,10 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
 
   // > stack > box:last-child > stack { margin-top: -6px; }
 
+  button.image-button { @extend %circular_button; }
+
   stackswitcher.linked > button {
     @extend %flat_button;
-    @extend %button_selected.flat;
 
     border-image: radial-gradient(circle closest-corner at center calc(100% - 1px),
                                   $warning_bg_color 0%,
@@ -464,6 +601,7 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
       color: $inversed_fg_color;
 
       stackswitcher button {
+        @extend %button_selected.flat;
         margin: -$container_padding 0;
         min-height: $medium_size;
       }
@@ -508,10 +646,10 @@ $pos_list: ((top, bottom), (bottom, top), (left, right), (right, left));
     grid > label:first-child { min-height: $medium_size; } // workaround to fix vertical-align
 
     // for <10.4
-    spinbutton:not(.vertical) { @extend %entry.flat; }
+    // spinbutton:not(.vertical) { @extend %entry.flat; }
 
     // for <10.4
-    button.combo { @extend %combo_flat; }
+    // button.combo { @extend %combo_flat; }
   }
 
   scrolledwindow.raven-background { border-bottom-style: none; }
@@ -555,14 +693,99 @@ calendar.raven-calendar {
 
   button.image-button {
     padding: ($large_size - 24px) / 2;
-    border-radius: 100px;
+    @extend %budgie_button_flat;
+  }
+}
 
-    @extend %button_selected.flat;
+// notification list
+box.vertical > stack > box.vertical {
+
+  > .raven-background > viewport.frame {
+    padding: 0; // reset padding for full-width list node
+
+    list { background-color: transparent; }
+
+    > list > row.activatable {
+      margin-left: -8px;
+      margin-right: -2px;
+      background-color: transparent;
+
+      > grid > *, // legacy
+      > box.vertical * { color: $fg_color; }
+
+      image { padding-left: 8px; }
+
+      button.image-button { // 'dismiss'
+        min-height: 32px;
+        min-width: 32px;
+        margin: 8px;
+        image { padding: 0; }
+      }
+
+      // sub-list rows grouping
+      list {
+        border-radius: 2px;
+        border-top: 1px solid $borders_color;
+        border-bottom: 1px solid $borders_color;
+
+        > row.activatable {
+          border-bottom: 1px solid $borders_color;
+          &:last-child { border-bottom: none; }
+
+          &:selected {
+            background-color: rgba($fg_color, 0.06);
+          }
+
+          label { padding: 0 16px; }
+
+          button.image-button { // 'close'
+            min-height: 24px;
+            min-width: 24px;
+            image { padding: 0; }
+          }
+
+//          box.horizontal > label:first-child { font-weight: 500; } // title labels
+        }
+      }
+
+      &:selected {
+        background-color: rgba($primary_color, 0.75);
+
+        > grid > *,
+        > box.vertical * { color: white; }
+
+        button.image-button { // 'dismiss'
+          border: none;
+
+          &:hover { background-color: rgba(white, 0.25); }
+          &:active, &:checked { background-color: rgba(white, 0.35); }
+        }
+
+        list {
+          border: 1px solid rgba(white, 0.12);
+
+          > row.activatable {
+            border-bottom: 1px solid rgba(white, 0.12);
+            &:last-child { border-bottom: none; }
+
+            &:selected {
+              background-color: rgba($primary_color, 0.65);
+            }
+          }
+        }
+      }
+    }
   }
 }
 
 // Notifications
-.budgie-notification-window { background-color: transparent; }
+.budgie-notification-window {
+  background-color: transparent;
+
+  button.image-button { // 'close'
+    @extend %circular_button;
+  }
+}
 
 .budgie-notification {
   .notification-title { font-size: 120%; }
@@ -594,7 +817,7 @@ calendar.raven-calendar {
   margin: 5px 9px;
   padding: 3px;
   border-radius: 2px;
-  box-shadow: $z-depth-2, inset 0 1px $highlight_color;
+  box-shadow: $z-depth-2, inset 0 1px $highlight_color, 0 0 0 1px $borders_color;
   background-color: $lighter_bg_color;
 
   button { @extend %simple_flat_button; }

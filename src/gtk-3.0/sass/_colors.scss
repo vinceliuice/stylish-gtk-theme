@@ -81,7 +81,8 @@ $disabled_menu_fg_color: if($variant =='light', rgba(#000, 0.5), rgba(#fff, 0.5)
 $tab_color: $primary_color;
 $secondary_titlebar_color: $primary_color;
 $topbar_bg_color: #262626;
-$topbar_fg_color: $secondary_inversed_fg_color;
+$topbar_fg_color: $inversed_fg_color;
+$alt_topbar_fg_color: $darker_contrast_color;
 
 // Misc colors
 $track_color: gtkalpha(currentColor, 0.15);
@@ -90,6 +91,7 @@ $zero_track_color: gtkalpha(currentColor, 0);
 $row_track_color: gtkalpha(currentColor, 0.05);
 
 $borders_color: if($variant == 'light', scale-alpha(#000000, 0.15), scale-alpha(#ffffff, 0.15));
+$solid_borders_color: if($variant == 'light', darken($bg_color, 10%), lighten($bg_color, 10%));
 $header_borders_color: $borders_color;
 
 $highlight_color: if($variant == 'light', scale-alpha(#FFFFFF, 0.4), scale-alpha(#FFFFFF, 0.3));
