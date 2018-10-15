@@ -72,7 +72,7 @@
 }
 
 .budgie-popover {
-  border-color: $lighter_bg_color;
+  border-color: $borders_color;
   border-radius: $md_radius + 1px;
   box-shadow: $z-depth-2, 0 0 0 1px $borders_color;
   background-color: $lighter_bg_color;
@@ -821,7 +821,6 @@ box.vertical > stack > box.vertical {
   background-color: $lighter_bg_color;
 
   button { @extend %simple_flat_button; }
-
   .linked > button { border-radius: 2px; }
 }
 
@@ -833,6 +832,7 @@ box.vertical > stack > box.vertical {
 }
 
 // Session Dialog
+.budgie-polkit-dialog,
 .budgie-session-dialog {
   @extend %budgie_dialog;
 
@@ -843,28 +843,49 @@ box.vertical > stack > box.vertical {
     padding: 8px 16px;
     border-top: 1px solid $borders_color;
     border-radius: 0;
-
     @extend %simple_flat_button;
 
-    &:first-child { border-bottom-left-radius: 2px; }
+    &:first-child {
+      &, &:hover, &:active, &:checked, &:disabled {
+        border-bottom-left-radius: 2px;
+        border-top-left-radius: 0;
+      }
+    }
+    &:last-child {
+      &, &:hover, &:active, &:checked, &:disabled {
+        border-bottom-right-radius: 2px;
+        border-top-right-radius: 0;
+      }
+    }
+  }
 
-    &:last-child { border-bottom-right-radius: 2px; }
+  @each $b_type, $b_color in (suggested-action, $suggested_color),
+                             (destructive-action, $destructive_color) {
+  .linked.horizontal > button.#{$b_type} {
+    color: $b_color;
+    background-color: transparent;
+    box-shadow: none;
+    border-color: $borders_color;
+    &:hover,
+    &:checked {
+      background-color: $b_color;
+      color: $inversed_fg_color;
+      border-color: $b_color;
+    }
+    &:disabled { opacity: 0.65; }
+    }
   }
 }
 
 // PolKit Dialog
 .budgie-polkit-dialog {
-  @extend %budgie_dialog;
-
   .message { color: $tertiary_fg_color; }
-
   .failure { color: $destructive_color; }
 }
 
 // Run Dialog
 .budgie-run-dialog {
   @extend %budgie_dialog;
-
   background-color: $base_color;
 
   entry.search {

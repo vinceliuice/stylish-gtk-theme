@@ -585,7 +585,8 @@ button:checked:disabled {
 
 modelbutton.flat,
 .menuitem.button.flat, spinbutton:not(.vertical) button, spinbutton.vertical button, notebook > header > tabs > arrow, scrollbar button, check,
-radio, calendar.button, messagedialog .dialog-action-area button, button.sidebar-button, PanelToplevel > widget > button, .budgie-settings-window buttonbox.inline-toolbar button, .raven .raven-header:not(.top) button, .drop-shadow button, .budgie-session-dialog .linked.horizontal > button, .lightdm-gtk-greeter button, .nautilus-window headerbar .path-bar-box button, .nautilus-window headerbar .path-bar-box button.text-button, .nautilus-window headerbar .path-bar-box button.image-button, .nautilus-window headerbar .path-bar-box button.text-button.image-button, layouttabbar button, .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar button.image-button, .mate-panel-menu-bar #PanelApplet button:not(.flat), .raven stackswitcher.linked > button, toolbar button, actionbar > revealer > box button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button, .caja-pathbar button.flat,
+radio, calendar.button, messagedialog .dialog-action-area button, button.sidebar-button, PanelToplevel > widget > button, .budgie-settings-window buttonbox.inline-toolbar button, .raven .raven-header:not(.top) button, .drop-shadow button, .budgie-polkit-dialog .linked.horizontal > button,
+.budgie-session-dialog .linked.horizontal > button, .lightdm-gtk-greeter button, .nautilus-window headerbar .path-bar-box button, .nautilus-window headerbar .path-bar-box button.text-button, .nautilus-window headerbar .path-bar-box button.image-button, .nautilus-window headerbar .path-bar-box button.text-button.image-button, layouttabbar button, .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar button.image-button, .mate-panel-menu-bar #PanelApplet button:not(.flat), .raven stackswitcher.linked > button, toolbar button, actionbar > revealer > box button:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button, .caja-pathbar button.flat,
 .path-bar button.flat,
 button.flat {
   transition: all 300ms cubic-bezier(0, 0, 0.2, 1), background-size 450ms cubic-bezier(0, 0, 0.2, 1), background-image 1000ms cubic-bezier(0, 0, 0.2, 1);
@@ -601,7 +602,8 @@ button.flat {
 
 modelbutton.flat:hover,
 .menuitem.button.flat:hover, spinbutton:not(.vertical) button:hover, spinbutton.vertical button:hover, notebook > header > tabs > arrow:hover, scrollbar button:hover, check:hover,
-radio:hover, calendar.button:hover, messagedialog .dialog-action-area button:hover, button.sidebar-button:hover, PanelToplevel > widget > button:hover, .budgie-settings-window buttonbox.inline-toolbar button:hover, .raven .raven-header:not(.top) button:hover, .drop-shadow button:hover, .budgie-session-dialog .linked.horizontal > button:hover, .lightdm-gtk-greeter button:hover, .nautilus-window headerbar .path-bar-box button:hover, .nautilus-window headerbar .path-bar-box button.text-button.image-button:hover, layouttabbar button:hover, .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar button.image-button:hover, .mate-panel-menu-bar #PanelApplet button:hover:not(.flat), .raven stackswitcher.linked > button:hover, toolbar button:hover, actionbar > revealer > box button:hover:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:hover, .caja-pathbar button.flat:hover,
+radio:hover, calendar.button:hover, messagedialog .dialog-action-area button:hover, button.sidebar-button:hover, PanelToplevel > widget > button:hover, .budgie-settings-window buttonbox.inline-toolbar button:hover, .raven .raven-header:not(.top) button:hover, .drop-shadow button:hover, .budgie-polkit-dialog .linked.horizontal > button:hover,
+.budgie-session-dialog .linked.horizontal > button:hover, .lightdm-gtk-greeter button:hover, .nautilus-window headerbar .path-bar-box button:hover, .nautilus-window headerbar .path-bar-box button.text-button.image-button:hover, layouttabbar button:hover, .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar button.image-button:hover, .mate-panel-menu-bar #PanelApplet button:hover:not(.flat), .raven stackswitcher.linked > button:hover, toolbar button:hover, actionbar > revealer > box button:hover:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:hover, .caja-pathbar button.flat:hover,
 .path-bar button.flat:hover,
 button.flat:hover {
   box-shadow: inset 0 0 0 9999px alpha(currentColor, 0.12);
@@ -610,7 +612,8 @@ button.flat:hover {
 
 modelbutton.flat:active,
 .menuitem.button.flat:active, spinbutton:not(.vertical) button:active, spinbutton.vertical button:active, notebook > header > tabs > arrow:active, scrollbar button:active, check:active,
-radio:active, calendar.button:active, messagedialog .dialog-action-area button:active, button.sidebar-button:active, PanelToplevel > widget > button:active, .budgie-settings-window buttonbox.inline-toolbar button:active, .raven .raven-header:not(.top) button:active, .drop-shadow button:active, .budgie-session-dialog .linked.horizontal > button:active, .lightdm-gtk-greeter button:active, .nautilus-window headerbar .path-bar-box button:active, .nautilus-window headerbar .path-bar-box button.text-button.image-button:active, layouttabbar button:active, .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar button.image-button:active, .mate-panel-menu-bar #PanelApplet button:active:not(.flat), .raven stackswitcher.linked > button:active, toolbar button:active, actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:active, .caja-pathbar button.flat:active,
+radio:active, calendar.button:active, messagedialog .dialog-action-area button:active, button.sidebar-button:active, PanelToplevel > widget > button:active, .budgie-settings-window buttonbox.inline-toolbar button:active, .raven .raven-header:not(.top) button:active, .drop-shadow button:active, .budgie-polkit-dialog .linked.horizontal > button:active,
+.budgie-session-dialog .linked.horizontal > button:active, .lightdm-gtk-greeter button:active, .nautilus-window headerbar .path-bar-box button:active, .nautilus-window headerbar .path-bar-box button.text-button.image-button:active, layouttabbar button:active, .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar button.image-button:active, .mate-panel-menu-bar #PanelApplet button:active:not(.flat), .raven stackswitcher.linked > button:active, toolbar button:active, actionbar > revealer > box button:active:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:active, .caja-pathbar button.flat:active,
 .path-bar button.flat:active,
 button.flat:active {
   transition: all 300ms cubic-bezier(0, 0, 0.2, 1), background-size 0, background-image 0;
@@ -623,7 +626,8 @@ button.flat:active {
 
 modelbutton.flat:disabled,
 .menuitem.button.flat:disabled, spinbutton:not(.vertical) button:disabled, spinbutton.vertical button:disabled, notebook > header > tabs > arrow:disabled, scrollbar button:disabled, check:disabled,
-radio:disabled, calendar.button:disabled, messagedialog .dialog-action-area button:disabled, button.sidebar-button:disabled, PanelToplevel > widget > button:disabled, .budgie-settings-window buttonbox.inline-toolbar button:disabled, .raven .raven-header:not(.top) button:disabled, .drop-shadow button:disabled, .budgie-session-dialog .linked.horizontal > button:disabled, .lightdm-gtk-greeter button:disabled, .nautilus-window headerbar .path-bar-box button:disabled, .nautilus-window headerbar .path-bar-box button.text-button.image-button:disabled, layouttabbar button:disabled, .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar button.image-button:disabled, .mate-panel-menu-bar #PanelApplet button:disabled:not(.flat), .raven stackswitcher.linked > button:disabled, toolbar button:disabled, actionbar > revealer > box button:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:disabled, .caja-pathbar button.flat:disabled,
+radio:disabled, calendar.button:disabled, messagedialog .dialog-action-area button:disabled, button.sidebar-button:disabled, PanelToplevel > widget > button:disabled, .budgie-settings-window buttonbox.inline-toolbar button:disabled, .raven .raven-header:not(.top) button:disabled, .drop-shadow button:disabled, .budgie-polkit-dialog .linked.horizontal > button:disabled,
+.budgie-session-dialog .linked.horizontal > button:disabled, .lightdm-gtk-greeter button:disabled, .nautilus-window headerbar .path-bar-box button:disabled, .nautilus-window headerbar .path-bar-box button.text-button.image-button:disabled, layouttabbar button:disabled, .sidebar-paned .inline-toolbar.horizontal.sidebar-toolbar button.image-button:disabled, .mate-panel-menu-bar #PanelApplet button:disabled:not(.flat), .raven stackswitcher.linked > button:disabled, toolbar button:disabled, actionbar > revealer > box button:disabled:not(.suggested-action):not(.destructive-action):not(.server-list-button), .app-notification button:disabled, .caja-pathbar button.flat:disabled,
 .path-bar button.flat:disabled,
 button.flat:disabled {
   box-shadow: none;
@@ -4297,6 +4301,7 @@ messagedialog.csd .dialog-action-area button.suggested-action {
 messagedialog.csd .dialog-action-area button.suggested-action:hover, messagedialog.csd .dialog-action-area button.suggested-action:checked {
   background-color: #4CAF50;
   color: #FFFFFF;
+  border-color: #4CAF50;
 }
 
 messagedialog.csd .dialog-action-area button.suggested-action:disabled {
@@ -4313,6 +4318,7 @@ messagedialog.csd .dialog-action-area button.destructive-action {
 messagedialog.csd .dialog-action-area button.destructive-action:hover, messagedialog.csd .dialog-action-area button.destructive-action:checked {
   background-color: #FF5252;
   color: #FFFFFF;
+  border-color: #FF5252;
 }
 
 messagedialog.csd .dialog-action-area button.destructive-action:disabled {
@@ -7026,7 +7032,7 @@ na-tray-applet {
 }
 
 .budgie-popover {
-  border-color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16), 0 3px 3px rgba(0, 0, 0, 0.23), 0 0 0 1px rgba(0, 0, 0, 0.15);
   background-color: #ffffff;
@@ -7847,32 +7853,90 @@ box.vertical > stack > box.vertical > .raven-background > viewport.frame > list 
   border-radius: 2px;
 }
 
-.budgie-session-dialog, .budgie-polkit-dialog, .budgie-run-dialog {
+.budgie-polkit-dialog,
+.budgie-session-dialog, .budgie-run-dialog {
   border-radius: 2px;
   background-color: #ffffff;
 }
 
-.budgie-session-dialog decoration, .budgie-polkit-dialog decoration, .budgie-run-dialog decoration {
+.budgie-polkit-dialog decoration, .budgie-session-dialog decoration, .budgie-run-dialog decoration {
   border-radius: 2px;
 }
 
+.budgie-polkit-dialog label:not(:last-child),
+.budgie-polkit-dialog .dialog-title,
 .budgie-session-dialog label:not(:last-child),
 .budgie-session-dialog .dialog-title {
   font-size: 120%;
 }
 
+.budgie-polkit-dialog .linked.horizontal > button,
 .budgie-session-dialog .linked.horizontal > button {
   padding: 8px 16px;
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0;
 }
 
-.budgie-session-dialog .linked.horizontal > button:first-child {
+.budgie-polkit-dialog .linked.horizontal > button:first-child, .budgie-polkit-dialog .linked.horizontal > button:first-child:hover, .budgie-polkit-dialog .linked.horizontal > button:first-child:active, .budgie-polkit-dialog .linked.horizontal > button:first-child:checked, .budgie-polkit-dialog .linked.horizontal > button:first-child:disabled,
+.budgie-session-dialog .linked.horizontal > button:first-child,
+.budgie-session-dialog .linked.horizontal > button:first-child:hover,
+.budgie-session-dialog .linked.horizontal > button:first-child:active,
+.budgie-session-dialog .linked.horizontal > button:first-child:checked,
+.budgie-session-dialog .linked.horizontal > button:first-child:disabled {
   border-bottom-left-radius: 2px;
+  border-top-left-radius: 0;
 }
 
-.budgie-session-dialog .linked.horizontal > button:last-child {
+.budgie-polkit-dialog .linked.horizontal > button:last-child, .budgie-polkit-dialog .linked.horizontal > button:last-child:hover, .budgie-polkit-dialog .linked.horizontal > button:last-child:active, .budgie-polkit-dialog .linked.horizontal > button:last-child:checked, .budgie-polkit-dialog .linked.horizontal > button:last-child:disabled,
+.budgie-session-dialog .linked.horizontal > button:last-child,
+.budgie-session-dialog .linked.horizontal > button:last-child:hover,
+.budgie-session-dialog .linked.horizontal > button:last-child:active,
+.budgie-session-dialog .linked.horizontal > button:last-child:checked,
+.budgie-session-dialog .linked.horizontal > button:last-child:disabled {
   border-bottom-right-radius: 2px;
+  border-top-right-radius: 0;
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.suggested-action,
+.budgie-session-dialog .linked.horizontal > button.suggested-action {
+  color: #4CAF50;
+  background-color: transparent;
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.suggested-action:hover, .budgie-polkit-dialog .linked.horizontal > button.suggested-action:checked,
+.budgie-session-dialog .linked.horizontal > button.suggested-action:hover,
+.budgie-session-dialog .linked.horizontal > button.suggested-action:checked {
+  background-color: #4CAF50;
+  color: #FFFFFF;
+  border-color: #4CAF50;
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.suggested-action:disabled,
+.budgie-session-dialog .linked.horizontal > button.suggested-action:disabled {
+  opacity: 0.65;
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.destructive-action,
+.budgie-session-dialog .linked.horizontal > button.destructive-action {
+  color: #FF5252;
+  background-color: transparent;
+  box-shadow: none;
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.destructive-action:hover, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:checked,
+.budgie-session-dialog .linked.horizontal > button.destructive-action:hover,
+.budgie-session-dialog .linked.horizontal > button.destructive-action:checked {
+  background-color: #FF5252;
+  color: #FFFFFF;
+  border-color: #FF5252;
+}
+
+.budgie-polkit-dialog .linked.horizontal > button.destructive-action:disabled,
+.budgie-session-dialog .linked.horizontal > button.destructive-action:disabled {
+  opacity: 0.65;
 }
 
 .budgie-polkit-dialog .message {

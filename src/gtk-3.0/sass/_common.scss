@@ -2904,7 +2904,6 @@ calendar {
 
   &:selected {
     @extend %selected_items;
-
     border-radius: 2px + 1px;
   }
 
@@ -2995,7 +2994,7 @@ messagedialog { // Message Dialog styling
       &:checked {
           background-color: $b_color;
           color: $inversed_fg_color;
-//          border-color: $b_color;
+          border-color: $b_color;
         }
       &:disabled { opacity: 0.65; }
       }
