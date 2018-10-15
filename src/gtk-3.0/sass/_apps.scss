@@ -1482,7 +1482,7 @@ window.solid-csd > box.vertical > box.vertical {
 .sidebar.vertical > paned.geary-sidebar-pane-separator {
   .geary-folder-frame {
     > border { @extend  %folder_frame_border; }
-    > scrolledwindow { @extend %folder_frame; }
+//    > scrolledwindow { @extend %folder_frame; }
   }
 }
 
