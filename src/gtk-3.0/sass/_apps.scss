@@ -72,16 +72,16 @@
   background: $base_color;
 }
 
-.nautilus-window notebook > header.top tabs, 
+.nautilus-window notebook > header.top tabs,
 .nautilus-window notebook > header.bottom tabs {
     padding-left: 0;
     padding-right: 0;
 }
 
-.nautilus-window notebook > header.left tabs, 
+.nautilus-window notebook > header.left tabs,
 .nautilus-window notebook > header.right tabs {
     padding-top: 0;
-    padding-bottom: 0; 
+    padding-bottom: 0;
 }
 
 .nautilus-canvas-item {
@@ -1168,14 +1168,15 @@ menu menuitem radio {
 }
 
 #MozillaGtkWidget.background {
-  &,
-  decoration { border-radius: 2px 2px 0 0; } // enforce radius
+  &, decoration {
+    border-radius: 0 0 0 0;
+  } // enforce radius
 
   // FIXME: unset all our specific titlebuttons
   // until upstream stops rendering useless (weird) icons
   headerbar.titlebar {
-    border-radius: 2px 2px 0 0;
-    border-top: 1px solid $borders_color;
+    border-radius: 0 0 0 0;
+    border: none;
 
     &.default-decoration button.titlebutton {
       min-width: 16px;
@@ -1654,6 +1655,77 @@ window.thunar {
   }
 }
 
+//
+// Nemo
+//
+.nemo-window {
+  .nemo-places-sidebar {
+    background-color: $lighter_bg_color;
+
+    &.frame { border-width: 0; }
+    .places-treeview {
+//      @extend row.activatable;
+    }
+  }
+
+  notebook {
+    background-color: $base_color;
+
+    .primary-toolbar {
+      background-color: $bg_color;
+
+      button,
+      combobox > .linked > button.combo {
+        @include button(normal);
+        &:hover { @include button(hover); }
+        &:active { @include button(active); }
+        &:disabled { @include button(disabled); }
+        &:checked { @include button(checked); }
+        &:checked:disabled { @include button(checked-disabled); }
+      }
+
+      entry {
+        @include entry(normal);
+        &:focus { @include entry(focus); }
+        &:disabled { @include entry(disabled); }
+      }
+    }
+  }
+
+  // Rename entry
+  .nemo-window-pane widget.entry {
+    border-radius: 3px;
+    padding: 3px 10px;
+    border-width: 2px;
+  }
+
+  .primary-toolbar {
+    padding-top: $container_padding;
+    padding-bottom: $container_padding;
+    border: none;
+    color: $headerbar_fg_color;
+    background-color: $headerbar_bg_color;
+    box-shadow: inset 0 -1px $borders_color;
+
+    button:not(.suggested-action):not(.destructive-action) { @extend %header_button; }
+
+    button, entry {
+      min-height: 24px;
+    }
+  }
+
+  // Pathbar
+  .primary-toolbar .linked:not(.vertical):not(.stack-switcher).path-bar,
+  .primary-toolbar widget.linked.raised:not(.vertical):not(.path-bar) {
+    // button { }
+  }
+
+  .sidebar {
+    scrolledwindow.frame { border: none; } // Removed treeview double borders
+  }
+}
+
+
 /*********
  * Unity *
  *********/
@@ -1773,5 +1845,3 @@ menuitem calendar .view {
 }
 
 // Unity Music Control Button //
-
-

@@ -234,22 +234,24 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == header-active {
     background-color: $primary_color;
     color: $inversed_fg_color;
-  }
-
-  @if $t == header-disabled {
-    background-color: lighten($headerbar_bg_color, 5%);
-    color: if($tc != $fg_color, gtkalpha(currentColor, $disabled_opacity), gtkalpha(currentColor, $enabled_opacity * $disabled_opacity));
+    border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $primary_color);
   }
 
   @if $t == header-checked {
     background-color: $primary_color;
     color: $inversed_fg_color;
+    border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $primary_color);
   }
 
   @if $t == header-checked-disabled {
     background-color: $track_color;
     color: gtkalpha(currentColor, $disabled_opacity);
     border-color: $borders_color;
+  }
+
+  @if $t == header-disabled {
+    background-color: lighten($headerbar_bg_color, 5%);
+    color: if($tc != $fg_color, gtkalpha(currentColor, $disabled_opacity), gtkalpha(currentColor, $enabled_opacity * $disabled_opacity));
   }
 }
 
