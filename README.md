@@ -3,7 +3,7 @@
 
 Stylish is a flat Material Design theme for GTK 3, GTK 2 and Gnome-Shell which supports GTK 3 and GTK 2 based desktop environments like Gnome, Unity, Budgie, Pantheon, XFCE, Mate, etc.
 
-This theme is based on materia-theme of nana-4. Thanks nana-4 sincerely for his great job! 
+This theme is based on materia-theme of nana-4. Thanks nana-4 sincerely for his great job!
 materia-theme: https://github.com/nana-4/materia-theme
 
 ## Info
@@ -32,36 +32,26 @@ Search for the engines in your distributions repository or install the engines f
 
 Open the terminal at current directory.
 
-
 Run
-
 
     ./Install
 
+Usage:  `./Install`  **[OPTIONS...]**
 
-Or double-click to open that script files and select "run at the terminal" at nautilus.
-
-
+|  OPTIONS:      | |
+|:---------------|:-------------|
+| -d, --dest     | Specify theme destination directory (Default: $HOME/.themes) |
+| -n, --name     | Specify theme name (Default: vimix) |
+| -c, --variant  | Specify theme light variant(s) **[standard/light/dark]** (Default: All variants) |
+| -t, --color    | Specify hue theme variant(s) **[standard/tang/azul/jade]** (Default: All variants) |
+| -s, --size     | Specify theme size variant(s) **[standard/laptop]** (Default: All variants) |
+| -h, --help     | Show this help |
 
 if you want to get the last vimix theme version online, you can
 
 Run
 
-
     ./update-stylish-online
-
-
-When running the installer script in ubuntu16.04 or later, if you had this error:
-
-    XMLLINT not set and xmllint not found in path; skipping xml preprocessing.
-
-To fix it you have to install libxml2-utils
-
-    sudo apt install libxml2-utils
-
-When running the installer script in Fedora 24 or later, you need to install 'glib2-devel'.
-
-    sudo dnf install glib2-devel
 
 ## Screenshots
 
