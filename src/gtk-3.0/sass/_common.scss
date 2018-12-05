@@ -257,20 +257,16 @@ entry {
     min-height: $medium_size;
     padding: 0 8px;
     border-radius: 2px;
-
     @include entry(normal);
 
     &:focus { @include entry(focus); }
-
     &:disabled { @include entry(disabled); }
 
     &.flat {
       border-radius: 0;
-
       @include entry(normal);
 
       &:focus { @include entry(focus); }
-
       &:disabled { @include entry(disabled); }
     }
 
@@ -284,7 +280,6 @@ entry {
       color: gtkalpha(currentColor, $enabled_opacity);
 
       &:hover, &:active { color: currentColor; }
-
       &:disabled { color: gtkalpha(currentColor, $hint_opacity); }
 
        &.left {
@@ -300,7 +295,6 @@ entry {
 
     undershoot {
       &.left { @include undershoot(left); }
-
       &.right { @include undershoot(right); }
     }
 
@@ -313,14 +307,12 @@ entry {
         @include entry(normal, $e_color);
 
         &:focus { @include entry(focus, $e_color); }
-
         &:disabled { @include entry(disabled, $e_color); }
 
         &.flat {
           @include entry(normal, $e_color);
 
           &:focus { @include entry(focus, $e_color); }
-
           &:disabled { @include entry(disabled, $e_color); }
         }
       }
@@ -352,6 +344,10 @@ entry {
 
   .linked:not(.vertical) > &.flat,
   .linked.vertical > &.flat { border-radius: 0; }
+
+  .linked:not(.vertical) > &:focus + button { border-color: $primary_color; }
+  .linked:not(.vertical) > &:focus + button + button { border-color: $primary_color; }
+  .linked:not(.vertical) > &:drop(active) + button { border-color: $warning_bg_color; }
 }
 
 treeview entry {
@@ -649,10 +645,9 @@ button {
 
 // Set button borders for all linked buttons
 .linked > button {
-    border: 1px solid $borders_color;
-    &:active { border-color: $borders_color; }
-    &:checked { border-color: $primary_color; }
-    &:checked:disabled { border-color: scale-alpha($primary_color, $disabled_opacity); }
+  &:active { border-color: $borders_color; }
+  &:checked { border-color: $primary_color; }
+  &:checked:disabled { border-color: scale-alpha($primary_color, $disabled_opacity); }
 }
 
 %needs_attention {
@@ -666,23 +661,25 @@ button {
 
 // all the following is for the +|- buttons on inline toolbars, that way
 // should really be deprecated...
-.inline-toolbar toolbutton > button {  }
+
+// .inline-toolbar toolbutton > button { }
+
 // redefining the button look is needed since those are flat...
 
 // More inline toolbar buttons
 toolbar.inline-toolbar toolbutton {
-   > button.flat { @extend %linked_middle; border: 1px solid $borders_color; background-color: $lighter_bg_color; }
+   > button.flat { @extend %linked_middle; background-color: $lighter_bg_color; }
 
    &:first-child > button.flat { @extend %linked:first-child; }
-
    &:last-child > button.flat { @extend %linked:last-child; }
-
    &:only-child > button.flat { @extend %linked:only-child; }
 }
 
 %linked_middle {
   border-radius: 0;
   -gtk-outline-radius: $md_radius;
+  border-top-style: solid;
+  border-bottom-style: solid;
   border-left-style: none;
   border-right-style: none;
 }
@@ -715,6 +712,8 @@ toolbar.inline-toolbar toolbutton {
   -gtk-outline-radius: $md_radius;
   border-bottom-style: none;
   border-top-style: none;
+  border-left-style: solid;
+  border-right-style: solid;
 }
 
 %linked_vertical{
@@ -829,19 +828,19 @@ spinbutton {
       border-radius: 0;
       box-shadow: none;
       background-color: transparent;
-      // 
+      //
       // This will help to simplify spinbutton's code, but unfortunatelly
       // doesn't work properly in :dir(rtl). It needs z-index property.
-      // 
+      //
       // min-width: $large_size - 8px;
-      // 
+      //
       // $spinbuttons_width: $small_size * 2 + $container_padding * 3;
-      // 
+      //
       // &:dir(ltr) {
       //   margin-right: -$spinbuttons_width;
       //   padding-right: $spinbuttons_width;
       // }
-      // 
+      //
       // &:dir(rtl) {
       //   margin-left: -$spinbuttons_width;
       //   padding-left: $spinbuttons_width;
@@ -953,9 +952,6 @@ combobox {
     }
   }
 
-  entry:focus + button { border-color: $primary_color; }
-  entry:drop(active) + button { border-color: $warning_bg_color; }
-
   &:drop(active) { // FIXME: untested
     box-shadow: none;
 
@@ -967,16 +963,17 @@ combobox {
   // the combo is a composite widget so the way we do button linking doesn't
   // work, special case needed. See
   // https://bugzilla.gnome.org/show_bug.cgi?id=733979
-  border: 1px solid $borders_color;
-  &:dir(ltr),
-  &:dir(rtl) { @extend %linked_middle; } // specificity bump
+
+  &:dir(ltr), &:dir(rtl) {
+    &, &:hover, &:active, &:checked, &:disabled { @extend %linked_middle; } // specificity bump
+  }
 }
 
 .linked:not(.vertical) > combobox:first-child > box > button.combo { @extend %linked:first-child; }
 .linked:not(.vertical) > combobox:last-child > box > button.combo { @extend %linked:last-child; }
 .linked:not(.vertical) > combobox:only-child > box > button.combo { @extend %linked:only-child; }
 
-.linked.vertical > combobox > box > button.combo { border: 1px solid $borders_color; @extend %linked_vertical_middle; }
+.linked.vertical > combobox > box > button.combo { @extend %linked_vertical_middle; }
 .linked.vertical > combobox:first-child > box > button.combo { @extend %linked_vertical:first-child; }
 .linked.vertical > combobox:last-child > box > button.combo { @extend %linked_vertical:last-child; }
 .linked.vertical > combobox:only-child > box > button.combo { @extend %linked_vertical:only-child; }
@@ -985,13 +982,10 @@ combobox {
   border-radius: 0;
   background-image: none;
   font-weight: inherit;
-
   @include entry(normal);
 
   &:hover { @include button(hover); }
-
   &:checked { @include button(active); }
-
   &:disabled { color: $disabled_fg_color; }
 }
 
@@ -1063,10 +1057,6 @@ searchbar,
   border-color: $borders_color;
   background-color: $bg_color;
   background-clip: border-box;
-
-  entry:focus + button { border-color: $primary_color; }
-  entry:focus + button + button { border-color: $primary_color; }
-  entry:drop(active) + button { border-color: $warning_bg_color; }
 }
 
 /***************
@@ -1105,25 +1095,19 @@ headerbar {
     }
   }
 
-   @at-root %header_button {
-      @include button(header-normal);
-      &:hover { @include button(header-hover); }
-      &:active { @include button(header-active); }
-      &:disabled { @include button(header-disabled); }
-      &:checked { @include button(header-checked); }
-      &:checked:disabled { @include button(header-checked-disabled); }
-    }
+  @at-root %header_button {
+    @include button(header-normal);
+    &:hover { @include button(header-hover); }
+    &:active { @include button(header-active); }
+    &:disabled { @include button(header-disabled); }
+    &:checked { @include button(header-checked); }
+    &:checked:disabled { @include button(header-checked-disabled); }
+  }
 
   button.flat.toggle.popup,
   button {
-      @extend %header_button;
-      &:active,
-      &:checked {
-          background-color: $primary_color;
-          color: $dark_contrast_color;
-          border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $primary_color);
-      }
-      &:backdrop { opacity: 0.85; }
+    @extend %header_button;
+    &:backdrop { opacity: 0.85; }
   }
 
   // Suggested and Destructive Headerbar buttons
@@ -1133,15 +1117,13 @@ headerbar {
       background-color: $b_color;
       color: $inversed_fg_color;
       box-shadow: none;
-      border-color: $b_color;
+      border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $b_color);
 
       &:hover { opacity: 0.75; color: $inversed_fg_color; }
-
-      &:disabled { opacity: 0.35; > label { color: inherit; } }
-
+      &:disabled { opacity: 0.35; > label { color: inherit; }}
       &:checked { opacity: 0.65; }
-      }
     }
+  }
 
   &.selection-mode {
     transition: background-color 0.00001s $longer_duration, color $longer_duration $deceleration_curve;
@@ -1218,7 +1200,7 @@ headerbar {
   &.default-decoration,
   .csd &.default-decoration,             // needed under wayland, since all gtk3 windows are csd windows
   &.default-decoration:backdrop,
-  .csd &.default-decoration:backdrop { 
+  .csd &.default-decoration:backdrop {
     box-shadow: none;
     border: none;
   }
@@ -1239,26 +1221,16 @@ headerbar {
 
     > button {
       @extend %header_button;
-      &:active,
-      &:checked {
-          background-color: $primary_color;
-          color: $dark_contrast_color;
-          border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $primary_color);
-        }
-
       &, &:hover, &:active, &:checked, &:disabled { @extend %linked; }
-
+    }
   }
- }  
 
   .linked:not(.vertical) {
-      > button {
-      &:active,
-      &:checked { border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $primary_color); }
+    > button {
       &:only-child:active,
       &:only-child:checked { border-color: $primary_color; }
+    }
   }
- }
 }
 
 %header_separator {
@@ -1289,6 +1261,8 @@ headerbar {
 //    margin-top: $container_padding * 2;
 //    margin-bottom: $container_padding * 2;
 //  }
+
+  separator { @extend %header_separator; }
 }
 
 .titlebar,
@@ -1382,7 +1356,7 @@ headerbar { // headerbar border rounding
       background-color: $primary_color;
       color: $dark_contrast_color;
       border-color: $primary_color;
-     }
+    }
 
     &:disabled { background-color: $base_color; }
 
@@ -1702,7 +1676,7 @@ notebook {
     border-color: $borders_color;
     background-color: $bg_color;
     background-clip: border-box;
- 
+
      button,
      button.flat {
        min-height: 24px;
