@@ -41,13 +41,13 @@ Usage:  `./Install`  **[OPTIONS...]**
 |  OPTIONS:      | |
 |:---------------|:-------------|
 | -d, --dest     | Specify theme destination directory (Default: $HOME/.themes) |
-| -n, --name     | Specify theme name (Default: vimix) |
-| -c, --variant  | Specify theme light variant(s) **[standard/light/dark]** (Default: All variants) |
+| -n, --name     | Specify theme name (Default: stylish) |
+| -v, --variant  | Specify theme light variant(s) **[standard/light/dark]** (Default: All variants) |
 | -t, --color    | Specify hue theme variant(s) **[standard/tang/azul/jade]** (Default: All variants) |
 | -s, --size     | Specify theme size variant(s) **[standard/laptop]** (Default: All variants) |
 | -h, --help     | Show this help |
 
-if you want to get the last vimix theme version online, you can
+if you want to get the last stylish theme version online, you can
 
 Run
 
