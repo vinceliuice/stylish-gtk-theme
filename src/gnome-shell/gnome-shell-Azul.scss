@@ -1,10 +1,6 @@
 $variant: 'light';
-$laptop: 'false';
 $color: 'azul';
-$panel: 'dark';
 
-@import 'sass/variables';
 @import 'sass/colors';
 @import 'sass/drawing';
 @import 'sass/common';
-@import 'sass/extensions';

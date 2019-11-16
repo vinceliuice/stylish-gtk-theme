@@ -1208,12 +1208,12 @@ headerbar {
   separator.titlebutton { @extend %header_separator; }
 
   // special case for headerbar linked entrys
-  .linked:not(.vertical):not(.path-bar) > entry {
-    &:first-child:focus { box-shadow: inset -1px 0 $primary_color; }
-    &:last-child:focus { box-shadow: inset 1px 0 $primary_color; }
-    &:not(:first-child):not(:last-child):focus { box-shadow: inset 1px 0 $primary_color, inset -1px 0 $primary_color; }
-    &:disabled { background-color: darken($lighter_bg_color, 3%); }
-  }
+  // .linked:not(.vertical):not(.path-bar) > entry {
+  //   &:first-child:focus { box-shadow: inset -1px 0 $primary_color; }
+  //   &:last-child:focus { box-shadow: inset 1px 0 $primary_color; }
+  //   &:not(:first-child):not(:last-child):focus { box-shadow: inset 1px 0 $primary_color, inset -1px 0 $primary_color; }
+  //   &:disabled { background-color: darken($lighter_bg_color, 3%); }
+  // }
 
   // special case for path-bar and stack-switchers
   .linked:not(.vertical).path-bar,

@@ -12,6 +12,11 @@ if [ ! -z "${COLOR_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _COLOR_VARIANTS <<< "${COLOR_VARIANTS:-}"
 fi
 
+_DCOLOR_VARIANTS=('' '-Dark')
+if [ ! -z "${DCOLOR_VARIANTS:-}" ]; then
+  IFS=', ' read -r -a _DCOLOR_VARIANTS <<< "${_DCOLOR_VARIANTS:-}"
+fi
+
 _SIZE_VARIANTS=('' '-Laptop')
 if [ ! -z "${SIZE_VARIANTS:-}" ]; then
   IFS=', ' read -r -a _SIZE_VARIANTS <<< "${SIZE_VARIANTS:-}"
@@ -25,12 +30,15 @@ fi
 for color in "${_COLOR_VARIANTS[@]}"; do
   for size in "${_SIZE_VARIANTS[@]}"; do
     for theme in "${_THEME_VARIANTS[@]}"; do
-
-    sassc $SASSC_OPT src/gtk-3.0/gtk${color}${size}${theme}.{scss,css}
-    echo "== Generating the gtk${color}${size}${theme}.css..."
-    sassc $SASSC_OPT src/gnome-shell/gnome-shell${color}${size}${theme}.{scss,css}
-    echo "== Generating the gnome-shell${color}${size}${theme}.css..."
-
+      sassc $SASSC_OPT src/gtk-3.0/gtk${color}${size}${theme}.{scss,css}
+      echo "== Generating the gtk${color}${size}${theme}.css..."
     done
+  done
+done
+
+for color in "${_DCOLOR_VARIANTS[@]}"; do
+  for theme in "${_THEME_VARIANTS[@]}"; do
+    sassc $SASSC_OPT src/gnome-shell/gnome-shell${color}${theme}.{scss,css}
+    echo "== Generating the gnome-shell${color}${theme}.css..."
   done
 done

@@ -30,32 +30,13 @@
 
 .nautilus-window headerbar {
   .path-bar-box {
-    margin: 0 $container_padding;
-    padding: 0 6px;
-    min-height: 16px;
-    border-radius: 3px;
-    button {
-      &, &.text-button,
-      &.image-button,
-      &.text-button.image-button {
-        @extend %pathbar_box_button;
-        &, &:hover, &:active, &:checked, &:disabled { border-radius: 3px; }
+    .linked.nautilus-path-bar { // for ≥ 3.31.90
+      button.text-button,
+      button.image-button.text-button {
+        &:not(:only-child):last-child {
+          @include button(header-checked);
+        }
       }
-    }
-
-    &.width-maximized {
-      color: $secondary_headerbar_fg_color;
-      background-color: lighten($headerbar_bg_color, 5%);
-      border: 1px solid $borders_color;
-
-//      button {
-//        &, &.text-button,
-//        &.image-button,
-//        &.text-button.image-button {
-//          @extend %pathbar_widthbox_button;
-//          &, &:hover, &:active, &:checked, &:disabled { border-radius: 0; }
-//        }
-//      }
     }
 
     // workaround for 3.30.1

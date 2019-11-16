@@ -1,76 +1,50 @@
 // When color definition differs for dark and light variant,
 // it gets @if ed depending on $variant
 
-@import 'color-palette';
+$base_color: if($variant == 'light', #ffffff, lighten(desaturate(#241f31, 20%), 2%));
+$bg_color: if($variant == 'light', #f6f5f4, darken(desaturate(#3d3846, 100%), 4%));
+$fg_color: if($variant == 'light', #2e3436, #eeeeec);
 
-@function fade($c) {
-  @return mix($c, $grey_900, 50%);
-}
+$selected_fg_color: #ffffff;
+$selected_bg_color: if($variant == 'light', #555555, darken(#555555, 10%));
 
-// Foreground colors
-$dark_fg_color:   rgba($black, 0.87);
-$light_fg_color:  $white;
-$button_fg_color: if($variant == 'light', rgba($black, 0.62), rgba($white, 0.8)); // extra fg color for raised buttons
+@if $color =='tang' { $selected_bg_color: if($variant == 'light', #F0544C, darken(#F0544C, 10%)); }
+@if $color =='azul' { $selected_bg_color: if($variant == 'light', #4586D8, darken(#4586D8, 10%)); }
+@if $color =='jade' { $selected_bg_color: if($variant == 'light', #2EB398, darken(#2EB398, 10%)); }
+@if $color =='black' { $selected_bg_color: if($variant == 'light', rgba(black, 0.15), rgba(white, 0.15)); }
 
-$fg_color:                    if($variant == 'light', rgba($black, 0.87), $white);
-$secondary_fg_color:          if($variant == 'light', rgba($black, 0.54), rgba($white, 0.7));
-$hint_fg_color:               if($variant == 'light', rgba($black, 0.38), rgba($white, 0.5));
-$disabled_fg_color:           if($variant == 'light', rgba($black, 0.38), rgba($white, 0.5));
-$disabled_secondary_fg_color: if($variant == 'light', rgba($black, 0.26), rgba($white, 0.3));
-$track_color:                 if($variant == 'light', rgba($black, 0.26), rgba($white, 0.12));
-$divider_color:               if($variant == 'light', rgba($black, 0.12), rgba($white, 0.08));
+$selected_borders_color: if($variant== 'light', darken($selected_bg_color, 15%), darken($selected_bg_color, 30%));
+$borders_color: if($variant == 'light', darken($bg_color, 18%), darken($bg_color, 10%));
+$borders_edge: if($variant == 'light', transparentize(white, 0.2), transparentize($fg_color, 0.93));
+$link_color: if($variant == 'light', darken($selected_bg_color, 10%), lighten($selected_bg_color, 20%));
+$link_visited_color: if($variant == 'light', darken($selected_bg_color, 20%), lighten($selected_bg_color, 10%));
+$top_hilight: $borders_edge;
 
-$titlebar_fg_color:                    if($panel == 'light', rgba($black, 0.87), $white);
-$titlebar_secondary_fg_color:          if($panel == 'light', rgba($black, 0.54), rgba($white, 0.7));
-$titlebar_hint_fg_color:               if($panel == 'light', rgba($black, 0.38), rgba($white, 0.5));
-$titlebar_disabled_fg_color:           if($panel == 'light', rgba($black, 0.38), rgba($white, 0.5));
-$titlebar_disabled_secondary_fg_color: if($panel == 'light', rgba($black, 0.26), rgba($white, 0.3));
-$titlebar_track_color:                 if($panel == 'light', rgba($black, 0.26), rgba($white, 0.15));
-$titlebar_divider_color:               if($panel == 'light', rgba($black, 0.12), rgba($white, 0.08));
+$warning_color: #f57900;
+$error_color: #ff8080;
+$success_color: if($variant == 'light', #33d17a, darken(#33d17a, 10%));
+$destructive_color: if($variant == 'light', #e01b24, darken(#e01b24, 10%));
 
-$inverse_fg_color:                    $white;
-$inverse_secondary_fg_color:          rgba($white, 0.7);
-$inverse_hint_fg_color:               rgba($white, 0.5);
-$inverse_disabled_fg_color:           rgba($white, 0.5);
-$inverse_disabled_secondary_fg_color: rgba($white, 0.3);
-$inverse_track_color:                 rgba($white, 0.1);
-$inverse_divider_color:               rgba($white, 0.06);
+$osd_fg_color: #eeeeec;
+$osd_text_color: white;
+$osd_bg_color: transparentize(darken(desaturate(#3d3846, 100%), 12%),0.04);
+$osd_insensitive_bg_color: transparentize(mix($osd_fg_color, opacify($osd_bg_color, 1), 10%), 0.5);
+$osd_insensitive_fg_color: mix($osd_fg_color, opacify($osd_bg_color, 1), 50%);
+$osd_borders_color: transparentize(black, 0.3);
+$osd_outer_borders_color: transparentize(white, 0.84);
 
-// Background colors
-$base_color:     if($variant =='dark', #333333, #FAFAFA);
-$alt_base_color: if($variant =='dark', darken($base_color, 3%), darken($base_color, 6%));
+$tooltip_borders_color: $osd_outer_borders_color;
+$shadow_color: transparentize(black, 0.9);
 
-$bg_color:         rgba($black, $middle_opacity);
-$alt_bg_color:     rgba($black, $lower_opacity);
-$inverse_bg_color: rgba($inverse_fg_color, 0.1);
-$panel_bg_color:   if($panel =='dark', scale-alpha($black, 0.5), scale-alpha($black, 0.4));
+//insensitive state derived colors
+$insensitive_fg_color: mix($fg_color, $bg_color, 50%);
+$insensitive_bg_color: mix($bg_color, $base_color, 60%);
+$insensitive_borders_color: $borders_color;
 
-// Misc colors
-
-$primary_color: #555555;
-$alt_primary_color: #666666;
-$accent_color: #444444;
-
-@if $color =='tang' { $primary_color: #F0544C; $alt_primary_color: #FF615A; $accent_color: #FF626C; }
-@if $color =='azul' { $primary_color: #4586D8; $alt_primary_color: #03a9f4; $accent_color: #0CAAF0; }
-@if $color =='jade' { $primary_color: #2EB398; $alt_primary_color: #1eba9b; $accent_color: #0fd1ab; }
-@if $color =='black' { $primary_color: #555555; $alt_primary_color: #666666; $accent_color: #EEEEEE; }
-
-$link_color:         $primary_color;
-$visited_link_color: $purple_A200;
-
-$warning_color: $orange_A700;
-$error_color:   $deep_orange_A700;
-$success_color: $green_A700;
-
-$suggested_color:   $accent_color;
-$destructive_color: $red_A200;
-
-$info_bg_color:     $green_400;
-$question_bg_color: $blue_400;
-$warning_bg_color:  $orange_400;
-$error_bg_color:    $red_400;
-
-$border_color:        if($variant == 'light', rgba($black, 0.15), rgba($white, 0.15));
-$highlight_color:     if($variant == 'light', rgba($white, 0.4),  rgba($white, 0.1));
-$alt_highlight_color: rgba($white, 0.2);
+//colors for the backdrop state, derived from the main colors.
+$backdrop_base_color: if($variant =='light', darken($base_color,1%), lighten($base_color,1%));
+$backdrop_bg_color: $bg_color;
+$backdrop_fg_color: mix($fg_color, $backdrop_bg_color, 80%);
+$backdrop_insensitive_color: if($variant =='light', darken($backdrop_bg_color,15%), lighten($backdrop_bg_color,15%));
+$backdrop_borders_color: mix($borders_color, $bg_color, 90%);
+$backdrop_dark_fill: mix($backdrop_borders_color,$backdrop_bg_color, 35%);

@@ -68,7 +68,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == focus {
     border-color: $primary_color;
     border-image: none;
-     color: if($fc != $primary_color, $inversed_fg_color, $fg_color);
+    color: if($fc != $primary_color, $inversed_fg_color, $fg_color);
   }
 
   @if $t == disabled {
@@ -139,7 +139,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   }
 
   @if $t == active {
-//    background-color: if($variant == 'light', darken($c, 10%), lighten($c, 10%));
+    // background-color: if($variant == 'light', darken($c, 10%), lighten($c, 10%));
     transition: $longer_transition,
                 background-size 0,
                 background-image 0;
@@ -160,7 +160,7 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == checked {
     background-color: $primary_color;
     color: $inversed_fg_color;
-    border-color: $primary_color;
+    border-color: $alt_primary_color;
   }
 
   @if $t == checked-disabled {
@@ -234,13 +234,13 @@ $header_shadow: if($headerbar =='light', $depth_light, $z-depth-dark);
   @if $t == header-active {
     background-color: $primary_color;
     color: $inversed_fg_color;
-    border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $primary_color);
+    border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $alt_primary_color);
   }
 
   @if $t == header-checked {
     background-color: $primary_color;
     color: $inversed_fg_color;
-    border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $primary_color);
+    border-color: if($variant == 'light' and $headerbar =='dark', $borders_color, $alt_primary_color);
   }
 
   @if $t == header-checked-disabled {

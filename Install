@@ -36,8 +36,8 @@ install() {
   local size=${4}
   local color=${5}
 
-  [[ ${variant} == '-dark' ]] && local ELSE_DARK=${variant}
-  [[ ${variant} == '-light' ]] && local ELSE_LIGHT=${variant}
+  [[ ${variant} == '-Dark' ]] && local ELSE_DARK=${variant}
+  [[ ${variant} == '-Light' ]] && local ELSE_LIGHT=${variant}
 
   local THEME_DIR=${dest}/${name}${variant}${size}${color}
 
@@ -67,28 +67,12 @@ install() {
   # Install GNOME Shell Theme
   mkdir -p                                                                              ${THEME_DIR}/gnome-shell
   cd ${SRC_DIR}/gnome-shell/
-  cp -ur {extensions,pad-osd.css,message-indicator-symbolic.svg}                        ${THEME_DIR}/gnome-shell
-  cp -ur gnome-shell${variant}${size}${color}.css                                       ${THEME_DIR}/gnome-shell/gnome-shell.css
-
-  mkdir -p                                                                              ${THEME_DIR}/gnome-shell/assets
+  cp -ur pad-osd.css                                                                    ${THEME_DIR}/gnome-shell
+  cp -ur gnome-shell${ELSE_DARK}${color}.css                                            ${THEME_DIR}/gnome-shell/gnome-shell.css
+  cp -ur common-assets                                                                  ${THEME_DIR}/gnome-shell/assets
   cd ${SRC_DIR}/gnome-shell/assets/
-  cp -ur {dash,dash-placeholder.svg,noise-texture.svg,process-working.svg}              ${THEME_DIR}/gnome-shell/assets
-  cp -ur {window-close.svg,window-close-hover.svg,window-close-active.svg}              ${THEME_DIR}/gnome-shell/assets
-  cp -ur no-events${variant}.svg                                                        ${THEME_DIR}/gnome-shell/assets/no-events.svg
-  cp -ur no-notifications${variant}.svg                                                 ${THEME_DIR}/gnome-shell/assets/no-notifications.svg 
-  cp -ur calendar-arrow-left${variant}.svg                                              ${THEME_DIR}/gnome-shell/assets/calendar-arrow-left.svg
-  cp -ur calendar-arrow-right${variant}.svg                                             ${THEME_DIR}/gnome-shell/assets/calendar-arrow-right.svg
-  cp -ur checkbox${color}.svg                                                           ${THEME_DIR}/gnome-shell/assets/checkbox.svg
-  cp -ur checkbox-off${variant}.svg                                                     ${THEME_DIR}/gnome-shell/assets/checkbox-off.svg
-  cp -ur close${variant}.svg                                                            ${THEME_DIR}/gnome-shell/assets/close.svg
-  cp -ur more-results${color}.svg                                                       ${THEME_DIR}/gnome-shell/assets/more-results.svg
-  cp -ur toggle-off${variant}.svg                                                       ${THEME_DIR}/gnome-shell/assets/toggle-off.svg
-  cp -ur toggle-on${color}.svg                                                          ${THEME_DIR}/gnome-shell/assets/toggle-on.svg
-
-  cd ${THEME_DIR}/gnome-shell/
-  ln -s assets/no-events.svg no-events.svg
-  ln -s assets/process-working.svg process-working.svg
-  ln -s assets/no-notifications.svg no-notifications.svg
+  cp -ur toggle-off${ELSE_DARK}.svg                                                     ${THEME_DIR}/gnome-shell/assets/toggle-off.svg
+  cp -ur toggle-on${ELSE_DARK}${color}.svg                                              ${THEME_DIR}/gnome-shell/assets/toggle-on.svg
 
   # Install GTK+ 2 Theme
   mkdir -p                                                                              ${THEME_DIR}/gtk-2.0
