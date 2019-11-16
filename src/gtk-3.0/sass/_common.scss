@@ -1104,8 +1104,8 @@ headerbar {
     &:checked:disabled { @include button(header-checked-disabled); }
   }
 
-  button.flat.toggle.popup,
-  button {
+  button,
+  button.flat.toggle.popup {
     @extend %header_button;
     &:backdrop { opacity: 0.85; }
   }
@@ -1218,18 +1218,14 @@ headerbar {
   // special case for path-bar and stack-switchers
   .linked:not(.vertical).path-bar,
   .linked:not(.vertical).stack-switcher {
-
     > button {
       @extend %header_button;
       &, &:hover, &:active, &:checked, &:disabled { @extend %linked; }
     }
   }
 
-  .linked:not(.vertical) {
-    > button {
-      &:only-child:active,
-      &:only-child:checked { border-color: $primary_color; }
-    }
+  .linked:not(.vertical) > button {
+    @extend %header_button;
   }
 }
 
@@ -1269,6 +1265,7 @@ headerbar {
 .titlebar .background {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  box-shadow: inset 0 -1px $borders_color, inset 0 1px rgba(white, 0.08);
 }
 
 .background.tiled .titlebar,

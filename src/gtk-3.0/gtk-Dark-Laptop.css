@@ -1612,81 +1612,83 @@ headerbar entry:focus {
   color: #FFFFFF;
 }
 
-.titlebar:not(headerbar) button.flat.toggle.popup,
 .titlebar:not(headerbar) button,
-headerbar button.flat.toggle.popup,
-headerbar button, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button,
+.titlebar:not(headerbar) button.flat.toggle.popup,
+headerbar button,
+headerbar button.flat.toggle.popup, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button,
 .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button,
 headerbar .linked:not(.vertical).path-bar > button,
-headerbar .linked:not(.vertical).stack-switcher > button, .nemo-window .primary-toolbar button:not(.suggested-action):not(.destructive-action) {
+headerbar .linked:not(.vertical).stack-switcher > button, .titlebar:not(headerbar) .linked:not(.vertical) > button,
+headerbar .linked:not(.vertical) > button, .nemo-window .primary-toolbar button:not(.suggested-action):not(.destructive-action) {
   transition: all 300ms cubic-bezier(0, 0, 0.2, 1);
   background-color: #4f4f4f;
   color: rgba(255, 255, 255, 0.75);
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-.titlebar:not(headerbar) button.flat.toggle.popup:hover,
 .titlebar:not(headerbar) button:hover,
-headerbar button.flat.toggle.popup:hover,
-headerbar button:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:hover,
+.titlebar:not(headerbar) button.flat.toggle.popup:hover,
+headerbar button:hover,
+headerbar button.flat.toggle.popup:hover, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:hover,
 .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:hover,
 headerbar .linked:not(.vertical).path-bar > button:hover,
-headerbar .linked:not(.vertical).stack-switcher > button:hover, .nemo-window .primary-toolbar button:hover:not(.suggested-action):not(.destructive-action) {
+headerbar .linked:not(.vertical).stack-switcher > button:hover, .titlebar:not(headerbar) .linked:not(.vertical) > button:hover,
+headerbar .linked:not(.vertical) > button:hover, .nemo-window .primary-toolbar button:hover:not(.suggested-action):not(.destructive-action) {
   background-color: rgba(255, 255, 255, 0.16);
   color: #FFFFFF;
 }
 
-.titlebar:not(headerbar) button.flat.toggle.popup:active,
 .titlebar:not(headerbar) button:active,
-headerbar button.flat.toggle.popup:active,
-headerbar button:active, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active,
+.titlebar:not(headerbar) button.flat.toggle.popup:active,
+headerbar button:active,
+headerbar button.flat.toggle.popup:active, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:active,
 .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:active,
 headerbar .linked:not(.vertical).path-bar > button:active,
-headerbar .linked:not(.vertical).stack-switcher > button:active, .nemo-window .primary-toolbar button:active:not(.suggested-action):not(.destructive-action) {
+headerbar .linked:not(.vertical).stack-switcher > button:active, .titlebar:not(headerbar) .linked:not(.vertical) > button:active,
+headerbar .linked:not(.vertical) > button:active, .nemo-window .primary-toolbar button:active:not(.suggested-action):not(.destructive-action) {
   background-color: #787878;
   color: #FFFFFF;
   border-color: #8c8c8c;
 }
 
-.titlebar:not(headerbar) button.flat.toggle.popup:disabled,
 .titlebar:not(headerbar) button:disabled,
-headerbar button.flat.toggle.popup:disabled,
-headerbar button:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:disabled,
+.titlebar:not(headerbar) button.flat.toggle.popup:disabled,
+headerbar button:disabled,
+headerbar button.flat.toggle.popup:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:disabled,
 .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:disabled,
 headerbar .linked:not(.vertical).path-bar > button:disabled,
-headerbar .linked:not(.vertical).stack-switcher > button:disabled, .nemo-window .primary-toolbar button:disabled:not(.suggested-action):not(.destructive-action) {
+headerbar .linked:not(.vertical).stack-switcher > button:disabled, .titlebar:not(headerbar) .linked:not(.vertical) > button:disabled,
+headerbar .linked:not(.vertical) > button:disabled, .nemo-window .primary-toolbar button:disabled:not(.suggested-action):not(.destructive-action) {
   background-color: #4f4f4f;
   color: alpha(currentColor, 0.3);
 }
 
-.titlebar:not(headerbar) button.flat.toggle.popup:checked,
 .titlebar:not(headerbar) button:checked,
-headerbar button.flat.toggle.popup:checked,
-headerbar button:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
+.titlebar:not(headerbar) button.flat.toggle.popup:checked,
+headerbar button:checked,
+headerbar button.flat.toggle.popup:checked, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked,
 .titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:checked,
 headerbar .linked:not(.vertical).path-bar > button:checked,
-headerbar .linked:not(.vertical).stack-switcher > button:checked, .nemo-window .primary-toolbar button:checked:not(.suggested-action):not(.destructive-action) {
+headerbar .linked:not(.vertical).stack-switcher > button:checked, .titlebar:not(headerbar) .linked:not(.vertical) > button:checked,
+headerbar .linked:not(.vertical) > button:checked, .nemo-window .primary-toolbar button:checked:not(.suggested-action):not(.destructive-action) {
   background-color: #787878;
   color: #FFFFFF;
   border-color: #8c8c8c;
 }
 
-.titlebar:not(headerbar) button.flat.toggle.popup:checked:disabled,
 .titlebar:not(headerbar) button:checked:disabled,
-headerbar button.flat.toggle.popup:checked:disabled,
-headerbar button:checked:disabled, .titlebar:not(headerbar) .linked:not(.vertical).path-bar > button:checked:disabled,
-.titlebar:not(headerbar) .linked:not(.vertical).stack-switcher > button:checked:disabled,
-headerbar .linked:not(.vertical).path-bar > button:checked:disabled,
-headerbar .linked:not(.vertical).stack-switcher > button:checked:disabled, .nemo-window .primary-toolbar button:checked:disabled:not(.suggested-action):not(.destructive-action) {
+.titlebar:not(headerbar) button.flat.toggle.popup:checked:disabled,
+headerbar button:checked:disabled,
+headerbar button.flat.toggle.popup:checked:disabled, .nemo-window .primary-toolbar button:checked:disabled:not(.suggested-action):not(.destructive-action) {
   background-color: alpha(currentColor, 0.15);
   color: alpha(currentColor, 0.4);
   border-color: rgba(255, 255, 255, 0.15);
 }
 
-.titlebar:not(headerbar) button.flat.toggle.popup:backdrop,
 .titlebar:not(headerbar) button:backdrop,
-headerbar button.flat.toggle.popup:backdrop,
-headerbar button:backdrop {
+.titlebar:not(headerbar) button.flat.toggle.popup:backdrop,
+headerbar button:backdrop,
+headerbar button.flat.toggle.popup:backdrop {
   opacity: 0.85;
 }
 
@@ -1868,12 +1870,6 @@ headerbar.default-decoration:backdrop {
   border: none;
 }
 
-.titlebar:not(headerbar) .linked:not(.vertical) > button:only-child:active, .titlebar:not(headerbar) .linked:not(.vertical) > button:only-child:checked,
-headerbar .linked:not(.vertical) > button:only-child:active,
-headerbar .linked:not(.vertical) > button:only-child:checked {
-  border-color: #787878;
-}
-
 .titlebar:not(headerbar) separator.titlebutton,
 headerbar separator.titlebutton, headerbar separator {
   min-width: 0;
@@ -1898,6 +1894,7 @@ headerbar button {
 .titlebar .background {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  box-shadow: inset 0 -1px rgba(255, 255, 255, 0.15), inset 0 1px rgba(255, 255, 255, 0.08);
 }
 
 .background.tiled .titlebar,
