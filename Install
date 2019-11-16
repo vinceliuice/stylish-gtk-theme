@@ -112,6 +112,11 @@ install() {
   cd ${SRC_DIR}/xfwm4/
   cp -ur assets${variant}${color}/*.png                                                 ${THEME_DIR}/xfwm4
   cp -ur themerc${variant}                                                              ${THEME_DIR}/xfwm4/themerc
+
+  # Install plank Theme
+  mkdir -p                                                                              ${THEME_DIR}/plank
+  cd ${SRC_DIR}/plank/
+  cp -ur dock.theme                                                                     ${THEME_DIR}/plank
 }
 
 while [[ $# -gt 0 ]]; do
