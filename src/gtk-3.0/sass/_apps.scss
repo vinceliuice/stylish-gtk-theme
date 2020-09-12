@@ -1005,7 +1005,6 @@ window.background:not(.csd) {
 
     // Firefox now uses this for selected items
     text:selected { @extend %selected_items; }
-
   }
 }
 
@@ -1016,7 +1015,6 @@ window.background:not(.csd) {
       color: $secondary_headerbar_fg_color;
 
       &:hover { color: $headerbar_fg_color; }
-
       &:disabled { color: $disabled_headerbar_fg_color; }
     }
 
