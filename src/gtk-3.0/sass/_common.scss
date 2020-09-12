@@ -1104,8 +1104,8 @@ headerbar {
     &:checked:disabled { @include button(header-checked-disabled); }
   }
 
-  button.flat.toggle.popup,
-  button {
+  button,
+  button.flat.toggle.popup {
     @extend %header_button;
     &:backdrop { opacity: 0.85; }
   }
@@ -1208,28 +1208,24 @@ headerbar {
   separator.titlebutton { @extend %header_separator; }
 
   // special case for headerbar linked entrys
-  .linked:not(.vertical):not(.path-bar) > entry {
-    &:first-child:focus { box-shadow: inset -1px 0 $primary_color; }
-    &:last-child:focus { box-shadow: inset 1px 0 $primary_color; }
-    &:not(:first-child):not(:last-child):focus { box-shadow: inset 1px 0 $primary_color, inset -1px 0 $primary_color; }
-    &:disabled { background-color: darken($lighter_bg_color, 3%); }
-  }
+  // .linked:not(.vertical):not(.path-bar) > entry {
+  //   &:first-child:focus { box-shadow: inset -1px 0 $primary_color; }
+  //   &:last-child:focus { box-shadow: inset 1px 0 $primary_color; }
+  //   &:not(:first-child):not(:last-child):focus { box-shadow: inset 1px 0 $primary_color, inset -1px 0 $primary_color; }
+  //   &:disabled { background-color: darken($lighter_bg_color, 3%); }
+  // }
 
   // special case for path-bar and stack-switchers
   .linked:not(.vertical).path-bar,
   .linked:not(.vertical).stack-switcher {
-
     > button {
       @extend %header_button;
       &, &:hover, &:active, &:checked, &:disabled { @extend %linked; }
     }
   }
 
-  .linked:not(.vertical) {
-    > button {
-      &:only-child:active,
-      &:only-child:checked { border-color: $primary_color; }
-    }
+  .linked:not(.vertical) > button {
+    @extend %header_button;
   }
 }
 
@@ -1269,6 +1265,7 @@ headerbar {
 .titlebar .background {
   border-top-left-radius: 2px;
   border-top-right-radius: 2px;
+  box-shadow: inset 0 -1px $borders_color, inset 0 1px rgba(white, 0.08);
 }
 
 .background.tiled .titlebar,
@@ -2060,6 +2057,8 @@ switch {
   background-clip: padding-box;
   font-size: 0;
 
+  image { color: transparent; }
+
   &:disabled { color: gtkalpha(currentColor, $disabled_opacity); }
 
   &:checked {
@@ -2076,7 +2075,7 @@ switch {
     transition: all 100ms $deceleration_curve, $shadow_transition, margin 0;
     min-width: $small_size;
     min-height: $small_size;
-    margin: -4px 0 -4px -4px;
+    margin: -3px 0 -3px -4px;
     border-radius: 100px;
     -gtk-outline-radius: 100px;
   }
@@ -2084,9 +2083,10 @@ switch {
   &:hover slider { @include entry(focus); }
 
   &:checked slider {
-    margin: -4px -4px -4px 0;
+    margin: -3px -4px -3px 0;
     background-color: $accent_color;
     color: $inversed_fg_color;
+    border-color: $alt_primary_color;
   }
 
   &:disabled slider { background-color: if($variant == 'light', darken($bg_color, 10%), lighten($bg_color, 10%)); }

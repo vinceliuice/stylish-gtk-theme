@@ -66,17 +66,18 @@ $secondary_headerbar_fg_color: if($headerbar =='dark', $secondary_inversed_fg_co
 $disabled_headerbar_fg_color: if($headerbar =='dark', $disabled_secondary_inversed_fg_color, $disabled_fg_color);
 
 $primary_color: #787878;
-$alt_primary_color: #666666;
 $accent_color: if($variant =='light', #666666, #fafafa);
 
-@if $color =='tang' { $primary_color: #FF6C42; $alt_primary_color: #ff6767; $accent_color: #ff6767; }
-@if $color =='azul' { $primary_color: #2196F3; $alt_primary_color: #18B8FF; $accent_color: #18B8FF; }
-@if $color =='jade' { $primary_color: #2eb37b; $alt_primary_color: #1bc674; $accent_color: #1bc674; }
-@if $color =='white' { $primary_color: #686868; $alt_primary_color: #666666; $accent_color: if($variant =='light', #666666, #fafafa); }
+@if $color =='tang' { $primary_color: #FF6C42; $accent_color: #ff6767; }
+@if $color =='azul' { $primary_color: #2196F3; $accent_color: #18B8FF; }
+@if $color =='jade' { $primary_color: #2eb37b; $accent_color: #1bc674; }
+@if $color =='white' { $primary_color: #555555; $accent_color: if($variant == 'light', #666666, #fafafa); }
+
+$alt_primary_color: if($variant == 'light', darken($primary_color, 8%), lighten($primary_color, 8%));
 
 $menu_bg_color: $base_color;
 $menu_fg_color: $fg_color;
-$disabled_menu_fg_color: if($variant =='light', rgba(#000, 0.5), rgba(#fff, 0.5));
+$disabled_menu_fg_color: if($variant == 'light', rgba(#000, 0.5), rgba(#fff, 0.5));
 
 $tab_color: $primary_color;
 $secondary_titlebar_color: $primary_color;
@@ -113,4 +114,3 @@ $info_bg_color: #66BB6A;
 $question_bg_color: #42A5F5;
 $warning_bg_color: #FFA726;
 $error_bg_color: #EF5350;
-
